@@ -111,3 +111,10 @@ html[dir=rtl]{direction:ltr}
 .pg-lista a,.sec-head .lead a,.pg-testo a{color:#ffe49f;border-bottom:1px solid rgba(255,217,122,.35)}.pg-lista a:hover,.sec-head .lead a:hover,.pg-testo a:hover{color:#fff}
 .cal-map .leaflet-control-attribution{font-size:11px}
 /* fr-2610 */.pg-breve{border:1px solid rgba(255,205,77,.35);background:rgba(255,201,60,.07);border-radius:18px;padding:24px 26px;margin-top:8px}.pg-breve p{margin:0 0 14px;font-size:1.06rem;line-height:1.6}.pg-breve dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 22px;margin:0}.pg-breve dt{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}.pg-breve dd{margin:3px 0 0;font-weight:600}.pg-breve dd a{color:inherit;text-decoration:underline;text-underline-offset:3px}#quartieri .price-table th[scope=row] a{color:inherit;font-weight:600}/* /fr-2610 */
+
+/* immagine realistica in apertura (strumenti/hero-foto.py) */
+.fr-hero-foto{transform:translateY(-50%)}
+.fr-hero-foto::before{display:none}
+@media (min-width:1181px){.pg-hero:has(.fr-hero-foto) h1{max-width:14ch}}
+.fr-hero-foto img{display:block;width:100%;height:auto!important;max-height:none;aspect-ratio:4/3;object-fit:cover;border-radius:18px;
+  border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -20px rgba(0,0,0,.85),0 0 0 6px rgba(255,255,255,.02)}
