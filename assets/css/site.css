@@ -964,3 +964,26 @@ body:has(.fr-hero-vis) .pg-crumbs{text-align:left}
    (pagina.js aggiunge html.cur-on). Senza JS, su touch o su portatili touch resta il cursore normale. */
 .cur,.cur-r{display:none}
 @media (min-width:1025px){html.cur-on .cur,html.cur-on .cur-r{display:block}html.cur-on,html.cur-on *{cursor:none!important}}
+
+/* selettore lingua compatto (pagina.js trasforma .lang-links dell'header in menu a tendina) */
+nav.links a{white-space:nowrap}
+header .lang-links.ll{position:relative;display:block;border:0;padding:0;background:none;gap:0}
+.ll-btn{display:flex;align-items:center;gap:7px;height:38px;padding:0 12px 0 11px;border-radius:99px;
+  border:1px solid var(--line);background:rgba(255,255,255,.035);color:#fff;font:600 12.5px/1 'Sora',sans-serif;
+  letter-spacing:.08em;white-space:nowrap;transition:border-color .3s,background .3s}
+.ll-btn svg{flex:none;color:var(--blue-2)}
+.ll-btn svg:last-child{color:var(--muted);transition:transform .35s var(--ease)}
+.ll:hover .ll-btn,.ll.open .ll-btn,.ll-btn:focus-visible{border-color:var(--line-strong);background:rgba(255,201,60,.1)}
+.ll.open .ll-btn svg:last-child{transform:rotate(180deg)}
+.ll-menu{position:absolute;top:100%;right:0;z-index:80;min-width:190px;margin-top:0;padding:16px 6px 6px;display:flex;flex-direction:column;gap:2px;
+  opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s,transform .25s,visibility 0s .25s}
+.ll-menu::before{content:"";position:absolute;inset:10px 0 0;z-index:-1;border-radius:16px;border:1px solid var(--line);
+  background:rgba(12,10,4,.96);backdrop-filter:blur(18px);box-shadow:0 26px 60px -24px rgba(0,0,0,.95)}
+.ll.open .ll-menu,.ll:focus-within .ll-menu{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .25s}
+@media (hover:hover){.ll:hover .ll-menu{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .25s}}
+header .lang-links.ll .ll-menu a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px 12px;border-radius:10px;
+  font-size:13.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+header .lang-links.ll .ll-menu a:hover{background:rgba(255,201,60,.12);color:#fff}
+.ll-menu a b{font:700 10.5px/1 'Sora',sans-serif;letter-spacing:.1em;opacity:.7}
+header .lang-links.ll .ll-menu a[aria-current="page"]{background:rgba(255,201,60,.16);color:#fff!important}
+header .lang-links.ll .ll-menu a[aria-current="page"] b{color:var(--blue-2);opacity:1}
