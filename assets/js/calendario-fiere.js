@@ -30,7 +30,7 @@
     lis.forEach(function(li){
       var a=li.querySelector('h4 a'), nome=li.querySelector('h4').childNodes[0].textContent, d=li.querySelector('.d').textContent.replace(/(\d{4})$/,' $1');
       var req=li.querySelector('[data-req]').getAttribute('data-req');
-      h+='<li><b>'+(a?'<a href="'+a.getAttribute('href')+'" style="color:#fff">'+esc(nome)+'</a>':esc(nome))+'</b><br><span style="color:#bcd3ff;font-size:12.5px">'+esc(d)+'</span><br>'+
+      h+='<li><b>'+(a?'<a href="'+a.getAttribute('href')+'" style="color:#fff">'+esc(nome)+'</a>':esc(nome))+'</b><br><span style="color:#ffecbc;font-size:12.5px">'+esc(d)+'</span><br>'+
          '<button type="button" class="cal-btn" data-req="'+esc(req)+'">Richiedi lo stand</button> <a class="cal-btn g" href="#f-'+li.dataset.id+'" data-goto="'+li.dataset.id+'">Dettagli</a></li>';
     });
     return h+'</ul>';
@@ -59,7 +59,7 @@
       fetch('/assets/data/europa.geojson').then(function(r){return r.json()}).then(function(g){
         L.geoJSON(g,{interactive:false,style:function(f){
           var it=f.properties.n==='Italy';
-          return {color:it?'rgba(122,169,255,.75)':'rgba(122,169,255,.32)',weight:it?1.2:0.8,fillColor:it?'#13224a':'#0d1630',fillOpacity:1};
+          return {color:it?'rgba(255,217,122,.75)':'rgba(255,217,122,.32)',weight:it?1.2:0.8,fillColor:it?'#4a3a13':'#30260d',fillOpacity:1};
         }}).addTo(map).bringToBack();
       }).catch(function(){});
       layer=L.layerGroup().addTo(map);

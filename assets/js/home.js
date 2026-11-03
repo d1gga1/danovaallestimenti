@@ -77,7 +77,7 @@ document.body.style.overflow='hidden';
       const a=Math.random()*Math.PI*2, d=180+Math.random()*260;
       h+=`<i style="--x:${(Math.cos(a)*d).toFixed(0)}px;--y:${(Math.sin(a)*d*.7).toFixed(0)}px;`
        + `--z:${(-180-Math.random()*420).toFixed(0)}px;--r:${(a*57.3).toFixed(0)}deg;`
-       + `--w:${(40+Math.random()*90).toFixed(0)}px;--c:${Math.random()>.45?'#4d8bff':'rgba(255,255,255,.9)'};`
+       + `--w:${(40+Math.random()*90).toFixed(0)}px;--c:${Math.random()>.45?'#ffcd4d':'rgba(255,255,255,.9)'};`
        + `--dur:${(.9+Math.random()*.7).toFixed(2)}s;--del:${(Math.random()*1.1).toFixed(2)}s"></i>`;
     }
     shards.innerHTML=h;
@@ -162,10 +162,10 @@ function drawNet(){
     if(dm<130*DPR&&dm>0){a.x+=dxm/dm*1.5;a.y+=dym/dm*1.5;}
     for(let j=i+1;j<parts.length;j++){
       const b=parts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-      if(d<LINK){ctx.strokeStyle=`rgba(60,130,255,${(1-d/LINK)*.32})`;ctx.lineWidth=DPR*.6;
+      if(d<LINK){ctx.strokeStyle=`rgba(255,200,60,${(1-d/LINK)*.32})`;ctx.lineWidth=DPR*.6;
         ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
     }
-    ctx.fillStyle=Math.hypot(a.x-pm.x,a.y-pm.y)<160*DPR?'rgba(180,215,255,.95)':'rgba(90,150,255,.6)';
+    ctx.fillStyle=Math.hypot(a.x-pm.x,a.y-pm.y)<160*DPR?'rgba(255,234,180,.95)':'rgba(255,208,90,.6)';
     ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,6.284);ctx.fill();
   }
   requestAnimationFrame(drawNet);
