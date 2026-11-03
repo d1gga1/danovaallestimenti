@@ -1,0 +1,113 @@
+/* Pagine allestimenti fieristici (ottobre 2026) */
+.pg-hero{position:relative}
+.fr-hero-vis{position:absolute;right:max(22px,calc((100vw - 1240px)/2));top:50%;transform:translateY(-46%);width:min(31vw,440px);pointer-events:none}
+.fr-hero-vis::before{content:"";position:absolute;inset:12% 6%;background:radial-gradient(closest-side,rgba(30,107,255,.3),transparent);filter:blur(24px)}
+@media (max-width:1180px){.fr-hero-vis{display:none}}
+.fr-svg{position:relative;width:100%;height:auto;display:block}
+.fr-svg *{vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.fr-svg .pl.tp{fill:rgba(30,107,255,.07);stroke:rgba(122,169,255,.45);stroke-width:1}
+.fr-svg .pl.fl,.fr-svg .pl.fr{fill:rgba(30,107,255,.16);stroke:rgba(122,169,255,.45);stroke-width:1}
+.fr-svg .gr{stroke:rgba(122,169,255,.12);stroke-width:1}
+.fr-svg .wl{fill:rgba(255,255,255,.035);stroke:rgba(122,169,255,.5);stroke-width:1}
+.fr-svg .wl.back{fill:rgba(30,107,255,.06)}
+.fr-svg .wa.tp{fill:rgba(122,169,255,.35);stroke:rgba(122,169,255,.6);stroke-width:1}
+.fr-svg .wa.fl,.fr-svg .wa.fr{fill:rgba(122,169,255,.18);stroke:rgba(122,169,255,.6);stroke-width:1}
+.fr-svg .gfx{fill:url(#frg);stroke:#7aa9ff;stroke-width:1.2}
+.fr-svg .gl{stroke:rgba(255,255,255,.75);stroke-width:2.4;stroke-linecap:round}
+.fr-svg .sh{fill:rgba(122,169,255,.25);stroke:rgba(122,169,255,.7);stroke-width:1}
+.fr-svg .hd.fl{fill:#1E6BFF;stroke:#7aa9ff;stroke-width:1}
+.fr-svg .hd.fr{fill:#1550c4;stroke:#7aa9ff;stroke-width:1}
+.fr-svg .hd.tp{fill:#5b93ff;stroke:#9fc0ff;stroke-width:1}
+.fr-svg .arm{stroke:rgba(188,211,255,.7);stroke-width:1.4}
+.fr-svg .spot{fill:#fff;filter:drop-shadow(0 0 6px #7aa9ff)}
+.fr-svg .cone{fill:url(#frc);animation:frpulse 4s ease-in-out infinite}
+.fr-svg .tt.fl{fill:rgba(30,107,255,.5);stroke:#7aa9ff;stroke-width:1}
+.fr-svg .tt.fr{fill:rgba(30,107,255,.3);stroke:#7aa9ff;stroke-width:1}
+.fr-svg .tt.tp{fill:#7aa9ff}
+.fr-svg .ct.fl{fill:rgba(255,255,255,.1);stroke:rgba(188,211,255,.8);stroke-width:1}
+.fr-svg .ct.fr{fill:rgba(255,255,255,.05);stroke:rgba(188,211,255,.8);stroke-width:1}
+.fr-svg .ct.tp{fill:rgba(255,255,255,.1)}
+.fr-svg .cttop.fl,.fr-svg .cttop.fr{fill:#cfe0ff;stroke:#fff;stroke-width:.6}
+.fr-svg .cttop.tp{fill:#eaf1ff}
+.fr-svg .stool{fill:rgba(122,169,255,.5);stroke:#bcd3ff;stroke-width:1}
+.fr-svg .mk{fill:none;stroke:#7aa9ff;stroke-width:1.4;stroke-dasharray:3 3;animation:frspin 6s linear infinite;transform-box:fill-box;transform-origin:center}
+.fr-svg .dim{stroke:rgba(122,169,255,.5);stroke-width:1;stroke-dasharray:4 4}
+@keyframes frpulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes frspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.fr-svg .cone,.fr-svg .mk{animation:none}}
+.fr-chips{display:flex;flex-wrap:wrap;gap:10px}
+.fr-chips a,.fr-chips span{display:inline-flex;align-items:center;padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:14.5px;color:#cfd7e8;transition:border-color .3s,background .3s,color .3s}
+.fr-chips a{border-color:rgba(122,169,255,.35);color:#dbe6ff}
+.fr-chips a:hover{background:rgba(30,107,255,.18);border-color:#7aa9ff;color:#fff}
+.fr-chips a::after{content:"→";margin-left:8px;color:var(--blue-2)}
+.lang-links a{padding:6px 10px}
+/* Arabo: lettura da destra */
+html[dir=rtl]{direction:ltr}
+[dir=rtl] main,[dir=rtl] footer .fb,[dir=rtl] footer .f-top>div,[dir=rtl] #mob{direction:rtl;text-align:right}
+[dir=rtl] .eyebrow::before{background:linear-gradient(270deg,transparent,var(--blue))}
+[dir=rtl] .pg-lista li{padding-left:0;padding-right:32px}
+[dir=rtl] .pg-lista li::before{left:auto;right:0}
+[dir=rtl] .btn svg,[dir=rtl] .pg-altri a::after,[dir=rtl] .fr-chips a::after{transform:scaleX(-1)}
+[dir=rtl] .fr-chips a::after{margin-left:0;margin-right:8px}
+[dir=rtl] .fr-hero-vis{right:auto;left:max(22px,calc((100vw - 1240px)/2))}
+[dir=rtl] .pg-passi li{text-align:right}
+[dir=rtl] .faq summary{text-align:right}
+[dir=rtl] .bar,[dir=rtl] .wordmark,[dir=rtl] .lang-links{direction:ltr}
+.fr-ct{justify-content:center;flex-wrap:wrap;gap:12px;display:flex;margin-top:22px}
+/* ---- pagine fiere, citta', tipologie, settori e calendario (8 ottobre 2026) ---- */
+.fr-scheda{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0;background:rgba(8,12,24,.92);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:0}
+.fr-scheda>div{padding:18px 20px;box-shadow:inset -1px -1px 0 var(--line)}
+.fr-scheda dt{font:500 11.5px/1.3 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:#7aa9ff;margin-bottom:6px}
+.fr-scheda dd{margin:0;color:#e6ecf8;font-size:15.5px;line-height:1.5}
+.fr-scheda dd a{color:#9fc0ff;border-bottom:1px solid rgba(122,169,255,.35)}
+.fr-req-box{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;padding:38px;border:1px solid rgba(122,169,255,.28);border-radius:24px;background:linear-gradient(160deg,rgba(30,107,255,.12),rgba(8,12,24,.6))}
+@media (max-width:900px){.fr-req-box{grid-template-columns:1fr;padding:24px 18px;gap:24px}}
+.fr-req-txt p{color:var(--muted);margin:12px 0 18px}
+.fr-req-pt{list-style:none;padding:0;margin:0;display:grid;gap:8px;color:#cfd7e8;font-size:14.5px}
+.fr-req-pt li::before{content:"✓";color:#7aa9ff;margin-right:10px}
+.fr-req{display:grid;gap:12px}
+.fr-req-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.fr-req-2{grid-template-columns:1fr}}
+.fr-req .btn{justify-content:center}
+.fr-req-err{display:none;margin:0;font-size:13.5px;color:#ff8b98}
+.fr-req-err.on{display:block}.fr-req-err.ok{color:#8fe3b0}
+.fr-req .form-note a{color:#9fc0ff}
+.fr-dates{display:inline-flex;flex-wrap:wrap;gap:8px 14px;margin-top:18px;font:500 13px/1.4 "JetBrains Mono",monospace;color:#bcd3ff}
+.fr-dates span{padding:7px 12px;border:1px solid rgba(122,169,255,.35);border-radius:99px;background:rgba(30,107,255,.1)}
+/* calendario */
+.cal-tools{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:10px;margin:0 0 18px}
+@media (max-width:820px){.cal-tools{grid-template-columns:1fr 1fr}.cal-tools .q{grid-column:1/-1}}
+.cal-tools input,.cal-tools select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);font:inherit;font-size:14.5px}
+.cal-tools select option{background:#05070e}
+.cal-tools input:focus,.cal-tools select:focus{outline:none;border-color:var(--blue)}
+.cal-map{height:min(62vh,560px);min-height:340px;border-radius:20px;border:1px solid var(--line);overflow:hidden;background:#070b16;position:relative}
+.cal-map .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;padding:20px}
+.cal-count{font-size:13.5px;color:var(--muted);margin:12px 2px 0}
+.cal-mese{margin-top:34px}
+.cal-mese h3{font:600 15px/1.2 "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#7aa9ff;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.cal-list{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.cal-ev{display:grid;grid-template-columns:118px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);transition:border-color .25s,background .25s}
+.cal-ev:hover,.cal-ev.on{border-color:rgba(122,169,255,.55);background:rgba(30,107,255,.08)}
+.cal-ev .d{font:500 13px/1.35 "JetBrains Mono",monospace;color:#bcd3ff}
+.cal-ev .d i{display:block;font-style:normal;color:var(--muted-2);font-size:11.5px}
+.cal-ev h4{margin:0 0 3px;font-size:16px;color:#fff}
+.cal-ev h4 a{color:#fff;border-bottom:1px solid rgba(122,169,255,.35)}
+.cal-ev p{margin:0;font-size:13.5px;color:var(--muted)}
+.cal-ev .tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:99px;font-size:11px;background:rgba(122,169,255,.15);color:#bcd3ff;vertical-align:middle}
+.cal-ev .tag.tbc{background:rgba(255,200,90,.14);color:#ffd88a}
+.cal-ev .act{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.cal-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:99px;font-size:13px;border:1px solid rgba(122,169,255,.45);color:#dbe6ff;background:rgba(30,107,255,.14);cursor:pointer;white-space:nowrap}
+.cal-btn:hover{background:#1E6BFF;color:#fff;border-color:#1E6BFF}
+.cal-btn.g{background:transparent;border-color:var(--line);color:#cfd7e8}
+@media (max-width:700px){.cal-ev{grid-template-columns:1fr;gap:8px}.cal-ev .act{justify-content:flex-start}}
+.cal-empty{display:none;padding:22px;border:1px dashed var(--line);border-radius:14px;color:var(--muted);text-align:center}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#0b1222!important;color:#e6ecf8!important;border:1px solid rgba(122,169,255,.35)}
+.leaflet-popup-content{margin:14px 16px!important;font:14px/1.45 Inter,system-ui,sans-serif!important}
+.leaflet-popup-content b{color:#fff}.leaflet-popup-content .cal-btn{margin-top:10px}
+.leaflet-container a.leaflet-popup-close-button{color:#9fc0ff!important}
+.leaflet-control-attribution{background:rgba(5,7,14,.75)!important;color:#8b97b0!important}.leaflet-control-attribution a{color:#9fc0ff!important}
+.cal-pin{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#1E6BFF;color:#fff;font:600 12px/1 Inter,sans-serif;border:2px solid #cfe0ff;box-shadow:0 0 0 6px rgba(30,107,255,.25)}
+.cal-map.leaflet-container,.cal-map .leaflet-container{background:#04060c!important;font:inherit}
+.pg-lista a,.sec-head .lead a,.pg-testo a{color:#9fc0ff;border-bottom:1px solid rgba(122,169,255,.35)}.pg-lista a:hover,.sec-head .lead a:hover,.pg-testo a:hover{color:#fff}
+.cal-map .leaflet-control-attribution{font-size:11px}
+/* fr-2610 */.pg-breve{border:1px solid rgba(77,139,255,.35);background:rgba(30,107,255,.07);border-radius:18px;padding:24px 26px;margin-top:8px}.pg-breve p{margin:0 0 14px;font-size:1.06rem;line-height:1.6}.pg-breve dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 22px;margin:0}.pg-breve dt{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}.pg-breve dd{margin:3px 0 0;font-weight:600}.pg-breve dd a{color:inherit;text-decoration:underline;text-underline-offset:3px}#quartieri .price-table th[scope=row] a{color:inherit;font-weight:600}/* /fr-2610 */

@@ -1,0 +1,18 @@
+{
+  "id": "/",
+  "name": "Danova Stand — stand fieristici e allestimenti chiavi in mano",
+  "short_name": "Danova Stand",
+  "description": "Stand fieristici preallestiti, modulari e su misura, allestimenti per eventi e showroom: progetto 3D, produzione, trasporto e montaggio in Italia e in Europa.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#04060c",
+  "theme_color": "#04060c",
+  "lang": "it",
+  "dir": "ltr",
+  "categories": ["business"],
+  "icons": [
+    { "src": "/assets/img/logo.png", "sizes": "160x160", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/logo.png", "sizes": "160x160", "type": "image/png", "purpose": "maskable" }
+  ]
+}
