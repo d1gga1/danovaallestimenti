@@ -26,7 +26,8 @@ jobs:
         run: |
           mkdir -p _site
           rsync -a --exclude='.git' --exclude='.github' --exclude='strumenti' \
-            --exclude='.DS_Store' --exclude='*.bak*' --exclude='.gitignore' ./ _site/
+            --exclude='.DS_Store' --exclude='*.bak*' --exclude='.gitignore' \
+            --exclude='README.md' --exclude='_google_business' --exclude='.htaccess' --exclude='_headers' ./ _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

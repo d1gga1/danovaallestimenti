@@ -35,7 +35,7 @@ body{
   font-size:16px;line-height:1.65;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-  cursor:none;
+  cursor:auto;
 }
 @media (max-width:1024px){body{cursor:auto}body *{cursor:auto}a,button,summary,.tst-dots i,label{cursor:pointer!important}input,textarea,select{cursor:text!important}select{cursor:pointer!important}}
 img{max-width:100%;display:block}
@@ -403,7 +403,7 @@ h1.hero-t .ch.in{transform:none;opacity:1;filter:blur(0);transition:transform .9
 /* ---------- PORTFOLIO ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
 .filters button{padding:9px 20px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.03);
-  color:var(--muted);font-size:13.5px;cursor:none;transition:all .4s var(--ease)}
+  color:var(--muted);font-size:13.5px;cursor:pointer;transition:all .4s var(--ease)}
 .filters button:hover{color:#fff;border-color:var(--line-strong)}
 .filters button.on{background:linear-gradient(120deg,var(--blue),#ffcd4d);color:#fff;border-color:transparent;
   box-shadow:0 8px 26px -12px rgba(255,201,60,.95)}
@@ -464,13 +464,13 @@ h1.hero-t .ch.in{transform:none;opacity:1;filter:blur(0);transition:transform .9
 .tst .who b{display:block;font-size:14.5px}
 .tst .who small{color:var(--muted-2);font-size:12.5px}
 .tst-dots{display:flex;gap:9px;margin-top:34px}
-.tst-dots i{width:26px;height:3px;border-radius:99px;background:var(--line);cursor:none;transition:background .4s,width .4s}
+.tst-dots i{width:26px;height:3px;border-radius:99px;background:var(--line);cursor:pointer;transition:background .4s,width .4s}
 .tst-dots i.on{background:var(--blue);width:44px;box-shadow:0 0 12px var(--blue)}
 
 /* ---------- FAQ ---------- */
 .faq{border-top:1px solid var(--line)}
 .faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:none;padding:26px 4px;display:flex;justify-content:space-between;gap:24px;align-items:center;
+.faq summary{list-style:none;cursor:pointer;padding:26px 4px;display:flex;justify-content:space-between;gap:24px;align-items:center;
   font-family:'Sora',sans-serif;font-weight:600;font-size:clamp(1rem,2vw,1.22rem);transition:color .35s}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary:hover{color:var(--blue-2)}
@@ -553,7 +553,7 @@ footer .fb p{color:var(--muted);font-size:14px;max-width:36ch}
 .f-legal{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
 .f-legal i{font-style:normal;opacity:.45}
 .f-legal button{background:none;border:0;padding:0;color:var(--muted-2);font-size:12.5px;line-height:1.4;
-  position:relative;transition:color .35s var(--ease);cursor:none}
+  position:relative;transition:color .35s var(--ease);cursor:pointer}
 .f-legal button::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:1px;
   background:linear-gradient(90deg,var(--blue),var(--blue-2));transition:right .4s var(--ease)}
 .f-legal button:hover{color:var(--ice)}
@@ -575,11 +575,11 @@ footer .fb p{color:var(--muted);font-size:14px;max-width:36ch}
 .lgl-head .mono{color:var(--blue-2);display:block;margin-bottom:11px}
 .lgl-head h3{font-size:clamp(1.3rem,3vw,1.85rem)}
 .lgl-x{width:40px;height:40px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--panel);
-  border:1px solid var(--line);color:var(--muted);cursor:none;transition:all .4s var(--ease)}
+  border:1px solid var(--line);color:var(--muted);cursor:pointer;transition:all .4s var(--ease)}
 .lgl-x:hover{color:#fff;border-color:var(--line-strong);background:rgba(255,201,60,.18);transform:rotate(90deg)}
 .lgl-tabs{display:flex;gap:8px;flex-wrap:wrap;padding:0 clamp(20px,4vw,38px) 16px;border-bottom:1px solid var(--line)}
 .lgl-tabs button{padding:9px 17px;border-radius:999px;border:1px solid var(--line);background:var(--panel);
-  color:var(--muted);font-size:12.5px;transition:all .35s var(--ease);cursor:none}
+  color:var(--muted);font-size:12.5px;transition:all .35s var(--ease);cursor:pointer}
 .lgl-tabs button:hover{color:#fff;border-color:var(--line-strong)}
 .lgl-tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 6px 24px rgba(255,201,60,.35)}
 .lgl-body{overflow-y:auto;overscroll-behavior:contain;padding:26px clamp(20px,4vw,38px) 32px}
@@ -600,7 +600,7 @@ footer .fb p{color:var(--muted);font-size:14px;max-width:36ch}
   padding:15px clamp(20px,4vw,38px);border-top:1px solid var(--line);background:rgba(255,255,255,.022)}
 .lgl-foot small{color:var(--muted-2);font-size:12px}
 .lgl-done{padding:11px 24px;border-radius:999px;border:1px solid var(--blue);background:var(--blue);color:#fff;
-  font-size:13px;transition:all .35s var(--ease);cursor:none}
+  font-size:13px;transition:all .35s var(--ease);cursor:pointer}
 .lgl-done:hover{background:var(--blue-3);border-color:var(--blue-3);transform:translateY(-2px)}
 @media (max-width:1024px){.f-legal button,.lgl-x,.lgl-tabs button,.lgl-done{cursor:pointer!important}}
 @media (max-width:560px){.lgl-panel{max-height:92vh}.lgl-foot{justify-content:center}}
@@ -618,7 +618,7 @@ html.no-js body{cursor:auto}
 
 /* ---------- TOP ---------- */
 #top{position:fixed;right:24px;bottom:24px;z-index:9100;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;
-  border:1px solid var(--line-strong);background:rgba(12,10,4,.8);backdrop-filter:blur(10px);color:#fff;cursor:none;
+  border:1px solid var(--line-strong);background:rgba(12,10,4,.8);backdrop-filter:blur(10px);color:#fff;cursor:pointer;
   opacity:0;transform:translateY(20px) scale(.8);transition:all .5s var(--ease)}
 #top.on{opacity:1;transform:none}
 #top:hover{background:var(--blue);box-shadow:0 0 30px rgba(255,201,60,.8)}
@@ -639,7 +639,7 @@ html.no-js body{cursor:auto}
    ========================================================= */
 .lang{position:relative;z-index:60}
 .lang-btn{position:relative;display:flex;align-items:center;gap:8px;padding:9px 13px 9px 11px;border-radius:99px;
-  border:1px solid var(--line);background:rgba(255,255,255,.035);backdrop-filter:blur(10px);cursor:none;
+  border:1px solid var(--line);background:rgba(255,255,255,.035);backdrop-filter:blur(10px);cursor:pointer;
   overflow:hidden;isolation:isolate;transition:border-color .45s,background .45s,transform .45s var(--ease),box-shadow .45s}
 .lang-btn::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .45s;
   background:linear-gradient(120deg,rgba(255,201,60,.35),rgba(255,201,60,0) 60%)}
@@ -674,7 +674,7 @@ html.no-js body{cursor:auto}
   animation:lmspin 4.5s linear infinite;opacity:.5;mix-blend-mode:screen}
 @keyframes lmspin{to{transform:rotate(360deg)}}
 .lang-menu button{position:relative;z-index:2;display:flex;align-items:center;gap:12px;width:100%;padding:11px 13px;
-  border:0;background:transparent;border-radius:12px;cursor:none;text-align:left;
+  border:0;background:transparent;border-radius:12px;cursor:pointer;text-align:left;
   opacity:0;transform:translateX(14px);
   transition:background .35s,opacity .5s var(--ease),transform .5s var(--ease)}
 .lang.on .lang-menu button{opacity:1;transform:none}
@@ -959,3 +959,8 @@ body:has(.fr-hero-vis) .pg-crumbs{text-align:left}
 }
 .dt-bar-call,.dt-bar-call *,.dt-urg-p button[aria-pressed=true]{color:#0b0b0b!important}
 /* === FINE TEMA GIALLO === */
+
+/* cursore personalizzato: visibile solo con un mouse vero e dopo il primo movimento
+   (pagina.js aggiunge html.cur-on). Senza JS, su touch o su portatili touch resta il cursore normale. */
+.cur,.cur-r{display:none}
+@media (min-width:1025px){html.cur-on .cur,html.cur-on .cur-r{display:block}html.cur-on,html.cur-on *{cursor:none!important}}

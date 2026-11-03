@@ -118,3 +118,4 @@ html[dir=rtl]{direction:ltr}
 @media (min-width:1181px){.pg-hero:has(.fr-hero-foto) h1{max-width:14ch}}
 .fr-hero-foto img{display:block;width:100%;height:auto!important;max-height:none;aspect-ratio:4/3;object-fit:cover;border-radius:18px;
   border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -20px rgba(0,0,0,.85),0 0 0 6px rgba(255,255,255,.02)}
+.fr-hero-foto picture{display:block}

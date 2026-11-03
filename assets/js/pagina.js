@@ -13,10 +13,13 @@ document.documentElement.classList.remove('no-js');
 
 /* ---------- 1. cursore + magnetico ---------- */
 const cur=$('.cur'), ring=$('.cur-r');
-const DESKTOP = !('ontouchstart' in window) && innerWidth>1024;
+/* mouse vero (anche su portatili con schermo touch); prima si guardava solo 'ontouchstart' e sui portatili touch il cursore spariva */
+const DESKTOP = window.matchMedia ? matchMedia('(hover:hover) and (pointer:fine)').matches && innerWidth>1024 : !('ontouchstart' in window) && innerWidth>1024;
 if(DESKTOP && cur && ring){
   let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+  let on=false;
   addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;
+    if(!on){on=true;rx=mx;ry=my;document.documentElement.classList.add('cur-on');}
     cur.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;});
   (function loop(){rx=lerp(rx,mx,.16);ry=lerp(ry,my,.16);
     ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(loop);})();

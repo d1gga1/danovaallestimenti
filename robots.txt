@@ -1,4 +1,37 @@
+# Danova Stand — danovastand.com
+# Tutto il sito e' pubblico: motori di ricerca e assistenti AI possono leggerlo e citarlo.
+
 User-agent: *
+Allow: /
+
+# Motori di ricerca
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+User-agent: YandexBot
+Allow: /
+
+# OpenAI (ChatGPT search, link aperti dagli utenti, addestramento)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude: ricerca web, link aperti dagli utenti, addestramento)
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+Allow: /
+
+# Altri assistenti AI
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://danovastand.com/sitemap.xml

@@ -47,22 +47,14 @@
   Cache-Control: public, max-age=86400
   Content-Type: text/plain; charset=utf-8
 
-/feed.xml
-  Cache-Control: public, max-age=3600
-  Content-Type: application/rss+xml; charset=utf-8
-
-/llms-full.txt
-  Cache-Control: public, max-age=86400
-  Content-Type: text/plain; charset=utf-8
-
 # ============================================================
 # ATTENZIONE: su GitHub Pages questo file viene IGNORATO.
-# Oggi il sito e' pubblicato su GitHub Pages (vedi pubblica.sh), quindi
+# Oggi il sito e' pubblicato su GitHub Pages (vedi .github/workflows/pubblica.yml), quindi
 # nessuna delle righe qui sopra e' attiva: GitHub serve tutto con
 # Cache-Control: max-age=600, senza header di sicurezza.
 # Per attivarle: mettere il dominio dietro Cloudflare (piano gratuito) e
 # replicare queste regole nelle Transform Rules, oppure spostare la
 # pubblicazione su Cloudflare Pages o Netlify, che leggono questo file.
 # Verifica rapida dello stato attuale, da terminale:
-#     curl -sI https://danova-tech.com/assets/css/site.css | grep -i cache
+#     curl -sI https://danovastand.com/assets/css/site.css | grep -i cache
 # ============================================================
