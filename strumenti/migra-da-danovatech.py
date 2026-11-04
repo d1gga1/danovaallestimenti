@@ -275,10 +275,34 @@ def fix_org(n):
 DT_TXT = ''
 
 
+EVENT_IMG = 'https://danovastand.com/assets/img/og-cover.jpg'
+
+
+def fix_event(n):
+    # Google Search Console (dati strutturati Eventi): servono 'image', 'performer' e 'offers'
+    if not n.get('image'):
+        n['image'] = [EVENT_IMG]
+    if not n.get('performer') and isinstance(n.get('organizer'), dict):
+        n['performer'] = dict(n['organizer'])
+    if not n.get('offers'):
+        off = {'@type': 'Offer', 'availability': 'https://schema.org/InStock'}
+        u = n.get('url') or (n.get('organizer') or {}).get('url')
+        if u:
+            off['url'] = u
+        n['offers'] = off
+
+
+def is_event(o):
+    t = o.get('@type')
+    return any(isinstance(x, str) and x.endswith('Event') for x in (t if isinstance(t, list) else [t]))
+
+
 def walk(o, is_home):
     if isinstance(o, dict):
         if str(o.get('@id', '')).endswith('/#organization') and 'name' in o:
             fix_org(o)
+        if is_event(o):
+            fix_event(o)
         for k, v in list(o.items()):
             o[k] = walk(v, is_home)
         return o
