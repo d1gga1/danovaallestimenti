@@ -279,17 +279,17 @@ EVENT_IMG = 'https://danovastand.com/assets/img/og-cover.jpg'
 
 
 def fix_event(n):
-    # Google Search Console (dati strutturati Eventi): servono 'image', 'performer' e 'offers'
+    # Google Search Console (dati strutturati Eventi): campi consigliati 'image' e 'performer'.
     if not n.get('image'):
         n['image'] = [EVENT_IMG]
     if not n.get('performer') and isinstance(n.get('organizer'), dict):
         n['performer'] = dict(n['organizer'])
-    if not n.get('offers'):
-        off = {'@type': 'Offer', 'availability': 'https://schema.org/InStock'}
-        u = n.get('url') or (n.get('organizer') or {}).get('url')
-        if u:
-            off['url'] = u
-        n['offers'] = off
+    # Niente 'offers': un Offer senza price/priceCurrency/validFrom genera 3 avvisi in
+    # Search Console (5 novembre 2026) e non conosciamo i prezzi reali dei biglietti delle
+    # fiere. Meglio non dichiararli che inventarli (stessa scelta di event_extra.py).
+    o = n.get('offers')
+    if isinstance(o, dict) and 'price' not in o:
+        del n['offers']
 
 
 def is_event(o):
