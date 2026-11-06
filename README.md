@@ -35,3 +35,11 @@ vanno rifatte, oppure fatte direttamente nello script.
 `.github/workflows/pubblica.yml` pubblica su GitHub Pages a ogni push su `main`.
 Una volta sola: GitHub → Settings → Pages → Source: **GitHub Actions**, poi
 Custom domain: `danovastand.com` (il file `CNAME` è già presente).
+
+## Pagine aggiunte a mano (6/11/2026)
+Non arrivano da Danova Tech, lo script di migrazione non le tocca:
+`allestimento-negozi/`, `allestimenti-eventi/`, `allestimento-mostre/`, `stand-pubblicitari/`.
+Si rigenerano con `python3 strumenti/genera-pagine-servizi.py` (testi dentro lo script).
+Ricerca parole chiave da cui nascono: `strumenti/ricerca-parole-chiave-2026-11.md`.
+Attenzione: rilanciando `migra-da-danovatech.py` vanno rifatti i link nel footer e in home
+verso queste pagine, il titolo della home e la sezione "Domande frequenti" di `llms.txt`.

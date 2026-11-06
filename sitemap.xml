@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://danovastand.com/allestimenti-eventi-showroom-negozi/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/allestimento-showroom-evento.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/allestimento-showroom-evento.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimenti-eventi-showroom-negozi/"/>
@@ -1062,7 +1062,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/espositori-desk-totem-per-fiere/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/espositori-desk-totem-fiera.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/espositori-desk-totem-fiera.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/espositori-desk-totem-per-fiere/"/>
@@ -1070,7 +1070,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/espositori-pubblicitari/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/allestimento-showroom-evento.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/allestimento-showroom-evento.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/espositori-pubblicitari/"/>
@@ -1169,7 +1169,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/idee-stand-fieristici/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-innovativo-led-interattivo.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-innovativo-led-interattivo.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/idee-stand-fieristici/"/>
@@ -1581,7 +1581,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-medio-32-mq.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/"/>
@@ -1977,7 +1977,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/totem-pubblicitari/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/espositori-desk-totem-fiera.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/espositori-desk-totem-fiera.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/totem-pubblicitari/"/>
@@ -3306,7 +3306,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/en/contact/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/og-cover.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/contatti/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/contact/"/>
@@ -3446,5 +3446,37 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/contact/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://danovastand.com/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/contatti/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/allestimento-negozi/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-moda-calzature-boutique.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-moda-calzature-boutique.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimento-negozi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/allestimento-negozi/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/allestimenti-eventi/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-roma-congresso-sponsor.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-roma-congresso-sponsor.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimenti-eventi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/allestimenti-eventi/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/allestimento-mostre/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-venezia-evento-storico.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-venezia-evento-storico.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimento-mostre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/allestimento-mostre/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/stand-pubblicitari/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-modulare-alluminio-tessuto.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-modulare-alluminio-tessuto.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-pubblicitari/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-pubblicitari/"/>
   </url>
 </urlset>
