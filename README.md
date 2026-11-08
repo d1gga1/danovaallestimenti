@@ -43,3 +43,13 @@ Si rigenerano con `python3 strumenti/genera-pagine-servizi.py` (testi dentro lo 
 Ricerca parole chiave da cui nascono: `strumenti/ricerca-parole-chiave-2026-11.md`.
 Attenzione: rilanciando `migra-da-danovatech.py` vanno rifatti i link nel footer e in home
 verso queste pagine, il titolo della home e la sezione "Domande frequenti" di `llms.txt`.
+
+## Ottimizzazioni SEO / GEO (8/11/2026)
+- `strumenti/ottimizza-seo.py`: profili social nello schema Organization, alt delle immagini
+  hero, title/description troppo lunghi, link "Chi siamo" nel footer, testo WhatsApp col marchio
+  giusto. **Rilancialo dopo ogni `migra-da-danovatech.py`** (è idempotente).
+- `strumenti/genera-chi-siamo.py`: rigenera `/chi-siamo/` (AboutPage + FAQ) dal modello di `/contatti/`.
+- `strumenti/audit-seo.py`: controllo rapido di tutte le pagine (title, description, H1, alt,
+  canonical, hreflang, JSON-LD).
+- Il workflow di pubblicazione ora avvisa IndexNow (Bing, ChatGPT search, Copilot) delle sole
+  pagine cambiate a ogni push.

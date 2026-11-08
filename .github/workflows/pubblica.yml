@@ -22,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Prepara i file pubblici
         run: |
           mkdir -p _site
@@ -34,3 +36,17 @@ jobs:
           path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
+      # Avvisa subito Bing (ChatGPT search, Copilot), Yandex, Seznam e Naver delle pagine
+      # cambiate in questo push, tramite IndexNow. Se fallisce il sito resta pubblicato.
+      - name: IndexNow (solo pagine cambiate)
+        continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          sleep 60
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            python3 strumenti/indexnow.py
+            exit 0
+          fi
+          URLS=$(git diff --name-only "$BEFORE" HEAD -- '*.html' | grep -v -e '^strumenti/' -e '^_google_business/' -e '^404.html$' | sed -e 's#index\.html$##' -e 's#^#/#')
+          if [ -n "$URLS" ]; then python3 strumenti/indexnow.py $URLS; else echo "Nessuna pagina cambiata"; fi
