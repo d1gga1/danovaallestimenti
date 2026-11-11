@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>So&amp;Co · Banco reception | Danova Stand</title>
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Progetto stand So&amp;Co: render 3D, prospetti quotati e distinta materiali. Documento riservato.">
+<meta name="theme-color" content="#0c0a04">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Danova Stand">
+<meta property="og:title" content="So&amp;Co · Banco reception — progetto Danova Stand">
+<meta property="og:description" content="Render 3D navigabile, prospetti quotati e distinta materiali. IT · EN · עברית">
+<meta property="og:url" content="https://danovastand.com/render/soco-banco-reception-7k2m/">
+<meta property="og:image" content="https://danovastand.com/render/soco-banco-reception-7k2m/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/sora-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin.woff2" crossorigin>
+<style>
+@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url(/assets/fonts/sora-latin.woff2) format('woff2-variations');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Sora';font-style:normal;font-weight:100 800;font-display:swap;src:url(/assets/fonts/sora-latin-ext.woff2) format('woff2-variations');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2-variations');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2-variations');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/jetbrains-mono-400.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/jetbrains-mono-500.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:400;font-display:swap;src:url(/render/_lib/fonts/outfit-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Outfit';font-style:normal;font-weight:500;font-display:swap;src:url(/render/_lib/fonts/outfit-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:400;font-display:swap;src:url(/render/_lib/fonts/heebo-hebrew-400-normal.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:500;font-display:swap;src:url(/render/_lib/fonts/heebo-hebrew-500-normal.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:600;font-display:swap;src:url(/render/_lib/fonts/heebo-hebrew-600-normal.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:700;font-display:swap;src:url(/render/_lib/fonts/heebo-hebrew-700-normal.woff2) format('woff2');unicode-range:U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+
+/* Layout: scheda progetto Danova — testata con logo, hero con dati chiave, render, tavole, distinta, piè di pagina. Tema scuro di marca. */
+:root{
+  --bg:#070707; --surface:#101010; --surface2:#161616; --ink:#f2f1ee; --muted:#9b9890; --rule:#242322;
+  --gold:#FFC93C; --gold2:#ffdd85; --navy:#2a4290; --dim:#f0c04e; --hid:#5c5a55; --soft:#1a1918;
+  --f-display:"Sora", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Inter", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --grad:linear-gradient(100deg,#f5b929 0%,#FFC93C 50%,#ffe08f 100%);
+  color-scheme:dark;
+}
+:root[lang="he"]{--f-body:"Heebo","Inter",Arial,sans-serif;--f-display:"Heebo","Inter",Arial,sans-serif}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 420px at 8% -6%,rgba(255,201,60,.16),transparent 70%),radial-gradient(700px 380px at 100% 0%,rgba(255,201,60,.06),transparent 70%);background-repeat:no-repeat}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:#0b0b0b}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1200px;margin:0 auto}
+
+/* Testata */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand img{height:38px;width:auto;display:block}
+.wordmark{display:flex;flex-direction:column;line-height:1;direction:ltr}
+.wordmark b{font-family:'Sora',sans-serif;font-weight:800;font-size:19px;letter-spacing:.11em;color:#fff}
+.wordmark i{font-family:'Sora',sans-serif;font-style:normal;font-weight:500;font-size:10px;letter-spacing:.44em;color:#ffcd4d;margin-top:4px}
+.cart .brand img{height:30px}.cart .wordmark b{font-size:15px}.cart .wordmark i{font-size:8.5px}
+footer a{color:inherit;text-decoration:none}footer a:hover{color:var(--gold)}
+.top-meta{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px}
+.top-meta b{color:var(--ink);font-weight:500}
+.pill-gold{background:var(--grad);color:#1b1404;font-weight:600;font-size:14px;padding:9px 18px;border-radius:999px;box-shadow:0 6px 24px rgba(255,201,60,.28);white-space:nowrap}
+@media (max-width:760px){.top-meta .hide-s{display:none}.brand img{height:32px}.wordmark b{font-size:16px}.wordmark i{font-size:8.5px}}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:end;padding-block:44px 26px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,4.6vw,52px);line-height:1.04;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);max-width:56ch;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kpi{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:14px 16px}
+.kpi span{display:block;font-size:12px;color:var(--muted)}
+.kpi strong{display:block;font-family:var(--f-mono);font-weight:500;font-size:17px;font-variant-numeric:tabular-nums;margin-top:2px}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+@media (max-width:460px){.kpis{grid-template-columns:1fr 1fr}}
+
+main.wrap{display:flex;flex-direction:column;gap:26px;padding-bottom:40px}
+
+/* Viewer */
+.viewer-card{background:var(--surface);border:1px solid var(--rule);border-radius:24px;overflow:hidden}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px}
+.toolbar .sep{flex:1}
+button.v{font:500 13.5px var(--f-body);color:var(--ink);background:var(--surface2);border:1px solid #2e2c29;padding:8px 15px;border-radius:999px;cursor:pointer;transition:border-color .15s,background .15s}
+button.v:hover{border-color:#57503f}
+button.v[aria-pressed="true"]{background:var(--grad);border-color:transparent;color:#1b1404;font-weight:600}
+button.v:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#viewer{position:relative;width:100%;aspect-ratio:16/9.3;max-height:74vh;max-width:100%;overflow:hidden;background:#eef0f3}
+#viewer canvas{display:block;width:100%;height:100%;cursor:grab}
+#viewer canvas:active{cursor:grabbing}
+#overlay{position:absolute;inset:0;pointer-events:none}
+.dl{position:absolute;left:0;top:0;font:500 12px var(--f-mono);font-variant-numeric:tabular-nums;color:#f8dc94;background:rgba(14,14,14,.86);
+  padding:2px 7px;border-radius:999px;white-space:nowrap;will-change:transform}
+.vcap{position:absolute;left:14px;bottom:12px;font:600 11px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#f2f1ee;background:rgba(14,14,14,.78);padding:6px 11px;border-radius:999px}
+.hint{position:absolute;right:14px;bottom:12px;font:400 12px var(--f-body);color:#3b3a37;background:rgba(255,255,255,.7);padding:5px 10px;border-radius:999px}
+@media (max-width:560px){#viewer{aspect-ratio:4/5}.hint{display:none}}
+
+/* Sezioni */
+.sec-h{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px}
+.sec-h h2{font-weight:600;font-size:24px;letter-spacing:-.01em;margin:4px 0 0}
+.sec-h p{margin:0;color:var(--muted);font-size:13.5px}
+.sheets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sheet{background:var(--surface);border:1px solid var(--rule);border-radius:22px;display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.sheet.wide{grid-column:1/-1}
+.sheet.wide svg{max-width:820px;margin:0 auto}
+.sheet header{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:14px 18px;border-bottom:1px solid var(--rule)}
+.sheet header span:first-child{font-weight:600;font-size:14px}
+.sheet header span:first-child i{font-style:normal;color:var(--gold);margin-inline-end:8px;font-family:var(--f-mono)}
+.sheet header span:last-child{color:var(--muted);font-size:12.5px}
+.sheet .draw{overflow-x:auto;padding:14px}
+.sheet svg{display:block;width:100%;height:auto;min-width:320px}
+@media (max-width:820px){.sheets{grid-template-columns:1fr}}
+
+/* SVG */
+.ln{fill:none;stroke:var(--ink);stroke-width:1.3;vector-effect:non-scaling-stroke}
+.thin{fill:none;stroke:var(--ink);stroke-width:.8;vector-effect:non-scaling-stroke}
+.wh{fill:#1d1c1a;stroke:var(--ink);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.nv{fill:var(--navy);stroke:var(--ink);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.gd{fill:#d8b56e}
+.blk{fill:#050505;stroke:var(--ink);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.scr{fill:#1c3170}
+.hid{fill:none;stroke:var(--hid);stroke-width:1;stroke-dasharray:4 3;vector-effect:non-scaling-stroke}
+.cpt{fill:#1a1a1a;stroke:#3a3936;stroke-width:1;vector-effect:non-scaling-stroke}
+.gnd{stroke:var(--ink);stroke-width:2;vector-effect:non-scaling-stroke}
+.dm{fill:none;stroke:var(--dim);stroke-width:.9;vector-effect:non-scaling-stroke}
+.dt{fill:var(--dim);font-family:var(--f-mono);font-size:5.4px;font-weight:500;paint-order:stroke;stroke:var(--surface);stroke-width:2.6px;stroke-linejoin:round}
+.lb{fill:var(--muted);font-family:var(--f-body);font-size:4.2px;letter-spacing:.08em}
+.logo-t{fill:#fff;font-family:"Outfit",var(--f-display);font-weight:500}
+
+/* Distinta */
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:22px}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:14px}
+th,td{text-align:start;padding:13px 18px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.c{font-family:var(--f-mono);font-weight:500;color:var(--gold)}
+td.m{direction:ltr;unicode-bidi:isolate;font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td:nth-child(4){color:#c9c6bf}
+tr:last-child td{border-bottom:0}
+.note{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:14px 18px;font-size:13.5px;color:#c9c6bf}
+.note b{color:var(--gold);font-weight:600;white-space:nowrap}
+
+/* Cartiglio + piede */
+.cart{display:grid;grid-template-columns:auto repeat(5,minmax(0,1fr));border:1px solid var(--rule);border-radius:22px;overflow:hidden;background:var(--surface)}
+.cart>div{padding:14px 18px;border-left:1px solid var(--rule);min-width:0}
+.cart>div:first-child{border-left:0;display:flex;align-items:center}
+.cart .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cart .v{font-family:var(--f-mono);font-size:14px;margin-top:2px}
+
+@media (max-width:900px){.cart{grid-template-columns:1fr 1fr}.cart>div{border-left:0;border-top:1px solid var(--rule)}.cart>div:first-child{grid-column:1/-1;border-top:0}}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px;padding-block:22px 34px;border-top:1px solid var(--rule)}
+/* Lingua */
+.lang{display:flex;align-items:center;gap:2px;padding:4px;border:1px solid #2e2c29;border-radius:999px;background:rgba(20,20,20,.7)}
+.lang svg{width:16px;height:16px;margin-inline:6px 2px;color:var(--muted);flex:none}
+.lang button{font:600 12.5px var(--f-body);letter-spacing:.04em;color:var(--muted);background:none;border:0;padding:6px 10px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--grad);color:#1b1404}
+.lang button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.ltr{direction:ltr}
+.opt{color:var(--gold);font-size:11.5px;font-weight:600;letter-spacing:.06em;margin-inline-start:6px;white-space:nowrap}
+@media (prefers-reduced-motion:reduce){button.v{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top band">
+  <div class="wrap">
+    <a href="/" class="brand" aria-label="Danova Stand"><img width="160" height="160" src="/assets/img/logo.png" alt="Logo Danova Stand"><span class="wordmark"><b>DANOVA</b><i>STAND</i></span></a>
+    <div class="top-meta">
+      <span class="hide-s"><span data-i18n="client">Cliente</span> <b>So&amp;Co</b></span>
+      <span class="hide-s"><span data-i18n="sheet">Tavola</span> <b>01</b></span>
+      <div class="lang" role="group" aria-label="Lingua / Language / שפה">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18"/></svg>
+        <button id="lang-it" data-lang="it" lang="it">IT</button>
+        <button id="lang-en" data-lang="en" lang="en">EN</button>
+        <button id="lang-he" data-lang="he" lang="he">עב</button>
+      </div>
+      <span class="pill-gold hide-s" data-i18n="pill">Progetto stand · Rev. B</span>
+    </div>
+  </div>
+</header>
+
+<section class="band">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow" data-i18n="eyebrow">Progetto esecutivo · Desk espositivo</div>
+      <h1 data-i18n-html="h1">Banco reception <em>So&amp;Co</em></h1>
+      <p class="lead" data-i18n="lead"></p>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span data-i18n="k_desk">Banco</span><strong class="ltr">100×50×100</strong></div>
+      <div class="kpi"><span data-i18n="k_foot">Ingombro</span><strong class="ltr">240×160</strong></div>
+      <div class="kpi"><span data-i18n="k_h">Altezza max</span><strong class="ltr">196 cm</strong></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap band">
+  <section class="viewer-card" aria-label="3D">
+    <div class="toolbar" role="group">
+      <button class="v" id="b-p34" data-v="p34" data-i18n="v_p34">Prospettiva 3/4</button>
+      <button class="v" id="b-p34l" data-v="p34l" data-i18n="v_p34l">3/4 sinistra</button>
+      <button class="v" id="b-back34" data-v="back34" data-i18n="v_back">Lato staff · vano gambe</button>
+      <button class="v" id="b-front" data-v="front" data-i18n="b_front">Frontale</button>
+      <button class="v" id="b-side" data-v="side" data-i18n="b_side">Laterale</button>
+      <button class="v" id="b-top" data-v="top" data-i18n="b_top">Pianta</button>
+      <span class="sep"></span>
+      <button class="v" id="b-dims" aria-pressed="true" data-i18n="b_dims">Quote</button>
+    </div>
+    <div id="viewer" dir="ltr">
+      <div id="overlay"></div>
+      <div class="vcap" id="vcap"></div>
+      <div class="hint" id="hint"></div>
+    </div>
+  </section>
+
+  <div class="sec-h"><div><div class="eyebrow" data-i18n="eb_draw">Disegni tecnici</div><h2 data-i18n="h_draw">Prospetti e pianta quotati</h2></div><p data-i18n="p_draw"></p></div>
+  <section class="sheets">
+    <article class="sheet wide"><header><span><i>A</i><span data-i18n="v_front">Prospetto frontale</span></span><span data-i18n="s_front2"></span></header><div class="draw" dir="ltr" id="svg-front"></div></article>
+    <article class="sheet"><header><span><i>B</i><span data-i18n="v_side">Prospetto laterale dx</span></span><span data-i18n="s_side2"></span></header><div class="draw" dir="ltr" id="svg-side"></div></article>
+    <article class="sheet"><header><span><i>C</i><span data-i18n="v_top">Pianta</span></span><span data-i18n="s_top2"></span></header><div class="draw" dir="ltr" id="svg-plan"></div></article>
+  </section>
+
+  <div class="sec-h"><div><div class="eyebrow" data-i18n="eb_mat">Materiali</div><h2 data-i18n="h_mat">Distinta elementi</h2></div><p data-i18n="p_mat"></p></div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th data-i18n="th1">Rif.</th><th data-i18n="th2">Elemento</th><th data-i18n="th3">Dimensioni</th><th data-i18n="th4">Materiale / finitura</th></tr></thead>
+      <tbody id="parts"></tbody>
+    </table>
+  </div>
+  <div class="note"><b data-i18n="note_b">Nota</b><span data-i18n="note"></span></div>
+
+  <section class="cart" aria-label="Cartiglio">
+    <div><span class="brand" aria-label="Danova Stand"><img width="160" height="160" src="/assets/img/logo.png" alt="Logo Danova Stand"><span class="wordmark"><b>DANOVA</b><i>STAND</i></span></span></div>
+    <div><div class="k" data-i18n="c_client">Cliente</div><div class="v">So&amp;Co</div></div>
+    <div><div class="k" data-i18n="c_draw">Elaborato</div><div class="v" data-i18n="c_draw_v"></div></div>
+    <div><div class="k" data-i18n="c_scale">Scala</div><div class="v" data-i18n="c_scale_v"></div></div>
+    <div><div class="k" data-i18n="c_date">Data</div><div class="v ltr">11.11.2026</div></div>
+    <div><div class="k" data-i18n="c_rev">Revisione</div><div class="v">B</div></div>
+  </section>
+</main>
+
+<footer class="band">
+  <div class="wrap"><span>© 2026 <a href="/">Danova Stand</a> · Stand builder Italy</span><span data-i18n="foot"></span></div>
+</footer>
+
+<script>
+const I18N={
+it:{client:"Cliente",sheet:"Tavola",pill:"Progetto stand · Rev. B",eyebrow:"Progetto esecutivo · Desk espositivo",
+ h1:"Banco reception <em>So&amp;Co</em>",
+ lead:"Postazione compatta per fiera con banco brandizzato, monitor 43\" su colonna e due sgabelli bar per lo staff. Render navigabile, prospetti quotati e distinta materiali.",
+ k_desk:"Banco",k_foot:"Ingombro",k_h:"Altezza max",
+ v_p34:"Prospettiva 3/4",v_p34l:"3/4 sinistra",v_back:"Lato staff · vano gambe",b_front:"Frontale",b_side:"Laterale",b_top:"Pianta",b_dims:"Quote",
+ v_front:"Prospetto frontale",v_side:"Prospetto laterale dx",v_top:"Pianta",
+ hintP:"Trascina per ruotare · rotella per zoom",hintO:"Trascina per spostare · rotella per zoom",no3d:"Render 3D non disponibile",
+ eb_draw:"Disegni tecnici",h_draw:"Prospetti e pianta quotati",p_draw:"Quote in cm · tratteggio = parti nascoste",
+ s_front2:"Lato visitatori",s_side2:"Fronte a sinistra",s_top2:"Vista dall'alto",
+ eb_mat:"Materiali",h_mat:"Distinta elementi",p_mat:"Dimensioni L × P × H in cm",
+ th1:"Rif.",th2:"Elemento",th3:"Dimensioni",th4:"Materiale / finitura",
+ note_b:"Nota",note:"Quote da verificare in cantiere prima della produzione di pannelli e grafiche. Altezza sgabelli regolabile 60–80 cm. Brochure e composizione floreale nei render sono a scopo illustrativo.",
+ c_client:"Cliente",c_draw:"Elaborato",c_draw_v:"Tav. 01 · Desk",c_scale:"Scala",c_scale_v:"n.d. · quote cm",c_date:"Data",c_rev:"Revisione",
+ foot:"Documento riservato al cliente. Vietata la riproduzione.",opt:"OPZIONALE",
+ carpet:"moquette",seat:"seduta",stool:"sgabello",column:"colonna",legroom:"vano gambe",legroom_s:"vano",front:"FRONTE",axis:"asse colonna",
+ staff:"area staff",visitors:"▼ LATO VISITATORI",monitor:"monitor",spacing:"interasse sgabelli",spacing_s:"interasse",clear:"h libera",dec:",",
+ rows:[
+  ["Banco reception aperto lato staff","100 × 50 × 100","Fronte + 2 fianchi in nobilitato bianco opaco sp. 18 mm, spigoli raggiati 3 mm, traverso di irrigidimento sotto il top. Vano gambe libero 96 × 48, h 89"],
+  ["Piano top","100 × 50 × 2,5","Bianco opaco, filo fronte e fianchi; h piano finito 100 cm"],
+  ["Pannello grafico frontale","100 × 97","Dibond 3 mm stampa UV: blu navy, onda oro, logo bianco"],
+  ["Monitor 43\" 16:9","96,5 × 56 × 6","Cornice nera sottile; bordo inferiore 140, superiore 196 da terra"],
+  ["Colonna porta monitor (angolo dx)","Ø 6 · h 166","Acciaio verniciato nero satinato, attacco VESA, base 30 × 30 × 1,2; asse a 10 cm dal fianco dx e 15 cm dal retro banco"],
+  ["Sgabelli bar × 2","40 × 36 · Ø 40","Seduta sagomata in ecopelle bianca, alzata a gas 60–80 cm (disegnata a 72), girevole, base a disco Ø 40 e poggiapiedi ad anello cromati. Interasse 48 cm, entrano sotto il top"],
+  ["Moquette","240 × 160 × 0,8","Agugliata grigio antracite"],
+  ["Composizione floreale","Ø 34 · h 50","Su richiesta del cliente: vaso vetro Ø 14 × 22, ortensie bianche",1]]},
+en:{client:"Client",sheet:"Sheet",pill:"Stand project · Rev. B",eyebrow:"Construction design · Exhibition desk",
+ h1:"<em>So&amp;Co</em> reception desk",
+ lead:"Compact trade-fair station with a branded counter, a 43\" monitor on a floor stand and two bar stools for staff. Interactive render, dimensioned elevations and bill of materials.",
+ k_desk:"Counter",k_foot:"Footprint",k_h:"Max height",
+ v_p34:"3/4 perspective",v_p34l:"3/4 left",v_back:"Staff side · legroom",b_front:"Front",b_side:"Side",b_top:"Plan",b_dims:"Dimensions",
+ v_front:"Front elevation",v_side:"Right side elevation",v_top:"Plan view",
+ hintP:"Drag to rotate · scroll to zoom",hintO:"Drag to pan · scroll to zoom",no3d:"3D render unavailable",
+ eb_draw:"Technical drawings",h_draw:"Dimensioned elevations and plan",p_draw:"Dimensions in cm · dashed = hidden parts",
+ s_front2:"Visitor side",s_side2:"Front on the left",s_top2:"Top view",
+ eb_mat:"Materials",h_mat:"Bill of materials",p_mat:"Dimensions W × D × H in cm",
+ th1:"Ref.",th2:"Item",th3:"Dimensions",th4:"Material / finish",
+ note_b:"Note",note:"Dimensions to be checked on site before producing panels and graphics. Stool height adjustable 60–80 cm. The brochure and flowers in the render are for illustration only.",
+ c_client:"Client",c_draw:"Drawing",c_draw_v:"Sheet 01 · Desk",c_scale:"Scale",c_scale_v:"n/a · dims in cm",c_date:"Date",c_rev:"Revision",
+ foot:"Confidential document for the client. Reproduction prohibited.",opt:"OPTIONAL",
+ carpet:"carpet",seat:"seat",stool:"stool",column:"column",legroom:"legroom",legroom_s:"legroom",front:"FRONT",axis:"column axis",
+ staff:"staff area",visitors:"▼ VISITOR SIDE",monitor:"monitor",spacing:"stool spacing",spacing_s:"spacing",clear:"clear h",dec:".",
+ rows:[
+  ["Reception counter, open on staff side","100 × 50 × 100","Front + 2 side panels in white matt melamine, 18 mm, 3 mm rounded edges, stiffening rail under the top. Clear legroom 96 × 48, h 89"],
+  ["Worktop","100 × 50 × 2.5","White matt, flush with front and sides; finished top height 100 cm"],
+  ["Front graphic panel","100 × 97","3 mm Dibond, UV print: navy blue, gold wave, white logo"],
+  ["43\" monitor 16:9","96.5 × 56 × 6","Slim black bezel; bottom edge 140, top edge 196 from floor"],
+  ["Monitor floor stand (right corner)","Ø 6 · h 166","Satin black painted steel, VESA mount, base 30 × 30 × 1.2; axis 10 cm from the right side and 15 cm from the counter back"],
+  ["Bar stools × 2","40 × 36 · Ø 40","Shaped white faux-leather seat, gas lift 60–80 cm (drawn at 72), swivel, chrome disc base Ø 40 and ring footrest. 48 cm spacing, they slide under the top"],
+  ["Carpet","240 × 160 × 0.8","Anthracite grey needle-punch"],
+  ["Floral arrangement","Ø 34 · h 50","On client request: glass vase Ø 14 × 22, white hydrangeas",1]]},
+he:{client:"לקוח",sheet:"גיליון",pill:"פרויקט ביתן · גרסה B",eyebrow:"תכנון לביצוע · דלפק תצוגה",
+ h1:"דלפק קבלה <em>So&amp;Co</em>",
+ lead:"עמדה קומפקטית לתערוכה עם דלפק ממותג, מסך 43 אינץ' על עמוד ושני כיסאות בר לצוות. הדמיה אינטראקטיבית, חזיתות עם מידות ורשימת רכיבים.",
+ k_desk:"דלפק",k_foot:"שטח כולל",k_h:"גובה מרבי",
+ v_p34:"פרספקטיבה 3/4",v_p34l:"3/4 משמאל",v_back:"צד הצוות · חלל רגליים",b_front:"חזית",b_side:"צד",b_top:"מבט על",b_dims:"מידות",
+ v_front:"חזית קדמית",v_side:"חזית צד ימין",v_top:"תוכנית",
+ hintP:"גררו לסיבוב · גלגלת לזום",hintO:"גררו להזזה · גלגלת לזום",no3d:"הדמיית תלת־ממד אינה זמינה",
+ eb_draw:"שרטוטים טכניים",h_draw:"חזיתות ותוכנית עם מידות",p_draw:"מידות בס\"מ · קו מקווקו = חלקים מוסתרים",
+ s_front2:"צד המבקרים",s_side2:"החזית משמאל",s_top2:"מבט מלמעלה",
+ eb_mat:"חומרים",h_mat:"רשימת רכיבים",p_mat:"מידות רוחב × עומק × גובה בס\"מ",
+ th1:"מס'",th2:"רכיב",th3:"מידות",th4:"חומר / גימור",
+ note_b:"הערה",note:"יש לאמת את המידות באתר לפני ייצור הפאנלים והגרפיקה. גובה הכיסאות מתכוונן 60–80 ס\"מ. החוברת והפרחים בהדמיה הם להמחשה בלבד.",
+ c_client:"לקוח",c_draw:"שרטוט",c_draw_v:"גיליון 01 · דלפק",c_scale:"קנה מידה",c_scale_v:"ללא · מידות בס\"מ",c_date:"תאריך",c_rev:"גרסה",
+ foot:"מסמך חסוי עבור הלקוח. אין להעתיק או להפיץ.",opt:"אופציונלי",
+ carpet:"שטיח",seat:"מושב",stool:"כיסא",column:"עמוד",legroom:"חלל רגליים",legroom_s:"חלל",front:"חזית",axis:"ציר העמוד",
+ staff:"אזור הצוות",visitors:"▼ צד המבקרים",monitor:"מסך",spacing:"מרווח כיסאות",spacing_s:"מרווח",clear:"גובה פנוי",dec:".",
+ rows:[
+  ["דלפק קבלה, פתוח בצד הצוות","100 × 50 × 100","חזית ושני צדדים מלוח מלמין לבן מט 18 מ\"מ, פינות מעוגלות 3 מ\"מ, קורת חיזוק מתחת למשטח. חלל רגליים פנוי 96 × 48, גובה 89"],
+  ["משטח עליון","100 × 50 × 2.5","לבן מט, בקו אחד עם החזית והצדדים; גובה משטח גמור 100 ס\"מ"],
+  ["פאנל גרפי קדמי","100 × 97","דיבונד 3 מ\"מ בהדפסת UV: כחול נייבי, גל זהב, לוגו לבן"],
+  ["מסך 43 אינץ' ביחס 16:9","96.5 × 56 × 6","מסגרת שחורה דקה; קצה תחתון 140, קצה עליון 196 מהרצפה"],
+  ["עמוד למסך (פינה ימנית)","Ø 6 · h 166","פלדה צבועה שחור סאטן, תושבת VESA, בסיס 30 × 30 × 1.2; הציר במרחק 10 ס\"מ מהצד הימני ו־15 ס\"מ מגב הדלפק"],
+  ["כיסאות בר × 2","40 × 36 · Ø 40","מושב מעוצב מדמוי עור לבן, בוכנת גז 60–80 ס\"מ (משורטט בגובה 72), מסתובב, בסיס דיסק כרום Ø 40 ומשענת רגליים טבעתית. מרווח 48 ס\"מ, נכנסים מתחת למשטח"],
+  ["שטיח","240 × 160 × 0.8","שטיח לבד בגוון אפור אנתרציט"],
+  ["סידור פרחים","Ø 34 · h 50","לפי בקשת הלקוח: אגרטל זכוכית Ø 14 × 22, הורטנזיות לבנות",1]]}
+};
+let LANG='it';
+const t=k=>(I18N[LANG][k]!==undefined?I18N[LANG][k]:I18N.it[k]);
+const num=s=>String(s).replace('.',t('dec'));
+const relabelHooks=[];
+function applyLang(l){
+  if(!I18N[l])l='it';LANG=l;
+  const r=document.documentElement;r.lang=l;r.dir=l==='he'?'rtl':'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=t(e.dataset.i18n);});
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=t(e.dataset.i18nHtml);});
+  document.getElementById('parts').innerHTML=t('rows').map((r,i)=>`<tr><td class="c">0${i+1}</td><td>${r[0]}${r[3]?` <span class="opt">${t('opt')}</span>`:''}</td><td class="m">${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+  document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false'));
+  relabelHooks.forEach(f=>f());
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{location.hash=b.dataset.lang;applyLang(b.dataset.lang);}));
+window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(I18N[h]&&h!==LANG)applyLang(h);});
+</script>
+<script src="/render/_lib/three.min.js"></script>
+<script src="/render/_lib/OrbitControls.js"></script>
+<script src="/render/_lib/Reflector.js"></script>
+<script>
+/* ---------- SVG tavole ---------- */
+function drawSVG(){
+  const f=n=>+n.toFixed(2);
+  const R=(x1,y1,x2,y2,c,extra='')=>`<rect x="${f(Math.min(x1,x2))}" y="${f(Math.min(y1,y2))}" width="${f(Math.abs(x2-x1))}" height="${f(Math.abs(y2-y1))}" class="${c}" ${extra}/>`;
+  const L=(x1,y1,x2,y2,c)=>`<line x1="${f(x1)}" y1="${f(y1)}" x2="${f(x2)}" y2="${f(y2)}" class="${c}"/>`;
+  const Ci=(x,y,r,c)=>`<circle cx="${x}" cy="${y}" r="${r}" class="${c}"/>`;
+  const T=(x,y,s,c,a='middle',rot)=>`<text x="${f(x)}" y="${f(y)}" class="${c}" text-anchor="${a}"${rot?` transform="rotate(${rot} ${f(x)} ${f(y)})"`:''}>${s}</text>`;
+  function D(x1,y1,x2,y2,o,at,label){
+    let s='';const tick=(x,y)=>L(x-1.5,y+1.5,x+1.5,y-1.5,'dm');
+    if(o==='h'){const s1=Math.sign(at-y1)||1,s2=Math.sign(at-y2)||1;
+      s+=L(x1,y1+s1*1.5,x1,at+s1*2.5,'dm')+L(x2,y2+s2*1.5,x2,at+s2*2.5,'dm')+L(x1,at,x2,at,'dm')+tick(x1,at)+tick(x2,at)+T((x1+x2)/2,at-1.6,label,'dt');}
+    else{const s1=Math.sign(at-x1)||1,s2=Math.sign(at-x2)||1;
+      s+=L(x1+s1*1.5,y1,at+s1*2.5,y1,'dm')+L(x2+s2*1.5,y2,at+s2*2.5,y2,'dm')+L(at,y1,at,y2,'dm')+tick(at,y1)+tick(at,y2)+T(at-1.6,(y1+y2)/2,label,'dt','middle',-90);}
+    return s;
+  }
+  const svg=(vb,body,label)=>`<svg viewBox="${vb}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${label}">${body}</svg>`;
+  // sgabello in prospetto (cx asse, cls)
+  const stoolFront=(cx,c)=>`<path d="M${cx-20} -71.5 Q${cx} -69 ${cx+20} -71.5 L${cx+20} -68.5 Q${cx} -66 ${cx-20} -68.5 Z" class="${c}"/>`
+    +R(cx-2.8,-67,cx+2.8,-46,c)+R(cx-2.3,-46,cx+2.3,-8,c)+`<path d="M${cx-20} 0 L${cx-19} -0.6 Q${cx-8} -2 ${cx-3} -2.6 L${cx+3} -2.6 Q${cx+8} -2 ${cx+19} -0.6 L${cx+20} 0 Z" class="${c}"/>`
+    +R(cx-15.9,-30.9,cx+15.9,-29.1,c);
+  const stoolSide=(cx,c)=>`<path d="M${cx-18} -69 Q${cx-6} -67.5 ${cx+2} -68 Q${cx+12} -69 ${cx+18} -74 L${cx+18} -71 Q${cx+12} -66 ${cx+2} -65 Q${cx-6} -64.5 ${cx-18} -66 Z" class="${c}"/>`
+    +R(cx-2.8,-65,cx+2.8,-46,c)+R(cx-2.3,-46,cx+2.3,-8,c)+`<path d="M${cx-20} 0 L${cx-19} -0.6 Q${cx-8} -2 ${cx-3} -2.6 L${cx+3} -2.6 Q${cx+8} -2 ${cx+19} -0.6 L${cx+20} 0 Z" class="${c}"/>`
+    +R(cx-21,-30.9,cx+9,-29.1,c);
+
+  // A · Frontale (X=x, Y=-y)
+  let a='';
+  a+=L(-150,0,180,0,'gnd')+R(-105,-0.8,135,0,'cpt');
+  a+=R(45,-1.2,75,0,'blk')+R(57,-140,63,-1.2,'blk');
+  a+=R(11.75,-196,108.25,-140,'blk')+R(12.4,-195.4,107.6,-141.6,'scr');
+  a+=`<text x="60" y="-166" class="logo-t" font-size="7" text-anchor="middle">So&amp;Co</text>`;
+  a+=R(-50,-100,50,-97.5,'wh')+R(-50,-97.5,50,0,'nv');
+  a+=`<path d="M-22.5 0 C1.7 -12.5 16.7 -31.2 50 -38.8 L50 0 Z" class="gd"/>`;
+  a+=`<text x="0" y="-52" class="logo-t" font-size="16" text-anchor="middle">So&amp;Co</text>`;
+  a+=`<text x="0" y="-44.5" class="logo-t" font-size="3.7" letter-spacing="1" text-anchor="middle">TRUSTED PARTNER</text>`;
+  a+=L(-48.2,0,-48.2,-97.5,'hid')+L(48.2,0,48.2,-97.5,'hid')+L(-48.2,-89.5,48.2,-89.5,'hid');
+  a+=stoolFront(-24,'hid')+stoolFront(24,'hid');
+  a+=R(-32.5,-100.5,-11.5,-100,'nv');
+  a+=R(21,-122,35,-100,'thin');
+  [[28,-136,9],[19,-134,6.5],[37,-134,6.5],[23,-145,6.5],[33,-146,6.5],[28,-125,5.5]].forEach(c=>a+=Ci(...c,'wh'));
+  a+=D(-50,0,50,0,'h',12,'100');
+  a+=D(-105,0,135,0,'h',26,'240 '+t('carpet'));
+  a+=D(-50,0,-50,-100,'v',-64,'100');
+  a+=D(-44,0,-44,-72,'v',-84,'72 '+t('seat'));
+  a+=D(108.25,-140,108.25,-196,'v',122,'56');
+  a+=D(75,0,108.25,-140,'v',138,'140');
+  a+=D(75,0,108.25,-196,'v',154,'196');
+  a+=D(11.75,-196,108.25,-196,'h',-208,num('96.5')+' · '+t('monitor')+' 43"');
+  a+=D(50,-60,60,-60,'h',-60,'10');
+  a+=T(-24,-78,t('stool')+' 1','lb')+T(24,-78,t('stool')+' 2','lb')+T(66,-120,t('column')+' Ø6','lb','start');
+  document.getElementById('svg-front').innerHTML=svg('-125 -222 300 256',a,'Prospetto frontale quotato');
+
+  // B · Laterale dx (X=-z, Y=-y)
+  let b='';
+  b+=`<defs><clipPath id="clipS"><rect x="25" y="-300" width="200" height="400"/></clipPath></defs>`;
+  b+=L(-62,0,108,0,'gnd')+R(-55,-0.8,105,0,'cpt');
+  b+=stoolSide(35,'hid')+`<g clip-path="url(#clipS)">${stoolSide(35,'wh')}</g>`;
+  b+=R(-25,-97.5,25,0,'wh')+R(-25,-100,25,-97.5,'wh')+R(-25.8,-97.5,-25,0,'nv');
+  b+=L(-23.2,0,-23.2,-97.5,'hid')+R(23.2,-97.5,25,-89.5,'hid');
+  b+=R(25,-1.2,55,0,'blk')+R(37,-166,43,-1.2,'blk')+R(35.8,-178,37.3,-158,'blk')+R(31,-196,35.8,-140,'blk');
+  b+=R(-2,-122,12,-100,'thin');
+  [[5,-136,9],[-4,-134,6.5],[14,-134,6.5],[0,-145,6.5],[10,-146,6.5]].forEach(c=>b+=Ci(...c,'wh'));
+  b+=T(-40,-55,t('front'),'lb','middle',-90);
+  b+=D(-25,0,25,0,'h',12,'50');
+  b+=D(-55,0,105,0,'h',26,'160 '+t('carpet'));
+  b+=D(-23.2,-82,25,-82,'h',-82,'48 '+t('legroom'));
+  b+=D(-25,0,-25,-100,'v',-44,'100');
+  b+=D(25,-100,40,-168,'h',-208,'15');
+  b+=D(53,0,53,-72,'v',70,'72');
+  b+=D(35.8,-196,55,0,'v',88,'196');
+  b+=T(40,-213.5,t('axis'),'lb','start');
+  document.getElementById('svg-side').innerHTML=svg('-62 -222 168 256',b,'Prospetto laterale quotato');
+
+  // C · Pianta (X=x, Y=z)
+  let c='';
+  c+=R(-105,-105,135,55,'cpt');
+  for(const cx of [-24,24])c+=Ci(cx,-35,20,'thin')+`<rect x="${cx-20}" y="-53" width="40" height="36" rx="5" class="wh"/>`;
+  c+=R(45,-55,75,-25,'thin');
+  c+=R(11.75,-37,108.25,-31,'blk')+Ci(60,-40,3,'blk');
+  c+=R(-50,-25,50,25,'wh');
+  c+=R(-50,23.2,50,25,'hid')+R(-50,-25,-48.2,23.2,'hid')+R(48.2,-25,50,23.2,'hid');
+  for(const cx of [-24,24])c+=R(cx-20,-25,cx+20,-17,'hid');
+  c+=L(-50,25.8,50,25.8,'gnd').replace('class="gnd"','class="gnd" style="stroke:var(--navy);stroke-width:3"');
+  c+=R(-32.5,-12.85,-11.5,16.85,'nv','transform="rotate(-7 -22 2)"');
+  c+=Ci(28,-5,17,'hid')+Ci(28,-5,7,'thin');
+  c+=T(-75,-72,t('staff'),'lb')+T(0,46,t('visitors'),'lb');
+  c+=D(-48.2,-12,48.2,-12,'h',-12,'96 '+t('legroom'));
+  c+=D(-50,25,50,25,'h',70,'100');
+  c+=D(-105,55,135,55,'h',86,'240');
+  c+=D(50,25,50,-25,'v',82,'50');
+  c+=D(135,55,135,-105,'v',150,'160');
+  c+=D(11.75,-37,108.25,-37,'h',-84,num('96.5')+' '+t('monitor'));
+  c+=D(50,-25,60,-40,'h',-70,'10');
+  c+=D(-24,-53,24,-53,'h',-116,'48 '+t('spacing'));
+  document.getElementById('svg-plan').innerHTML=svg('-125 -134 300 232',c,'Pianta quotata');
+}
+relabelHooks.push(drawSVG);
+
+/* ---------- 3D ---------- */
+(async function(){
+  if(!window.THREE){document.getElementById('hint').textContent=t('no3d');return;}
+  try{await Promise.all([document.fonts.load('500 100px Outfit'),document.fonts.load('400 40px Outfit')]);}catch(e){}
+
+  const BG=0xeef0f3;
+  const view=document.getElementById('viewer'), overlay=document.getElementById('overlay');
+  const DPR=Math.min(window.devicePixelRatio||1,2);
+  const renderer=new THREE.WebGLRenderer({antialias:true});
+  renderer.setPixelRatio(DPR);renderer.setClearColor(BG,1);
+  renderer.outputEncoding=THREE.sRGBEncoding;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=0.95;
+  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  view.insertBefore(renderer.domElement,overlay);
+  const scene=new THREE.Scene(), dimScene=new THREE.Scene();
+  scene.background=new THREE.Color(BG);
+  const FOG=new THREE.Fog(BG,700,2100);
+
+  /* ambiente da studio fotografico per riflessi realistici */
+  (function(){
+    const env=new THREE.Scene();
+    const room=new THREE.Mesh(new THREE.BoxGeometry(1000,500,1000),new THREE.MeshBasicMaterial({color:0x2c2e33,side:THREE.BackSide}));
+    room.position.y=250;env.add(room);
+    const fl=new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),new THREE.MeshBasicMaterial({color:0x3a3632}));fl.rotation.x=-Math.PI/2;fl.position.y=1;env.add(fl);
+    const sb=(w,h,x,y,z,k)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:new THREE.Color(k,k,k),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,80,0);env.add(m);};
+    sb(520,320,0,480,40,2.2);sb(300,220,-480,230,140,1.0);sb(340,240,380,220,380,1.5);sb(260,160,60,200,-480,.6);sb(80,300,480,180,-200,1.2);
+    const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(env,0.035).texture;pm.dispose();
+  })();
+
+  const key=new THREE.DirectionalLight(0xfff6ec,2.0);key.position.set(-170,290,190);key.castShadow=true;
+  key.shadow.mapSize.set(2048,2048);Object.assign(key.shadow.camera,{left:-190,right:190,top:190,bottom:-190,near:50,far:900});
+  key.shadow.bias=-0.0006;key.shadow.normalBias=0.05;key.shadow.radius=3;renderer.shadowMap.type=THREE.VSMShadowMap;key.shadow.radius=9;key.shadow.blurSamples=16;scene.add(key);
+  scene.add(new THREE.HemisphereLight(0xffffff,0xe6e0d6,0.45));
+
+  /* utilità */
+  let seed=11;const rnd=()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};
+  const M=o=>new THREE.MeshStandardMaterial(o), P=o=>new THREE.MeshPhysicalMaterial(o);
+  const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+  function add(m,parent){m.castShadow=true;m.receiveShadow=true;(parent||scene).add(m);return m;}
+  function rboxGeo(w,h,d,r){
+    r=Math.min(r,w/2-0.01,h/2-0.01,d/2-0.01);
+    const s=new THREE.Shape(),hw=w/2-r,hh=h/2-r;s.moveTo(-hw,-hh);s.lineTo(hw,-hh);s.lineTo(hw,hh);s.lineTo(-hw,hh);s.closePath();
+    const g=new THREE.ExtrudeGeometry(s,{depth:d-2*r,bevelEnabled:true,bevelSize:r,bevelThickness:r,bevelSegments:3,curveSegments:4});
+    g.center();g.computeVertexNormals();return g;}
+  function rbox(w,h,d,r,mat,x,y,z,parent){const m=new THREE.Mesh(rboxGeo(w,h,d,r),mat);m.position.set(x,y,z);return add(m,parent);}
+  function rod(a,b,r,mat,parent,seg){const A=V(...a),B=V(...b);const m=new THREE.Mesh(new THREE.CylinderGeometry(r,r,A.distanceTo(B),seg||24),mat);
+    m.position.copy(A).add(B).multiplyScalar(.5);m.quaternion.setFromUnitVectors(V(0,1,0),B.clone().sub(A).normalize());return add(m,parent);}
+  function lathe(pts,mat,seg){return new THREE.Mesh(new THREE.LatheGeometry(pts.map(p=>new THREE.Vector2(p[0],p[1])),seg||64),mat);}
+  function canvas(w,h){const c=document.createElement('canvas');c.width=w;c.height=h;return [c,c.getContext('2d')];}
+  function tex(c,rep){const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=renderer.capabilities.getMaxAnisotropy();
+    if(rep){t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rep[0],rep[1]);}return t;}
+  function spaced(g,text,cx,y,sp){let w=0;for(const ch of text)w+=g.measureText(ch).width+sp;w-=sp;let x=cx-w/2;g.textAlign='left';for(const ch of text){g.fillText(ch,x,y);x+=g.measureText(ch).width+sp;}}
+
+  /* texture */
+  function floorTex(){const [c,g]=canvas(1024,1024);
+    g.fillStyle='#e4dbcf';g.fillRect(0,0,1024,1024);
+    for(let t=0;t<4;t++){const ox=(t%2)*512,oy=Math.floor(t/2)*512;const k=rnd()*10-5;g.fillStyle=`rgba(${k>0?255:120},${k>0?250:110},${k>0?240:100},${Math.abs(k)/90})`;g.fillRect(ox,oy,512,512);}
+    for(let i=0;i<90000;i++){const v=200+rnd()*55|0;g.fillStyle=`rgba(${v},${v-8},${v-18},${rnd()*.16})`;g.fillRect(rnd()*1024,rnd()*1024,1+rnd()*2,1+rnd()*2);}
+    g.lineCap='round';
+    for(let i=0;i<26;i++){g.beginPath();let x=rnd()*1024,y=rnd()*1024;g.moveTo(x,y);
+      for(let k=0;k<5;k++){x+=(rnd()-.3)*220;y+=(rnd()-.5)*160;g.quadraticCurveTo(x-60*rnd(),y+60*rnd(),x,y);}
+      g.strokeStyle=`rgba(140,122,104,${.05+rnd()*.1})`;g.lineWidth=.6+rnd()*2.2;g.stroke();}
+    g.fillStyle='rgba(170,158,144,.75)';g.fillRect(0,0,1024,2);g.fillRect(0,512,1024,2);g.fillRect(0,0,2,1024);g.fillRect(512,0,2,1024);
+    return tex(c,[25,25]);}
+  function carpetTex(){const [c,g]=canvas(512,512);g.fillStyle='#5f6064';g.fillRect(0,0,512,512);
+    for(let i=0;i<60000;i++){const v=60+rnd()*80|0;g.fillStyle=`rgba(${v},${v},${v+4},.55)`;g.fillRect(rnd()*512,rnd()*512,1,1+rnd()*2);}
+    return tex(c,[5,3.5]);}
+  function aoTex(){const [c,g]=canvas(256,256);g.shadowColor='rgba(0,0,0,1)';g.shadowBlur=34;g.shadowOffsetX=1000;g.fillStyle='#000';g.fillRect(48-1000,48,160,160);return new THREE.CanvasTexture(c);}
+  function frontTex(){const [c,g]=canvas(1000,970);
+    let gr=g.createLinearGradient(0,0,1000,970);gr.addColorStop(0,'#1f3469');gr.addColorStop(1,'#13234b');g.fillStyle=gr;g.fillRect(0,0,1000,970);
+    g.beginPath();g.moveTo(275,970);g.bezierCurveTo(517,845,667,660,1000,584);g.lineTo(1000,970);g.closePath();
+    gr=g.createLinearGradient(330,970,1000,580);gr.addColorStop(0,'#c19d6c');gr.addColorStop(.5,'#e8d2aa');gr.addColorStop(1,'#c8a575');g.fillStyle=gr;g.fill();
+    g.fillStyle='#fff';g.textAlign='center';g.font='500 165px Outfit, Arial, sans-serif';g.fillText('So&Co',500,450);
+    g.font='400 40px Outfit, Arial, sans-serif';spaced(g,'TRUSTED PARTNER',500,528,10);return tex(c);}
+  function screenTex(){const [c,g]=canvas(1600,900);
+    let gr=g.createLinearGradient(0,0,1600,900);gr.addColorStop(0,'#16295e');gr.addColorStop(1,'#0b1840');g.fillStyle=gr;g.fillRect(0,0,1600,900);
+    for(let i=0;i<54;i++){g.beginPath();const o=i*3;g.moveTo(0,520+o*.6);g.bezierCurveTo(450,480+o,820,820-o*.4,1600,600-o*.5);
+      g.strokeStyle=`rgba(226,198,150,${0.06+0.55*(i/54)*(1-i/54)})`;g.lineWidth=1.5;g.stroke();}
+    g.fillStyle='#fff';g.textAlign='center';g.font='500 150px Outfit, Arial, sans-serif';g.fillText('So&Co',800,370);
+    g.font='400 40px Outfit, Arial, sans-serif';spaced(g,'TRUSTED PARTNER',800,440,10);return tex(c);}
+  function coverTex(){const [c,g]=canvas(420,594);g.fillStyle='#1d3168';g.fillRect(0,0,420,594);
+    g.fillStyle='#d8bd8c';g.fillRect(0,470,420,6);g.fillStyle='#fff';g.textAlign='center';g.font='500 64px Outfit, Arial, sans-serif';g.fillText('So&Co',210,260);
+    g.font='400 18px Outfit, Arial, sans-serif';spaced(g,'TRUSTED PARTNER',210,300,5);return tex(c);}
+
+  /* pavimento lucido con riflesso */
+  let refl=null;
+  if(THREE.Reflector){refl=new THREE.Reflector(new THREE.PlaneGeometry(3000,3000),{textureWidth:1024,textureHeight:1024,color:0x6f6f6f,clipBias:0.003});
+    refl.rotation.x=-Math.PI/2;refl.position.y=-0.02;scene.add(refl);}
+  const floorMat=M({map:floorTex(),roughness:.14,metalness:0,transparent:!!refl,opacity:refl?.9:1});
+  const floor=new THREE.Mesh(new THREE.PlaneGeometry(3000,3000),floorMat);floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
+  const grid=new THREE.GridHelper(400,40,0xa9adb7,0xc9ccd4);grid.position.set(15,0.05,-25);scene.add(grid);
+
+  const AO=aoTex();
+  function blob(w,d,x,z,op,y){const m=new THREE.Mesh(new THREE.PlaneGeometry(w,d),new THREE.MeshBasicMaterial({map:AO,transparent:true,opacity:op,depthWrite:false,color:0x000000}));
+    m.rotation.x=-Math.PI/2;m.position.set(x,y||0.86,z);m.renderOrder=2;scene.add(m);return m;}
+
+  /* moquette */
+  const ct=carpetTex();
+  rbox(240,0.8,160,0.3,M({map:ct,bumpMap:ct,bumpScale:.6,roughness:1,color:0x9a9a9c}),15,0.4,-25);
+  blob(260,180,15,-25,.35,0.03);
+
+  /* banco 100 × 50 × 100, aperto lato staff */
+  const lam=M({color:0xf2f1ed,roughness:.5,metalness:0}), lamIn=M({color:0xe6e5e0,roughness:.6});
+  const bodyH=96.7, y0=0.8;
+  rbox(100,bodyH,1.8,0.3,lam,0,y0+bodyH/2,24.1);
+  rbox(1.8,bodyH,48.2,0.3,lam,-49.1,y0+bodyH/2,-0.9);
+  rbox(1.8,bodyH,48.2,0.3,lam,49.1,y0+bodyH/2,-0.9);
+  rbox(100,2.5,50,0.35,lam,0,98.75,0);
+  rbox(96.4,8,1.8,0.2,lamIn,0,93.5,-23.2);
+  const fp=new THREE.Mesh(new THREE.PlaneGeometry(99.4,96.2),M({map:frontTex(),roughness:.55,metalness:0}));
+  fp.position.set(0,y0+bodyH/2,25.07);fp.receiveShadow=true;scene.add(fp);
+  blob(116,66,0,0,.55);
+
+  /* monitor 43" su colonna, angolo posteriore destro */
+  const mx=60, mz=-40, my=168;
+  const satinBlack=M({color:0x1a1b1e,roughness:.45,metalness:.55}), plastic=M({color:0x232427,roughness:.55});
+  rbox(30,1.2,30,0.5,satinBlack,mx,1.4,mz);
+  rod([mx,1.6,mz],[mx,my-2,mz],3,satinBlack,null,32);
+  rbox(20,20,1.5,0.2,satinBlack,mx,my,-36.6);
+  rbox(78,42,3.4,1.4,plastic,mx,my,-33.9);
+  rbox(96.5,56,1.2,0.35,P({color:0x0d0d0f,roughness:.25,clearcoat:.6}),mx,my,-31.6);
+  const st=screenTex();
+  const scr=new THREE.Mesh(new THREE.PlaneGeometry(95.3,53.6),P({map:st,emissive:0xffffff,emissiveMap:st,emissiveIntensity:.3,roughness:.06,clearcoat:1,clearcoatRoughness:.05}));
+  scr.position.set(mx,my+0.2,-30.98);scene.add(scr);
+  blob(44,44,mx,mz,.45);
+
+  /* sgabelli bar con alzata a gas (modello fornito) */
+  const chrome=M({color:0xffffff,metalness:1,roughness:.07});
+  const leather=P({color:0xf5f5f2,roughness:.42,clearcoat:.45,clearcoatRoughness:.35});
+  function seatGeo(){const g=new THREE.BoxGeometry(40,5,36,30,3,28),p=g.attributes.position,v=V(0,0,0);
+    for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i);const t=v.z/18;
+      const k=1-0.1*(1-t*t);v.x*=k;
+      const ax=Math.abs(v.x)/(20*k),az=Math.abs(t),r=Math.pow(Math.pow(ax,5)+Math.pow(az,5),1/5);if(r>1){v.x/=r;v.z/=r;}
+      const tt=v.z/18,sx=v.x/20;
+      v.y+=4.4*Math.pow(Math.max(0,-tt),2.2)+1.3*Math.pow(Math.max(0,tt),2.4)+0.7*sx*sx;
+      if(v.y<0)v.y*=0.9;
+      p.setXYZ(i,v.x,v.y,v.z);}
+    g.computeVertexNormals();return g;}
+  const SEAT=seatGeo();
+  function stool(cx,cz,rot){
+    const s=new THREE.Group();s.position.set(cx,0.8,cz);s.rotation.y=rot||0;scene.add(s);
+    add(lathe([[0,2.7],[3.2,2.6],[8,2.1],[14,1.3],[18.8,.65],[19.7,.35],[20,.12],[20,0],[0,0]],chrome),s).receiveShadow=false;
+    add(lathe([[0,9.5],[2.5,9.5],[2.6,8],[3.6,5],[6.2,3],[8,2.6],[0,2.6]],chrome,48),s).receiveShadow=false;
+    rod([0,9,0],[0,48,0],2.3,chrome,s,32);
+    rod([0,45,0],[0,66.5,0],2.85,chrome,s,32);
+    rod([0,28,0],[0,32,0],3.4,chrome,s,32);
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(14.5,0.95,16,96),chrome);ring.rotation.x=Math.PI/2;ring.position.set(0,30,6);add(ring,s);
+    rod([0,30,-3],[0,30,-8.4],0.95,chrome,s);
+    rbox(20,1.2,16,0.3,satinBlack,0,66.6,0,s);
+    rod([6,66.8,3],[14,64.5,3],0.5,chrome,s);
+    const seat=new THREE.Mesh(SEAT,leather);seat.position.set(0,69.7,0);add(seat,s);
+    blob(46,46,cx,cz,.45,0.83);
+  }
+  stool(-24,-35,0.12);stool(24,-35,-0.1);
+
+  /* fiori, vaso, brochure */
+  const glass=P({color:0xffffff,roughness:.03,metalness:0,transparent:true,opacity:.22,clearcoat:1,side:THREE.DoubleSide});
+  const vase=lathe([[0,0],[5.6,0],[6.1,.6],[6.4,10],[6.9,21.6],[7.1,22],[6.75,22],[6.3,10],[5.7,1.2],[0,1.2]],glass,64);
+  vase.position.set(28,100,-5);scene.add(vase);
+  const water=new THREE.Mesh(new THREE.CylinderGeometry(6.0,5.6,11,48),P({color:0xdcebec,transparent:true,opacity:.28,roughness:.05}));water.position.set(28,106.7,-5);scene.add(water);
+  const stem=M({color:0x4b7a3c,roughness:.6}), leaf=M({color:0x3d6b34,roughness:.55,side:THREE.DoubleSide});
+  const heads=[];for(let i=0;i<10;i++){const a=i/10*Math.PI*2+rnd()*.4,rr=i<3?3:9+rnd()*3;heads.push(V(28+Math.cos(a)*rr,(i<3?138:130)+rnd()*4,-5+Math.sin(a)*rr));}
+  heads.forEach(h=>rod([28+(rnd()-.5)*5,104,-5+(rnd()-.5)*5],[h.x,h.y-4,h.z],.35,stem));
+  for(let i=0;i<12;i++){const a=i/12*Math.PI*2+rnd()*.3;const l=new THREE.Mesh(new THREE.SphereGeometry(3,14,10),leaf);
+    l.scale.set(1,.12,2.4);l.position.set(28+Math.cos(a)*12,124+rnd()*3,-5+Math.sin(a)*12);l.rotation.y=-a+Math.PI/2;l.rotation.x=.35;add(l);}
+  const floret=new THREE.SphereGeometry(1.25,10,8);floret.scale(1,.5,1);
+  const petals=M({color:0xf8f7f2,roughness:.85});
+  const im=new THREE.InstancedMesh(floret,petals,heads.length*90);im.castShadow=true;im.receiveShadow=true;
+  const o=new THREE.Object3D();let n=0;
+  heads.forEach(h=>{for(let k=0;k<90;k++){let d=V(rnd()*2-1,rnd()*2-1,rnd()*2-1).normalize();if(d.y<-.35)d.y=-d.y*.5;d.normalize();
+    o.position.copy(h).addScaledVector(d,5.8+rnd()*.9);o.quaternion.setFromUnitVectors(V(0,1,0),d);o.rotateY(rnd()*6);const sc=.85+rnd()*.35;o.scale.set(sc,sc,sc);o.updateMatrix();im.setMatrixAt(n++,o.matrix);}});
+  scene.add(im);
+  const paper=M({color:0xf4f3ee,roughness:.7}), cov=M({map:coverTex(),roughness:.45});
+  const br=new THREE.Mesh(new THREE.BoxGeometry(21,0.5,29.7),[paper,paper,cov,paper,paper,paper]);br.position.set(-22,100.25,2);br.rotation.y=0.12;add(br);
+
+  /* camere e viste */
+  const persp=new THREE.PerspectiveCamera(30,1,1,6000);
+  const ortho=new THREE.OrthographicCamera(-1,1,1,-1,1,6000);
+  const VIEWS={
+    p34:{name:'v_p34',t:'p',pos:[330,150,450],tgt:[22,92,-15],dims:'p'},
+    p34l:{name:'v_p34l',t:'p',pos:[-330,140,430],tgt:[18,92,-15],dims:'pl'},
+    back34:{name:'v_back',t:'p',pos:[-190,150,-400],tgt:[10,80,-12],dims:'back'},
+    front:{name:'v_front',t:'o',pos:[15,92,1500],tgt:[15,92,0],hw:165,hh:134,dims:'front'},
+    side:{name:'v_side',t:'o',pos:[1500,92,-25],tgt:[0,92,-25],hw:100,hh:134,dims:'side'},
+    top:{name:'v_top',t:'o',pos:[12,1500,-18],tgt:[12,0,-18],hw:150,hh:125,up:[0,0,-1],dims:'top'}
+  };
+  let cam=persp,controls=null,cur='p34',showDims=true;
+
+  /* quote 3D */
+  const groups={},labels=[];
+  const dmat=new THREE.LineBasicMaterial({color:0xb8862b,depthTest:false,transparent:true});
+  function dim(set,p1,p2,meas,off,at,text){
+    const ax={x:0,y:1,z:2},m=ax[meas],oo=ax[off];
+    const a2=[...p1];a2[oo]=at;const b2=[...p2];b2[oo]=at;const pts=[];
+    for(const [p,q] of [[p1,a2],[p2,b2]]){const sg=Math.sign(at-p[oo])||1;const s=[...p];s[oo]+=sg*1.5;const e=[...q];e[oo]+=sg*3;pts.push(s,e);}
+    pts.push(a2,b2);
+    for(const Q of [a2,b2]){const s=[...Q],e=[...Q];s[m]-=2;s[oo]-=2;e[m]+=2;e[oo]+=2;pts.push(s,e);}
+    const g=new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute(pts.flat(),3));
+    const ls=new THREE.LineSegments(g,dmat);
+    (groups[set]||(groups[set]=new THREE.Group(),dimScene.add(groups[set]),groups[set])).add(ls);
+    const el=document.createElement('div');el.className='dl';el.textContent=typeof text==='function'?text():text;el.hidden=true;overlay.appendChild(el);
+    labels.push({set,el,text,pos:V((a2[0]+b2[0])/2,(a2[1]+b2[1])/2,(a2[2]+b2[2])/2)});
+  }
+  dim('p',[-50,0,25.5],[50,0,25.5],'x','z',48,'100');
+  dim('p',[-50,0,25],[-50,0,-25],'z','x',-72,'50');
+  dim('p',[-50,0,25],[-50,100,25],'y','z',46,'100');
+  dim('p',[108.25,0,-31],[108.25,196,-31],'y','x',125,'196');
+  dim('p',[-105,0,55],[135,0,55],'x','z',80,'240');
+  dim('pl',[-50,0,25.5],[50,0,25.5],'x','z',48,'100');
+  dim('pl',[50,0,25],[50,0,-25],'z','x',72,'50');
+  dim('pl',[50,0,25],[50,100,25],'y','z',46,'100');
+  dim('pl',[11.75,0,-31],[11.75,196,-31],'y','x',-75,'196');
+  dim('pl',[-105,0,55],[135,0,55],'x','z',80,'240');
+  dim('back',[-48.2,89.5,-25],[48.2,89.5,-25],'x','y',89.5,()=>'96 '+t('legroom'));
+  dim('back',[-48.2,0,-25],[-48.2,89.5,-25],'y','x',-64,()=>'89 '+t('clear'));
+  dim('back',[-24,0,-35],[24,0,-35],'x','z',-64,()=>'48 '+t('spacing_s'));
+  dim('back',[-44,0,-35],[-44,72,-35],'y','x',-80,()=>'72 '+t('seat'));
+  dim('front',[-50,0,30],[50,0,30],'x','y',-12,'100');
+  dim('front',[-105,0,60],[135,0,60],'x','y',-26,()=>'240 '+t('carpet'));
+  dim('front',[-50,0,30],[-50,100,30],'y','x',-64,'100');
+  dim('front',[-44,0,30],[-44,72,30],'y','x',-84,()=>'72 '+t('seat'));
+  dim('front',[108.25,140,30],[108.25,196,30],'y','x',122,'56');
+  dim('front',[75,0,30],[108.25,140,30],'y','x',138,'140');
+  dim('front',[75,0,30],[108.25,196,30],'y','x',154,'196');
+  dim('front',[11.75,196,30],[108.25,196,30],'x','y',208,()=>num('96.5')+' · 43"');
+  dim('front',[50,60,30],[60,60,30],'x','y',60,'10');
+  dim('side',[140,0,25],[140,0,-25],'z','y',-12,'50');
+  dim('side',[140,0,55],[140,0,-105],'z','y',-26,'160');
+  dim('side',[140,82,23.2],[140,82,-25],'z','y',82,()=>'48 '+t('legroom_s'));
+  dim('side',[140,0,25],[140,100,25],'y','z',44,'100');
+  dim('side',[140,100,-25],[140,168,-40],'z','y',208,()=>'15 '+t('axis'));
+  dim('side',[140,0,-53],[140,72,-53],'y','z',-70,'72');
+  dim('side',[140,0,-55],[140,196,-35.8],'y','z',-88,'196');
+  dim('top',[-48.2,210,-12],[48.2,210,-12],'x','z',-12,()=>'96 '+t('legroom_s'));
+  dim('top',[-50,210,25],[50,210,25],'x','z',70,'100');
+  dim('top',[-105,210,55],[135,210,55],'x','z',86,'240');
+  dim('top',[50,210,25],[50,210,-25],'z','x',82,'50');
+  dim('top',[135,210,55],[135,210,-105],'z','x',150,'160');
+  dim('top',[11.75,210,-37],[108.25,210,-37],'x','z',-84,()=>num('96.5'));
+  dim('top',[-24,210,-53],[24,210,-53],'x','z',-116,()=>'48 '+t('spacing_s'));
+
+  function resize(){
+    const w=view.clientWidth,h=view.clientHeight;if(!w||!h)return;
+    renderer.setSize(w,h,false);const asp=w/h;
+    persp.aspect=asp;persp.updateProjectionMatrix();
+    if(refl)refl.getRenderTarget().setSize(Math.round(w*DPR),Math.round(h*DPR));
+    const v=VIEWS[cur];if(v.t==='o'){const hh=Math.max(v.hh,v.hw/asp);Object.assign(ortho,{left:-hh*asp,right:hh*asp,top:hh,bottom:-hh});ortho.updateProjectionMatrix();}
+  }
+  function setView(k){
+    cur=k;const v=VIEWS[k];const isP=v.t==='p';cam=isP?persp:ortho;
+    cam.up.set(...(v.up||[0,1,0]));cam.position.set(...v.pos);cam.zoom=1;cam.updateProjectionMatrix();
+    if(controls)controls.dispose();
+    controls=new THREE.OrbitControls(cam,renderer.domElement);
+    controls.target.set(...v.tgt);controls.enableDamping=true;controls.dampingFactor=.08;
+    if(isP){controls.minDistance=150;controls.maxDistance=1100;controls.maxPolarAngle=Math.PI/2-0.04;}
+    else{controls.enableRotate=false;controls.minZoom=.5;controls.maxZoom=4;}
+    controls.update();
+    grid.visible=!isP;scene.fog=isP?FOG:null;
+    if(refl)refl.visible=isP;floorMat.opacity=(isP&&refl)?.9:1;
+    document.querySelectorAll('button[data-v]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===k?'true':'false'));
+    document.getElementById('vcap').textContent=t(v.name);
+    document.getElementById('hint').textContent=t(isP?'hintP':'hintO');
+    resize();
+  }
+  document.querySelectorAll('button[data-v]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.v)));
+  const bd=document.getElementById('b-dims');
+  bd.addEventListener('click',()=>{showDims=!showDims;bd.setAttribute('aria-pressed',showDims?'true':'false');});
+  new ResizeObserver(resize).observe(view);
+  setView('p34');
+  relabelHooks.push(()=>{for(const l of labels)if(typeof l.text==='function')l.el.textContent=l.text();const v=VIEWS[cur];document.getElementById('vcap').textContent=t(v.name);document.getElementById('hint').textContent=t(v.t==='p'?'hintP':'hintO');});
+
+  const tmp=V(0,0,0);
+  (function loop(){
+    requestAnimationFrame(loop);
+    controls.update();
+    const set=VIEWS[cur].dims;
+    for(const k in groups)groups[k].visible=showDims&&k===set;
+    renderer.autoClear=true;renderer.render(scene,cam);
+    renderer.autoClear=false;renderer.render(dimScene,cam);
+    const w=view.clientWidth,h=view.clientHeight;
+    for(const l of labels){
+      if(!showDims||l.set!==set){l.el.hidden=true;continue;}
+      tmp.copy(l.pos).project(cam);
+      if(tmp.z>1){l.el.hidden=true;continue;}
+      l.el.hidden=false;
+      l.el.style.transform=`translate(${(tmp.x+1)/2*w}px,${(1-tmp.y)/2*h}px) translate(-50%,-50%)`;
+    }
+  })();
+})();
+</script>
+<script>
+(function(){let l=location.hash.slice(1);if(!I18N[l]){try{l=localStorage.getItem('lang')||'it';}catch(e){l='it';}}applyLang(l);})();
+</script>
+</body>
+</html>

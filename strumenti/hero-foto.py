@@ -24,7 +24,7 @@ PAT = re.compile(r'<div class="fr-hero-vis"><svg class="fr-svg".*?</svg></div>',
 PAT2 = re.compile(r'<div class="fr-hero-vis fr-hero-foto">.*?</div>', re.S)
 n = 0
 for root, dirs, files in os.walk(ROOT):
-    dirs[:] = [d for d in dirs if d not in ('.git','strumenti','_google_business')]
+    dirs[:] = [d for d in dirs if d not in ('.git','strumenti','_google_business','render')]
     if 'index.html' not in files: continue
     p = os.path.join(root, 'index.html'); t = open(p, encoding='utf-8').read()
     if 'fr-hero-vis' not in t: continue

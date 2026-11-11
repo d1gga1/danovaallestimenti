@@ -64,7 +64,7 @@ body:has(.fr-hero-vis) .pg-crumbs{text-align:left}
 
 changed = 0
 for root, dirs, files in os.walk(ROOT):
-    dirs[:] = [d for d in dirs if d not in ('.git','strumenti','_google_business','node_modules')]
+    dirs[:] = [d for d in dirs if d not in ('.git','strumenti','_google_business','node_modules','render')]
     for f in files:
         if not f.endswith(('.css','.js','.html','.svg','.webmanifest','.json')): continue
         p = os.path.join(root,f)

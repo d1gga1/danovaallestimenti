@@ -48,5 +48,5 @@ jobs:
             python3 strumenti/indexnow.py
             exit 0
           fi
-          URLS=$(git diff --name-only "$BEFORE" HEAD -- '*.html' | grep -v -e '^strumenti/' -e '^_google_business/' -e '^404.html$' | sed -e 's#index\.html$##' -e 's#^#/#')
+          URLS=$(git diff --name-only "$BEFORE" HEAD -- '*.html' | grep -v -e '^strumenti/' -e '^_google_business/' -e '^render/' -e '^404.html$' | sed -e 's#index\.html$##' -e 's#^#/#')
           if [ -n "$URLS" ]; then python3 strumenti/indexnow.py $URLS; else echo "Nessuna pagina cambiata"; fi

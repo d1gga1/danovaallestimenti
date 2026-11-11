@@ -53,3 +53,14 @@ verso queste pagine, il titolo della home e la sezione "Domande frequenti" di `l
   canonical, hreflang, JSON-LD).
 - Il workflow di pubblicazione ora avvisa IndexNow (Bing, ChatGPT search, Copilot) delle sole
   pagine cambiate a ogni push.
+
+## Area render riservata (`/render/`, 11/11/2026)
+Pagine progetto da mandare ai clienti con un link diretto (anche su WhatsApp). Non sono nel menu,
+non sono nella sitemap, hanno `noindex` e sono escluse da IndexNow e dagli script in `strumenti/`.
+- `/render/` rimanda alla home: non c'e' un elenco dei progetti.
+- Un progetto = una cartella con un codice finale difficile da indovinare, es.
+  `render/soco-banco-reception-7k2m/` (index.html + og.jpg per l'anteprima WhatsApp).
+- `render/_lib/` librerie 3D (three.js r128) e font extra (ebraico, Outfit) usati dalle pagine.
+- Lingue: IT / EN / עברית dal selettore; il link si apre gia' nella lingua con `#en` o `#he`.
+- Nuovo progetto: copia la cartella di un progetto esistente, cambia nome e codice, poi modifica la pagina.
+- Non aggiungere `Disallow: /render/` in robots.txt: renderebbe pubblico l'indirizzo della sezione.

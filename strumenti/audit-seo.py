@@ -4,7 +4,7 @@ import re, os, json, collections, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 pages = []
 for d, ds, fs in os.walk(ROOT):
-    ds[:] = [x for x in ds if x not in ('.git', 'strumenti', '_google_business', 'node_modules')]
+    ds[:] = [x for x in ds if x not in ('.git', 'strumenti', '_google_business', 'node_modules', 'render')]
     for f in fs:
         if f.endswith('.html'): pages.append(os.path.join(d, f))
 issues = collections.defaultdict(list)
