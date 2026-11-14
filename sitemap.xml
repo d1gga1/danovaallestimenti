@@ -386,12 +386,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/calendario-fiere/"/>
   </url>
   <url>
-    <loc>https://danovastand.com/contributi-fiere-2026/</loc>
+    <loc>https://danovastand.com/contributi-fiere/</loc>
     <lastmod>2026-11-04</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-fiera-estero-padiglione.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-fiera-estero-padiglione.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/contributi-fiere-2026/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/contributi-fiere-2026/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/contributi-fiere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/contributi-fiere/"/>
   </url>
   <url>
     <loc>https://danovastand.com/de/messebau-italien/</loc>
@@ -1251,62 +1251,6 @@
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-medio-32-mq.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/sicurezza-stand-fieristici/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/sicurezza-stand-fieristici/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-100-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-isola-legno-rovere.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-isola-legno-rovere.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-100-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-100-mq/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-12-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-piccolo-12-mq.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-piccolo-12-mq.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-12-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-12-mq/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-16-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-16-mq-angolo.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-16-mq-angolo.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-16-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-16-mq/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-24-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-24-mq-penisola.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-24-mq-penisola.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-24-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-24-mq/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-32-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-medio-32-mq.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-medio-32-mq.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-32-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-32-mq/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-48-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-48-mq-isola.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-48-mq-isola.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-48-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-48-mq/"/>
-  </url>
-  <url>
-    <loc>https://danovastand.com/stand-9-mq/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-9-mq-3x3.webp</image:loc></image:image>
-    <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-9-mq-3x3.jpg</image:loc></image:image>
-    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/stand-9-mq/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/stand-9-mq/"/>
   </url>
   <url>
     <loc>https://danovastand.com/stand-a-due-piani/</loc>
@@ -3482,5 +3426,40 @@
   <url>
     <loc>https://danovastand.com/chi-siamo/</loc>
     <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://danovastand.com/allestimento-vetrine/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-vicenzaoro-gioielli.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimento-vetrine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/allestimento-vetrine/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/de/messebau-verona/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-vinitaly-cantina.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="de" href="https://danovastand.com/de/messebau-verona/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/de/messebau-verona/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/de/messebau-bologna/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-cersaie-ceramica.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="de" href="https://danovastand.com/de/messebau-bologna/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/de/messebau-bologna/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/nl/standbouw-beurzen-duitsland-europa/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-fiera-estero-padiglione.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://danovastand.com/nl/standbouw-beurzen-duitsland-europa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/nl/standbouw-beurzen-duitsland-europa/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/nl/standbouw-italie/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-salone-mobile-design.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://danovastand.com/nl/standbouw-italie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/nl/standbouw-italie/"/>
   </url>
 </urlset>

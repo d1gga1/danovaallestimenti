@@ -36,7 +36,7 @@ for p in sorted(pages):
         if not re.search(r'\balt=', img): issues['img-no-alt'].append(rel)
         elif re.search(r'\balt=""', img): issues['img-empty-alt'].append(rel)
         if not re.search(r'\bwidth=', img): issues['img-no-dim'].append(rel)
-        if not re.search(r'loading=', img) and not re.search(r'fetchpriority', img): issues['img-no-loading'].append(rel)
+        if 'logo' not in img and not re.search(r'loading=', img) and not re.search(r'fetchpriority', img): issues['img-no-loading'].append(rel)
     blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S)
     if not blocks: issues['no-jsonld'].append(rel)
     for b in blocks:

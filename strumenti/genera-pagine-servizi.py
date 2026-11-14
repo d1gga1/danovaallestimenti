@@ -2,7 +2,7 @@
 """Genera le pagine di servizio non fieristiche (negozi, eventi, mostre, stand pubblicitari)
 partendo dal modello allestimenti-eventi-showroom-negozi/index.html.
 
-Uso (dalla cartella del sito):  python3 strumenti/genera-pagine-servizi.py
+Uso (dalla cartella del sito):  python3 strumenti/genera-pagine-servizi.py [slug ...]
 Riscrive solo le cartelle elencate in PAGINE. Ricerca parole chiave: strumenti/ricerca-parole-chiave-2026-11.md
 """
 import html, json, os, re, struct, sys
@@ -28,6 +28,77 @@ def webp_size(path):
 
 
 PAGINE = [
+    {
+        "slug": "allestimento-vetrine",
+        "title": "Allestimento vetrine natalizie e su misura | Danova Stand",
+        "desc": "Allestimento vetrine per negozi: vetrine natalizie e stagionali, vetrine fisse su misura, vetrine per marchi ed eventi, grafiche e vetrofanie. Preventivo in 24 ore.",
+        "og_title": "Allestimento vetrine per negozi — Danova Stand",
+        "og_desc": "Vetrine natalizie e stagionali, strutture su misura, vetrine per lanci di prodotto, grafiche e vetrofanie: progetto, produzione e montaggio.",
+        "crumb": "Allestimento vetrine",
+        "img": "stand-vicenzaoro-gioielli",
+        "alt": "Render di vetrina espositiva per gioielli con teche illuminate e fondale scuro",
+        "caption": "Render di progetto: vetrina espositiva con teche, podi e luce dedicata al prodotto.",
+        "eyebrow": "Vetrine per negozi e marchi",
+        "h1": "Allestimento vetrine: <span class=\"grad\">natalizie, stagionali e su misura</span>.",
+        "lead": "Vetrine per Natale, saldi e cambi di stagione, vetrine fisse costruite su misura, vetrine per lanci di prodotto e marchi, grafiche e vetrofanie. Progettiamo la vetrina in 3D vista dalla strada, la facciamo produrre e la montiamo noi, anche a negozio chiuso.",
+        "breve": "Danova Stand allestisce vetrine per negozi in tutta Italia: vetrine natalizie e stagionali (Natale, saldi, San Valentino, primavera, estate, autunno), vetrine fisse su misura con fondali, podi, teche e illuminazione, vetrine sponsorizzate per marchi, lanci di prodotto ed eventi, grafiche e vetrofanie stampate e posate. Progetto e render 3D, produzione, montaggio e smontaggio con un unico referente. Preventivo gratuito entro 24 ore lavorative.",
+        "service": "Allestimento vetrine per negozi",
+        "service_type": "Allestimento vetrine (visual merchandising)",
+        "cards_title": "Le vetrine che allestiamo",
+        "cards": [
+            ("Vetrine natalizie", "Allestimenti per Natale e le feste: fondali, strutture scenografiche, luci calde e decorazioni progettate sul marchio, non comprate a catalogo."),
+            ("Vetrine stagionali e saldi", "Saldi, San Valentino, primavera, estate, rientro e autunno: una struttura base che resta e grafiche che cambiano a ogni stagione."),
+            ("Vetrine fisse su misura", "Fondali, podi, mensole, teche e cornici costruiti sulle misure della vetrina, con illuminazione LED dedicata al prodotto."),
+            ("Vetrine per marchi e lanci", "Vetrine sponsorizzate nei negozi dei rivenditori, lanci di prodotto ed eventi: uguali in ogni punto vendita, con istruzioni di montaggio."),
+            ("Grafiche e vetrofanie", "Vetrofanie adesive, pellicole satinate, pannelli e tessuti stampati, stampati e posati da noi senza lasciare segni sul vetro."),
+            ("Luci per la vetrina", "Faretti orientabili, strisce LED e retroilluminazioni che fanno vedere la merce di sera senza scaldarla."),
+        ],
+        "settori_title": "Idee per le vetrine, stagione per stagione",
+        "settori": [
+            ("Natale", "un fondale che crea profondità, luci calde a punti, prodotti su podi a diverse altezze e una sola idea forte invece di tante decorazioni."),
+            ("Saldi", "grafica grande e leggibile dalla strada, percentuali chiare, struttura semplice che si monta in poche ore."),
+            ("San Valentino e feste", "un colore dominante, pochi prodotti scelti e un elemento scenografico che si riusa cambiando solo la grafica."),
+            ("Primavera ed estate", "colori chiari, materiali naturali come legno e tessuto, luce più fredda e prodotti in uso."),
+            ("Autunno e rientro", "toni caldi, texture, vetrina che racconta la nuova collezione con fondale e mensole su misura."),
+        ],
+        "testo_title": "Una vetrina si giudica <span class=\"grad\">dalla strada, in tre secondi</span>",
+        "testo": [
+            "Chi passa davanti al negozio guarda la vetrina per pochi secondi: deve capire subito cosa vendi e avere un motivo per entrare. Per questo progettiamo la vetrina dal punto di vista di chi cammina sul marciapiede, con render 3D che mostrano altezze, profondità, riflessi del vetro e luce di sera.",
+            "Lavoriamo come per gli stand fieristici: struttura costruita in laboratorio, grafica stampata sulle misure esatte, montaggio rapido con il negozio chiuso. La struttura base resta e si cambiano grafiche e decorazioni a ogni stagione, così ogni nuovo allestimento costa meno del precedente.",
+        ],
+        "passi": [
+            ("Sopralluogo e misure", "dimensioni della vetrina, profondità, accessi, prese elettriche e vincoli del centro commerciale o del condominio."),
+            ("Progetto e render 3D", "la vetrina vista dalla strada di giorno e di sera, con materiali, colori, luci e posizione dei prodotti. La approvi prima della produzione."),
+            ("Produzione", "fondali, podi, strutture e teche realizzati da laboratori partner; grafiche e vetrofanie stampate sulle misure reali."),
+            ("Montaggio", "nei giorni e negli orari che scegli tu, anche di notte o il giorno di chiusura, con un capocantiere che segue il lavoro."),
+            ("Cambio di stagione", "conserviamo strutture e decorazioni nei nostri magazzini e torniamo a cambiare la vetrina quando serve."),
+        ],
+        "preventivo": [
+            ("Rilievo e progetto", "sopralluogo, render 3D e varianti."),
+            ("Strutture e arredi", "fondali, podi, mensole, teche, cornici, voce per voce."),
+            ("Grafica e vetrofanie", "stampa e posa di vetrofanie, pannelli e tessuti."),
+            ("Illuminazione", "faretti, strisce LED, retroilluminazioni."),
+            ("Montaggio e cambi stagione", "montaggio, smontaggio, magazzino e trasporto fra un allestimento e l'altro."),
+        ],
+        "faq": [
+            ("Quanto costa allestire una vetrina?", "Dipende dalle misure della vetrina, dalla quantità di strutture su misura, dalla grafica e dalle luci. Facciamo un preventivo voce per voce dopo aver visto misure e foto: è gratuito e arriva entro 24 ore lavorative."),
+            ("Allestite vetrine natalizie?", "Sì: progettiamo vetrine di Natale sul tuo marchio, con fondali, strutture scenografiche e luci, e le montiamo a negozio chiuso. Conviene sentirci entro ottobre per avere la vetrina pronta per l'inizio di dicembre."),
+            ("Si può riusare la vetrina per più stagioni?", "Sì: progettiamo una struttura base che resta e cambiamo solo grafiche e decorazioni a ogni stagione, così i cambi successivi costano meno."),
+            ("Fate anche solo vetrofanie e grafiche?", "Sì: stampiamo e posiamo vetrofanie, pellicole satinate, pannelli e tessuti, anche senza il resto dell'allestimento."),
+            ("Potete allestire la stessa vetrina in più negozi?", "Sì: per marchi e reti di rivenditori progettiamo una vetrina standard e la replichiamo nei punti vendita, con le stesse misure, grafiche e istruzioni di montaggio."),
+            ("Lavorate in tutta Italia?", "Sì. Abbiamo sede a Mansuè (TV) e magazzini a Fontanelle (TV) e Trumello (PV): seguiamo direttamente Nord e Centro Italia e, con squadra in trasferta, il resto del Paese."),
+        ],
+        "altri": [
+            ("/allestimento-negozi/", "Allestimento negozi su misura"),
+            ("/espositori-pubblicitari/", "Espositori pubblicitari e da banco"),
+            ("/grafica-per-stand-fieristici/", "Grafica e tessuti stampati"),
+            ("/ledwall-e-illuminazione-stand/", "Ledwall e illuminazione"),
+            ("/stand-pubblicitari/", "Stand pubblicitari e promozionali"),
+            ("/allestimenti-eventi/", "Allestimenti per eventi e congressi"),
+            ("/allestimenti-eventi-showroom-negozi/", "Allestimenti per showroom e negozi"),
+            ("/progettazione-stand-fieristici/", "Progettazione e render 3D"),
+        ],
+    },
     {
         "slug": "allestimento-negozi",
         "title": "Allestimento negozi e vetrine su misura | Danova Stand",
@@ -89,6 +160,7 @@ PAGINE = [
             ("Montate anche a negozio chiuso o di notte?", "Sì. Concordiamo con te giorni e orari per ridurre al minimo la chiusura, anche fuori dall'orario di apertura del negozio o del centro commerciale."),
         ],
         "altri": [
+            ("/allestimento-vetrine/", "Allestimento vetrine natalizie e stagionali"),
             ("/allestimenti-eventi-showroom-negozi/", "Allestimenti per eventi, showroom e mostre"),
             ("/espositori-pubblicitari/", "Espositori pubblicitari e da banco"),
             ("/totem-pubblicitari/", "Totem pubblicitari personalizzati"),
@@ -510,7 +582,10 @@ def main():
     legno = re.search(r"<!--fr-legno-->.*?<!--/fr-legno-->", mainhtml, re.S).group(0)
     cta = re.search(r'<section class="pg-cta">.*?</section>', mainhtml, re.S).group(0)
     cta = cta.replace("Parliamo del tuo stand.", "Parliamo del tuo progetto.").replace("Dicci fiera, date e metratura", "Dicci dove, quando e cosa ti serve")
+    solo = set(sys.argv[1:])  # opzionale: rigenera solo gli slug indicati
     for p in PAGINE:
+        if solo and p["slug"] not in solo:
+            continue
         out = build(p, tpl, legno, cta, footer, head_before_ld, head_after_ld, body_before_main)
         d = os.path.join(ROOT, p["slug"]); os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(out)

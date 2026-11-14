@@ -64,3 +64,21 @@ non sono nella sitemap, hanno `noindex` e sono escluse da IndexNow e dagli scrip
 - Lingue: IT / EN / עברית dal selettore; il link si apre gia' nella lingua con `#en` o `#he`.
 - Nuovo progetto: copia la cartella di un progetto esistente, cambia nome e codice, poi modifica la pagina.
 - Non aggiungere `Disallow: /render/` in robots.txt: renderebbe pubblico l'indirizzo della sezione.
+
+## Ottimizzazioni dai dati Keyword Planner e Search Console (14/11/2026)
+Analisi e decisioni: `strumenti/ricerca-parole-chiave-2026-11-csv.md` (dati uniti in `strumenti/keyword-planner-2026-11.csv`).
+
+Ordine degli script dopo ogni `migra-da-danovatech.py` (tutti idempotenti):
+
+    python3 strumenti/genera-pagine-servizi.py      # negozi, eventi, mostre, stand pubblicitari, VETRINE
+    python3 strumenti/genera-pagine-estere.py       # de/messebau-verona, de/messebau-bologna, nl/...
+    python3 strumenti/ottimizza-seo.py
+    python3 strumenti/ottimizza-keyword.py          # title, calendari 2027, edizioni fiere, contributi,
+                                                    # metrature, immagini, sitemap, llms.txt, link interni
+    python3 strumenti/audit-seo.py
+
+`ottimizza-keyword.py` fa anche:
+- `/contributi-fiere-2026/` -> `/contributi-fiere/` (la vecchia pagina rimanda alla nuova);
+- le 7 pagine `/stand-XX-mq/` -> sezioni di `/stand-fieristici-per-metratura/` (contenuto salvato in
+  `strumenti/metrature-blocchi.html`, i vecchi indirizzi rimandano all'ancora);
+- fiere concluse portate alla prossima edizione (tabella `EDIZIONI`: aggiornarla quando escono le date).
