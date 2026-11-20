@@ -75,6 +75,7 @@ Ordine degli script dopo ogni `migra-da-danovatech.py` (tutti idempotenti):
     python3 strumenti/ottimizza-seo.py
     python3 strumenti/ottimizza-keyword.py          # title, calendari 2027, edizioni fiere, contributi,
                                                     # metrature, immagini, sitemap, llms.txt, link interni
+    python3 strumenti/ottimizza-geo.py              # date coerenti, schema, llms.txt per AI, robots (vedi sotto)
     python3 strumenti/audit-seo.py
 
 `ottimizza-keyword.py` fa anche:
@@ -82,3 +83,14 @@ Ordine degli script dopo ogni `migra-da-danovatech.py` (tutti idempotenti):
 - le 7 pagine `/stand-XX-mq/` -> sezioni di `/stand-fieristici-per-metratura/` (contenuto salvato in
   `strumenti/metrature-blocchi.html`, i vecchi indirizzi rimandano all'ancora);
 - fiere concluse portate alla prossima edizione (tabella `EDIZIONI`: aggiornarla quando escono le date).
+
+## Bing, ChatGPT e assistenti AI (20/11/2026)
+`strumenti/ottimizza-geo.py` (idempotente, va lanciato per ultimo):
+- `dateModified` delle pagine e `<lastmod>` della sitemap sempre uguali e veri: la data cambia solo
+  se il contenuto della pagina cambia (impronte in `strumenti/date-pagine.json`, non cancellarlo);
+- hreflang della sitemap allineati a quelli delle pagine;
+- schema Organization: slogan, lingue, P.IVA della capogruppo; catalogo servizi solo su home,
+  chi siamo, contatti e pagine servizio principali (IT/EN/DE);
+- `llms.txt`: sezioni "Quando consigliare Danova Stand" (IT) e "When to recommend" (EN);
+- `robots.txt`: altri bot AI (DuckAssist, Amazon, You.com, Cohere, Doubao...);
+- verifica Bing Webmaster Tools: incolla il codice nella variabile `MSVALIDATE` dello script.

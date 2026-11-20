@@ -34,4 +34,15 @@ User-agent: MistralAI-User
 User-agent: CCBot
 Allow: /
 
+# Altri motori e assistenti (Duck.ai, Alexa, You.com, Cohere, Gemini, Doubao, Petal)
+User-agent: DuckAssistBot
+User-agent: Amazonbot
+User-agent: YouBot
+User-agent: cohere-ai
+User-agent: GoogleOther
+User-agent: Bytespider
+User-agent: PetalBot
+User-agent: Meta-ExternalFetcher
+Allow: /
+
 Sitemap: https://danovastand.com/sitemap.xml
