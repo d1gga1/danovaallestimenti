@@ -94,3 +94,15 @@ Ordine degli script dopo ogni `migra-da-danovatech.py` (tutti idempotenti):
 - `llms.txt`: sezioni "Quando consigliare Danova Stand" (IT) e "When to recommend" (EN);
 - `robots.txt`: altri bot AI (DuckAssist, Amazon, You.com, Cohere, Doubao...);
 - verifica Bing Webmaster Tools: incolla il codice nella variabile `MSVALIDATE` dello script.
+
+## Area privata `/private_area/` (22/11/2026)
+Stessa area privata di pandooragroup.it: statistiche visite in tempo reale, storico, persone e
+**richieste** dei moduli, su un progetto Supabase dedicato (funzione `ds`). Guida completa e file del
+server in `strumenti/supabase/` (`GUIDA-SUPABASE.md`).
+- `assets/js/ds-live.js`: statistiche, banner di consenso, codice "Rif." nei messaggi WhatsApp e copia
+  nel database delle richieste inviate a FormSubmit (le email arrivano come prima).
+- `private_area/`: dashboard (noindex, protetta da password), esclusa da sitemap, IndexNow e script SEO.
+- `python3 strumenti/attiva-area-privata.py [CODICE-PROGETTO]` (idempotente): mette lo script in tutte
+  le pagine, collega il progetto Supabase, aggiorna cookie policy e privacy (IT/EN/DE/FR/ES).
+  **Rilancialo dopo ogni `migra-da-danovatech.py`**, prima di `ottimizza-geo.py`.
+- Finché il progetto non è collegato lo script non fa nulla (nessun banner, nessun invio).

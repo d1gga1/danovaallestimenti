@@ -30,7 +30,7 @@ DATE_FILE = 'strumenti/date-pagine.json'
 # Lascialo vuoto se hai verificato il sito con DNS o importandolo da Google Search Console.
 MSVALIDATE = ''
 
-ESCLUDI = ('strumenti/', 'render/', '_google_business/', 'Claude outputs/', '.git/')
+ESCLUDI = ('strumenti/', 'render/', 'private_area/', '_google_business/', 'Claude outputs/', '.git/')
 LD_RE = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
 stats = {k: 0 for k in ('date', 'org', 'website', 'msvalidate', 'sitemap', 'llms', 'robots')}
 

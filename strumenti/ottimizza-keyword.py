@@ -20,7 +20,7 @@ Cosa fa (dati e motivazioni in strumenti/ricerca-parole-chiave-2026-11-csv.md):
 import os, re, collections, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP = {'.git', 'strumenti', '_google_business', 'node_modules', '.github', 'render'}
+SKIP = {'.git', 'strumenti', '_google_business', 'node_modules', '.github', 'render', 'private_area'}
 
 # vecchio -> nuovo: sostituiti ovunque nel file (title, og:title, twitter:title, schema)
 REPLACE = {

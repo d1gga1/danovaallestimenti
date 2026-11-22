@@ -18,7 +18,7 @@ Cosa fa:
 import os, re, json, html, collections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP = {'.git', 'strumenti', '_google_business', 'node_modules', '.github', 'render'}
+SKIP = {'.git', 'strumenti', '_google_business', 'node_modules', '.github', 'render', 'private_area'}
 
 SOCIAL = [
     "https://www.instagram.com/danova_techh/",
