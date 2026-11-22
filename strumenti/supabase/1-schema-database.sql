@@ -68,6 +68,13 @@ create index if not exists i_r_creato on public.richieste (creato);
 create index if not exists i_r_stato on public.richieste (stato);
 create index if not exists i_r_vis on public.richieste (visitatore);
 
+-- più siti nello stesso database: stand / costruzioni / tech
+alter table public.sessioni add column if not exists sito text;
+alter table public.eventi add column if not exists sito text;
+alter table public.richieste add column if not exists sito text;
+create index if not exists i_s_sito on public.sessioni (sito, giorno);
+create index if not exists i_e_sito on public.eventi (sito, giorno);
+
 -- sicurezza: RLS attiva ovunque, nessuna regola => anon e utenti loggati non vedono nulla
 do $$
 declare t text;

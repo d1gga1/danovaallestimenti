@@ -88,7 +88,7 @@
   function disegnaLive(d) {
     var live = d.live;
     $('#live-n').textContent = n(live.length);
-    document.title = (live.length ? '(' + live.length + ') ' : '') + 'Visitatori · Danova Stand';
+    document.title = (live.length ? '(' + live.length + ') ' : '') + 'Visitatori · ' + ((window.DSSITO || {}).nome || 'Danova');
     var nuovi = live.filter(function (x) { return +x.ritorno === 0; }).length;
     var disp = {};
     live.forEach(function (x) { disp[x.dispositivo] = (disp[x.dispositivo] || 0) + 1; });
@@ -480,9 +480,9 @@
   function apriImpostazioni() {
     var ip = ultimoLive ? ultimoLive.tuo_ip : '';
     apriModal('<h2>Impostazioni</h2>' +
-      '<p class="small">I dati stanno nel database Supabase del progetto Danova Stand. La password di questa pagina si cambia in Supabase → Edge Functions → Secrets → <code>ADMIN_PASSWORD</code>.</p>' +
+      '<p class="small">I dati dei tre siti (Danova Stand, Danova Costruzioni, Danova Tech) stanno nello stesso database Supabase; il sito si sceglie dal menu in alto. La password di questa pagina si cambia in Supabase → Edge Functions → Secrets → <code>ADMIN_PASSWORD</code>.</p>' +
       '<h3 style="margin-top:20px">Non contare le vostre visite</h3>' +
-      '<p class="small">Da ogni computer o telefono vostro aprite una volta <a href="https://danovastand.com/?dslive=no" target="_blank" rel="noopener">danovastand.com/?dslive=no</a>: quel browser non verrà più contato (per annullare: <code>?dslive=si</code>).</p>' +
+      '<p class="small">Da ogni computer o telefono vostro aprite una volta questi link (uno per sito): quel browser non verrà più contato (per annullare: <code>?dslive=si</code>).<br><a href="https://danovastand.com/?dslive=no" target="_blank" rel="noopener">danovastand.com/?dslive=no</a> · <a href="https://danovacostruzioni.it/?dslive=no" target="_blank" rel="noopener">danovacostruzioni.it/?dslive=no</a> · <a href="https://danova-tech.com/?dslive=no" target="_blank" rel="noopener">danova-tech.com/?dslive=no</a></p>' +
       (ip ? '<p class="small muted">Il vostro indirizzo IP attuale: <code>' + esc(ip) + '</code></p>' : ''));
   }
   /* ---------------- avvio ---------------- */

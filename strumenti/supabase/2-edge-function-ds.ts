@@ -1,4 +1,6 @@
-// DANOVA STAND — Edge Function "ds" su Supabase (stessa struttura della funzione "pd" di Pan.door.a).
+// DANOVA — Edge Function "ds" su Supabase (stessa struttura della funzione "pd" di Pan.door.a).
+// Un solo database e una sola dashboard per più siti: Danova Stand, Danova Costruzioni, Danova Tech.
+// Ogni sito manda il suo nome ("si") con ogni segnale; la dashboard sceglie il sito con ?sito=.
 //   /functions/v1/ds/s         → statistiche visite (riceve i segnali di /assets/js/ds-live.js)
 //   /functions/v1/ds/richiesta → copia nel database delle richieste inviate dai moduli del sito
 //                                (l'email a info@danova-tech.com continua ad arrivare da FormSubmit come prima)
@@ -13,8 +15,19 @@
 import postgres from "npm:postgres@3.4.4";
 
 /* ======================= impostazioni ======================= */
+/* i siti collegati: nome breve → dominio */
+const SITI: Record<string, string> = { stand: "danovastand.com", costruzioni: "danovacostruzioni.it", tech: "danova-tech.com" };
+function sitoDi(x: unknown, req?: Request) {
+  const s = String(x ?? "");
+  if (SITI[s]) return s;
+  try { // ripiego: dal dominio della pagina che manda il segnale
+    const h = new URL(req?.headers.get("origin") || req?.headers.get("referer") || "").hostname.replace(/^www\./, "");
+    for (const [k, d] of Object.entries(SITI)) if (h === d) return k;
+  } catch { /* */ }
+  return "stand";
+}
 const CFG = {
-  origini: (Deno.env.get("DS_ORIGINI") || "https://danovastand.com,https://www.danovastand.com").split(",").map((s) => s.trim()),
+  origini: (Deno.env.get("DS_ORIGINI") || "https://danovastand.com,https://www.danovastand.com,https://danovacostruzioni.it,https://www.danovacostruzioni.it,https://danova-tech.com,https://www.danova-tech.com").split(",").map((s) => s.trim()),
   contatto: "info@danova-tech.com",
   segreto: Deno.env.get("DS_SEGRETO") || "",
   admin_password: Deno.env.get("ADMIN_PASSWORD") || "",
@@ -256,7 +269,13 @@ async function colonneGeo() {
   if (colonneGeoOk) return;
   try { await esegui(`ALTER TABLE sessioni ADD COLUMN IF NOT EXISTS cap text, ADD COLUMN IF NOT EXISTS geo_fonte text,
       ADD COLUMN IF NOT EXISTS gps_lat double precision, ADD COLUMN IF NOT EXISTS gps_lon double precision, ADD COLUMN IF NOT EXISTS gps_acc int,
-      ADD COLUMN IF NOT EXISTS gps_indirizzo text, ADD COLUMN IF NOT EXISTS gps_citta text, ADD COLUMN IF NOT EXISTS gps_cap text, ADD COLUMN IF NOT EXISTS gps_ts bigint, ADD COLUMN IF NOT EXISTS consenso int`); colonneGeoOk = true; } catch (e) { console.error("colonne geo", e); }
+      ADD COLUMN IF NOT EXISTS gps_indirizzo text, ADD COLUMN IF NOT EXISTS gps_citta text, ADD COLUMN IF NOT EXISTS gps_cap text, ADD COLUMN IF NOT EXISTS gps_ts bigint, ADD COLUMN IF NOT EXISTS consenso int, ADD COLUMN IF NOT EXISTS sito text`);
+    await esegui("ALTER TABLE eventi ADD COLUMN IF NOT EXISTS sito text");
+    await esegui("UPDATE sessioni SET sito = 'stand' WHERE sito IS NULL");
+    await esegui("UPDATE eventi SET sito = 'stand' WHERE sito IS NULL");
+    await esegui("CREATE INDEX IF NOT EXISTS i_s_sito ON sessioni (sito, giorno)");
+    await esegui("CREATE INDEX IF NOT EXISTS i_e_sito ON eventi (sito, giorno)");
+    colonneGeoOk = true; } catch (e) { console.error("colonne geo", e); }
 }
 /* da coordinate GPS a indirizzo (OpenStreetMap / Nominatim) */
 async function indirizzoDa(lat: number, lon: number): Promise<Row> {
@@ -293,6 +312,8 @@ async function statistiche(req: Request) {
   const adesso = ora();
   let percorso = t(inp.p ?? "/", 250); if (percorso === "" || percorso[0] !== "/") percorso = "/";
   const titolo = t(inp.t, 200);
+  const sito = sitoDi(inp.si, req);
+  await colonneGeo();
   try {
     if (e === "pos") { // posizione GPS concessa dal visitatore
       const la = parseFloat(inp.la), lo = parseFloat(inp.lo), ac = parseFloat(inp.ac);
@@ -307,8 +328,8 @@ async function statistiche(req: Request) {
         [Math.round(la * 1e5) / 1e5, Math.round(lo * 1e5) / 1e5, acc, ind.indirizzo || null, ind.citta || null, ind.cap || null, adesso, sid]);
       if (prima.gps_lat == null) {
         const modo = inp.m === "modulo" ? "dal modulo indirizzo" : inp.m === "auto" ? "già autorizzata" : "dall'avviso";
-        await esegui("INSERT INTO eventi (sessione, visitatore, ts, giorno, ora, tipo, dettaglio, percorso, titolo) VALUES (?,?,?,?,?,?,?,?,?)",
-          [sid, vid, adesso, giornoDi(adesso), oraDi(adesso), "posizione", t((ind.indirizzo || `${la}, ${lo}`) + (acc != null ? ` (± ${acc} m, ${modo})` : ""), 200), percorso, titolo]);
+        await esegui("INSERT INTO eventi (sessione, visitatore, ts, giorno, ora, tipo, dettaglio, percorso, titolo, sito) VALUES (?,?,?,?,?,?,?,?,?,?)",
+          [sid, vid, adesso, giornoDi(adesso), oraDi(adesso), "posizione", t((ind.indirizzo || `${la}, ${lo}`) + (acc != null ? ` (± ${acc} m, ${modo})` : ""), 200), percorso, titolo, sito]);
         await esegui("UPDATE sessioni SET azioni = COALESCE(azioni,0) + 1 WHERE id = ?", [sid]);
       }
       return new Risposta(null, 204);
@@ -319,8 +340,8 @@ async function statistiche(req: Request) {
       if (!TIPI_EVENTO.includes(tipo) && !dettagliato) return new Risposta(null, 204);
       if (dettagliato && inp.c !== 1) return new Risposta(null, 204); // senza consenso non si salva
       if (dettagliato && !await val("SELECT id FROM sessioni WHERE id = ?", [sid])) return new Risposta(null, 204);
-      await esegui("INSERT INTO eventi (sessione, visitatore, ts, giorno, ora, tipo, dettaglio, percorso, titolo) VALUES (?,?,?,?,?,?,?,?,?)",
-        [sid, vid, adesso, giornoDi(adesso), oraDi(adesso), tipo, t(inp.x, 200), percorso, titolo]);
+      await esegui("INSERT INTO eventi (sessione, visitatore, ts, giorno, ora, tipo, dettaglio, percorso, titolo, sito) VALUES (?,?,?,?,?,?,?,?,?,?)",
+        [sid, vid, adesso, giornoDi(adesso), oraDi(adesso), tipo, t(inp.x, 200), percorso, titolo, sito]);
       if (dettagliato) { await colonneGeo(); await esegui("UPDATE sessioni SET ultimo = ?, consenso = 1 WHERE id = ?", [adesso, sid]); }
       else await esegui("UPDATE sessioni SET azioni = COALESCE(azioni,0) + 1, ultimo = ? WHERE id = ?", [adesso, sid]);
       return new Risposta(null, 204);
@@ -349,14 +370,14 @@ async function statistiche(req: Request) {
       const dpr = parseFloat(inp.dpr), mem = parseFloat(inp.mem);
       await esegui(`INSERT INTO sessioni (id, visitatore, inizio, ultimo, giorno, ora, dow, ritorno, n_visita, cc, paese, regione, citta, lat, lon,
         canale, sorgente, ref_host, campagna, ingresso, pagina, titolo, dispositivo, browser, so, lingua, pagine, chiuso,
-        isp, fuso, schermo, finestra, dpr, touch, connessione, memoria, cpu, tema, lingue, riferimento, utm_sorgente, utm_mezzo, utm_termine, ua, azioni, modello, so_versione, visitatore_noto, cap, geo_fonte)
+        isp, fuso, schermo, finestra, dpr, touch, connessione, memoria, cpu, tema, lingue, riferimento, utm_sorgente, utm_mezzo, utm_termine, ua, azioni, modello, so_versione, visitatore_noto, cap, geo_fonte, sito)
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,0,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,?,?,
-          CASE WHEN EXISTS (SELECT 1 FROM visitatori WHERE id = ? AND identificato IS NOT NULL) THEN 1 ELSE 0 END, ?, ?) ON CONFLICT (id) DO NOTHING`,
+          CASE WHEN EXISTS (SELECT 1 FROM visitatori WHERE id = ? AND identificato IS NOT NULL) THEN 1 ELSE 0 END, ?, ?, ?) ON CONFLICT (id) DO NOTHING`,
         [sid, vid, adesso, adesso, giornoDi(adesso), oraDi(adesso), dowDi(adesso), ritorno, n, g.cc, g.paese, g.regione, g.citta, g.lat, g.lon,
           canale, sorgente, host, t(utm.c, 120), percorso, percorso, titolo, disp, browser, so, lingua,
           g.isp, t(inp.tz, 60), dim(inp.sch), dim(inp.fin), isFinite(dpr) ? Math.min(dpr, 10) : null, inp.tc ? 1 : 0, t(inp.cn, 20),
           isFinite(mem) ? Math.min(mem, 64) : null, intOk(inp.cpu, 256), inp.dk ? "scuro" : "chiaro", t(inp.ls, 60), rif,
-          t(utm.s, 80), t(utm.m, 80), t(utm.t, 120), t(ua, 300), t(inp.mo, 60), t(inp.ov, 30), vid, g.cap || null, g.fonte || null]);
+          t(utm.s, 80), t(utm.m, 80), t(utm.t, 120), t(ua, 300), t(inp.mo, 60), t(inp.ov, 30), vid, g.cap || null, g.fonte || null, sito]);
     }
     await esegui("INSERT INTO visualizzazioni (sessione, ts, giorno, ora, percorso, titolo, scroll, tempo) VALUES (?,?,?,?,?,?,0,0)", [sid, adesso, giornoDi(adesso), oraDi(adesso), percorso, titolo]);
     await esegui("UPDATE sessioni SET ultimo = ?, pagina = ?, titolo = ?, pagine = pagine + 1, chiuso = 0 WHERE id = ?", [adesso, percorso, titolo, sid]);
@@ -399,7 +420,7 @@ async function admin(req: Request) {
     if (!await limite("area_login", ip, 8, 900)) errore("Troppi tentativi. Riprovate tra 15 minuti.", 429);
     if (!uguali(String(inp.password ?? ""), CFG.admin_password)) { await new Promise((r) => setTimeout(r, 500)); errore("Password non corretta.", 401); }
     const scad = ora() + 3600 * CFG.admin_ore;
-    return json({ ok: true, token: await firma(scad), scade: scad });
+    return json({ ok: true, token: await firma(scad), scade: scad, siti: SITI });
   }
   if (!await autorizzato(req)) return json({ ok: false, errore: "accesso" }, 401);
   await colonneGeo();
@@ -407,10 +428,13 @@ async function admin(req: Request) {
 
   const g = (k: string, max = 190) => t(G.get(k) ?? inp[k] ?? "", max);
   const adesso = ora();
+  const SITO = SITI[G.get("sito") || ""] ? String(G.get("sito")) : "";   // vuoto = tutti i siti
+  const soloSito = (p: unknown[], alias = "s") => { if (!SITO) return ""; p.push(SITO); return ` AND ${alias}.sito = ?`; };
 
   /* ---------- filtri delle statistiche ---------- */
   const filtri = (p: unknown[], alias = "s") => {
     const w: string[] = [];
+    if (SITO) { w.push(`${alias}.sito = ?`); p.push(SITO); }
     const mappa: Record<string, string> = { paese: "cc", canale: "canale", sorgente: "sorgente", dispositivo: "dispositivo", citta: "citta", browser: "browser", so: "so", lingua: "lingua" };
     for (const [k, col] of Object.entries(mappa)) { const v = G.get(k); if (v !== null && v !== "") { w.push(`${alias}.${col} = ?`); p.push(v); } }
     if (G.get("tipo") === "nuovi") w.push(`${alias}.ritorno = 0`);
@@ -426,7 +450,7 @@ async function admin(req: Request) {
     return w.length ? " AND " + w.join(" AND ") : "";
   };
   const kpi = async (da: string, a_: string, senzaFiltri = false) => {
-    const p: unknown[] = [da, a_]; const w = senzaFiltri ? "" : filtri(p);
+    const p: unknown[] = [da, a_]; const w = senzaFiltri ? soloSito(p) : filtri(p);
     const r = (await riga(`SELECT COUNT(*) sessioni, COUNT(DISTINCT s.visitatore) visitatori, COALESCE(SUM(s.ritorno),0) sess_ritorno,
       COUNT(DISTINCT CASE WHEN s.ritorno = 1 THEN s.visitatore END) vis_ritorno,
       COALESCE(SUM(CASE WHEN s.pagine <= 1 THEN 1 ELSE 0 END),0) rimbalzi, AVG(s.ultimo - s.inizio) durata, COALESCE(SUM(s.pagine),0) pagine
@@ -441,9 +465,9 @@ async function admin(req: Request) {
   if (a === "live") {
     const live = await righe(`SELECT s.id, s.ritorno, s.n_visita, s.cc, s.paese, s.regione, s.citta, s.cap, s.gps_lat, s.gps_lon, s.gps_acc, s.gps_indirizzo, s.gps_citta, s.gps_cap, s.lat, s.lon, s.canale, s.sorgente, s.ingresso, s.pagina, s.titolo,
       s.dispositivo, s.browser, s.so, s.lingua, s.pagine, s.inizio, s.ultimo, s.modello, s.azioni, SUBSTR(s.visitatore, 1, 16) pid, v.nome, v.email, v.telefono
-      FROM sessioni s LEFT JOIN visitatori v ON v.id = s.visitatore AND v.identificato IS NOT NULL WHERE s.ultimo >= ? AND s.chiuso = 0 ORDER BY s.inizio DESC LIMIT 500`, [adesso - CFG.live_secondi]);
+      FROM sessioni s LEFT JOIN visitatori v ON v.id = s.visitatore AND v.identificato IS NOT NULL WHERE s.ultimo >= ? AND s.chiuso = 0${SITO ? " AND s.sito = ?" : ""} ORDER BY s.inizio DESC LIMIT 500`, SITO ? [adesso - CFG.live_secondi, SITO] : [adesso - CFG.live_secondi]);
     for (const x of live) { x.id = String(x.id).slice(0, 12); x.durata = adesso - Number(x.inizio); }
-    const rec = await righe("SELECT inizio, ultimo FROM sessioni WHERE ultimo >= ?", [adesso - 1900]);
+    const rec = await righe(`SELECT inizio, ultimo FROM sessioni WHERE ultimo >= ?${SITO ? " AND sito = ?" : ""}`, SITO ? [adesso - 1900, SITO] : [adesso - 1900]);
     const serie = [];
     for (let i = 29; i >= 0; i--) {
       const fine = adesso - i * 60, ini = fine - 60; let n = 0;
@@ -451,9 +475,9 @@ async function admin(req: Request) {
       serie.push({ t: hhmm(fine), n });
     }
     const oggi = giornoDi(adesso), ieri = giornoDi(adesso - 86400);
-    const contaAzioni = async (g2: string) => { const m: Row = {}; for (const r of await righe("SELECT tipo, COUNT(*) n FROM eventi WHERE giorno = ? GROUP BY tipo", [g2])) m[r.tipo] = Number(r.n); return m; };
+    const contaAzioni = async (g2: string) => { const m: Row = {}; for (const r of await righe(`SELECT tipo, COUNT(*) n FROM eventi WHERE giorno = ?${SITO ? " AND sito = ?" : ""} GROUP BY tipo`, SITO ? [g2, SITO] : [g2])) m[r.tipo] = Number(r.n); return m; };
     const ultimeAzioni = await righe(`SELECT e.ts, e.tipo, e.dettaglio, e.percorso, e.titolo, s.citta, s.paese, s.cc, s.dispositivo, SUBSTR(e.sessione, 1, 12) sid, v.nome
-      FROM eventi e LEFT JOIN sessioni s ON s.id = e.sessione LEFT JOIN visitatori v ON v.id = e.visitatore AND v.identificato IS NOT NULL WHERE e.ts >= ? AND e.tipo NOT IN ${FUORI_ELENCHI} ORDER BY e.ts DESC LIMIT 30`, [adesso - 86400]);
+      FROM eventi e LEFT JOIN sessioni s ON s.id = e.sessione LEFT JOIN visitatori v ON v.id = e.visitatore AND v.identificato IS NOT NULL WHERE e.ts >= ? AND e.tipo NOT IN ${FUORI_ELENCHI}${SITO ? " AND e.sito = ?" : ""} ORDER BY e.ts DESC LIMIT 30`, SITO ? [adesso - 86400, SITO] : [adesso - 86400]);
     return json({ ok: true, ora: adesso, live, serie, oggi: await kpi(oggi, oggi, true), ieri: await kpi(ieri, ieri, true), tuo_ip: ip, geo: true,
       azioni_oggi: await contaAzioni(oggi), azioni_ieri: await contaAzioni(ieri), ultime_azioni: ultimeAzioni });
   }
@@ -650,6 +674,7 @@ async function admin(req: Request) {
     case "richieste": {
       const st = g("stato") || "aperte";
       const w: string[] = []; let p: unknown[] = [];
+      if (SITO) { w.push("sito = ?"); p.push(SITO); }
       if (st === "aperte") w.push("stato IN ('nuova','contattato','preventivo')"); else if (STATI_R[st]) { w.push("stato = ?"); p.push(st); }
       const q = g("q", 80);
       if (q !== "") { w.push("(nome ILIKE ? OR email ILIKE ? OR telefono ILIKE ? OR azienda ILIKE ? OR fiera ILIKE ? OR messaggio ILIKE ? OR oggetto ILIKE ? OR rif ILIKE ?)"); p = p.concat(Array(8).fill(like(q))); }
@@ -659,11 +684,11 @@ async function admin(req: Request) {
         FROM richieste r${w.length ? " WHERE " + w.join(" AND ") : ""} ORDER BY r.creato DESC LIMIT 500`, p);
       for (const x of r) { delete x.visitatore; delete x.sessione; try { x.campi = JSON.parse(x.campi || "[]"); } catch { x.campi = []; } }
       const conta: Row = {};
-      for (const x of await righe("SELECT stato, COUNT(*) n FROM richieste GROUP BY stato")) conta[x.stato] = Number(x.n);
+      for (const x of await righe(`SELECT stato, COUNT(*) n FROM richieste${SITO ? " WHERE sito = ?" : ""} GROUP BY stato`, SITO ? [SITO] : [])) conta[x.stato] = Number(x.n);
       const oggi = giornoDi(adesso);
       const per = await riga(`SELECT COUNT(*) FILTER (WHERE creato >= ?) oggi, COUNT(*) FILTER (WHERE creato >= ?) d7, COUNT(*) FILTER (WHERE creato >= ?) d30,
-        COALESCE(SUM(valore) FILTER (WHERE stato = 'acquisita'), 0) valore_acquisito FROM richieste`,
-        [mezzanotte(oggi), mezzanotte(piuGiorni(oggi, -6)), mezzanotte(piuGiorni(oggi, -29))]);
+        COALESCE(SUM(valore) FILTER (WHERE stato = 'acquisita'), 0) valore_acquisito FROM richieste${SITO ? " WHERE sito = ?" : ""}`,
+        [mezzanotte(oggi), mezzanotte(piuGiorni(oggi, -6)), mezzanotte(piuGiorni(oggi, -29)), ...(SITO ? [SITO] : [])]);
       return json({ ok: true, richieste: r, conta, periodo: per, stati: STATI_R });
     }
     case "richiesta_salva": {
@@ -685,11 +710,11 @@ async function admin(req: Request) {
       return json({ ok: true, rif: r, pid, chi, evento: ev, richieste: rq });
     }
     case "csv_richieste": {
-      const rr = await righe("SELECT * FROM richieste ORDER BY creato");
-      return csv(`richieste_${giornoDi(adesso)}.csv`, ["Data", "Stato", "Nome", "Azienda", "Email", "Telefono", "Fiera", "Quando vuole partire", "Messaggio", "Oggetto", "Altri campi", "Pagina", "Lingua", "Città", "Regione", "Paese", "Arrivato da", "Rif. WhatsApp", "Valore (€)", "Note interne"],
+      const rr = await righe(`SELECT * FROM richieste${SITO ? " WHERE sito = ?" : ""} ORDER BY creato`, SITO ? [SITO] : []);
+      return csv(`richieste_${SITO || "tutti"}_${giornoDi(adesso)}.csv`, ["Data", "Sito", "Stato", "Nome", "Azienda", "Email", "Telefono", "Fiera", "Quando vuole partire", "Messaggio", "Oggetto", "Altri campi", "Pagina", "Lingua", "Città", "Regione", "Paese", "Arrivato da", "Rif. WhatsApp", "Valore (€)", "Note interne"],
         rr.map((x) => {
           let altri = ""; try { altri = (JSON.parse(x.campi || "[]") as string[][]).map((c) => c[0] + ": " + c[1]).join(" | "); } catch { /* */ }
-          return [dataOra(Number(x.creato)), STATI_R[x.stato] || x.stato, x.nome, x.azienda, x.email, x.telefono, x.fiera, x.urgenza, x.messaggio, x.oggetto, altri,
+          return [dataOra(Number(x.creato)), SITI[x.sito] || x.sito || "", STATI_R[x.stato] || x.stato, x.nome, x.azienda, x.email, x.telefono, x.fiera, x.urgenza, x.messaggio, x.oggetto, altri,
             x.pagina, x.lingua, x.citta, x.regione, x.paese, x.sorgente, x.rif, x.valore != null ? vir(x.valore) : "", x.note_admin];
         }));
     }
@@ -709,6 +734,8 @@ async function tabellaRichieste() {
     citta text, regione text, paese text, cc text, canale text, sorgente text,
     valore numeric(12,2), note_admin text, contattato bigint)`);
   await esegui("ALTER TABLE richieste ENABLE ROW LEVEL SECURITY");
+  await esegui("ALTER TABLE richieste ADD COLUMN IF NOT EXISTS sito text");
+  await esegui("UPDATE richieste SET sito = 'stand' WHERE sito IS NULL");
   tabellaRichiesteOk = true;
 }
 // etichette dei campi dei moduli (contatto.js, fiere-richiesta.js) → colonne
@@ -745,15 +772,17 @@ async function richiesta(req: Request) {
   const ses = sid ? await riga("SELECT citta, regione, paese, cc, canale, sorgente FROM sessioni WHERE id = ?", [sid]) : null;
   let percorso = t(inp.p ?? "/", 250); if (percorso[0] !== "/") percorso = "/";
   const rif = v ? v.slice(0, 6).toUpperCase() : "";
+  const sito = sitoDi(inp.si, req);
+  await colonneGeo();
   const id = await val(`INSERT INTO richieste (creato, aggiornato, stato, nome, email, telefono, azienda, fiera, urgenza, messaggio, oggetto, campi, pagina, titolo, lingua, rif,
-      visitatore, sessione, citta, regione, paese, cc, canale, sorgente) VALUES (?,?,'nuova',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) RETURNING id`,
+      visitatore, sessione, citta, regione, paese, cc, canale, sorgente, sito) VALUES (?,?,'nuova',?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) RETURNING id`,
     [adesso, adesso, t(col.nome, 160), t(col.email, 190).toLowerCase(), t(col.telefono, 40), t(col.azienda, 160), t(col.fiera, 160), t(col.urgenza, 60),
       t(col.messaggio, 3000), t(inp.oggetto, 200), JSON.stringify(campi), percorso, t(inp.t, 200), t(inp.l, 10), rif, vid, sid,
-      ses?.citta || null, ses?.regione || null, ses?.paese || null, ses?.cc || null, ses?.canale || null, ses?.sorgente || null]);
+      ses?.citta || null, ses?.regione || null, ses?.paese || null, ses?.cc || null, ses?.canale || null, ses?.sorgente || null, sito]);
   if (v) await identifica(v, { email: col.email, nome: col.nome, telefono: col.telefono, fonte: "richiesta" });
   if (sid && vid) {
-    await esegui("INSERT INTO eventi (sessione, visitatore, ts, giorno, ora, tipo, dettaglio, percorso, titolo) VALUES (?,?,?,?,?,?,?,?,?)",
-      [sid, vid, adesso, giornoDi(adesso), oraDi(adesso), "richiesta", t((col.fiera ? col.fiera + " · " : "") + (col.azienda || col.nome || ""), 200), percorso, t(inp.t, 200)]);
+    await esegui("INSERT INTO eventi (sessione, visitatore, ts, giorno, ora, tipo, dettaglio, percorso, titolo, sito) VALUES (?,?,?,?,?,?,?,?,?,?)",
+      [sid, vid, adesso, giornoDi(adesso), oraDi(adesso), "richiesta", t((col.fiera ? col.fiera + " · " : "") + (col.azienda || col.nome || ""), 200), percorso, t(inp.t, 200), sito]);
     await esegui("UPDATE sessioni SET azioni = COALESCE(azioni,0) + 1, ultimo = ? WHERE id = ?", [adesso, sid]);
   }
   return new Risposta({ ok: true, id });

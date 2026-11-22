@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Danova Stand — area privata /private_area/ (stessa di pandooragroup.it), idempotente.
+"""Danova — area privata danovastand.com/private_area/ (stessa di pandooragroup.it), idempotente.
+Una sola dashboard per tre siti: Danova Stand (questo), Danova Costruzioni, Danova Tech.
 
-    python3 strumenti/attiva-area-privata.py                 # aggiorna pagine e testi legali
+    python3 strumenti/attiva-area-privata.py                 # Danova Stand: aggiorna pagine e testi legali
     python3 strumenti/attiva-area-privata.py abcdefghijklmn  # in più collega il progetto Supabase (codice del progetto)
+    python3 strumenti/attiva-area-privata.py --sito costruzioni ~/danova_costruzioni   # collega un altro sito
+    python3 strumenti/attiva-area-privata.py --sito tech ~/Desktop/dantech/danovatech
+  Per gli altri siti copia anche assets/js/ds-live.js (lo stesso file per tutti: il sito si riconosce dal dominio).
 
 Cosa fa:
   1. aggiunge <script src="/assets/js/ds-live.js" defer> a tutte le pagine del sito
@@ -14,10 +18,24 @@ Va rilanciato dopo ogni migra-da-danovatech.py (che riscrive le pagine), insieme
 """
 import os, re, sys
 
-REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SALTA = {'.git', '.github', 'strumenti', 'private_area', '_google_business', 'Claude outputs', 'node_modules'}
+QUI = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # repository di Danova Stand
+args = sys.argv[1:]
+SITO = 'stand'
+if '--sito' in args:
+    i = args.index('--sito'); SITO = args[i + 1]; del args[i:i + 2]
+    if SITO not in ('stand', 'costruzioni', 'tech'): sys.exit('--sito deve essere stand, costruzioni o tech')
+REPO = QUI
+if SITO != 'stand':
+    if not args: sys.exit('Indica la cartella del sito, es. --sito costruzioni ~/danova_costruzioni')
+    REPO = os.path.abspath(os.path.expanduser(args.pop(0)))
+    os.makedirs(os.path.join(REPO, 'assets', 'js'), exist_ok=True)
+    src = open(os.path.join(QUI, 'assets', 'js', 'ds-live.js'), encoding='utf-8').read()
+    open(os.path.join(REPO, 'assets', 'js', 'ds-live.js'), 'w', encoding='utf-8').write(src)
+    print('Copiato assets/js/ds-live.js in', REPO)
+MAIL = {'stand': 'info@danova-tech.com', 'costruzioni': 'info@danovacostruzioni.it', 'tech': 'info@danova-tech.com'}[SITO]
+SALTA = {'.git', '.github', 'strumenti', 'private_area', '_google_business', 'Claude outputs', 'node_modules', 'seo-tools', 'social', 'assets'}
 TAG = '<script src="/assets/js/ds-live.js?v=1" defer></script>'
-PROG_FILE = os.path.join(REPO, 'strumenti', 'supabase', 'progetto.txt')
+PROG_FILE = os.path.join(QUI, 'strumenti', 'supabase', 'progetto.txt')
 
 
 def leggi(p): return open(p, encoding='utf-8').read()
@@ -28,7 +46,7 @@ def scrivi(p, t): open(p, 'w', encoding='utf-8').write(t)
 def pagine():
     for root, dirs, files in os.walk(REPO):
         rel = os.path.relpath(root, REPO)
-        dirs[:] = [d for d in dirs if d not in SALTA and not d.startswith('_backup')]
+        dirs[:] = [d for d in dirs if d not in SALTA and not d.startswith('_')]
         for f in files:
             if f.endswith('.html'):
                 yield os.path.join(root, f), os.path.join(rel, f)
@@ -48,16 +66,18 @@ for p, rel in pagine():
 print(f'Script statistiche: aggiunto a {aggiunte} pagine, già presente in {gia}, {salt} reindirizzamenti saltati.')
 
 # ---------- 2. progetto Supabase ----------
-ref = sys.argv[1].strip() if len(sys.argv) > 1 else (leggi(PROG_FILE).strip() if os.path.exists(PROG_FILE) else '')
+ref = args[0].strip() if args else (leggi(PROG_FILE).strip() if os.path.exists(PROG_FILE) else '')
 ref = re.sub(r'^https?://', '', ref).split('.')[0]
 if ref:
     if not re.fullmatch(r'[a-z0-9]{10,40}', ref):
         sys.exit('Codice progetto non valido: è la parte prima di .supabase.co, es. abcdefghijklmnopqrst')
     for rel in ('assets/js/ds-live.js', 'private_area/index.html'):
-        p = os.path.join(REPO, rel); t = leggi(p)
+        p = os.path.join(REPO, rel)
+        if not os.path.exists(p): continue
+        t = leggi(p)
         t2 = re.sub(r'https://[a-zA-Z0-9-]+\.supabase\.co/functions/v1/ds', f'https://{ref}.supabase.co/functions/v1/ds', t)
         if t2 != t: scrivi(p, t2)
-    os.makedirs(os.path.dirname(PROG_FILE), exist_ok=True); scrivi(PROG_FILE, ref + '\n')
+    if SITO == 'stand': os.makedirs(os.path.dirname(PROG_FILE), exist_ok=True); scrivi(PROG_FILE, ref + '\n')
     print(f'Progetto Supabase collegato: https://{ref}.supabase.co/functions/v1/ds')
 else:
     print('Progetto Supabase non ancora indicato: le statistiche restano spente finché non lanci lo script con il codice del progetto.')
@@ -123,7 +143,12 @@ for rel, (titolo, corpo) in COOKIE.items():
         t = re.sub(r'<p>' + re.escape(vecchio) + r'[^<]*</p>', '<p>' + nuovo + '</p>', t)
     scrivi(p, t); print('Aggiornata', rel)
 
+NEWS = (" Se ti iscrivi alla newsletter", " If you subscribe to the newsletter", " Wenn Sie den Newsletter abonnieren", " Si vous vous abonnez à la newsletter", " Si te suscribes a la newsletter")
 for rel, (dopo, titolo, corpo) in PRIVACY.items():
+    if SITO != 'stand':   # il popup della newsletter c'è solo su Danova Stand
+        for n in NEWS:
+            if n in corpo: corpo = corpo[:corpo.index(n)] + '</p>'
+    corpo = corpo.replace('info@danova-tech.com', MAIL)
     p = os.path.join(REPO, rel)
     if not os.path.exists(p): print('  manca', rel); continue
     t = leggi(p)

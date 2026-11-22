@@ -14,14 +14,17 @@
   var STATI = { nuova: 'Nuova', contattato: 'Contattato', preventivo: 'Preventivo inviato', acquisita: 'Acquisita', persa: 'Persa' };
   var CL = { nuova: 'ricevuto', contattato: 'produzione', preventivo: 'spedito', acquisita: 'consegnato', persa: 'annullato' };
   var badge = function (s) { return '<span class="st st-' + (CL[s] || 'ricevuto') + '">' + esc(STATI[s] || s) + '</span>'; };
+  var NOME = (window.DSSITO || {}).nome && window.DSSITO.id ? window.DSSITO.nome : 'Danova';
+  var NOMI_S = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech' };
   var MSG = {
-    it: function (n, f) { return 'Buongiorno' + (n ? ' ' + n : '') + ', sono di Danova Stand: abbiamo ricevuto la sua richiesta' + (f ? ' per ' + f : '') + ' dal nostro sito. Quando possiamo sentirci per definire metratura, idee e preventivo?'; },
-    en: function (n, f) { return 'Hello' + (n ? ' ' + n : '') + ', this is Danova Stand: we received your request' + (f ? ' for ' + f : '') + ' from our website. When can we talk to define size, ideas and a quote?'; },
-    de: function (n, f) { return 'Guten Tag' + (n ? ' ' + n : '') + ', hier ist Danova Stand: Wir haben Ihre Anfrage' + (f ? ' für ' + f : '') + ' über unsere Website erhalten. Wann können wir sprechen, um Fläche, Ideen und Angebot zu besprechen?'; },
-    fr: function (n, f) { return 'Bonjour' + (n ? ' ' + n : '') + ', ici Danova Stand : nous avons reçu votre demande' + (f ? ' pour ' + f : '') + ' depuis notre site. Quand pouvons-nous échanger sur la surface, les idées et le devis ?'; },
-    es: function (n, f) { return 'Hola' + (n ? ' ' + n : '') + ', le escribe Danova Stand: hemos recibido su solicitud' + (f ? ' para ' + f : '') + ' desde nuestra web. ¿Cuándo podemos hablar para definir superficie, ideas y presupuesto?'; }
+    it: function (n, f, b) { return 'Buongiorno' + (n ? ' ' + n : '') + ', sono di ' + b + ': abbiamo ricevuto la sua richiesta' + (f ? ' per ' + f : '') + ' dal nostro sito. Quando possiamo sentirci per parlarne e prepararle il preventivo?'; },
+    en: function (n, f, b) { return 'Hello' + (n ? ' ' + n : '') + ', this is ' + b + ': we received your request' + (f ? ' for ' + f : '') + ' from our website. When can we talk about it and prepare your quote?'; },
+    de: function (n, f, b) { return 'Guten Tag' + (n ? ' ' + n : '') + ', hier ist ' + b + ': Wir haben Ihre Anfrage' + (f ? ' für ' + f : '') + ' über unsere Website erhalten. Wann können wir darüber sprechen und Ihr Angebot vorbereiten?'; },
+    fr: function (n, f, b) { return 'Bonjour' + (n ? ' ' + n : '') + ', ici ' + b + ' : nous avons reçu votre demande' + (f ? ' pour ' + f : '') + ' depuis notre site. Quand pouvons-nous en parler et préparer votre devis ?'; },
+    es: function (n, f, b) { return 'Hola' + (n ? ' ' + n : '') + ', le escribe ' + b + ': hemos recibido su solicitud' + (f ? ' para ' + f : '') + ' desde nuestra web. ¿Cuándo podemos hablar y prepararle el presupuesto?'; }
   };
-  var testo = function (r) { var f = MSG[r.lingua] || (r.lingua && r.lingua !== 'it' ? MSG.en : MSG.it); return f(String(r.nome || '').split(' ')[0], r.fiera || ''); };
+  var marchio = function (r) { return NOMI_S[r.sito] || NOME; };
+  var testo = function (r) { var f = MSG[r.lingua] || (r.lingua && r.lingua !== 'it' ? MSG.en : MSG.it); return f(String(r.nome || '').split(' ')[0], r.fiera || '', marchio(r)); };
 
   function api(a, q, corpo) {
     var opt = { cache: 'no-store', headers: PDADM.headers() };
@@ -36,7 +39,7 @@
     var s = $('#tab-richieste');
     s.innerHTML = '<div class="kpis k5" id="r-kpi"></div>'
       + '<div class="card filters"><div class="seg" id="r-stati"></div><div class="sel"><input type="search" id="r-q" placeholder="Cerca nome, azienda, fiera, email, telefono…"><a class="ghost" id="r-csv" href="#">Scarica CSV</a></div></div>'
-      + '<div class="card bz-card"><div class="bz-head"><div><h3>💬 Chi mi sta scrivendo su WhatsApp?</h3><small class="muted">I messaggi WhatsApp partiti dal sito finiscono con un codice «Rif.» (es. Rif. 3FA9C1): scrivetelo qui per vedere chi è e cosa ha guardato.</small></div>'
+      + '<div class="card bz-card"><div class="bz-head"><div><h3>💬 Chi mi sta scrivendo su WhatsApp?</h3><small class="muted">I messaggi WhatsApp partiti dai siti finiscono con un codice «Rif.» (es. Rif. 3FA9C1): scrivetelo qui per vedere chi è e cosa ha guardato.</small></div>'
       + '<div class="sel"><input type="search" id="rif-q" placeholder="Codice Rif., es. 3FA9C1" maxlength="14"><button class="ghost" id="rif-go">Trova chi è</button></div></div><div id="rif-out"></div></div>'
       + '<div class="card"><div class="table-wrap tall"><table class="tbl" id="r-tab"></table></div></div>';
     $('#r-csv').href = PDADM.link('a=csv_richieste');
@@ -67,11 +70,11 @@
         + (ultime.length ? ultime.map(function (r, i) {
           var rich = [r.fiera ? '<b>' + esc(r.fiera) + '</b>' : '', (r.campi || []).map(function (x) { return esc(x[0]) + ': ' + esc(x[1]); }).join(' · '), r.messaggio ? esc(String(r.messaggio).slice(0, 140)) + (String(r.messaggio).length > 140 ? '…' : '') : ''].filter(Boolean).join('<br>');
           return '<tr data-i="' + i + '"><td>' + dt(r.creato, true) + '<br><small class="muted">' + fa(r.creato) + '</small>' + (r.urgenza ? '<br><small class="' + (/^Subito/.test(r.urgenza) ? 'hot-t' : 'muted') + '">' + (/^Subito/.test(r.urgenza) ? '🔥 ' : '⏱ ') + esc(r.urgenza) + '</small>' : '') + '</td>'
-            + '<td><b>' + esc(r.nome || '—') + '</b>' + (r.azienda ? '<br><small>' + esc(r.azienda) + '</small>' : '') + '<br><small class="muted">' + [esc(r.email), esc(r.telefono)].filter(Boolean).join('<br>') + '</small></td>'
+            + '<td>' + (!(window.DSSITO || {}).id && r.sito ? '<span class="st st-spedito">' + esc(NOMI_S[r.sito] || r.sito) + '</span><br>' : '') + '<b>' + esc(r.nome || '—') + '</b>' + (r.azienda ? '<br><small>' + esc(r.azienda) + '</small>' : '') + '<br><small class="muted">' + [esc(r.email), esc(r.telefono)].filter(Boolean).join('<br>') + '</small></td>'
             + '<td class="wrap">' + (rich || '<span class="muted">' + esc(r.oggetto || '') + '</span>') + '</td>'
             + '<td><small>' + esc(r.titolo || r.pagina || '') + '</small><br><small class="muted">' + [r.citta, r.paese].filter(Boolean).map(esc).join(', ') + (r.sorgente ? ' · da ' + esc(r.sorgente) : '') + (+r.visite ? ' · ' + r.visite + ' visit' + (+r.visite === 1 ? 'a' : 'e') + ', ' + r.pagine_viste + ' pagine' : '') + '</small></td>'
             + '<td><div class="acts">' + (r.telefono ? '<a class="ghost" href="tel:' + esc(tel(r.telefono)) + '">📞</a><a class="ghost" target="_blank" rel="noopener" href="' + wa(r.telefono) + '?text=' + encodeURIComponent(testo(r)) + '">💬</a>' : '')
-            + (r.email ? '<a class="ghost" href="mailto:' + esc(r.email) + '?subject=' + encodeURIComponent('Danova Stand — la sua richiesta' + (r.fiera ? ' per ' + r.fiera : '')) + '&body=' + encodeURIComponent(testo(r)) + '">✉️</a>' : '')
+            + (r.email ? '<a class="ghost" href="mailto:' + esc(r.email) + '?subject=' + encodeURIComponent(marchio(r) + ' — la sua richiesta' + (r.fiera ? ' per ' + r.fiera : '')) + '&body=' + encodeURIComponent(testo(r)) + '">✉️</a>' : '')
             + (r.pid && window.PDPersona ? '<button class="ghost" data-pp="' + esc(r.pid) + '" title="Cosa ha guardato sul sito">👤</button>' : '') + '</div></td>'
             + '<td>' + badge(r.stato) + (r.valore != null ? '<br><small>' + EUR.format(+r.valore) + '</small>' : '') + (r.note_admin ? '<br><small class="muted">' + esc(String(r.note_admin).slice(0, 80)) + '</small>' : '') + '</td></tr>';
         }).join('') : '<tr><td colspan="6" class="empty">' + (F.q ? 'Nessuna richiesta trovata.' : F.stato === 'aperte' ? 'Nessuna richiesta da seguire. Compariranno qui appena qualcuno invia un modulo del sito.' : 'Nessuna.') + '</td></tr>') + '</tbody>';
@@ -85,7 +88,7 @@
     var b = modal('<div class="m-head"><h2>' + esc(r.nome || r.azienda || 'Richiesta') + '</h2>' + badge(r.stato) + '</div>'
       + '<div class="muted small">Arrivata il ' + dt(r.creato, true) + (r.titolo || r.pagina ? ' dalla pagina <i>' + esc(r.titolo || r.pagina) + '</i>' : '') + (r.rif ? ' · Rif. ' + esc(r.rif) : '') + '</div>'
       + '<div class="m-grid"><div><h3>Contatto</h3><p><b>' + esc(r.nome || '—') + '</b>' + (r.azienda ? '<br>' + esc(r.azienda) : '') + '</p><div class="acts">'
-      + (r.email ? '<a class="ghost" href="mailto:' + esc(r.email) + '?subject=' + encodeURIComponent('Danova Stand — la sua richiesta') + '&body=' + encodeURIComponent(testo(r)) + '">' + esc(r.email) + '</a>' : '')
+      + (r.email ? '<a class="ghost" href="mailto:' + esc(r.email) + '?subject=' + encodeURIComponent(marchio(r) + ' — la sua richiesta') + '&body=' + encodeURIComponent(testo(r)) + '">' + esc(r.email) + '</a>' : '')
       + (r.telefono ? '<a class="ghost" href="tel:' + esc(tel(r.telefono)) + '">' + esc(r.telefono) + '</a><a class="ghost" target="_blank" rel="noopener" href="' + wa(r.telefono) + '?text=' + encodeURIComponent(testo(r)) + '">WhatsApp</a>' : '') + '</div>'
       + (r.pid && window.PDPersona ? '<p><button class="ghost" id="r-pp">👤 Cosa ha guardato sul sito</button></p>' : '') + '</div>'
       + '<div><h3>Provenienza</h3><div class="det">' + [['Luogo', [r.citta, r.regione, r.paese].filter(Boolean).join(', ')], ['Arrivato da', [r.sorgente, r.canale].filter(Boolean).join(' · ')], ['Lingua', String(r.lingua || '').toUpperCase()], ['Visite sul sito', r.visite ? r.visite + ' (' + r.pagine_viste + ' pagine)' : '']]

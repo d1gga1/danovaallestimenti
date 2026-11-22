@@ -96,3 +96,22 @@ Se qualcosa non va: Supabase → Edge Functions → `ds` → **Logs**.
   nelle pagine e i testi legali).
 - **Cambiare password della dashboard:** Supabase → Edge Functions → Secrets → `ADMIN_PASSWORD`.
 - **Piano gratuito:** 500.000 chiamate al mese. Ogni visitatore ne usa qualche decina. Controlla in Supabase → Usage.
+
+---
+
+## Più siti nella stessa area privata (22/11/2026)
+
+La dashboard mostra anche **Danova Costruzioni** (danovacostruzioni.it) e **Danova Tech** (danova-tech.com):
+si sceglie il sito dal menu giallo in alto a sinistra (c'è anche "Tutti i siti").
+Stesso database, stessa funzione `ds`: ogni sito manda il proprio nome con le visite e le richieste.
+
+- `assets/js/ds-live.js` è **lo stesso file** nei tre siti (il sito si riconosce dal dominio).
+  Se lo modifichi qui, ricopialo negli altri con lo script qui sotto.
+- Collegare / aggiornare gli altri siti (mette lo script nelle pagine e aggiorna cookie policy e privacy):
+
+      python3 strumenti/attiva-area-privata.py --sito costruzioni ~/danova_costruzioni
+      python3 strumenti/attiva-area-privata.py --sito tech ~/Desktop/dantech/danovatech
+
+- Il popup −3% newsletter e la fascia preventivo restano solo su Danova Stand.
+- "Non contare le mie visite": il link `?dslive=no` va aperto una volta **per ogni sito**.
+- Le visite e richieste raccolte prima di questo aggiornamento risultano di Danova Stand.

@@ -13,6 +13,9 @@
 .det span{color:var(--muted)}
 .steps small i{font-style:normal;color:var(--s3)}
 /* marchio Danova Stand */
+.ds-siti select{appearance:none;-webkit-appearance:none;background:rgba(255,201,60,.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23FFC93C' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid rgba(255,201,60,.45);color:#FFC93C;border-radius:999px;padding:8px 34px 8px 14px;font:600 13.5px inherit;cursor:pointer}
+.ds-siti select option{background:#0f1522;color:#e9edf7}
+@media (max-width:900px){.ds-siti{order:3}}
 .brand-mark{background:linear-gradient(135deg,#FFC93C,#e0a100)!important;color:#0b0b0b;display:grid;place-items:center;font-weight:800;font-size:17px;animation:none!important;box-shadow:0 6px 24px -6px rgba(255,201,60,.55),inset 0 0 0 1px rgba(255,255,255,.25)!important}
 </style>
 </head><body>
@@ -27,7 +30,10 @@
 </form>
 <div id="pd-app" style="display:none">
 <header class="top">
-  <div class="brand"><span class="brand-mark">D</span><div><b>DANOVA STAND</b><small>Visitatori del sito</small></div></div>
+  <div class="brand"><span class="brand-mark">D</span><div><b id="ds-nome">DANOVA STAND</b><small>Visitatori del sito</small></div></div>
+  <label class="ds-siti" title="Scegli il sito"><select id="ds-sito" aria-label="Sito">
+    <option value="stand">Danova Stand</option><option value="costruzioni">Danova Costruzioni</option><option value="tech">Danova Tech</option><option value="">Tutti i siti</option>
+  </select></label>
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="live" class="on"><span class="dot"></span>Live</button>
     <button role="tab" data-tab="storico">Storico</button>
@@ -176,16 +182,24 @@
 (function () {
   var BASE = 'https://hqodsztwzcofdsunnpxa.supabase.co/functions/v1/ds/admin';   // impostato da strumenti/attiva-area-privata.py
   var K = 'dsAdmT';
+  /* sito scelto (Danova Stand / Costruzioni / Tech / tutti): va in ogni richiesta alla funzione */
+  var NOMI = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech', '': 'Tutti i siti' };
+  var DOMINI = { stand: 'danovastand.com', costruzioni: 'danovacostruzioni.it', tech: 'danova-tech.com' };
+  var sito = 'stand'; try { var sv = localStorage.getItem('dsSito'); if (sv !== null && sv in NOMI) sito = sv; } catch (e) {}
+  window.DSSITO = { id: sito, nome: NOMI[sito], dominio: DOMINI[sito] || '', domini: DOMINI };
   var tok = function () { try { return localStorage.getItem(K) || ''; } catch (e) { return ''; } };
   var valido = function (t) { var m = /^(\d+)\./.exec(t || ''); return !!m && +m[1] > Date.now() / 1000 + 60; };
   window.PDADM = {
-    url: function (q) { return BASE + '?' + q; },
-    link: function (q) { return BASE + '?' + q + '&t=' + encodeURIComponent(tok()); },
+    url: function (q) { return BASE + '?' + q + '&sito=' + encodeURIComponent(sito); },
+    link: function (q) { return BASE + '?' + q + '&sito=' + encodeURIComponent(sito) + '&t=' + encodeURIComponent(tok()); },
     headers: function () { return { 'X-Area-Token': tok() }; },
     esci: function () { try { localStorage.removeItem(K); } catch (e) {} location.reload(); }
   };
   var d = document, $ = function (i) { return d.getElementById(i); };
   $('pd-esci').addEventListener('click', function (e) { e.preventDefault(); PDADM.esci(); });
+  if (sito !== 'stand') { var hs = d.createElement('style'); hs.textContent = '.card:has(#t-prodotti){display:none}'; d.head.appendChild(hs); }   // "pagine stand e fiere": solo per Danova Stand
+  $('ds-sito').value = sito; $('ds-nome').textContent = NOMI[sito].toUpperCase();
+  $('ds-sito').addEventListener('change', function () { try { localStorage.setItem('dsSito', this.value); } catch (e) {} location.reload(); });
   if (!valido(tok())) {
     d.body.classList.add('login'); $('pd-login').style.display = ''; $('pd-pw').focus();
     if (/TUO-PROGETTO/.test(BASE)) { $('pd-err').textContent = 'Area privata non ancora collegata a Supabase: vedi strumenti/supabase/GUIDA-SUPABASE.md'; $('pd-err').hidden = false; }

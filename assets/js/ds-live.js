@@ -1,4 +1,5 @@
-/* Danova Stand — statistiche visite del sito per l'area privata /private_area/ (solo uso interno).
+/* Danova — statistiche visite per l'area privata danovastand.com/private_area/ (solo uso interno).
+   STESSO FILE su danovastand.com, danovacostruzioni.it e danova-tech.com: il sito si riconosce dal dominio.
    Stesso sistema di pandooragroup.it (pd-live.js), con database Supabase e funzione "ds".
    Per tutti: conteggi anonimi (pagine viste, provenienza, dispositivo, zona approssimativa; nessun indirizzo IP salvato).
    Solo per chi accetta il banner: clic, sezioni lette, moduli iniziati / inviati / lasciati a metà (mai quello che si scrive).
@@ -8,7 +9,7 @@
 (function () {
   if (window.__dsLive) return; window.__dsLive = 1;
   try { if (window.top !== window.self) return; } catch (e) { return; }   // non contare le pagine dentro un iframe
-  var BASE = window.DS_LIVE_BASE || 'https://TUO-PROGETTO.supabase.co/functions/v1/ds';   // impostato da strumenti/attiva-area-privata.py
+  var BASE = window.DS_LIVE_BASE || 'https://hqodsztwzcofdsunnpxa.supabase.co/functions/v1/ds';   // impostato da strumenti/attiva-area-privata.py
   if (/TUO-PROGETTO/.test(BASE)) return;   // area privata non ancora collegata a Supabase: non si fa nulla
   var URL_ = BASE + '/s';
   var LS = null; try { LS = window.localStorage; LS.setItem('ds_t', '1'); LS.removeItem('ds_t'); } catch (e) { LS = null; }
@@ -20,7 +21,12 @@
   if (/[?&]dslive=no\b/.test(q)) set('ds_live_off', '1');
   if (/[?&]dslive=si\b/.test(q)) del('ds_live_off');
   if (get('ds_live_off') || navigator.webdriver) return;
-  if (!window.DS_LIVE_BASE && !/(^|\.)danovastand\.com$/.test(location.hostname)) return;   // niente statistiche in locale o in anteprima
+  var SITI = { 'danovastand.com': 'stand', 'danovacostruzioni.it': 'costruzioni', 'danova-tech.com': 'tech' };
+  var NOMI = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech' };
+  var DOMINIO = location.hostname.replace(/^www\./, '');
+  var SITO = window.DS_SITO || SITI[DOMINIO] || '';
+  if (!SITO || (!window.DS_LIVE_BASE && !SITI[DOMINIO])) return;   // niente statistiche in locale o in anteprima
+  var NOME = NOMI[SITO];
 
   var rid = function () {
     var a = new Uint8Array(12);
@@ -43,7 +49,7 @@
       if (u.indexOf(r) >= 0 || !/^(https?:\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)\/|whatsapp:)/i.test(u)) return u;
       var m = /([?&])text=([^&#]*)/.exec(u), tx = '';
       if (m) { try { tx = decodeURIComponent(m[2].replace(/\+/g, ' ')); } catch (e) { tx = m[2]; } }
-      var ini = { it: 'Ciao Danova Stand! Vi scrivo dal sito danovastand.com.', de: 'Hallo Danova Stand! Ich schreibe Ihnen über danovastand.com.', fr: 'Bonjour Danova Stand ! Je vous écris depuis danovastand.com.', es: '¡Hola Danova Stand! Os escribo desde danovastand.com.' }[LG] || 'Hello Danova Stand! I am writing from danovastand.com.';
+      var ini = { it: 'Ciao ' + NOME + '! Vi scrivo dal sito ' + DOMINIO + '.', de: 'Hallo ' + NOME + '! Ich schreibe Ihnen über ' + DOMINIO + '.', fr: 'Bonjour ' + NOME + ' ! Je vous écris depuis ' + DOMINIO + '.', es: '¡Hola ' + NOME + '! Os escribo desde ' + DOMINIO + '.' }[LG] || 'Hello ' + NOME + '! I am writing from ' + DOMINIO + '.';
       var nuovo = encodeURIComponent((tx || ini) + '\n\n' + (LG === 'it' ? 'Rif. ' : 'Ref. ') + r);
       if (m) return u.slice(0, m.index) + m[1] + 'text=' + nuovo + u.slice(m.index + m[0].length);
       var h = u.indexOf('#'), coda = h >= 0 ? u.slice(h) : ''; if (h >= 0) u = u.slice(0, h);
@@ -63,7 +69,7 @@
     return m ? p + '?p=' + m[1] : p;
   };
   var invia = function (e, extra) {
-    var d = { e: e, v: vid, s: sess.id, p: percorso(), t: (document.title || '').slice(0, 200) };
+    var d = { e: e, si: SITO, v: vid, s: sess.id, p: percorso(), t: (document.title || '').slice(0, 200) };
     if (extra) for (var k in extra) d[k] = extra[k];
     var body = JSON.stringify(d);
     try {
@@ -252,7 +258,7 @@
     if (campoPrivato(el)) return;
     var cosa = el.tagName === 'A' ? 'Link' : el.tagName === 'IMG' ? 'Foto' : el.tagName === 'VIDEO' ? 'Video' : el.tagName === 'SUMMARY' ? 'Apre' : (el.type === 'checkbox' || el.type === 'radio') ? 'Opzione' : 'Pulsante';
     var tx = testoDi(el), dove = '';
-    if (el.tagName === 'A') { var h = el.getAttribute('href') || ''; if (h && h.charAt(0) !== '#' && !/^javascript:/i.test(h)) dove = ' → ' + h.replace(/^https?:\/\/(www\.)?danovastand\.com/i, '').slice(0, 90); }
+    if (el.tagName === 'A') { var h = el.getAttribute('href') || ''; if (h && h.charAt(0) !== '#' && !/^javascript:/i.test(h)) dove = ' → ' + h.replace(/^https?:\/\/[^/]+/i, function (o) { return o.replace(/^https?:\/\/(www\.)?/i, '') === DOMINIO ? '' : o; }).slice(0, 90); }
     if (el.type === 'checkbox') tx += el.checked ? ' (sì)' : ' (no)';
     var z = zona(el), d = cosa + (tx ? ' «' + tx + '»' : '') + dove + (z ? ' · ' + z : '');
     var adesso = ora(); if (d === ultimoClic && adesso - tClic < 1500) return;
@@ -423,8 +429,9 @@
         campi.push([k, String(d[k] == null ? '' : d[k]).slice(0, 3000)]);
       }
       if (!campi.length) return;
+      set('ds_rq', '1');   // ha già scritto: niente popup dello sconto
       tocca();
-      var body = JSON.stringify({ v: vid, s: sess.id, p: percorso(), t: (document.title || '').slice(0, 200), l: LG, oggetto: String(d._subject || '').slice(0, 200), email: email, campi: campi });
+      var body = JSON.stringify({ si: SITO, v: vid, s: sess.id, p: percorso(), t: (document.title || '').slice(0, 200), l: LG, oggetto: String(d._subject || '').slice(0, 200), email: email, campi: campi });
       origFetch(URL_RICHIESTA, { method: 'POST', body: body, mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain' } }).catch(function () {});
     } catch (e) {}
   };
@@ -438,6 +445,9 @@
       return origFetch.apply(this, arguments);
     };
   }
+
+  /* ───────── più richieste: popup −3% newsletter, fascia preventivo, fumetto WhatsApp (ds-conversioni.js) ───────── */
+  if (SITO === 'stand') try { var cv = document.createElement('script'); cv.src = '/assets/js/ds-conversioni.js?v=1'; cv.defer = true; (document.head || document.documentElement).appendChild(cv); } catch (e) {}
 
   /* ───────── banner cookie (statistiche dettagliate) ─────────
      Senza consenso restano solo i conteggi anonimi. La scelta vale 6 mesi. */
