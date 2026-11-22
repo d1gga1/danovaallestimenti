@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://danovastand.com/allestimenti-eventi-showroom-negozi/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/allestimento-showroom-evento.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/allestimento-showroom-evento.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimenti-eventi-showroom-negozi/"/>
@@ -231,7 +231,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/allestimenti-fieristici-venezia/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-venezia-evento-storico.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-venezia-evento-storico.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimenti-fieristici-venezia/"/>
@@ -616,7 +616,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/en/exhibition-stand-builder-italy/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-isola-legno-rovere.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-isola-legno-rovere.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/servizi/allestimenti-fieristici/"/>
@@ -1078,7 +1078,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/fr/standiste-salon-italie/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-isola-legno-rovere.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-isola-legno-rovere.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/servizi/allestimenti-fieristici/"/>
@@ -1216,7 +1216,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/progetti-stand-fieristici/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-isola-legno-rovere.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/progetti-stand-fieristici/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/progetti-stand-fieristici/"/>
@@ -1525,7 +1525,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-medio-32-mq.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/"/>
@@ -1952,21 +1952,21 @@
   </url>
   <url>
     <loc>https://danovastand.com/video-per-fiere-e-lancio-prodotto/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/video/reel-stand-chiavi-in-mano.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/video-per-fiere-e-lancio-prodotto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/video-per-fiere-e-lancio-prodotto/"/>
   </url>
   <url>
     <loc>https://danovastand.com/video/spot-stand-chiavi-in-mano/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/video/spot-stand-chiavi-in-mano.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/video/spot-stand-chiavi-in-mano/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/video/spot-stand-chiavi-in-mano/"/>
   </url>
   <url>
     <loc>https://danovastand.com/video/stand-chiavi-in-mano-3d/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/video/reel-stand-chiavi-in-mano.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/video/stand-chiavi-in-mano-3d/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/video/stand-chiavi-in-mano-3d/"/>
@@ -3401,7 +3401,7 @@
   </url>
   <url>
     <loc>https://danovastand.com/allestimenti-eventi/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-roma-congresso-sponsor.webp</image:loc></image:image>
     <image:image><image:loc>https://danovastand.com/assets/img/stand/og/stand-roma-congresso-sponsor.jpg</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/allestimenti-eventi/"/>
@@ -3463,5 +3463,77 @@
     <image:image><image:loc>https://danovastand.com/assets/img/stand/stand-salone-mobile-design.webp</image:loc></image:image>
     <xhtml:link rel="alternate" hreflang="nl" href="https://danovastand.com/nl/standbouw-italie/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/nl/standbouw-italie/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/lavori/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/palco-galleggiante-arsenale-venezia-pannelli-neri.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/lavori/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/lavori/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/fr/realisations/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/palco-galleggiante-arsenale-venezia-pannelli-neri.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/lavori/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/lavori/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/en/projects/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/palco-galleggiante-arsenale-venezia-pannelli-neri.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/lavori/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/realisations/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/lavori/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/posizionamento-pontoni-darsena-arsenale-venezia-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/telaio-acciaio-raccordo-pontoni-arsenale.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/dettaglio-telaio-acciaio-pontone-galleggiante.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/raccordo-triangolare-multistrato-piattaforma-galleggiante.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/palco-galleggiante-arsenale-venezia-pannelli-neri.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/piattaforme-galleggianti-darsena-arsenale-venezia.webp</image:loc></image:image>
+    <video:video><video:thumbnail_loc>https://danovastand.com/assets/img/lavori/spettacolo-luci-palco-galleggiante-arsenale-venezia.jpg</video:thumbnail_loc><video:title>Video: il palco galleggiante acceso all&#x27;Arsenale di Venezia</video:title><video:description>32 secondi girati dalla riva: le luci dello spettacolo, la nebbia sull&#x27;acqua e il palco galleggiante con i lati neri lucidi che riflettono fasci e colori.</video:description><video:content_loc>https://danovastand.com/assets/img/lavori/spettacolo-luci-palco-galleggiante-arsenale-venezia.mp4</video:content_loc><video:duration>32</video:duration></video:video>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/realisations/scene-flottante-arsenal-venise/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/projects/floating-stage-venice-arsenale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/fr/realisations/scene-flottante-arsenal-venise/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/posizionamento-pontoni-darsena-arsenale-venezia-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/telaio-acciaio-raccordo-pontoni-arsenale.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/dettaglio-telaio-acciaio-pontone-galleggiante.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/raccordo-triangolare-multistrato-piattaforma-galleggiante.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/palco-galleggiante-arsenale-venezia-pannelli-neri.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/piattaforme-galleggianti-darsena-arsenale-venezia.webp</image:loc></image:image>
+    <video:video><video:thumbnail_loc>https://danovastand.com/assets/img/lavori/spettacolo-luci-palco-galleggiante-arsenale-venezia.jpg</video:thumbnail_loc><video:title>Vidéo : la scène flottante allumée à l&#x27;Arsenal de Venise</video:title><video:description>32 secondes filmées depuis le quai : les lumières du spectacle, la brume sur l&#x27;eau et la scène flottante aux côtés noirs brillants qui reflètent faisceaux et couleurs.</video:description><video:content_loc>https://danovastand.com/assets/img/lavori/spettacolo-luci-palco-galleggiante-arsenale-venezia.mp4</video:content_loc><video:duration>32</video:duration></video:video>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/realisations/scene-flottante-arsenal-venise/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/projects/floating-stage-venice-arsenale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/"/>
+  </url>
+  <url>
+    <loc>https://danovastand.com/en/projects/floating-stage-venice-arsenale/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/posizionamento-pontoni-darsena-arsenale-venezia-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/telaio-acciaio-raccordo-pontoni-arsenale.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/dettaglio-telaio-acciaio-pontone-galleggiante.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/raccordo-triangolare-multistrato-piattaforma-galleggiante.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/palco-galleggiante-arsenale-venezia-pannelli-neri.webp</image:loc></image:image>
+    <image:image><image:loc>https://danovastand.com/assets/img/lavori/piattaforme-galleggianti-darsena-arsenale-venezia.webp</image:loc></image:image>
+    <video:video><video:thumbnail_loc>https://danovastand.com/assets/img/lavori/spettacolo-luci-palco-galleggiante-arsenale-venezia.jpg</video:thumbnail_loc><video:title>Video: the floating stage lit up at the Venice Arsenale</video:title><video:description>32 seconds filmed from the quay: the show lighting, haze on the water and the floating stage with glossy black sides reflecting beams and colours.</video:description><video:content_loc>https://danovastand.com/assets/img/lavori/spettacolo-luci-palco-galleggiante-arsenale-venezia.mp4</video:content_loc><video:duration>32</video:duration></video:video>
+    <xhtml:link rel="alternate" hreflang="it" href="https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://danovastand.com/fr/realisations/scene-flottante-arsenal-venise/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://danovastand.com/en/projects/floating-stage-venice-arsenale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/"/>
   </url>
 </urlset>

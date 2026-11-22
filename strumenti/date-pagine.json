@@ -1,1398 +1,1422 @@
 {
  "allestimenti-eventi-showroom-negozi/index.html": {
-  "data": "2026-11-14",
-  "hash": "691f549b2ce208cf5139f1c184aa2c39f51502d1"
+  "data": "2026-11-22",
+  "hash": "f43d248337cc42c9c07f76a8e75bbaf373675b81"
  },
  "allestimenti-eventi/index.html": {
-  "data": "2026-11-14",
-  "hash": "1075b24155e9f35151e772bdefdf27321c514fea"
+  "data": "2026-11-22",
+  "hash": "ed6cf840ea450c173bd113f24c6cc1793d100686"
  },
  "allestimenti-fieristici-bari/index.html": {
   "data": "2026-11-14",
-  "hash": "82359f11e9e47593cd57635211a65a473d42c1d7"
+  "hash": "fba65b90114f4e8b9a999dfbf8bc6fbbcfb8d99a"
  },
  "allestimenti-fieristici-bergamo/index.html": {
   "data": "2026-11-14",
-  "hash": "848cdb6ea9db0523f3c64f537f45222ae7343a89"
+  "hash": "a161a1dd292b35a49b16af6cad3440da0a4349c9"
  },
  "allestimenti-fieristici-bologna/index.html": {
   "data": "2026-11-14",
-  "hash": "24b8335af75305e6bc2b748af7a43285cb888984"
+  "hash": "3ebe8ea620e022a052315e5ea7330ff8b6843b3a"
  },
  "allestimenti-fieristici-bolzano/index.html": {
   "data": "2026-11-14",
-  "hash": "fb1e345b16db60b2bfc52f1b134904ef68d50296"
+  "hash": "7e6d2ee8199fd203041169d278d9a1c890f3bf4f"
  },
  "allestimenti-fieristici-brescia/index.html": {
   "data": "2026-11-14",
-  "hash": "f69ac9168b19c3d0f07fb5a04df247ef9cc6a049"
+  "hash": "613c5a045880956ab71a949e4509a44726211818"
  },
  "allestimenti-fieristici-carrara/index.html": {
   "data": "2026-11-14",
-  "hash": "de4eac75a640a087203ca5824170eb4826398c77"
+  "hash": "f894f7ea4494b3184e493d564b2955a96f8bb7e8"
  },
  "allestimenti-fieristici-emilia-romagna/index.html": {
   "data": "2026-11-14",
-  "hash": "be09d3d92c4e92f8a67ead76f69f38da7a13d301"
+  "hash": "08c18ace6731553c51bbd39da3d65a521024af49"
  },
  "allestimenti-fieristici-estero/index.html": {
   "data": "2026-11-14",
-  "hash": "1d54c04374524f0af5dbccc9f395a8ee171f9b62"
+  "hash": "689a973f029711831cdd26cc5fc533f16c229d1b"
  },
  "allestimenti-fieristici-firenze/index.html": {
   "data": "2026-11-14",
-  "hash": "16c5b47eb2f920525d2c19c92479f4dc6729b654"
+  "hash": "8dc70faa2e82ecac915fd2c85de3e1d3bc672247"
  },
  "allestimenti-fieristici-genova/index.html": {
   "data": "2026-11-14",
-  "hash": "827223a4bcde07975109f384c8473317a8c8e299"
+  "hash": "35cdd70064bf0fdcb509618618f276d15c93296c"
  },
  "allestimenti-fieristici-germania/index.html": {
   "data": "2026-11-14",
-  "hash": "c80e977bce20162625a422bcbd0d23bb7ea17783"
+  "hash": "975e22a6df9caf5f97033876e68e4d5eecab0567"
  },
  "allestimenti-fieristici-lombardia/index.html": {
   "data": "2026-11-14",
-  "hash": "baa2fa921003e37bcf8a6f0d7138f057acf0ff9b"
+  "hash": "6b809623bcb33c95d4f80238947dd2f269a95914"
  },
  "allestimenti-fieristici-longarone/index.html": {
   "data": "2026-11-14",
-  "hash": "6a1f43901242b5e9d47b641ea0f9d2d3283ea835"
+  "hash": "6a87ff232dd45648131948c11c8ad62ec363e604"
  },
  "allestimenti-fieristici-milano/index.html": {
   "data": "2026-11-14",
-  "hash": "8d43d6d5c7e3237fd4c761d461d1997ef3f731e7"
+  "hash": "8f7520d5ea751f3c5cb3d3a8d140d83b32ef7147"
  },
  "allestimenti-fieristici-napoli/index.html": {
   "data": "2026-11-14",
-  "hash": "86fcdc0975cf0ff2018a4a8e88d53d5b1477d4ee"
+  "hash": "66fadd82652e0c54bdbfc2413fe3f0e3f7931a1c"
  },
  "allestimenti-fieristici-padova/index.html": {
   "data": "2026-11-14",
-  "hash": "e78fdcf63ba302c78d5da7e47cd1f945ba74f725"
+  "hash": "7cef35c1e02c99bf5c44705ad318955763508985"
  },
  "allestimenti-fieristici-parma/index.html": {
   "data": "2026-11-14",
-  "hash": "378ce0210d934dd464ab7eabf62da2f373fdcf89"
+  "hash": "6d1fe04c60ce4827da369afb52bec6b3a2e04542"
  },
  "allestimenti-fieristici-pordenone/index.html": {
   "data": "2026-11-14",
-  "hash": "cbeb60733de2488157a82aac712ce8269ba90826"
+  "hash": "1854caf861160465bbaf44830766b931cc190995"
  },
  "allestimenti-fieristici-rimini/index.html": {
   "data": "2026-11-14",
-  "hash": "2b0b6d41b567d260811b8f929f50579fd4ff68b7"
+  "hash": "fd7a1645a8cec13824fce3d650c4091f1b08aed7"
  },
  "allestimenti-fieristici-riva-del-garda/index.html": {
   "data": "2026-11-14",
-  "hash": "fdec1fc8ce282e0b083cda66106e3554aca77a09"
+  "hash": "892e54726e9b707dfbc6b9e83c85b52d220d8b99"
  },
  "allestimenti-fieristici-roma/index.html": {
   "data": "2026-11-14",
-  "hash": "ce24d21f27e18c91009ea69f44594f0f0aa095bc"
+  "hash": "fbfa35e67358beef6e3e252f98b93313a9b77f43"
  },
  "allestimenti-fieristici-torino/index.html": {
   "data": "2026-11-14",
-  "hash": "ee473d35f3a0ed21b01b00a66c4ea3d4d721a87b"
+  "hash": "6094f640d3c74ed3ccb0fb8530723dda629b4a1e"
  },
  "allestimenti-fieristici-treviso/index.html": {
   "data": "2026-11-14",
-  "hash": "61f3d2cc593493fb4875c51ea1b9017d7e18ae86"
+  "hash": "cc59de00d52883676b0f2990414b19686e105450"
  },
  "allestimenti-fieristici-udine/index.html": {
   "data": "2026-11-14",
-  "hash": "0c34f2b9f93d3b32f22d8c6d1ad505575610ab38"
+  "hash": "02c702be0b2051e5536d5e23b4b45b0c9e612e60"
  },
  "allestimenti-fieristici-veneto/index.html": {
   "data": "2026-11-14",
-  "hash": "092ad0a026a63c321f03be243b16cfe59529ef5d"
+  "hash": "32f28694cd52810f7ecfb30460e6834d1bff90af"
  },
  "allestimenti-fieristici-venezia/index.html": {
-  "data": "2026-11-14",
-  "hash": "ac0f6c43392d932052c31d679e2364d691198c22"
+  "data": "2026-11-22",
+  "hash": "d278beb74809df5b4e5f2ecafe7b73c6b56268df"
  },
  "allestimenti-fieristici-verona/index.html": {
   "data": "2026-11-14",
-  "hash": "57850701047d22c53ae28b82d1e293fd44911fa6"
+  "hash": "016afaf36b5cca432fc8d489b88944267c08133d"
  },
  "allestimenti-fieristici-vicenza/index.html": {
   "data": "2026-11-14",
-  "hash": "f469655d8a5454de9a76d2be098cf97295fb63c8"
+  "hash": "1ac4d1f977d83df02235c13a60afab704d8c4dd1"
  },
  "allestimento-mostre/index.html": {
   "data": "2026-11-14",
-  "hash": "6d59726ea41ea792a82b4d826f269aebfdf25403"
+  "hash": "ddf0eca22c686ea7ab3a2f3165f10e08ddeb7b10"
  },
  "allestimento-negozi/index.html": {
   "data": "2026-11-14",
-  "hash": "f2bfd80cab10efa818cc41f8336e58718b415542"
+  "hash": "d4ef6d5311a094b39e563fd5a16a15aef2de14c0"
  },
  "allestimento-vetrine/index.html": {
   "data": "2026-11-14",
-  "hash": "c09a000d04ef072c66372c676f71e2a1a61cb3dd"
+  "hash": "9f227d3b944715b6a772ab059a268b097668bae2"
  },
  "ar/italy-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "50ce1d59ff0f21139103770d1cfef9645f4d878f"
+  "hash": "91d537f2dd6e7946271be6a7da63aec927ed06cf"
  },
  "calendario-fiere-agricoltura/index.html": {
   "data": "2026-11-14",
-  "hash": "aad232ea81b32a83d5d613eb749c4b9efe171025"
+  "hash": "97853ccb2c125fde1c0baf37b071e29893c0afbb"
  },
  "calendario-fiere-arredo-e-design/index.html": {
   "data": "2026-11-14",
-  "hash": "02b5fa7f35e8785ca6a458490b726a8c7b111ea8"
+  "hash": "20d524fdc3753892460aee75d2e370d6c7daa829"
  },
  "calendario-fiere-bologna/index.html": {
   "data": "2026-11-14",
-  "hash": "943f1d0e293d2c9b316a10850a2da5bc9298e304"
+  "hash": "515fd7b5f1dc616f43484e5cdd80d0b4f46ded0b"
  },
  "calendario-fiere-edilizia-ed-energia/index.html": {
   "data": "2026-11-14",
-  "hash": "8db014ba91397b77cf6a97d2a3e47c62bd814614"
+  "hash": "361a364ee13d5a769b2a54aa81bd174cd3b223aa"
  },
  "calendario-fiere-elettronica-e-tecnologia/index.html": {
   "data": "2026-11-14",
-  "hash": "f7f8759cf280c99f9167ab085687916e1771d19b"
+  "hash": "47ab0fad8d576f29c66628e4599911659654ab6a"
  },
  "calendario-fiere-firenze/index.html": {
   "data": "2026-11-14",
-  "hash": "4f23b6e5d5c6bb33ff6c64c72594b9fcada5b926"
+  "hash": "25ac1b0e1cacc7408558670b81b59b0bbf5500fe"
  },
  "calendario-fiere-food-e-ristorazione/index.html": {
   "data": "2026-11-14",
-  "hash": "811b6216b8fced2f5b4c352fe032802f0aa2f0aa"
+  "hash": "9e7491eb758c3b630a87252ca1abc6cc009eb163"
  },
  "calendario-fiere-meccanica-e-industria/index.html": {
   "data": "2026-11-14",
-  "hash": "863746b2543e9dd7db01584d257754f08c331b46"
+  "hash": "da818979031aaeef1e44ae3fbb41fd5cc0878eb1"
  },
  "calendario-fiere-milano/index.html": {
   "data": "2026-11-14",
-  "hash": "e4114fd6b8d9ae4a98cbb38044690783b0c12e50"
+  "hash": "84a3efda86e23edc55c78c8243f9faf7344f1146"
  },
  "calendario-fiere-moda/index.html": {
   "data": "2026-11-14",
-  "hash": "5b569d894c4eebd8bcb77530eb7074d9084c6a3c"
+  "hash": "dfef5d089ffb546377cc3f58fb9051e6c09e7061"
  },
  "calendario-fiere-parma/index.html": {
   "data": "2026-11-14",
-  "hash": "53a63db45f70e93d492d55afa0e6f69ea93b575b"
+  "hash": "693f461bbd9d5a2339b05cbad8773cf0533f63da"
  },
  "calendario-fiere-rimini/index.html": {
   "data": "2026-11-14",
-  "hash": "73f2be3320c4153b2f7226254c897facd465dac1"
+  "hash": "902e2281d92133d4523a3cc14efdadf2f37b95c8"
  },
  "calendario-fiere-turismo/index.html": {
   "data": "2026-11-14",
-  "hash": "3d44b88a95dd11adf63f9453fec218e1a8bec538"
+  "hash": "eb4acc8d35ea6c59d7331ea3e217bd8f983a6a10"
  },
  "calendario-fiere-verona/index.html": {
   "data": "2026-11-14",
-  "hash": "9b1e8c2d7324562719bdd4ed8c6a703c6d759578"
+  "hash": "b49c5ed2d0673dbb3cfc77a8cb3c29d21702db98"
  },
  "calendario-fiere/index.html": {
   "data": "2026-11-14",
-  "hash": "f49e8e1e764312db02b7e486e2e2c59ed6807723"
+  "hash": "1d08ebaa33bf93cb360215d36c9c08521d3aec9d"
  },
  "chi-siamo/index.html": {
   "data": "2026-11-14",
-  "hash": "4213402e7aca8b0e5722ea0cce6687204dbb9742"
+  "hash": "3cda42fa974b727047bdd02ae9426913b7ec6608"
  },
  "contatti/index.html": {
   "data": "2026-11-14",
-  "hash": "ea173d25024b483df4019882b5c25e8953a75622"
+  "hash": "0604655c02a55645784805e327628ac97eb35e1e"
  },
  "contributi-fiere/index.html": {
   "data": "2026-11-14",
-  "hash": "11048ae4911c691214b99ee9eb0d0103a4cf3c98"
+  "hash": "c4938e3249d7291ede75eb93cdf498727dae3b00"
  },
  "cookie-policy/index.html": {
   "data": "2026-11-14",
-  "hash": "d4f9952b6a667d278f99884a0760279e4c526975"
+  "hash": "51f757e29239cac4c00078dfc8181d20fab107f1"
  },
  "de/agb/index.html": {
   "data": "2026-11-08",
-  "hash": "0da75fbe430574cbb6485fd5a7dff878bd4ef4b8"
+  "hash": "133f4762b704d5f2303cbc498de04e90d36703a0"
  },
  "de/cookie-richtlinie/index.html": {
   "data": "2026-11-08",
-  "hash": "df9b39d2b4e8df50f6979814cdf85115c66346be"
+  "hash": "c7e94151ffb8f61908084d23a572898fe9f6a60f"
  },
  "de/datenschutz/index.html": {
   "data": "2026-11-08",
-  "hash": "519b60a5536baff4dd93c8ea51d75c6d041b75cf"
+  "hash": "5824ed8df17e2bc9ddbe30cf1b9ac4f148e35f08"
  },
  "de/kontakt/index.html": {
   "data": "2026-11-08",
-  "hash": "0e3d7b68597b6e61273215d4350f00566c5f9ed1"
+  "hash": "9750a5956451dd3f2eebb9b47e0f292e7bb7c491"
  },
  "de/messebau-bologna/index.html": {
   "data": "2026-11-14",
-  "hash": "5dbf9fbe711d294772791366b6c53dd51855e1d5"
+  "hash": "84104720c204c30ac2e29d46f9ceb52adf1f7cd1"
  },
  "de/messebau-italien/index.html": {
   "data": "2026-11-14",
-  "hash": "fd146ac1eaa444791a84747c3b738abc9bd5f120"
+  "hash": "ea21728c930548a15257bd666b7af653b68e968b"
  },
  "de/messebau-mailand/index.html": {
   "data": "2026-11-14",
-  "hash": "5708b7f60707679ffadc0ee3a3c55dd5eb2b94ba"
+  "hash": "5d9822b0ffe11ef774653241fab4e6269166393c"
  },
  "de/messebau-verona/index.html": {
   "data": "2026-11-14",
-  "hash": "5e8dd737cb1b002ba6321fb234295eb83d17f7a0"
+  "hash": "cf5bebfea779df27c19c2de499af2c35b55d6a3b"
  },
  "en/agritechnica-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "b3ee4ffa33e2149bca862bb160328bd4c487d835"
+  "hash": "f37e9acfbbbc9108d085324872d64f5fd300727e"
  },
  "en/ambiente-frankfurt-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "ffa0763999e4de1f6d8b24f5bd35cf47ab674174"
+  "hash": "cba3f0992e733750eb35912f5c034583d97d4151"
  },
  "en/anuga-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "64f13fe4feda0d870fd5d7ee5791b94367ac9bfc"
+  "hash": "058a59d0b8ea6c736af412aff7ce46c2d19f0331"
  },
  "en/cersaie-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "28e774cf41e16ce9a0375edab07e65c90a561051"
+  "hash": "a5c55616c6f2c8471cba25fdf8ddb9681386de8d"
  },
  "en/cibus-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "8bbc62d2ad242076c4c01ebc5d6954aff4f9cc6a"
+  "hash": "95d37454cb3889d3d66e7731d66dd098b1ad5788"
  },
  "en/contact/index.html": {
   "data": "2026-11-08",
-  "hash": "5a843dc22bcf63e18ce7787f6a6352b9d92a0665"
+  "hash": "c44048288a3bd0ce688cf33592132eeee2559135"
  },
  "en/cookie-policy/index.html": {
   "data": "2026-11-08",
-  "hash": "9a942d44a6942fa8a0a7342b05774e2a903b3b46"
+  "hash": "1a9881531862702475ea7a2000f6a771d299dfdb"
  },
  "en/cosmoprof-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "2c6be9e90c137270578b153f8366064308111d08"
+  "hash": "595a6c325b7806b6862149a2729d83ad0c54efc1"
  },
  "en/ecomondo-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "f35d8945ab040eef6a2765810abbd8e7e797fb6f"
+  "hash": "f1f95c4562fd77e280d04e8920005ccc5ed52565"
  },
  "en/eicma-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "492bbe8dcabd5ecf2e3a51d64ac262554747f288"
+  "hash": "127f223d798fee16d9ba6f9306d272c66d40f1b4"
  },
  "en/eima-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "15206fe73c1224995a5b81b3ff550e972891ebe6"
+  "hash": "1baa1060e798f0897bf6c57c2e9e4d434fb7e60b"
  },
  "en/electronica-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "c64cf95b3610d3f12ce5bd20f87ca4d227425a3e"
+  "hash": "cdf485274111f4adc6e379daa2683982bfc133d1"
  },
  "en/emo-milano-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "86a26767a44a897d87387bad297f6dc219461c41"
+  "hash": "16a7ea7632cb5b68022b29ca8b2776581ecc1172"
  },
  "en/euroshop-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "fdc119516cd047352830331981c1af820e2e3c0c"
+  "hash": "db6d8217f00fb574dba0816684b1122e6a95f73d"
  },
  "en/exhibiting-at-trade-fairs-in-italy/index.html": {
   "data": "2026-11-14",
-  "hash": "8f4e2ba89b9167c573d767f17ae4f798885cf05f"
+  "hash": "9f19174a5c05b7bf0a34306ee17ae92386861a74"
  },
  "en/exhibition-stand-builder-bologna/index.html": {
   "data": "2026-11-14",
-  "hash": "d1ef39219a581c9f3b29b7cafffc45a015fc9108"
+  "hash": "78419b6a9d6d4d9d9b257ffbf92f3b2ffb60422d"
  },
  "en/exhibition-stand-builder-europe/index.html": {
   "data": "2026-11-14",
-  "hash": "48731c1fcb40f671be5043e412592dc1a5be4f91"
+  "hash": "9cca16c69177699c87b16f7144d2834b48b9a85e"
  },
  "en/exhibition-stand-builder-florence/index.html": {
   "data": "2026-11-14",
-  "hash": "decf2fb216d2a341edaeb05d1c24bf64a4948fae"
+  "hash": "9fbcb4fc7584fb7e1c7d70db62164a2037117ac8"
  },
  "en/exhibition-stand-builder-for-bangladeshi-companies/index.html": {
   "data": "2026-11-14",
-  "hash": "4e70177ba0e83f7419e9a6e6a36e3fce41b9363b"
+  "hash": "dce405ddc46680e2f10fa33d391a4b42b817ab82"
  },
  "en/exhibition-stand-builder-for-chinese-companies/index.html": {
   "data": "2026-11-14",
-  "hash": "6b646c65f7cdb3222968ab88614a6397a7a23700"
+  "hash": "de7c348e9b94f3b59e91fa813880a1524d5847a7"
  },
  "en/exhibition-stand-builder-for-indian-companies/index.html": {
   "data": "2026-11-14",
-  "hash": "fc01d4f26e2da4bc53602cbc14473d4efd26c3f7"
+  "hash": "eea9b51f7fd3df29beff8e7634d035443f482484"
  },
  "en/exhibition-stand-builder-for-pakistani-companies/index.html": {
   "data": "2026-11-14",
-  "hash": "3e6a7e3e7c5d21735573fcf47f5d12788d2b7d0b"
+  "hash": "09c3e6b9bf2a50fd6d89f88a1ba15e9ddcdca158"
  },
  "en/exhibition-stand-builder-italy/index.html": {
-  "data": "2026-11-14",
-  "hash": "a56a4ff152c5dd164e078ef78241b5b04f45d53f"
+  "data": "2026-11-22",
+  "hash": "2caeccf6bddc8543f8a7a713dadd61d026fbceb7"
  },
  "en/exhibition-stand-builder-milan/index.html": {
   "data": "2026-11-14",
-  "hash": "6cf1798a1a69e7b75f9fd794b196037059b2ee78"
+  "hash": "3c6bd35efb0d4b285937018f9850ef1eb82bfd54"
  },
  "en/exhibition-stand-builder-parma/index.html": {
   "data": "2026-11-14",
-  "hash": "71940f1e1b489b2f16a84ad3df2a85ca05bd721d"
+  "hash": "3c30362d743f00fa8ae0da70a343808d7298b030"
  },
  "en/exhibition-stand-builder-rimini/index.html": {
   "data": "2026-11-14",
-  "hash": "0d3e81cebf0a0b51d56d5014465ea18bfcceeea9"
+  "hash": "69ccbcd5e9ef817b3437e680acb0542accc84623"
  },
  "en/exhibition-stand-builder-riva-del-garda/index.html": {
   "data": "2026-11-14",
-  "hash": "c9988400f3ec0204450c6f5e8c7985b90de81337"
+  "hash": "29ee886087bb5d20c3414c8d9c76b7f0ca8365e1"
  },
  "en/exhibition-stand-builder-verona/index.html": {
   "data": "2026-11-14",
-  "hash": "6a20932816be1a07a5eca822b0da689d0ade2b73"
+  "hash": "b845c2ef20b579831591544cabda2a43c6c6a327"
  },
  "en/exhibition-stand-builder-vicenza/index.html": {
   "data": "2026-11-14",
-  "hash": "b07f8f9f71aefc14892661bda0ed2f8fc25b0c6f"
+  "hash": "be7a66db32936007e04aac645cc8189375d94047"
  },
  "en/expo-riva-schuh-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "79e5bcb145c92725e9834455e041dff09e18ead0"
+  "hash": "c81bbd56173c14652ea110a4826f7c19c11ef0bb"
  },
  "en/fitur-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "1d3a6e28c15bbb325ead3d968da50396b0c4c762"
+  "hash": "db1eccc2a95aadb53f02d440e1ae7e6651484a78"
  },
  "en/fruit-logistica-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "a070d462eb57b213700c67d58d65a019e1b58c1e"
+  "hash": "a1b8f809336a6b97e89661a65be06a2988b28188"
  },
  "en/hannover-messe-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "821fb4cb89f04058ca0cb4879dcf1c971a3897da"
+  "hash": "a69f900f17883d6173ff2a499a8a42fd7738257c"
  },
  "en/heimtextil-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "07d9a84e2a04dc5c4bbee2bf8627fb461e4963f3"
+  "hash": "3e1edbf58de43e9d4a4c2ccf5598ec242565d7c4"
  },
  "en/host-milano-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "8e143856793f2aa20de59e8867370d976c689cb8"
+  "hash": "86235189754312e5a23f0922616c3df44503e54d"
  },
  "en/ifa-berlin-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "bea869c05905c6ce5b2bf8f34c234462f4a1dea9"
+  "hash": "6039d0d83f91e716c474b14c39e1d569e4a315ae"
  },
  "en/interpack-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "d95fc5f929929b6c2bad5f09747b3bd3949fc8dc"
+  "hash": "b8e0bb6c3241d20b1764f50ef756c9410fcca86f"
  },
  "en/ish-frankfurt-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "d441be0ec8be6114d2ccde9e64dda3a18a1da5a3"
+  "hash": "ccc431199d82718523d15ace476049b39c09159d"
  },
  "en/key-energy-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "538eb408f59fd3ea0b487fbebc1ca5090ea185b8"
+  "hash": "79551a2304f8d9c4dd0d7eb23e143986b594f59e"
  },
  "en/lamiera-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "c72c8970bce7ff095272be4333687d6abe171520"
+  "hash": "b753e2c61093e098fd6bea0ecde7066d7610f3f5"
  },
  "en/lineapelle-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "8a86cba84c8ccaf8b4fc3f9311bd933ca3a2420a"
+  "hash": "ea4bb1a694d51ffe9938af91098f43864122e1b8"
  },
  "en/macfrut-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "0089350aaded1f9b46b0746bb38c5538148126a2"
+  "hash": "f8455cbc9c407405686078192a6634970bdd1a5c"
  },
  "en/maison-et-objet-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "4252c06ec287a43fa068c8753de4a2cffe8f0ded"
+  "hash": "5fbab88649abe2b414393759154906f84ca16dd9"
  },
  "en/marmomac-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "d8ce941101d0b15c7e2a146e9fbc3c3093c09991"
+  "hash": "608c544f07f795b7ee6afe9bb551995d6e4b2f90"
  },
  "en/mecspe-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "e8a45535e16cd608b8586e83cd6d2a3bb0881098"
+  "hash": "7a363b5dbf16504cfa13d14664dfa7460adbf3f3"
  },
  "en/medica-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "c0a975174ac3b6097867b42845379c97f635bbe3"
+  "hash": "ed09466c17268c455af35c16c53c1c29722a578f"
  },
  "en/metstrade-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "9abde36dcd37e21dd7d56d5d924fae983f915456"
+  "hash": "1f75d44ebb9fd86d2ba831a57f53f602946ea232"
  },
  "en/micam-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "69c671244247191d55361cc71d0cf31f89a083f9"
+  "hash": "793a981633f6912155098aa72c18e83e2eda886d"
  },
  "en/mido-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "6f3fa9bee1ed800fd009e96cc380e5fd9255cb4a"
+  "hash": "25cab795e77240a7ad3f8e5b3daf1b29d39f1a02"
  },
  "en/mwc-barcelona-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "1b5299cf0d6372faee9250487d41fcf71c89fc35"
+  "hash": "108f16f965d200a0601a9a3a9adacc35059dd3df"
  },
  "en/pitti-uomo-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "212c0b35d337ff6c6510146142c1296ecaed9b19"
+  "hash": "bdbbf18f6e1e92d1d0ad166df3fce709c5a3b626"
  },
  "en/privacy/index.html": {
   "data": "2026-11-08",
-  "hash": "72050ad83230c5641f86401663143f82ec4df5e4"
+  "hash": "b0f01a6a40a560b24e3aaf2b30aaccdd7f6a4400"
+ },
+ "en/projects/floating-stage-venice-arsenale/index.html": {
+  "data": "2026-11-22",
+  "hash": "98b48cd4debe474bda5cf5a8338f2af78a1b8405"
+ },
+ "en/projects/index.html": {
+  "data": "2026-11-22",
+  "hash": "9c8809c532dd388ee4d05b77647957648483a053"
  },
  "en/prowein-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "3cb22a776229f1a9e0bd0cb838e25e34a75ec364"
+  "hash": "ee911582bc08ae13cef246f62067ec71c8408b4a"
  },
  "en/salone-del-mobile-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "c613c0ee101cb61aa7b6cab93e9af5f419964b4c"
+  "hash": "a4a834acd8faeed54df72d30890286d74d2bbe00"
  },
  "en/sial-paris-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "7334153dce1348f5b856d8a27335794ad155f9a6"
+  "hash": "0fb939dd2e90d7d48ffb0ffb8b3ec07f919b601d"
  },
  "en/sicam-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "6960cc123139a3c25c18052be5aa5da87285d646"
+  "hash": "206536e90a38d0a7075390d98f6b9917e29239b9"
  },
  "en/sigep-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "2440d776f1bf2d088c797b4dae3d22fda344bd17"
+  "hash": "e72bd19e18de7e941ee0763730bf7ceb2e02e87d"
  },
  "en/spielwarenmesse-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "2f88812acc910fd93d8d8c42aa4bd49a39d4df15"
+  "hash": "f20d73416ed75b3a03e3a5a73947f0367149c637"
  },
  "en/terms/index.html": {
   "data": "2026-11-08",
-  "hash": "420fcec77a1acbb85485f13a14375aed57d47f1b"
+  "hash": "fd440249cd3cb1e85e6077f7675d583c12a639bf"
  },
  "en/tuttofood-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "96c49b7fd214fc2cf6089f5f3a55809b92eb6679"
+  "hash": "23ad4de83345346eb6500d1b28cf4ed0552af208"
  },
  "en/vicenzaoro-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "99b28b688824a826d566bed85eb3f0466abc8ea8"
+  "hash": "11a4d687a9dc6776ba8026c1a79cebc784117317"
  },
  "en/vinitaly-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "d00e1de68d5b062ac340bfced1a0906dc6283567"
+  "hash": "546fb4eac07399f514107a7e5281f11657cc683c"
  },
  "en/wine-paris-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "a3f67cdd721ca8a10acf0354e2ce98dfc27711f7"
+  "hash": "6a885c2e36c2e23c2e9790d67ddb70eb030dddd6"
  },
  "en/zoomark-stand-builder/index.html": {
   "data": "2026-11-14",
-  "hash": "908186cd8c9e788ce9b739cecec208e9552d90a1"
+  "hash": "d109a8606f96e015753a10a54f6f5b1e1f071609"
  },
  "es/condiciones/index.html": {
   "data": "2026-11-08",
-  "hash": "e1376a275044c319075ef2645ccabe3b71bde8e2"
+  "hash": "4169b1b28844ceebed970ea4ca3d63f050d48e60"
  },
  "es/contacto/index.html": {
   "data": "2026-11-08",
-  "hash": "a333416bb03b1c4e2bb458f37c37a57deab82833"
+  "hash": "e04b1a8c600ec9972d491a4b8b21682895a06e38"
  },
  "es/cookies/index.html": {
   "data": "2026-11-08",
-  "hash": "924c12b37aac09cbbe196252734398ad38230f02"
+  "hash": "7c8f77c7b9f7bce359334e3876676896d3478d31"
  },
  "es/montaje-stands-feriales-italia/index.html": {
   "data": "2026-11-14",
-  "hash": "6eab3a833e35dcb6558b1a1731e90e824bee30c2"
+  "hash": "93b2a60bb491c0fe8f41977cfbd668dfa9a990a9"
  },
  "es/privacidad/index.html": {
   "data": "2026-11-08",
-  "hash": "8c9515918b32728f6611377b58c3a23f12257969"
+  "hash": "ea3c11a0515d1355fd4b9cfb99e326c8f0151500"
  },
  "espositori-desk-totem-per-fiere/index.html": {
   "data": "2026-11-14",
-  "hash": "1480fcc28f7d89d780b1ec4f6fed3d81e72b19a9"
+  "hash": "7b938ff3d33a41c44a5f07c5357a08947b742b62"
  },
  "espositori-pubblicitari/index.html": {
   "data": "2026-11-14",
-  "hash": "76c562ce21375be36d76134cacdfab136311434a"
+  "hash": "0895201e9ffa819fe844aed4fd99404def6b689d"
  },
  "fr/conditions/index.html": {
   "data": "2026-11-08",
-  "hash": "61c13c45e25147807f8dc28e4f897dbfa58e9836"
+  "hash": "fb23e360e495a36a629760511d58ebe615639512"
  },
  "fr/confidentialite/index.html": {
   "data": "2026-11-08",
-  "hash": "f29d2b10f907ba53f65e720f978cc59c0c0d420c"
+  "hash": "130e648e3e5bd8c08e20ed46e49172de47dbcac9"
  },
  "fr/contact/index.html": {
   "data": "2026-11-08",
-  "hash": "32a6764ade8979d2b8a566c6b0e5ad72263784aa"
+  "hash": "7993262e2f13606b18c7e63babd0e763bd153de9"
  },
  "fr/cookies/index.html": {
   "data": "2026-11-08",
-  "hash": "46b19652096584ac5586fde5966c02239eee69cd"
+  "hash": "fb90487c19240ffae37c3dd2de05378a91de1787"
+ },
+ "fr/realisations/index.html": {
+  "data": "2026-11-22",
+  "hash": "b0de1334809ec9efd8aaea9fb2fd0909fd79f97b"
+ },
+ "fr/realisations/scene-flottante-arsenal-venise/index.html": {
+  "data": "2026-11-22",
+  "hash": "5dc4eb42f3614adc22a688b0cf512b54089b7afa"
  },
  "fr/standiste-salon-italie/index.html": {
-  "data": "2026-11-14",
-  "hash": "26386ea1be609de585f30b43db6fae735ecf3b15"
+  "data": "2026-11-22",
+  "hash": "d836a49e0a9dce0d08f044c0c3a975fefe7698a8"
  },
  "grafica-per-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "530cd40dd455552261e6cc917b08bef248e4b5ee"
+  "hash": "b4b6669a7eafb9886dbaccb6d53bbc1095fb387a"
  },
  "guide/come-attirare-visitatori-allo-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "88b3ab9ec9ba31f6f8f937f038360846aa382702"
+  "hash": "e10812efe9265f510c2b5e5b9e7c998acf36b629"
  },
  "guide/come-preparare-una-fiera/index.html": {
   "data": "2026-11-14",
-  "hash": "8fc78c64630a14c2948ea144ca160fd21ea98551"
+  "hash": "678aaac150ae64f3082aa69d95a1ed7b679fc55e"
  },
  "guide/come-raccogliere-contatti-in-fiera/index.html": {
   "data": "2026-11-14",
-  "hash": "f3bc7f332835ca6494da0e1d3a13f62c55c39706"
+  "hash": "fe9e6f4f69ed0b8b955331c8c9692d985f4848af"
  },
  "guide/come-scegliere-un-allestitore-fieristico/index.html": {
   "data": "2026-11-14",
-  "hash": "3c8e86193d9018aae19628d6a5f36889ec364acb"
+  "hash": "fe1457660ef6b0d96618ae5eb90f49d0e0acb784"
  },
  "guide/dichiarazione-di-conformita-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "5c8b9341c0edf14399c3ef15d4678912ec50f1db"
+  "hash": "564fd7a378d006f675ee8b117f6d60fe6199c3d2"
  },
  "guide/materiali-ignifughi-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "33ed5f288bfeb788a95d222fa7b00baeeb2ec95c"
+  "hash": "26f1a34080501e392fd3cf991d8f3b999c6a28c9"
  },
  "guide/quanto-costa-partecipare-a-una-fiera/index.html": {
   "data": "2026-11-14",
-  "hash": "fe774a48606b118587b5fc664528477ee19af6b2"
+  "hash": "b97af40fa478a494e2ff962fb6bb9079193883f3"
  },
  "guide/regolamento-tecnico-fiera/index.html": {
   "data": "2026-11-14",
-  "hash": "637d7e6e8f776f0a39392a07d7367232ec3d3e8f"
+  "hash": "ffa5c7bd9de35183480c3d5971db2680d847ff50"
  },
  "idee-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "43ead797888d1c1e705e68de9e1954177bb5ac1b"
+  "hash": "76861ba0a4e8320098d601775ceacfea359d4690"
  },
  "index.html": {
-  "data": "2026-11-14",
-  "hash": "b9dddbe7c03a8a365ed39416486b5c8baa0a7a16"
+  "data": "2026-11-22",
+  "hash": "e416f10f9a27e9b2d57df457eb157578260d7631"
+ },
+ "lavori/index.html": {
+  "data": "2026-11-22",
+  "hash": "80894e1b920a6c32b3c08ea9bf1e6f2acc0f9fea"
+ },
+ "lavori/palco-galleggiante-arsenale-venezia/index.html": {
+  "data": "2026-11-22",
+  "hash": "fada962beca9fd2c4422e8c161b54ac1d9b638db"
  },
  "ledwall-e-illuminazione-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2eb8b8d60fb694ce63aeb4978060d1585535116d"
+  "hash": "e04a733760a116e5dbc1f4acf6c71b933bd04fa1"
  },
  "montaggio-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "c5c61ece9248a7baa81d0949fe86f3c0d217cd08"
+  "hash": "75d7fe6175c2812b801069eeecba05b2fce85658"
  },
  "moquette-per-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "1f6a250031f316fe4293d8eebd46a29f7b6c1d84"
+  "hash": "c3cbed01511c04ee37c15db0ff383c0cc6d832a5"
  },
  "nl/standbouw-beurzen-duitsland-europa/index.html": {
   "data": "2026-11-14",
-  "hash": "02188fb3553ae90439c22343efbb112fb251ebb6"
+  "hash": "e3a6bba6ba41072da4918416af7c5f936a6b2482"
  },
  "nl/standbouw-italie/index.html": {
   "data": "2026-11-14",
-  "hash": "05ded93c9e4638f7073b0a505b6293b8fff0bcc6"
+  "hash": "2b07fb3550bca8d2fbed1540f62d5b0b5ab8ef5d"
  },
  "noleggio-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "ea34944b6a7ced2675d1d0e8cdd2008f253f609b"
+  "hash": "a51f6dae82856737f1962bdc0e0bdb2b68031537"
  },
  "privacy/index.html": {
   "data": "2026-11-14",
-  "hash": "58db7f1e9e7a65a13e11690d6a733baa733b15e9"
+  "hash": "16195ffb80d6d1b14c4046ac14d1a4b9573ed331"
  },
  "progettazione-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "dc1bf60f8186602e2152d6eee194f4671d38392b"
+  "hash": "f8f3986b2ecdbd167c5e828fd5f1ae76ce7de79b"
  },
  "progetti-stand-fieristici/index.html": {
-  "data": "2026-11-14",
-  "hash": "037bc9985c3ee5017ecc0d1d456db0c4dc39ace8"
+  "data": "2026-11-22",
+  "hash": "904f1d1f4e23b9fc5d1f75a0ee4ec4e2f1832a28"
  },
  "quanto-costa-uno-stand-fieristico/index.html": {
   "data": "2026-11-14",
-  "hash": "3cd4b0ac74e9d28cb24bad127df824582049c562"
+  "hash": "22ef4f8afbca770c6ddfc1d1f692cf4e873632e9"
  },
  "servizi/allestimenti-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "bf157668c42da1aca2bcac5cdadf9d51478280c0"
+  "hash": "4be672554b59b2e2078348b57c631fe4dfc0e21a"
  },
  "sicurezza-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "e1e75559cb8b583ec5e1d15a9fcaeba4c01dc75c"
+  "hash": "b37a3eee50b5fb999ee4a0dead8ba8ff96a27560"
  },
  "stand-a-due-piani/index.html": {
   "data": "2026-11-14",
-  "hash": "26bc88f4a04fd14c1fddb8e43c11ea708e1b466a"
+  "hash": "9d26c211f011dbf4f5a5ce7a131b0b6be7518650"
  },
  "stand-a-isola/index.html": {
   "data": "2026-11-14",
-  "hash": "a331a6df3a31daa03447c1c8fa45f5ed178ecdeb"
+  "hash": "9a016a575880519fc7b7b69450c08893df235434"
  },
  "stand-ad-angolo/index.html": {
   "data": "2026-11-14",
-  "hash": "a777b550015bc81c1997db4faad6a3320e136d0b"
+  "hash": "4276bec3da99794936754a29dbc4a475c7426175"
  },
  "stand-agritechnica/index.html": {
   "data": "2026-11-14",
-  "hash": "3d00bb60aa7fb04a395a6683ef4e559db2be526e"
+  "hash": "e607cba151366911d7d3b0f2a03a3756ab94df02"
  },
  "stand-ambiente-francoforte/index.html": {
   "data": "2026-11-14",
-  "hash": "7bd6dab3151ebb799955334705c64dcf3af77c5c"
+  "hash": "be29d5e8bdbf9b885febf420fe2baa12003a1997"
  },
  "stand-anuga/index.html": {
   "data": "2026-11-14",
-  "hash": "91001d158c64850eb4755daf04afba83b93d8f88"
+  "hash": "0bf10036ef2a05773235ff9807aeff5ef3828d21"
  },
  "stand-bit-milano/index.html": {
   "data": "2026-11-14",
-  "hash": "d0a4d63bde9c3f2f87bd4fb9746b8b898f75b038"
+  "hash": "382c80aca16c25243bd515fd2637198f9fe0ed34"
  },
  "stand-cersaie/index.html": {
   "data": "2026-11-14",
-  "hash": "3eaf3992033bcb3e0e0aae462d594c1ae3ce07a6"
+  "hash": "42675f8e1087ba0b22f5c55dbc2f1ec74a88286a"
  },
  "stand-cibus/index.html": {
   "data": "2026-11-14",
-  "hash": "7398189b058565e85903371851250f38a4e660da"
+  "hash": "4931ca3e7a1e24b3a68221b20a6bf5fceee53029"
  },
  "stand-cosmofarma/index.html": {
   "data": "2026-11-14",
-  "hash": "4973cab44049c326a529afb1f49998fb375cf672"
+  "hash": "9af7bf6304d6bd423693dc890f8da008a654202a"
  },
  "stand-cosmoprof/index.html": {
   "data": "2026-11-14",
-  "hash": "5dbaca55f8101726f87cee3098786a2e38e0b6da"
+  "hash": "8f9aeec2b8f202aa73a95dae0158a6ffe0babcfc"
  },
  "stand-ecomondo/index.html": {
   "data": "2026-11-14",
-  "hash": "3524cd37d3ea20a447593716078fed21252a75b2"
+  "hash": "9c7232c3aa7063d30738278c3efdcdd93f02a2a7"
  },
  "stand-eicma/index.html": {
   "data": "2026-11-14",
-  "hash": "fbb91d62a5bd4b8269229ea79ddea1edde2174f2"
+  "hash": "db7241ce670a63fe3b353a89a9c226d5a77cce16"
  },
  "stand-eima/index.html": {
   "data": "2026-11-14",
-  "hash": "33ffba73f1d51935fe64c499cf576fbbca5b0fd1"
+  "hash": "ae73fc1eb705265fd564667032a40d77c7e9c3a8"
  },
  "stand-electronica/index.html": {
   "data": "2026-11-14",
-  "hash": "708f5c1b1dd272ad0d90c0635795c825e08f680a"
+  "hash": "1deaa8c5ccbb8827c59b5a12f890d4a1ecc851ef"
  },
  "stand-emo/index.html": {
   "data": "2026-11-14",
-  "hash": "217c50409cf3f3830b44ff5405c4e2da915d7af3"
+  "hash": "212932258be9b9fd4e78689c3c6ad6045b7117d4"
  },
  "stand-euroshop/index.html": {
   "data": "2026-11-14",
-  "hash": "8f83641a81085b2b068e0c35e73492b6424daa2d"
+  "hash": "b83327d8c3f550776cac5ecb8511835809685c41"
  },
  "stand-expo-riva-schuh/index.html": {
   "data": "2026-11-14",
-  "hash": "942ee1fe4cca309685f7b6e09ab4903e854d5f4c"
+  "hash": "87210fb43b16d26848b5d2653c9ba5b22e595aa9"
  },
  "stand-fieracavalli/index.html": {
   "data": "2026-11-14",
-  "hash": "6455275846d0eec5ec9d39fb87547985ab18ed68"
+  "hash": "ca3a1e162bbbff15f316b27531be8b5a973a9c6c"
  },
  "stand-fieragricola/index.html": {
   "data": "2026-11-14",
-  "hash": "87b20de57c97fb23404ef9ba547f9e63cc341ec9"
+  "hash": "85cc467aaf13ff365d034c9ad8015f7ddb6bfa66"
  },
  "stand-fieristici-agricoltura/index.html": {
   "data": "2026-11-14",
-  "hash": "a37be56f2c800bc226a13d0c7eef8ffa5bdfb9d2"
+  "hash": "f9380306c335bf1c6fdd5450b8b49b22f69fcf98"
  },
  "stand-fieristici-arredo-e-design/index.html": {
   "data": "2026-11-14",
-  "hash": "be94d9b6f8236aa8f576ba4e4868b4694b8eac5c"
+  "hash": "a4d29cfc1ce9d927cce033069994fa9b214f0ada"
  },
  "stand-fieristici-cosmetica-e-beauty/index.html": {
   "data": "2026-11-14",
-  "hash": "6d3ded7aeea7117b4a6daf041af2f3da0eb56ed0"
+  "hash": "f1c91eb5d0464fda443acadd14e94967ff3a2d08"
  },
  "stand-fieristici-ecosostenibili/index.html": {
   "data": "2026-11-14",
-  "hash": "6ecff6d36c79ea6eb34b27f2dfa51b7d0d59bae2"
+  "hash": "5f844bee65f15567e1001941889ccade8a100059"
  },
  "stand-fieristici-food-e-vino/index.html": {
   "data": "2026-11-14",
-  "hash": "9d2d87a63108fe24f85b10f7a353f58dce933de0"
+  "hash": "cb44da4c0ab80c166c89eac8cb867fe506f7edac"
  },
  "stand-fieristici-meccanica-e-industria/index.html": {
   "data": "2026-11-14",
-  "hash": "a85900c4173f8ec75f95135c2369a16f409e4bb3"
+  "hash": "d5fe9d51bfcbde2aff5674282fee234e450bda5b"
  },
  "stand-fieristici-moda-e-calzature/index.html": {
   "data": "2026-11-14",
-  "hash": "59dd2e5d321edd5bafd5f3616e6ee2f3108db391"
+  "hash": "1b57ceeded4eac69f57f27673b81985d1c55ef99"
  },
  "stand-fieristici-per-metratura/index.html": {
   "data": "2026-11-14",
-  "hash": "188276f686cbe4840bad0a3757477309a6246ff5"
+  "hash": "7d41d87d951c945021d5b9f772f630e6cbab42e1"
  },
  "stand-fieristici-piccoli/index.html": {
   "data": "2026-11-14",
-  "hash": "1269b0617321af039908b4ba8b62f8de367f1a64"
+  "hash": "f463fc35de1892ff061bb5c0012d18f117239d79"
  },
  "stand-fieristici-su-misura/index.html": {
   "data": "2026-11-14",
-  "hash": "4ac45ddd52b90db9d42757b8f150059802907b54"
+  "hash": "eb56564b535a8209e7bf94350d1ebe77e35d9955"
  },
  "stand-fitur/index.html": {
   "data": "2026-11-14",
-  "hash": "e947ff289da754f176bb4a03382890c2d43236cc"
+  "hash": "7191b6e5159199b4c595a5033e140cb7fb2fef5d"
  },
  "stand-fruit-logistica/index.html": {
   "data": "2026-11-14",
-  "hash": "324df11ab24b051e5d1ed9593c2f1e5288d23e44"
+  "hash": "f83e58599952b283ce75f3d301e4094da04e5488"
  },
  "stand-hannover-messe/index.html": {
   "data": "2026-11-14",
-  "hash": "d561b0cb93894f9541367115b64475f26709e2c2"
+  "hash": "e80a667c0d48e330490bf7605f6c7dabde33cb63"
  },
  "stand-heimtextil/index.html": {
   "data": "2026-11-14",
-  "hash": "900039205528ea97696a94471f59d29e5fb83de0"
+  "hash": "d4774fd87ec77da956ea2095843e29c9b45adfa5"
  },
  "stand-host/index.html": {
   "data": "2026-11-14",
-  "hash": "150410c20fb31ad238bb90029ffee89be231afe4"
+  "hash": "dbf09fddd27e22c5d7627d36fb15d1b9a195bc13"
  },
  "stand-ifa-berlino/index.html": {
   "data": "2026-11-14",
-  "hash": "66ccc3d26913fe583c695a1312b5695ef0e2addb"
+  "hash": "260ec2266bdec848d40290a160a8df305fb0e451"
  },
  "stand-interpack/index.html": {
   "data": "2026-11-14",
-  "hash": "d8a64d633884f4587387d7c35f408b15423002cd"
+  "hash": "1d1402447418ae9c83cecbe929605a14765f180a"
  },
  "stand-ish-francoforte/index.html": {
   "data": "2026-11-14",
-  "hash": "3060060f662482557196e68ff2064fd8c0b68645"
+  "hash": "537cb8d5052b40914d1653b90b8b59a276f2f1ae"
  },
  "stand-key/index.html": {
   "data": "2026-11-14",
-  "hash": "bc8e86b8c27fa96bd3e22b1b4bbe311f2863eba1"
+  "hash": "c6873faa9f4a4b100f702f0b8a30551ec92bfede"
  },
  "stand-lamiera/index.html": {
   "data": "2026-11-14",
-  "hash": "bd3fd81049f1f0083dd7133e2c05604356bf1a47"
+  "hash": "8364de5d4f53d97f6878376171cbda728588992d"
  },
  "stand-lineapelle/index.html": {
   "data": "2026-11-14",
-  "hash": "0ddb2c76236c6006820ce8dd8ea453a4c316f2cd"
+  "hash": "f88f3791d9e22f5d241543a0fdf832ec9b877104"
  },
  "stand-macfrut/index.html": {
   "data": "2026-11-14",
-  "hash": "62a79d60f4006f4313648676e0ad87f78363ed27"
+  "hash": "569500fa752b67dbbaef6ccfe79e43eaee307378"
  },
  "stand-made-expo/index.html": {
   "data": "2026-11-14",
-  "hash": "8c51c7dfd15782ac3cd612ed4e7f34329943c9a7"
+  "hash": "9bd77556958ab060377c31ca880360c2609f3192"
  },
  "stand-maison-et-objet/index.html": {
   "data": "2026-11-14",
-  "hash": "4122004d45901a68b2bcadda09890378f720b905"
+  "hash": "fbd9be1e3b8dbfac95d5ad1428737021ff96ba8a"
  },
  "stand-marmomac/index.html": {
   "data": "2026-11-14",
-  "hash": "c765a3fbb0324c128314b316bb0f4e4e31d1c87c"
+  "hash": "7eb2003913580445cbcf8feb37ad0f175e815c5d"
  },
  "stand-mecspe/index.html": {
   "data": "2026-11-14",
-  "hash": "f466a01a5af1e7d73ff8e05c7802b6d572eba0f2"
+  "hash": "7e376f2afcfc6ccc4e5c346b82ea816beb410b88"
  },
  "stand-medica/index.html": {
   "data": "2026-11-14",
-  "hash": "411cb06057ca966cacde23d0473ec1adab89ca7b"
+  "hash": "d6f085409ae88da4b05da98bf01939bb3702cc1a"
  },
  "stand-metstrade/index.html": {
   "data": "2026-11-14",
-  "hash": "9d1b4a336198b193dca95821d36c2ed3da9f5780"
+  "hash": "78b67d3c0df6956da453dbeb2c580b73503ed77c"
  },
  "stand-micam/index.html": {
   "data": "2026-11-14",
-  "hash": "33862947a9f64ad72d7c9cfb6fac90d599a4d79a"
+  "hash": "dbf450cf13d3c2560ea2b5edc53318d9fa326223"
  },
  "stand-mido/index.html": {
   "data": "2026-11-14",
-  "hash": "fe253ff2b4b239ff681f6473916db3ea69f3d0ae"
+  "hash": "807a7138e6f4d53349905c810efdf5a69b1bb050"
  },
  "stand-modulari/index.html": {
   "data": "2026-11-14",
-  "hash": "6bfd631640f4d48c7b74c425c37ae296b862118c"
+  "hash": "7dad4c4bf3616cc4ca0f0b070876a82c07190f9a"
  },
  "stand-mwc-barcellona/index.html": {
   "data": "2026-11-14",
-  "hash": "3d5f910ade4467c326b0f21219f03e9457163179"
+  "hash": "fe763622ea087f98527ccbff53d990f5d47fc376"
  },
  "stand-pitti-uomo/index.html": {
   "data": "2026-11-14",
-  "hash": "27b6ad0d615ac7f04b69949349df97b928eb3a06"
+  "hash": "d9461b2f672e1f060cc90c54393a4b6f4ef0f062"
  },
  "stand-preallestiti/index.html": {
   "data": "2026-11-14",
-  "hash": "5f4b0a4bd065ae6c012c3413d2599b95c8b5a89e"
+  "hash": "311df503ea0b9bc4fe6b94ccaa14faa5d1362113"
  },
  "stand-prowein/index.html": {
   "data": "2026-11-14",
-  "hash": "ab5767e2c451a3cd5e941a164dae032109f0e4bb"
+  "hash": "dddba0c4f5bcc5314e0c8e5ec41a687184bec268"
  },
  "stand-pubblicitari/index.html": {
   "data": "2026-11-14",
-  "hash": "d346799c60e0045324f38a4b9674f3c26111cc78"
+  "hash": "fe799cd2a9992a34ad487af1d370267db7cfbe79"
  },
  "stand-salone-del-mobile/index.html": {
   "data": "2026-11-14",
-  "hash": "ecff0dd91ba7a4a777e968e5e717beb0d412a027"
+  "hash": "dd2d9194c09bff855c4ec4d187e2a129984f0b10"
  },
  "stand-salone-nautico-genova/index.html": {
   "data": "2026-11-14",
-  "hash": "832b765a687b195751c6e56209a77bee1b79da5f"
+  "hash": "0287b4c9abde56c649bfe86e500fdf2111f92151"
  },
  "stand-samuexpo/index.html": {
   "data": "2026-11-14",
-  "hash": "a4d7c799cdc793483c1277b657bd9b7c5082638c"
+  "hash": "fe4159514f6b175eb96d3121d1b24a0561714104"
  },
  "stand-sial-paris/index.html": {
   "data": "2026-11-14",
-  "hash": "75d58dee210ed3d54e75190efcb729c70146ec60"
+  "hash": "6d75f1b0af44c169530c771a12b5bb473494871e"
  },
  "stand-sicam/index.html": {
   "data": "2026-11-14",
-  "hash": "50c5d70cd3186f175aa959400acbd50654283243"
+  "hash": "6ed5a8295daadaf82517ddf5649abe44ce039d34"
  },
  "stand-sigep/index.html": {
   "data": "2026-11-14",
-  "hash": "d9d0e355d595dc5e9286ba0fc005ff25b10ed394"
+  "hash": "68865c075dcd8a8527ac42d8c52b2c97a4e36b81"
  },
  "stand-spielwarenmesse/index.html": {
   "data": "2026-11-14",
-  "hash": "7f4fa06f64b3cf8999e239b10aa9035dd88f1339"
+  "hash": "732aa454e5006ab82e7448985d04ff76e6c23561"
  },
  "stand-sps-italia/index.html": {
   "data": "2026-11-14",
-  "hash": "952445a36dbe05670c86b32ee20fb0d25e9cc69d"
+  "hash": "923fde350b44e02cd4a4fea851c9c12f7ff8ff52"
  },
  "stand-transpotec/index.html": {
   "data": "2026-11-14",
-  "hash": "ac0c9c4cbc5b671b9b2262a9020967944a5b5f58"
+  "hash": "aef5e53012f93340983d54c456d79e74035c16cb"
  },
  "stand-tuttofood/index.html": {
   "data": "2026-11-14",
-  "hash": "4edc3ad2632ec238584ecc56a8f83d009580428a"
+  "hash": "6ed3e8082705117896a1b1ca7f816d869e11f78d"
  },
  "stand-vicenzaoro/index.html": {
   "data": "2026-11-14",
-  "hash": "fcb87a2756890176669bb1f4fdf65e63348029b9"
+  "hash": "c14f5a00809c76d3104af02d8223778b45afe02e"
  },
  "stand-vinitaly/index.html": {
   "data": "2026-11-14",
-  "hash": "bfc5393ea2ebfd997f835784a78e2d02bbc74b15"
+  "hash": "7b20efe1d6c7dbb2daa4596b6e950c42404f65fd"
  },
  "stand-wine-paris/index.html": {
   "data": "2026-11-14",
-  "hash": "97ae54a78fce397058a75ed15b609554b60b46bb"
+  "hash": "e8fa73db833344bd0246df074a7cd026f2728505"
  },
  "stand-zoomark/index.html": {
   "data": "2026-11-14",
-  "hash": "943c96c4e41d993854c0f9afdc65c6c44d398add"
+  "hash": "57fe392492efd1851d6be92606adb9645f6f76be"
  },
  "termini/index.html": {
   "data": "2026-11-14",
-  "hash": "1fd8d5d01caa6fe6311776ab2cfa80d2e2298ddd"
+  "hash": "b06460aa442ef01c4af610318f3e1cbf320639cf"
  },
  "totem-pubblicitari/index.html": {
   "data": "2026-11-14",
-  "hash": "1b31c1afccc4eb5dc96b1b369522857215558317"
+  "hash": "0ecb007dc185ed1334ffb4b8868ef544477bf10d"
  },
  "tr/italya-fuar-standi/index.html": {
   "data": "2026-11-14",
-  "hash": "22ecb14fa9be7f6f997fd5275b3d95cced95fd1d"
+  "hash": "d1c4857b62261d93a22b6534b863f9b1a590cfc7"
  },
  "trasporto-e-magazzino-stand-fieristici/index.html": {
   "data": "2026-11-14",
-  "hash": "94fd66f4120df8311ef0daab6f174871bfec89f2"
+  "hash": "397fa5c76c1baa0cf03b4fdbdb52e0b8df75cd4d"
  },
  "video-per-fiere-e-lancio-prodotto/index.html": {
-  "data": "2026-11-14",
-  "hash": "3726752d28c02efd88f0344836466600c1dbef8e"
+  "data": "2026-11-22",
+  "hash": "81b06aae7d6017860b3c9d1f811ccd7b1b5a6889"
  },
  "video/spot-stand-chiavi-in-mano/index.html": {
-  "data": "2026-11-14",
-  "hash": "7ff4f7ad276c8b026efdb8d782404005c9cb1073"
+  "data": "2026-11-22",
+  "hash": "d34d41a901934641349323df10e283936c181247"
  },
  "video/stand-chiavi-in-mano-3d/index.html": {
-  "data": "2026-11-14",
-  "hash": "9ecc3df2c4f85999e4858b8b606fc5b1f7c2bd5f"
+  "data": "2026-11-22",
+  "hash": "ec5834c307a96d12de67e95fcd0e87b6f7f20681"
  },
  "zh-hant/agritechnica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "adac6e59d57f65cbaa237797585816d0b5cb0c36"
+  "hash": "c8c2ec4301b146a7b53978c21bb4059f8f75836f"
  },
  "zh-hant/ambiente-frankfurt-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2a01267e5b2e34d5d7d2315271ecea780397787c"
+  "hash": "67637d058a145b7e45c62b04223e0a69e75b141e"
  },
  "zh-hant/anuga-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "dc0357d16a6f50d98096670b43ac6dea4f612d28"
+  "hash": "238741c20d84fe732d1b21e99a6df2855ef8c929"
  },
  "zh-hant/bologna-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "75ea402ddd588d85c4a66903c946e662cb236349"
+  "hash": "2263be49e4f7efca39edd7adb02b7cb9193fc7d9"
  },
  "zh-hant/cersaie-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "c3bd9e747f26f1d1e5642bb5e3551d91eecbe514"
+  "hash": "25cf0afa15a3fd291e3ef573ae12b2f06c9a7b62"
  },
  "zh-hant/cibus-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "c53836ccfa693fcf35dc8af9a6de084e9f77729d"
+  "hash": "d58e856432c2defa460d53ff16bbb5150cf24acc"
  },
  "zh-hant/cosmoprof-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e649e05535936172561026c1346d037dbd7a176c"
+  "hash": "1c7bd847057b83094ef22fbdf3ec222738afd847"
  },
  "zh-hant/ecomondo-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "36470e86b7ccd696db4e420bdaff8a51f3515cb3"
+  "hash": "b3165a8e9743dbad4f74dab940c4ef3925cb4197"
  },
  "zh-hant/eicma-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "5c75464ab238fdcdcdfe57d12352c35e0337acd6"
+  "hash": "d469ce948edd1a365f1bb907c9147071ab135d67"
  },
  "zh-hant/eima-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "c64059c398788ba971c566a21934fe2acfd51f4e"
+  "hash": "9cab3a3bbe60d15bbe8855c2b74368cbf0757ff4"
  },
  "zh-hant/electronica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "0cda70d6f5c59e3e9a5e0170f48746e571b1cd22"
+  "hash": "bbc54eb6c896c82e2b814cac0a9c12ef05f29caa"
  },
  "zh-hant/emo-milano-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "3efc6958dc0afb4f7c803c74dfab2f4165d689a3"
+  "hash": "d61caedceb34f85d85991e6bec84df3ca63eda4f"
  },
  "zh-hant/europe-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "7d0a5f401077c14f68ae162ca2d45e88226d5336"
+  "hash": "8f67bfd3bda978452912f7f20bfcfbadaaa77e4b"
  },
  "zh-hant/euroshop-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "40753ccfd71acc87bef19478b5cdb969e4945e08"
+  "hash": "6d8728337175a7df86eab47c1f7b4af42b50b153"
  },
  "zh-hant/expo-riva-schuh-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "4c0795db6809cab00bb24bc42acea924588abb81"
+  "hash": "58da0180924e842fb890ed595a2f058105d2fe2b"
  },
  "zh-hant/fitur-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2c41f4f050555be645d757a28dba6f8235b966c7"
+  "hash": "54fe06ed06284578709c62aa02db9837d0c7838e"
  },
  "zh-hant/florence-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2d3c666f376d96b28e710c05da87619586f30973"
+  "hash": "435247d6d590d23fdc21006966ed5c506c8835b1"
  },
  "zh-hant/fruit-logistica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "f3c97e8ac458217ff48cf28afa06ad5da971c259"
+  "hash": "553a52c964f9fb820171fd1c4f7e971419182e56"
  },
  "zh-hant/hannover-messe-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "6b880a09aa956b6ab0b34329c4f1086f878286ec"
+  "hash": "043aa2ec12b6e3be0d9e3a5db09379e92e056907"
  },
  "zh-hant/heimtextil-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2381112a225fbad44939e4ff1118426a647afd10"
+  "hash": "2666019994a24244ffe4f61a33076ab0fbd8595a"
  },
  "zh-hant/host-milano-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "18ac6baa6305664367602e0df426af3d26ccadfa"
+  "hash": "f65d991cfb2e97fd8f8afd853a0a8310baf640fb"
  },
  "zh-hant/ifa-berlin-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "1f616e65689ab2009f081ab98ea1b932501d7e72"
+  "hash": "b58d2bffb167b32556f4ca160b3afc1c967b3632"
  },
  "zh-hant/interpack-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "8063553278cae33d3958a406ef6e4cd148a523c5"
+  "hash": "9e85da8b8b7d21a594a812deae126a7fbfe83f18"
  },
  "zh-hant/ish-frankfurt-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "997e136bee84007f09ad0b05e5be5ccbb86ed9f2"
+  "hash": "867075e765869bd372ca753a4389cfb252bac5a4"
  },
  "zh-hant/italy-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "45e749c1b0dff6369e05b96853c87482bf8e781c"
+  "hash": "443c441f75e49d3ffc36fff52e27d22f910b575e"
  },
  "zh-hant/italy-trade-fair-guide/index.html": {
   "data": "2026-11-14",
-  "hash": "b71ee85300b1d2ffaccfc8f9fd73821fbedd8e9e"
+  "hash": "9ceff801946f85cdbef2b6d0ed15315ddd4be5a4"
  },
  "zh-hant/key-energy-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "ed561e82a17cb6238c2982185d3a57f766c3889a"
+  "hash": "5ea0e1f51271481d2de0c10535b5f91d9226f786"
  },
  "zh-hant/lamiera-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "02ed3a52e56e3877ee87cfad34bccd757b324dc3"
+  "hash": "494da8c052cc4d5f07ac87df5630d14210e47724"
  },
  "zh-hant/lineapelle-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "acae07d1373a42a836e6915b005c1c7696aea029"
+  "hash": "7a0c5a6813904c7240076e2e7f0e9f35104a761f"
  },
  "zh-hant/macfrut-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "90f20da5b40bea2cf99d792f5df9116b2e146db7"
+  "hash": "51b5081a8353bee74a905986d5eb3627de732ef2"
  },
  "zh-hant/maison-et-objet-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "d63f8c5b45aa482b9fb9b495eaf2bea78927d8fd"
+  "hash": "70636da0a84ec6bea509d50cff96aba806cabbb5"
  },
  "zh-hant/marmomac-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e34e95a3c775ada028468eac8f828599e4bec6f1"
+  "hash": "80ac69812684d4d16bc2620df4e45b414f83aa02"
  },
  "zh-hant/mecspe-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e78d94a96a1a98edab4994e0ea30d4f46f137219"
+  "hash": "ec000dbac2f56e64c5fa97beef1fee473304592a"
  },
  "zh-hant/medica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "9a6a5dada402e032a99abfebb67fd6b493b1a47f"
+  "hash": "be44ec91033ae677f3eddb1e529da5d520199ace"
  },
  "zh-hant/metstrade-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "8b2e210ce08e0d79694444cd54d02d7f1632716c"
+  "hash": "d26a0bb888d3ec2d93696195e391ac47cfefb7f4"
  },
  "zh-hant/micam-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "34f21a1db11203a548e070892f7f687f58475be5"
+  "hash": "392ed0fd886bd6dbd11da931c9a9027369caee25"
  },
  "zh-hant/mido-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "bb66fafe665468b4963d1c0dc46fed30bdbb9bb0"
+  "hash": "cb72d2a33e55367f2fed6268bb3d7d08d088db63"
  },
  "zh-hant/milan-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "7bf1218705ee08e4e3329d990290f7e88449e267"
+  "hash": "5df9821600e4772c4e01bcd493d75c1e2ddde936"
  },
  "zh-hant/mwc-barcelona-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "64a3fc2864a98d3ae3e4fee75aeceac7d6ea711e"
+  "hash": "14923e9fd97b2bea42a0e29743ac0e88960bb579"
  },
  "zh-hant/parma-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2535f8f16376d869791043306b585d066727f15c"
+  "hash": "51be1530e4a32c47e63b79e027f3a817df9e3b21"
  },
  "zh-hant/pitti-uomo-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "00096266c7753f5712525a28becd5ead75940577"
+  "hash": "75a332830d8bca6ec2ade49952bc6b73997fe22a"
  },
  "zh-hant/prowein-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "b5525cb203770bf6ec3fb308380300ad58643c1e"
+  "hash": "87472dd747d970287bc4137d45540c09d4d818bf"
  },
  "zh-hant/rimini-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "3cca6726ff3108bc4aebd7e22b35bf20e3da3419"
+  "hash": "a57e2f93a73bc2e7450f056fb313c3e30f92bf70"
  },
  "zh-hant/riva-del-garda-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "7f0cbed8b1de4804cc114b56951b3671d3df8d05"
+  "hash": "ea0fe3c95362f42ad1be13650c27cfc62f95eaeb"
  },
  "zh-hant/salone-del-mobile-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "6ba80b0deb4511c4d95deb5c4c18bfa35000183e"
+  "hash": "3d98ec3415792d867f675cf5149a78dc9e1af76f"
  },
  "zh-hant/sial-paris-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "6a774f32bfd3e7687bbba1a8505ad3483dfee0af"
+  "hash": "ff2d13e495a7e4d94d84becc4cecb437492a1dcc"
  },
  "zh-hant/sicam-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "7124e8fd72504f6c1300dfa359d1abceeab44ecf"
+  "hash": "30bd1b02110c923e4b0332514fe6e98f7075c2d8"
  },
  "zh-hant/sigep-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "ad83f0aeb5b8218fe7823cd178a46476ce2b0206"
+  "hash": "5cecb0ef20b935638b6a15b53a409a3c9ba1d030"
  },
  "zh-hant/spielwarenmesse-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "5b1028953c2efdbee8b8a6414dfb6b4b4d2281c5"
+  "hash": "966a3b7cbb71ade4a7066afb12d84ce371156d26"
  },
  "zh-hant/tuttofood-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "360bb3a4ba7f796de7caefd16b26708436f3ff71"
+  "hash": "d8f2eb7619f61c800992b6cb9395db265f3fb6c4"
  },
  "zh-hant/verona-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "491576f2d950b3e1d4a8c632f199a07c1de9aa95"
+  "hash": "5c7c8375ba1aca8c3724e4d0ae1c4100ea2d6ac7"
  },
  "zh-hant/vicenza-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "6d26f0b8dfae9febb6c4ecc590317d7004e67c03"
+  "hash": "2c1d6cd1585ba7a84e39c05b260d08303a4934be"
  },
  "zh-hant/vicenzaoro-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "129f68cd5746900ac1f4d26ab87dedfb1b22529c"
+  "hash": "7276d342e3c40b465d936417b86c6b80b44a45ab"
  },
  "zh-hant/vinitaly-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "f30444d6bca88a1d534c38dc589f81614e3c4618"
+  "hash": "6cf444fd4bcb355cbabac2417e32d455e8dee18b"
  },
  "zh-hant/wine-paris-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "76c8f9f2bd3706681adbb01cdc4a854d3243acaf"
+  "hash": "57d35af95ebab0877a8572bfc39c0e8b11ccdc82"
  },
  "zh-hant/zoomark-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "4aa553d260a00679b595d25cc8c282a2c02f7af5"
+  "hash": "a2db7c030899ced53ba5ac4a30d1e257452b08d6"
  },
  "zh/agritechnica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "92947807bb2646953b141f5149fdaaef41d19c34"
+  "hash": "0300c7eb7dd2226b09fbd495c3b777490f00c431"
  },
  "zh/ambiente-frankfurt-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "0d7e4d5330090511103ae1bd708beb15ca2fd064"
+  "hash": "1e2aa078584b8ccfbd490854da1d48e912056163"
  },
  "zh/anuga-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "4a5deff692bff412e2cd67f25b7453301ae9f151"
+  "hash": "17518eaba5559943c98dc7b1f4908637e9b76e12"
  },
  "zh/bologna-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "6f30622cea9e066b3aa4cf58611650e73dfc8930"
+  "hash": "6e58f67dcb68d9421ebea7d72716b0f4079c1166"
  },
  "zh/cersaie-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "9791f9396ad4b61f8e6cb3f88ade6659d7cba072"
+  "hash": "ade85d54645638213bbf406ede8463d84a0324d3"
  },
  "zh/cibus-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "0d24d2d8027beb42db29f290907426675e805d4f"
+  "hash": "085d4ebc1434cf7013e54fea63b351c73a5385b4"
  },
  "zh/cosmoprof-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "cead7f2e2ce332320a63e89264936f7feaf0ec43"
+  "hash": "d5c878208d47b2f3ee8a2ed9e505bcc33de2ad7f"
  },
  "zh/ecomondo-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "4e8dcfdf6fcca54519fa5f5d8a48214a830d782f"
+  "hash": "06d57f8258edb22fa3db3903e20312cdfda4af51"
  },
  "zh/eicma-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "58e430cd380413714a1abbf8a6ea858dfbea393d"
+  "hash": "bb7ea9105f64f1004fad2c0d38bb12ff6d7d70f9"
  },
  "zh/eima-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "5c003288160e23a19e7875a5ff9f3f7e8c7b1931"
+  "hash": "f679bc532b8943100d74580849d442626723864c"
  },
  "zh/electronica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "1d474fdbf20c631ed0a2a29a7c1910a7ab82b21c"
+  "hash": "5ac865043b55880b1e3a0ae0a9f71a66da8230eb"
  },
  "zh/emo-milano-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "a746c2839e2a90bfb7139c312b9b207f77dfd783"
+  "hash": "f26153eee15ebd496da761ccc9d116035fad3c40"
  },
  "zh/europe-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "fba9e268df2e1fc7d371333264520655faca5a64"
+  "hash": "108d5e8ce882c2d1713cc6679e2bd3c2b07b2842"
  },
  "zh/euroshop-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "2b54536119904c5349d5f84bb1a2bfccb4f900a5"
+  "hash": "31671cbe46f41b552dc52d0f469b0526ec99aa9b"
  },
  "zh/expo-riva-schuh-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "54c6d5693d08db21f54dbc8d33093893ed219455"
+  "hash": "457c288e50a37cda03af9eb96b8b45853e6c4bc2"
  },
  "zh/fitur-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "1e88a696002d90b80e6dc9170dacfd6964b217a8"
+  "hash": "098fc7fef181e1dc0996bd335e49bb6466d8d863"
  },
  "zh/florence-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "4b05c471add1b8f9f073792d086f56ca936427c8"
+  "hash": "caf5079ce0bedeeabd4625e047fd51768842561e"
  },
  "zh/fruit-logistica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "d448e7868e5174df99802aa5468a0ccbb4862bf6"
+  "hash": "d1078f637150cd73d6c106291786323a2c90b104"
  },
  "zh/hannover-messe-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "5e6e9d4164530613c49ff58845ebf4bb9a86f86f"
+  "hash": "fcc57d77eb220838e5facf2a9cb70af64f6e26df"
  },
  "zh/heimtextil-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "64009ccfd23181cdfbed88c3274589394dbe6d56"
+  "hash": "245b15b58770c4d5eb1b5152b172dbe676d82a21"
  },
  "zh/host-milano-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "5ecb5142247e31ae9ab78d8bde2cc03bc7415057"
+  "hash": "88eb00d661365e533632a04d0d9c5a9c6d8879f2"
  },
  "zh/ifa-berlin-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "dd5fabfcd90772aed769e602f963007ce0946b98"
+  "hash": "32c4e3e0ed411bcd7f1532750f5dec873116c2a4"
  },
  "zh/interpack-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "d63afd7df65052c600b6f217162611be0ead7a37"
+  "hash": "f6101bf4f293abb6d6517e226dfd683854641046"
  },
  "zh/ish-frankfurt-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "dba1215e367a4f9546fd7c55025f0fed6df3c320"
+  "hash": "5775c9d35c60d9068d5c2336c1151b8440ae7d62"
  },
  "zh/italy-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "3befa9ee3268b178203b6f9eff393a89a56434ca"
+  "hash": "a4dda938ffdc37cd378d3309b8ff51f9effdddbf"
  },
  "zh/italy-trade-fair-guide/index.html": {
   "data": "2026-11-14",
-  "hash": "f451f7aa7a55824f0b2bd6340b08458f8baf48af"
+  "hash": "ca485879b714f3c425ce62bf09acc02183752ef3"
  },
  "zh/key-energy-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "108784f8077066902020c7ee4acc65a414f72ade"
+  "hash": "0d100fe68772f5bd64f7c0899b6a21451de8a567"
  },
  "zh/lamiera-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e32d661b407699e4f318985d72bfd9d0be1713b6"
+  "hash": "5093a8a907551275552fba1e997f36b1ac3a88d7"
  },
  "zh/lineapelle-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "af807da10e0ca878a85dd49ff82e208931bcc283"
+  "hash": "29391068886cb500acf0c66f3e72023fd3ed07c5"
  },
  "zh/macfrut-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e0be03596285797abe0b6e27f4c14e20b2982005"
+  "hash": "ec5148c3dfa75f07b3b20e83529401c2fcd904a3"
  },
  "zh/maison-et-objet-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "37e9fa729441d944598494405c5d0114c95cff40"
+  "hash": "159ae75c1a3e73194831efe00add82deb84eb922"
  },
  "zh/marmomac-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "07ecc0c213bd7d8414b95b79cc70f7f6dcdd1e69"
+  "hash": "efc523005d1373a2229f6bf1ad478af5cebc98fd"
  },
  "zh/mecspe-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "c348f296402f934cca2c18117b8bda446f0404e8"
+  "hash": "9b9c058ad391b96179095e714ff99af3b747bba6"
  },
  "zh/medica-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "87c116f737561a9a7db1f3157bad56a18959a173"
+  "hash": "9c811345d164ff79ca6e40a1539eeff66fab692b"
  },
  "zh/metstrade-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "fe6d5507c91255301e31d0594e09bbdadb9616e1"
+  "hash": "f9278d3f8bb49ce70913d2e7127736b1016a624b"
  },
  "zh/micam-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "024b7e901ade90c422b882552847f127786c2c30"
+  "hash": "91de01feefc3032e28ea64ef6894b5572ca995dd"
  },
  "zh/mido-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "7a07e08a9010168ba583f17139c125e438e669e6"
+  "hash": "c2083b26e0edfaff5063fc72cb16fbaa2798c726"
  },
  "zh/milan-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "8e180869d1866ee6714cb6ef192e3c84de63e972"
+  "hash": "3fca6796d0975833a62bb1d251ea7948d7869dac"
  },
  "zh/mwc-barcelona-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "3fca187913b112cd987517cd44eb4cb125c940d3"
+  "hash": "adcb717412d44f20841154b60d5ff4ea0846bcfb"
  },
  "zh/parma-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e1d51a26f210dadcbff27d816ec781d6b1c4dab9"
+  "hash": "083c52068659fee4bc3c450c0f57bd0902229af3"
  },
  "zh/pitti-uomo-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "ddf5dda6cbc60fa65b0fc6ea20d3fbfd1ab70bae"
+  "hash": "9da492a80825890e9a2e863cce2852a7da25d324"
  },
  "zh/prowein-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "c4e4d621fe9a28d8583dc5d3e8cbcb990817cbb3"
+  "hash": "1ca0940eda7dc8ea876ea8f1076d32eaaf352e7e"
  },
  "zh/rimini-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "3e9b4a360335c8f395446de0510a6f94c94c6f2c"
+  "hash": "5893f3401ac1f4b8e74645c25c4a7369f31da5c0"
  },
  "zh/riva-del-garda-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "e92604d7a7bad37533b80530fe874a4240fc2cb0"
+  "hash": "7857b1dbeb6555df58d5be8aa710afff1619c25b"
  },
  "zh/salone-del-mobile-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "572134c63d1363ea2f492d55d924d4c913469a85"
+  "hash": "cb57b77391057eeaf5adf1fb3f42ec2bfd8e9e4b"
  },
  "zh/sial-paris-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "a23083bcdc8c6b2c7ae34849487cc2872c255f81"
+  "hash": "f0dbfe19f35c841ee1f84d47a8c69c64d1a4da60"
  },
  "zh/sicam-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "fdfb8f4499acbb71df0390aead2cef480038b7ab"
+  "hash": "5b34ba552603a1f3339ccf1a94d61cb547ce37ca"
  },
  "zh/sigep-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "023c4a7e8eafd76ac7f6cb8ce7bf0a1a3b4ec481"
+  "hash": "2d1bf9fc8835c0fad2d8954b139a3f816f0e7736"
  },
  "zh/spielwarenmesse-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "b3efce88808904a112c06ac3788300a254ebadb9"
+  "hash": "be41c6447d950e5cec4463e470ba1ce6eb4a9487"
  },
  "zh/tuttofood-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "b68e6ddd39e706dabe05b190ad74c0d28d81e66d"
+  "hash": "de405c7dfd812f167d9c931718f0245974362072"
  },
  "zh/verona-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "197b8c2bd2b7f439f458374de0c6e092f3d43392"
+  "hash": "2af263da92be0a93c181664a475ff96b487091d8"
  },
  "zh/vicenza-exhibition-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "fa31be7e542c6c8c7abb5950c3349476132eb25d"
+  "hash": "71815c0de1aaba81c0017fd20ec337a772358139"
  },
  "zh/vicenzaoro-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "f6f463a75df6ef2cb01ce68abfa0c8c1e5c6e8c5"
+  "hash": "961bf905259d6a178d24e7c283ace1f126de515a"
  },
  "zh/vinitaly-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "a30e199cfc41e09d4eb9216e6501a420dc728a24"
+  "hash": "e28d56a4c20ed11c1fe260d8f2eb8f0b3417dcb3"
  },
  "zh/wine-paris-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "07d604b9aac67652c4e213a99ac450ccc59de711"
+  "hash": "5e2127da2d6832bf5837f063b050b0da86806b30"
  },
  "zh/zoomark-stand/index.html": {
   "data": "2026-11-14",
-  "hash": "71368ff11028e6b8ca039bd6aca3d1360d9b8012"
+  "hash": "541302dd40063ae97f8de7b68b15ed9a07786511"
  }
 }

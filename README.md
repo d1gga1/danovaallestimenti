@@ -118,3 +118,12 @@ server in `strumenti/supabase/` (`GUIDA-SUPABASE.md`).
 - fascia "Stai preparando una fiera?" a metà delle pagine lunghe, con preventivo e WhatsApp;
 - fumetto accanto al pulsante WhatsApp dopo 45 s (solo desktop).
 Ognuna si spegne in cima al file (`ATTIVO = { popup, fascia, fumetto }`); percentuale e giorni in `SCONTO`.
+
+## Lavori realizzati con foto vere (22/11/2026)
+`python3 strumenti/genera-lavori.py` (idempotente) genera `/lavori/`, `/fr/realisations/`, `/en/projects/` e una pagina
+per ogni lavoro in IT/FR/EN (primo: palco galleggiante all'Arsenale di Venezia, The Heart in Art, 19-20/11/2026).
+Aggiunge le pagine alla sitemap, la sezione "Lavori realizzati" in `llms.txt` e il riquadro "Lavoro recente"
+(blocchi `<!--ds-lavori-->`) in home, Venezia, eventi, progetti e nelle home FR/EN.
+Foto in `assets/img/lavori/` (webp 800/1200/1600 + og 1200x630, senza dati EXIF/GPS).
+**Rilancialo dopo ogni `migra-da-danovatech.py`** (che rimette `/lavori/` come redirect), prima di `ottimizza-geo.py`.
+Nuovo lavoro: aggiungi un elemento a `LAVORI` nello script.
