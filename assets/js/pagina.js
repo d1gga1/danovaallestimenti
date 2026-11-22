@@ -166,7 +166,7 @@ onScroll();
     const btn=document.createElement('button');
     btn.type='button'; btn.className='ll-btn';
     btn.setAttribute('aria-haspopup','true'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls',id);
-    btn.setAttribute('aria-label','Lingua / Language: '+(NOMI[cur.getAttribute('hreflang')]||cur.textContent.trim()));
+    btn.setAttribute('aria-label',cur.textContent.trim()+' — Lingua / Language: '+(NOMI[cur.getAttribute('hreflang')]||cur.textContent.trim()));
     btn.innerHTML=SVG+'<span>'+cur.textContent.trim()+'</span>'+CHEV;
     const menu=document.createElement('span'); menu.className='ll-menu'; menu.id=id;
     links.forEach(function(a){

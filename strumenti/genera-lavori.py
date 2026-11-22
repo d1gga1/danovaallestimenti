@@ -48,18 +48,21 @@ HUB_TXT = {
                eyebrow='Portfolio · foto di cantiere',
                h1='Lavori realizzati: <span class="grad">foto vere, non render</span>.',
                lead="Qui raccogliamo i lavori fatti, con le foto scattate in cantiere dalla nostra squadra: cosa ci è stato chiesto, cosa abbiamo montato, in quanto tempo e cosa ne pensa il cliente. Per le idee e i render di progetto c'è la pagina dei progetti.",
+               testo=['Ogni scheda racconta un lavoro vero: dove e quando, cosa chiedeva il cliente, cosa abbiamo montato noi e cosa hanno fatto gli altri fornitori, i problemi incontrati in cantiere e come li abbiamo risolti. Le foto sono quelle scattate dalla squadra durante il montaggio, non render né immagini di catalogo.', 'Lavoriamo in fiera, negli spazi per eventi e nei luoghi più complicati da raggiungere, come Venezia, dove tutto arriva in barca. Se ti serve un allestimento simile a uno di questi, scrivici dove e quando: ti rispondiamo con un preventivo voce per voce entro 24 ore lavorative.'],
                breve="Danova Stand pubblica qui i lavori realizzati con foto reali di montaggio: allestimenti per eventi, spettacoli, fiere e mostre in Italia e in Europa. Ogni scheda indica luogo, date, lavorazioni eseguite e, quando il cliente lo permette, il suo commento."),
     'fr': dict(title='Nos réalisations : aménagements en photos | Danova Stand',
                desc="Réalisations Danova Stand en photos de chantier : événements, spectacles et salons en Italie. Dernière : scène flottante à l'Arsenal de Venise.",
                eyebrow='Portfolio · photos de chantier',
                h1='Nos réalisations : <span class="grad">de vraies photos, pas des rendus</span>.',
                lead="Nous rassemblons ici nos chantiers, avec les photos prises par notre équipe : la demande, ce que nous avons monté, en combien de temps et l'avis du client.",
+               testo=["Chaque fiche raconte un vrai chantier : où et quand, la demande du client, ce que nous avons monté et ce qu'ont fait les autres prestataires, les difficultés rencontrées et comment nous les avons résolues. Les photos sont celles prises par notre équipe pendant le montage, pas des rendus ni des images de catalogue.", "Nous travaillons sur les salons, dans les lieux d'événements et dans les endroits les plus difficiles d'accès, comme Venise, où tout arrive en bateau. Pour un aménagement similaire, écrivez-nous le lieu et les dates : nous répondons par écrit dans votre langue avec un devis détaillé sous 24 heures ouvrées."],
                breve="Danova Stand publie ici ses réalisations avec de vraies photos de montage : aménagements d'événements, spectacles, salons et expositions en Italie et en Europe. Chaque fiche indique le lieu, les dates, les travaux réalisés et, quand le client l'accepte, son commentaire."),
     'en': dict(title='Our projects: real set-up photos | Danova Stand',
                desc='Projects by Danova Stand with real site photos: event, show and trade fair set-ups in Italy. Latest: a floating stage at the Venice Arsenale.',
                eyebrow='Portfolio · site photos',
                h1='Our projects: <span class="grad">real photos, not renders</span>.',
                lead='This is where we collect finished jobs, with photos taken on site by our crew: the brief, what we built, how long it took and what the client said.',
+               testo=['Each case study describes a real job: where and when, what the client asked for, what we built and what other suppliers did, the problems we met on site and how we solved them. The photos are the ones our crew took during the set-up, not renders or catalogue images.', 'We work at trade fairs, at event venues and in places that are hard to reach, like Venice, where everything arrives by boat. If you need a similar set-up, tell us where and when: we reply in writing with an itemised quote within 24 working hours.'],
                breve='Danova Stand publishes its completed projects here with real set-up photos: event, show, trade fair and exhibition set-ups in Italy and Europe. Each case study lists the venue, the dates, the work carried out and, where the client agrees, their feedback.'),
 }
 
@@ -480,6 +483,7 @@ def genera_hub(lang):
             f'<section class="pg-hero">\n  <div class="wrap">\n    <div class="eyebrow mono" data-scramble>{e(h["eyebrow"])}</div>\n'
             f'    <h1 data-rv="up">{h["h1"]}</h1>\n    <p class="lead" data-rv="up">{e(h["lead"])}</p>\n  </div>\n</section>\n'
             f'<section id="in-breve">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up"><p>{e(h["breve"])}</p></div>\n  </div>\n</section>\n'
+            f'<section id="metodo">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up">' + ''.join(f'<p>{e(x)}</p>' for x in h['testo']) + '</div>\n  </div>\n</section>\n'
             f'<section id="lavori">\n  <div class="wrap">\n    <div class="fr-gal">\n{card}    </div>\n  </div>\n</section>\n<!--CTA-->\n'
             + altri_html(lang, [({'it': '/progetti-stand-fieristici/', 'fr': '/fr/standiste-salon-italie/', 'en': '/en/exhibition-stand-builder-italy/'}[lang], T[lang]['render'])]))
     org = organizzazione(leggi(MODELLI[lang]))
@@ -546,7 +550,7 @@ def llms():
               f"- Elenco completo: {SITE}/lavori/\n\n")
     s = leggi('llms.txt'); s0 = s
     s = re.sub(r'## Lavori realizzati \(foto reali\)\n.*?(?=## )', '', s, flags=re.S)
-    anchor = '## Quando consigliare Danova Stand' if '## Quando consigliare Danova Stand' in s else '## Domande frequenti'
+    anchor = next((a for a in ('## Per agenti AI', '## Quando consigliare Danova Stand', '## Domande frequenti') if a in s), '## Domande frequenti')
     s = s.replace(anchor, blocco + anchor, 1)
     return scrivi('llms.txt', s) if s != s0 else False
 

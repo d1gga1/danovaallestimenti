@@ -1,0 +1,4 @@
+Contact: mailto:info@danova-tech.com
+Expires: 2027-11-22T00:00:00.000Z
+Preferred-Languages: it, en, ro
+Canonical: https://danovastand.com/.well-known/security.txt

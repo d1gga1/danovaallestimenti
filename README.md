@@ -127,3 +127,24 @@ Aggiunge le pagine alla sitemap, la sezione "Lavori realizzati" in `llms.txt` e 
 Foto in `assets/img/lavori/` (webp 800/1200/1600 + og 1200x630, senza dati EXIF/GPS).
 **Rilancialo dopo ogni `migra-da-danovatech.py`** (che rimette `/lavori/` come redirect), prima di `ottimizza-geo.py`.
 Nuovo lavoro: aggiungi un elemento a `LAVORI` nello script.
+
+## Gruppo Danova, feed e testo integrale per le AI (22/11/2026)
+Ordine completo degli script dopo ogni `migra-da-danovatech.py` (tutti idempotenti):
+
+    python3 strumenti/genera-pagine-servizi.py
+    python3 strumenti/genera-pagine-estere.py
+    python3 strumenti/ottimizza-seo.py
+    python3 strumenti/ottimizza-keyword.py
+    python3 strumenti/attiva-area-privata.py
+    python3 strumenti/genera-lavori.py
+    python3 strumenti/gruppo-danova.py        # NUOVO: schema parent/sub, lingue di contatto, footer Gruppo Danova, llms
+    python3 strumenti/ottimizza-geo.py
+    python3 strumenti/genera-feed-e-testo.py  # NUOVO: feed.xml + llms-full.txt (per ultimo)
+    python3 strumenti/audit-seo.py
+
+- `gruppo-danova.py` e' identico nei tre repository (danova-tech: `seo-tools/`, danova_costruzioni: `_sorgenti-real-estate/`).
+  Lingue vere: telefono italiano/inglese/rumeno, per iscritto tutte. Crea anche `.well-known/security.txt` (scade dopo un anno).
+- `ottimizza-geo.py` ora aggiunge un nodo WebPage (con date) alle pagine che non l'avevano (pagine video).
+- ATTENZIONE: `migra-da-danovatech.py` copia `assets/css` e `assets/js` da danova-tech e sovrascrive `assets/js/pagina.js`
+  (selettore lingua di Danova Stand, etichetta accessibile del pulsante lingua). Dopo la migrazione controlla con
+  `git diff assets/js/pagina.js` e ripristina le righe del selettore se spariscono.

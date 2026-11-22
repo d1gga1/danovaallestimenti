@@ -18,7 +18,7 @@ Cosa fa:
  5. robots.txt: aggiunge i bot AI che mancano.
  6. Verifica Bing Webmaster Tools: se scrivi il codice in MSVALIDATE, mette il meta in tutte le pagine.
 """
-import datetime, glob, hashlib, json, os, re, subprocess
+import datetime, glob, hashlib, html, json, os, re, subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -98,6 +98,32 @@ def arricchisci_ld(s, pagina=''):
     return LD_RE.sub(sub, s)
 
 
+PAGE_TYPES = {'WebPage', 'CollectionPage', 'AboutPage', 'ContactPage', 'FAQPage', 'ItemPage', 'ProfilePage', 'SearchResultsPage', 'CheckoutPage', 'MedicalWebPage', 'RealEstateListing', 'QAPage'}
+
+
+def aggiungi_webpage(s, pagina):
+    """Pagine senza nodo WebPage (es. pagine video): lo aggiunge, cosi' hanno anche dateModified."""
+    url = SITE + (pagina[:-len('index.html')] if pagina.endswith('index.html') else pagina)
+    def sub(m):
+        d = json.loads(m.group(2))
+        g = d.get('@graph')
+        if not isinstance(g, list): return m.group(0)
+        tipi = set()
+        for n in g:
+            t = n.get('@type'); tipi |= set(t if isinstance(t, list) else [t])
+        if (tipi & PAGE_TYPES) - {'FAQPage'} or any(n.get('@id') == url + '#webpage' for n in g): return m.group(0)
+        t = re.search(r'<title>(.*?)</title>', s, re.S); de = re.search(r'<meta name="description" content="([^"]*)"', s)
+        lang = (re.search(r'<html[^>]*lang="([^"]+)"', s) or [0, 'it'])[1]
+        date = sorted(re.findall(r'"(?:uploadDate|datePublished)": "(\d{4}-\d{2}-\d{2})', m.group(2)))
+        wp = {'@type': 'WebPage', '@id': url + '#webpage', 'url': url, 'name': html.unescape(t.group(1).strip()) if t else '',
+              'description': html.unescape(de.group(1)) if de else '', 'isPartOf': {'@id': SITE + '#website'}, 'inLanguage': lang,
+              'datePublished': date[0] if date else TODAY, 'dateModified': date[-1] if date else TODAY}
+        if any(n.get('@id') == url + '#breadcrumb' for n in g): wp['breadcrumb'] = {'@id': url + '#breadcrumb'}
+        g.insert(1, wp)
+        return m.group(1) + '\n' + json.dumps(d, ensure_ascii=False, indent=2) + '\n' + m.group(3)
+    return LD_RE.sub(sub, s, count=1)
+
+
 def msvalidate(s):
     if not MSVALIDATE or 'name="msvalidate.01"' in s: return s
     stats['msvalidate'] += 1
@@ -136,7 +162,7 @@ def main():
     for f in pagine:
         s = open(f, encoding='utf-8').read()
         if 'noindex' in s[:4000]: continue
-        s = msvalidate(arricchisci_ld(s, f))
+        s = msvalidate(arricchisci_ld(aggiungi_webpage(s, f), f))
         h = impronta(s)
         vecchia = memo.get(f)
         if vecchia and vecchia['hash'] == h:
