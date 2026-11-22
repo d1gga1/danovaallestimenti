@@ -137,6 +137,7 @@ Ordine completo degli script dopo ogni `migra-da-danovatech.py` (tutti idempoten
     python3 strumenti/ottimizza-keyword.py
     python3 strumenti/attiva-area-privata.py
     python3 strumenti/genera-lavori.py
+    python3 strumenti/genera-pagine-ur-hi.py  # urdu e hindi (vedi sotto)
     python3 strumenti/gruppo-danova.py        # NUOVO: schema parent/sub, lingue di contatto, footer Gruppo Danova, llms
     python3 strumenti/ottimizza-geo.py
     python3 strumenti/genera-feed-e-testo.py  # NUOVO: feed.xml + llms-full.txt (per ultimo)
@@ -148,3 +149,17 @@ Ordine completo degli script dopo ogni `migra-da-danovatech.py` (tutti idempoten
 - ATTENZIONE: `migra-da-danovatech.py` copia `assets/css` e `assets/js` da danova-tech e sovrascrive `assets/js/pagina.js`
   (selettore lingua di Danova Stand, etichetta accessibile del pulsante lingua). Dopo la migrazione controlla con
   `git diff assets/js/pagina.js` e ripristina le righe del selettore se spariscono.
+
+## Urdu (Pakistan) e hindi (India) (22/11/2026)
+`python3 strumenti/genera-pagine-ur-hi.py` (idempotente) crea 11 pagine per lingua in `/ur/` e `/hi/`:
+hub Europa (pagina principale, `/ur/` e `/hi/` rimandano qui), hub Italia, guida "esporre in Europa" e 8 fiere scelte per i
+settori di export dei due paesi: MEDICA, Heimtextil, Marmomac, Anuga, Ambiente, Lineapelle, Vicenzaoro, Fruit Logistica.
+- Testi diversi per paese (citta' e settori pakistani o indiani), parole chiave con "stall" (اسٹال / स्टॉल), che li' si usa piu' di "stand".
+- Aggiunge ur/hi agli hreflang e al selettore lingua delle pagine sorelle, اردو e हिन्दी al footer "Lingue / Languages" di tutte
+  le pagine, testi urdu/hindi in `pagina.js`, `contatto.js` e `ds-conversioni.js`, sitemap e `llms.txt`.
+- Urdu da destra a sinistra; font di sistema (Noto Nastaliq Urdu su iPhone/Mac/Android, devanagari di sistema per l'hindi): niente font da scaricare.
+- Contatto dichiarato: per iscritto in urdu/hindi o inglese, al telefono inglese e italiano. `gruppo-danova.py` ora elenca anche 'Urdu'
+  tra le lingue scritte: **riportare la stessa riga negli altri due repository** (danova-tech, danova_costruzioni), che hanno lo stesso script.
+- Rilancialo dopo ogni `migra-da-danovatech.py` (sovrascrive pagina.js, contatto.js e i footer), **prima** di `gruppo-danova.py`.
+- Nuova fiera: aggiungi un elemento a `FIERE` nello script (serve una pagina `zh/<fiera>-stand/` per il gruppo hreflang).
+

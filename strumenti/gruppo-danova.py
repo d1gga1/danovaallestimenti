@@ -30,7 +30,7 @@ ESCLUDI = ('.git', 'strumenti', 'seo-tools', '_sorgenti-real-estate', '_archivio
 LD_RE = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
 
 TEL_LINGUE = ['Italian', 'English', 'Romanian']
-SCRITTO_LINGUE = ['Italian', 'English', 'Romanian', 'German', 'French', 'Spanish', 'Chinese', 'Turkish', 'Arabic', 'Albanian', 'Hindi']
+SCRITTO_LINGUE = ['Italian', 'English', 'Romanian', 'German', 'French', 'Spanish', 'Chinese', 'Turkish', 'Arabic', 'Albanian', 'Hindi', 'Urdu']
 
 ETICHETTE = {  # (prefisso, descrizione dei siti)
     'it': ('Gruppo Danova', {'danova-tech.com': 'Siti web e software', 'danovastand.com': 'Stand fieristici', 'danovacostruzioni.it': 'Ristrutturazioni e edilizia'}),

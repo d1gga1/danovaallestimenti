@@ -155,7 +155,7 @@ onScroll();
    di link dell'header diventa un menu a tendina, cosi' occupa sempre lo stesso
    spazio anche con 9 lingue. Senza JS resta la riga di link originale. */
 (function(){
-  const NOMI={it:'Italiano',en:'English',de:'Deutsch',fr:'Français',es:'Español','zh-Hans':'简体中文','zh-Hant':'繁體中文',tr:'Türkçe',ar:'العربية'};
+  const NOMI={it:'Italiano',en:'English',de:'Deutsch',fr:'Français',es:'Español','zh-Hans':'简体中文','zh-Hant':'繁體中文',tr:'Türkçe',ar:'العربية',ur:'اردو',hi:'हिन्दी'};
   const SVG='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>';
   const CHEV='<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
   document.querySelectorAll('header .lang-links').forEach(function(w,n){
@@ -173,7 +173,7 @@ onScroll();
       const code=a.textContent.trim(), nome=NOMI[a.getAttribute('hreflang')]||code;
       a.innerHTML='<span class="ll-nome"></span><b></b>';
       a.firstChild.textContent=nome; a.lastChild.textContent=code;
-      if(a.getAttribute('hreflang')==='ar') a.firstChild.setAttribute('dir','rtl');
+      if(/^(ar|ur)$/.test(a.getAttribute('hreflang'))) a.firstChild.setAttribute('dir','rtl');
       menu.appendChild(a);
     });
     w.textContent=''; w.appendChild(btn); w.appendChild(menu); w.classList.add('ll');
