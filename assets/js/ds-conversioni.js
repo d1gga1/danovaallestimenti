@@ -239,12 +239,11 @@
   document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href="#sconto"]'); if (a) { e.preventDefault(); apri('link'); } }, true);
 
   /* quando mostrarlo: una volta per visita, dopo 30 s sulla pagina, a metà lettura o quando il mouse esce verso
-     la barra del browser (sta per chiudere). Mai prima che la persona abbia risposto al banner dei cookie,
-     mai a chi ha già inviato una richiesta, e se l'ha chiuso aspettiamo 3 giorni. */
+     la barra del browser (sta per chiudere). Ricompare a ogni nuova visita finché la persona non lascia i dati
+     (iscrizione al −3% o qualsiasi richiesta inviata dal sito). Se lo chiude, nella stessa visita resta solo la pillola. */
   function puoMostrare() {
     if (!ATTIVO.popup || LEGALE || CONTATTI || haScritto() || sg('ds_nl_vista')) return false;
     if (BOX && BOX.classList.contains('open')) return false;
-    var no = parseInt(lg('ds_nl_no') || '0', 10); if (no && Date.now() - no < 3 * 864e5) return false;
     var fm = document.activeElement; if (fm && /^(INPUT|TEXTAREA|SELECT)$/.test(fm.tagName)) return false;   // sta già compilando un modulo
     return true;
   }
