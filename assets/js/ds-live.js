@@ -8,7 +8,7 @@
 (function () {
   if (window.__dsLive) return; window.__dsLive = 1;
   try { if (window.top !== window.self) return; } catch (e) { return; }   // non contare le pagine dentro un iframe
-  var BASE = window.DS_LIVE_BASE || 'https://hqodsztwzcofdsunnpxa.supabase.co/functions/v1/ds';   // impostato da strumenti/attiva-area-privata.py
+  var BASE = window.DS_LIVE_BASE || 'https://TUO-PROGETTO.supabase.co/functions/v1/ds';   // impostato da strumenti/attiva-area-privata.py
   if (/TUO-PROGETTO/.test(BASE)) return;   // area privata non ancora collegata a Supabase: non si fa nulla
   var URL_ = BASE + '/s';
   var LS = null; try { LS = window.localStorage; LS.setItem('ds_t', '1'); LS.removeItem('ds_t'); } catch (e) { LS = null; }

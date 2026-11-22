@@ -106,3 +106,15 @@ server in `strumenti/supabase/` (`GUIDA-SUPABASE.md`).
   le pagine, collega il progetto Supabase, aggiorna cookie policy e privacy (IT/EN/DE/FR/ES).
   **Rilancialo dopo ogni `migra-da-danovatech.py`**, prima di `ottimizza-geo.py`.
 - Finché il progetto non è collegato lo script non fa nulla (nessun banner, nessun invio).
+
+## Più richieste: popup −3% newsletter, fascia preventivo, fumetto WhatsApp (22/11/2026)
+`assets/js/ds-conversioni.js`, caricato da `ds-live.js` su tutte le pagine (resta dopo le migrazioni):
+- popup "−3% sul tuo prossimo allestimento" per chi si iscrive alla newsletter: codice personale
+  `DANOVA3-XXXXXX` valido 30 giorni, mandato via email al cliente (risposta automatica FormSubmit) e a
+  info@danova-tech.com; l'iscritto compare nella scheda Richieste dell'area privata.
+  Compare una volta a visita (dopo 30 s, a metà pagina o quando il mouse esce dalla finestra), mai a chi
+  ha già scritto, mai su contatti e pagine legali; se chiuso resta il pulsante "−3%" in basso a sinistra.
+  Link `href="#sconto"` in qualsiasi pagina apre il popup.
+- fascia "Stai preparando una fiera?" a metà delle pagine lunghe, con preventivo e WhatsApp;
+- fumetto accanto al pulsante WhatsApp dopo 45 s (solo desktop).
+Ognuna si spegne in cima al file (`ATTIVO = { popup, fascia, fumetto }`); percentuale e giorni in `SCONTO`.
