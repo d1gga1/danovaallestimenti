@@ -21,6 +21,7 @@
     tech: { brand: 'Danova Tech', dom: 'danova-tech.com', mail: 'info@danova-tech.com' }
   }[SITO];
   SCONTO.mail = CFG.mail;
+  SCONTO.perc = { stand: 3, costruzioni: 5, tech: 10 }[SITO];   // sconto di ogni sito
   if (SITO !== 'stand') { ATTIVO.fascia = false; ATTIVO.fumetto = false; }
 
   var P = location.pathname;
@@ -153,6 +154,13 @@
   var priv = (PRIV[SITO] || {})[LT] || '/en/privacy/';
   T.ok = String(T.ok).replace('{priv}', priv).replace('{b}', CFG.brand);
   T.fieraK = T.fieraK || 'Fiera';
+  /* i testi sono scritti con il 3%: qui diventano lo sconto del sito (5% Costruzioni, 10% Tech) */
+  var perc = function (x) {
+    if (typeof x === 'string') return x.replace(/(^|[^\d.,])3(?=\s?%)/g, '$1' + SCONTO.perc).replace(/%3(?![\d])/g, '%' + SCONTO.perc);
+    if (x && x.map) return x.map(perc);
+    return x;
+  };
+  if (SCONTO.perc !== 3) for (var kk in T) T[kk] = perc(T[kk]);
   T.arCosa = T.arCosa || (LT === 'it' ? 'sul tuo allestimento' : 'off your exhibition stand');
   T.arRacc = T.arRacc || (LT === 'it' ? 'Raccontaci fiera, metri quadri e idee' : 'Tell us the fair, the size and your ideas');
 
@@ -189,13 +197,21 @@
     + '@media(max-width:760px){.dsnl-box{grid-template-columns:1fr;top:auto;bottom:0;left:0;width:100%;max-height:92%;border-radius:22px 22px 0 0;transform:translateY(30px)}.dsnl.show .dsnl-box{transform:none}'
     + '.dsnl-vis{padding:22px 20px;gap:8px}.dsnl-vis ul{display:none}.dsnl-vis b.big{font-size:64px}.dsnl-f{padding:20px 18px 18px}.dsnl-g{grid-template-columns:1fr}'
     + '.dsnl-pill{bottom:calc(84px + env(safe-area-inset-bottom));left:10px}.ds-fascia .ds-f-in{padding:20px}.ds-bolla{display:none}}';
+  /* colori del sito: oro su Stand, verde su Costruzioni, blu su Tech */
+  var COL = {
+    costruzioni: { a: '#83b06d', rgb: '131,176,109', l: '157,193,139', lt: '#c9e0bd', bg: '#0b0f09', g1: '#131c0f', g2: '#080b06', btn: '#83b06d', btnTx: '#0b0b0b' },
+    tech: { a: '#4d8bff', rgb: '30,107,255', l: '77,139,255', lt: '#a9c7ff', bg: '#070b14', g1: '#0c1733', g2: '#05080f', btn: '#1E6BFF', btnTx: '#fff' }
+  }[SITO];
+  if (COL) CSS = CSS.split('background:#FFC93C;color:#0b0b0b').join('background:' + COL.btn + ';color:' + COL.btnTx)
+    .split('#FFC93C').join(COL.a).split('rgba(255,201,60,').join('rgba(' + COL.rgb + ',').split('rgba(255,217,122,').join('rgba(' + COL.l + ',')
+    .split('#ffe49f').join(COL.lt).split('#0f0d07').join(COL.bg).split('#1a1508').join(COL.g1).split('#0b0904').join(COL.g2);
   var st = document.createElement('style'); st.id = 'ds-conv-css'; st.textContent = CSS; (document.head || document.documentElement).appendChild(st);
 
   /* chi ha già lasciato i dati non va disturbato con il popup */
   var iscritto = function () { return !!lg('ds_nl'); };
   var haScritto = function () { return !!lg('ds_rq') || iscritto(); };
   var vid = function () { try { return window.dsVisitatore ? window.dsVisitatore() : ''; } catch (e) { return ''; } };
-  var codice = function () { var r = (vid() || Math.random().toString(16).slice(2)).slice(0, 6).toUpperCase(); return 'DANOVA3-' + r; };
+  var codice = function () { var r = (vid() || Math.random().toString(16).slice(2)).slice(0, 6).toUpperCase(); return 'DANOVA' + SCONTO.perc + '-' + r; };
   var dataIt = function (d) { return ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + d.getFullYear(); };
   var bersaglio = function () { return document.getElementById('richiesta') || document.getElementById('dt-scrivi') || document.querySelector('form.fr-req,form.dt-lead,main form#form'); };
   var vaiAlModulo = function (da) {
