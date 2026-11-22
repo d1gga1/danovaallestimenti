@@ -448,7 +448,7 @@
   }
 
   /* ───────── più richieste: popup −3% newsletter, fascia preventivo, fumetto WhatsApp (ds-conversioni.js) ───────── */
-  if (SITO === 'stand') try { var cv = document.createElement('script'); cv.src = '/assets/js/ds-conversioni.js?v=2'; cv.defer = true; (document.head || document.documentElement).appendChild(cv); } catch (e) {}
+  if (SITO) try { var cv = document.createElement('script'); cv.src = '/assets/js/ds-conversioni.js?v=3'; cv.defer = true; (document.head || document.documentElement).appendChild(cv); } catch (e) {}
 
   /* ───────── banner cookie (statistiche dettagliate) ─────────
      Senza consenso restano solo i conteggi anonimi. La scelta vale 6 mesi. */
