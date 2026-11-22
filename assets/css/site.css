@@ -987,3 +987,9 @@ header .lang-links.ll .ll-menu a:hover{background:rgba(255,201,60,.12);color:#ff
 .ll-menu a b{font:700 10.5px/1 'Sora',sans-serif;letter-spacing:.1em;opacity:.7}
 header .lang-links.ll .ll-menu a[aria-current="page"]{background:rgba(255,201,60,.16);color:#fff!important}
 header .lang-links.ll .ll-menu a[aria-current="page"] b{color:var(--blue-2);opacity:1}
+/* ds-lingue-extra: menu lingue su piu' colonne (36 lingue) */
+header .lang-links.ll .ll-menu{display:grid;grid-template-columns:repeat(3,minmax(150px,1fr));column-gap:2px;min-width:0;width:max-content}
+header .lang-links.ll .ll-menu a{padding:8px 11px}
+@media (max-width:820px){header .lang-links.ll .ll-menu{grid-template-columns:repeat(2,minmax(140px,1fr));max-height:72vh;overflow-y:auto;background:rgba(12,10,4,.97);border:1px solid var(--line);border-radius:16px;padding:6px;margin-top:10px}header .lang-links.ll .ll-menu::before{display:none}}
+#mob .mob-lang-links a{min-width:44px;text-align:center}
+/* /ds-lingue-extra */
