@@ -459,7 +459,7 @@ def home_from_hub(s):
 def redirect_page(target, lang='it'):
     url = target if target.startswith('http') else NEW + target
     return ('<!DOCTYPE html>\n<html lang="%s"><head><meta charset="utf-8">\n<title>Danova Stand</title>\n'
-            '<meta name="robots" content="noindex, follow">\n<link rel="canonical" href="%s">\n'
+            '<link rel="canonical" href="%s">\n'
             '<meta http-equiv="refresh" content="0; url=%s">\n'
             '<script>location.replace(%s)</script>\n</head><body>\n'
             '<p><a href="%s">Danova Stand</a></p>\n</body></html>\n') % (lang, url, target, json.dumps(target), target)
@@ -535,7 +535,7 @@ def main():
     # sitemap con hreflang
     rows = []
     for path, h in meta:
-        if re.search(r'<meta name="robots" content="noindex', h):
+        if re.search(r'<meta name="robots" content="noindex', h) or 'http-equiv="refresh"' in h[:3000]:
             continue
         alts = re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">', h)
         x = '  <url>\n    <loc>%s%s</loc>\n    <lastmod>%s</lastmod>\n' % (NEW, path, TODAY)
@@ -555,7 +555,7 @@ def main():
              'Contatti: info@danova-tech.com, +39 388 470 6887.', '']
     groups = {}
     for path, h in meta:
-        if path.lstrip('/').split('/')[0] in ('privacy', 'cookie-policy', 'termini') or 'noindex' in h[:3000]:
+        if path.lstrip('/').split('/')[0] in ('privacy', 'cookie-policy', 'termini') or 'noindex' in h[:3000] or 'http-equiv="refresh"' in h[:3000]:
             continue
         g = path.strip('/').split('/')[0] if path.strip('/').split('/')[0] in ('en', 'de', 'fr', 'es', 'zh', 'zh-hant', 'tr', 'ar') else 'it'
         groups.setdefault(g, []).append((path, *tdesc(h)))

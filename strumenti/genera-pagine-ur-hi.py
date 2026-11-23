@@ -788,7 +788,7 @@ def redirect(L):
     dest = f"/{L}/europe-exhibition-stand/"
     rtl = ' dir="rtl"' if L == "ur" else ""
     return (f'<!DOCTYPE html>\n<html lang="{L}"{rtl}><head><meta charset="utf-8">\n<title>Danova Stand</title>\n'
-            f'<meta name="robots" content="noindex, follow">\n<link rel="canonical" href="{SITO}{dest}">\n'
+            f'<link rel="canonical" href="{SITO}{dest}">\n'
             f'<meta http-equiv="refresh" content="0; url={dest}">\n<script>location.replace("{dest}")</script>\n'
             f'</head><body>\n<p><a href="{dest}">Danova Stand</a></p>\n</body></html>\n')
 

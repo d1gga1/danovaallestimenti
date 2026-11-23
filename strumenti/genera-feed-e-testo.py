@@ -46,7 +46,7 @@ def main():
         f = loc.replace(SITE + '/', '') + 'index.html'
         if not os.path.exists(f): continue
         h = open(f, encoding='utf-8').read()
-        if 'noindex' in h[:5000]: continue
+        if 'noindex' in h[:5000] or 'http-equiv="refresh"' in h[:5000]: continue
         lang = (re.search(r'<html[^>]*lang="([^"]+)"', h) or [0, 'it'])[1]
         tit = html.unescape((re.search(r'<title>(.*?)</title>', h, re.S) or [0, ''])[1].strip())
         desc = html.unescape((re.search(r'<meta name="description" content="([^"]*)"', h) or [0, ''])[1])

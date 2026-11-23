@@ -159,7 +159,6 @@ LINK_TESTI = [('>Contributi fiere 2026<', '>Contributi fiere 2027<'), ('>Contrib
 STUB = """<!DOCTYPE html>
 <html lang="it"><head><meta charset="utf-8">
 <title>Contributi per le fiere | Danova Stand</title>
-<meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://danovastand.com/contributi-fiere/">
 <meta http-equiv="refresh" content="0; url=/contributi-fiere/">
 <script>location.replace("/contributi-fiere/")</script>

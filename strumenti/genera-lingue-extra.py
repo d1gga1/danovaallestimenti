@@ -142,7 +142,7 @@ UH.alts_cluster, UH.ld_json, UH.footer = alts_cluster, ld_json, footer
 def redirect(L):
     d = MAIN[L]; rtl = ' dir="rtl"' if L in RTL else ""
     return (f'<!DOCTYPE html>\n<html lang="{L}"{rtl}><head><meta charset="utf-8">\n<title>Danova Stand</title>\n'
-            f'<meta name="robots" content="noindex, follow">\n<link rel="canonical" href="{SITO}{d}">\n'
+            f'<link rel="canonical" href="{SITO}{d}">\n'
             f'<meta http-equiv="refresh" content="0; url={d}">\n<script>location.replace("{d}")</script>\n'
             f'</head><body>\n<p><a href="{d}">Danova Stand</a></p>\n</body></html>\n')
 

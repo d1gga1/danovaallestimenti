@@ -161,7 +161,7 @@ def main():
     date_pag = {}
     for f in pagine:
         s = open(f, encoding='utf-8').read()
-        if 'noindex' in s[:4000]: continue
+        if 'noindex' in s[:4000] or 'http-equiv="refresh"' in s[:4000]: continue
         s = msvalidate(arricchisci_ld(aggiungi_webpage(s, f), f))
         h = impronta(s)
         vecchia = memo.get(f)
