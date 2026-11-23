@@ -12,10 +12,12 @@ Idempotente. Rilancialo dopo ogni migra-da-danovatech.py (prima di ottimizza-geo
 Nuovo lavoro: aggiungi un dizionario in LAVORI (testi IT/FR/EN, foto in assets/img/lavori/,
 nome file = parola chiave, versioni -800 e -1200 in webp + og 1200x630 in jpg).
 """
-import html, json, os, re
+import html, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
+sys.path.insert(0, os.path.join(ROOT, 'strumenti'))
+from galleria_stand import GALLERIA  # altri stand realizzati (solo foto), negli hub
 SITE = 'https://danovastand.com'
 IMG = '/assets/img/lavori/'
 e = html.escape
@@ -44,7 +46,7 @@ T = {  # testi fissi dell'interfaccia
 
 HUB_TXT = {
     'it': dict(title='Lavori realizzati: allestimenti con foto vere | Danova Stand',
-               desc="Lavori realizzati da Danova Stand con foto di cantiere: allestimenti per eventi, spettacoli e fiere. Ultimo: palco galleggiante all'Arsenale di Venezia.",
+               desc="Lavori realizzati da Danova Stand con foto vere: oltre 20 stand fieristici e padiglioni divisi per cliente, da MEDICA Düsseldorf all'Arsenale di Venezia.",
                eyebrow='Portfolio · foto di cantiere',
                h1='Lavori realizzati: <span class="grad">foto vere, non render</span>.',
                lead="Qui raccogliamo i lavori fatti, con le foto scattate in cantiere dalla nostra squadra: cosa ci è stato chiesto, cosa abbiamo montato, in quanto tempo e cosa ne pensa il cliente. Per le idee e i render di progetto c'è la pagina dei progetti.",
@@ -435,6 +437,53 @@ LAVORI.insert(0, {
     ),
 })
 
+GAL_TXT = {
+    'it': dict(tit='Altri stand realizzati', intro="Oltre ai lavori raccontati nel dettaglio, una selezione di stand che abbiamo costruito e montato in fiera, in Italia e all'estero, divisi per cliente. Sono foto vere scattate in fiera, non render.",
+               stand='Stand', foto='Foto', apri='Apri la foto'),
+    'fr': dict(tit="Autres stands réalisés", intro="En plus des réalisations détaillées, une sélection de stands que nous avons construits et montés sur des salons, en Italie et à l'étranger, classés par client. Ce sont de vraies photos prises sur le salon, pas des rendus.",
+               stand='Stand', foto='Photo', apri='Ouvrir la photo'),
+    'en': dict(tit='More stands we have built', intro='Besides the detailed case studies, a selection of stands we built and installed at trade fairs in Italy and abroad, grouped by client. These are real photos taken at the show, not renders.',
+               stand='Stand', foto='Photo', apri='Open the photo'),
+}
+GAL_STILE = ('<style>.lv-st{margin-top:46px}.lv-st h3{font-family:"Sora",sans-serif;font-size:1.25rem;margin:0 0 6px}'
+             '.lv-st p{margin:0 0 16px;color:var(--muted);max-width:760px}'
+             '.lv-sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}'
+             '.lv-sg a{display:block;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--panel)}'
+             '.lv-sg img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform .4s var(--ease)}'
+             '.lv-sg a:hover img{transform:scale(1.03)}</style>\n')
+
+
+def gal_alt(G, f, lang):
+    return f'{GAL_TXT[lang]["stand"]} {G["nome"][lang]} — {f[3][lang]}'
+
+
+def galleria_html(lang):
+    g = GAL_TXT[lang]; out = ''
+    for G in GALLERIA:
+        imgs = ''
+        for f in G['foto']:
+            nome, w, h = f[0], f[1], f[2]
+            imgs += (f'<a href="{IMG}{nome}-1200.webp" target="_blank" rel="noopener" aria-label="{e(g["apri"])}: {e(gal_alt(G, f, lang))}">'
+                     f'<img src="{IMG}{nome}-800.webp" srcset="{IMG}{nome}-800.webp 800w, {IMG}{nome}-1200.webp 1200w" sizes="(max-width:700px) calc(100vw - 44px), 300px" '
+                     f'width="{w}" height="{h}" alt="{e(gal_alt(G, f, lang))}" loading="lazy" decoding="async"></a>')
+        out += (f'    <div class="lv-st" id="stand-{G["slug"]}" data-rv="up"><h3>{e(G["nome"][lang])}</h3><p>{e(G["testo"][lang])}</p>'
+                f'<div class="lv-sg">{imgs}</div></div>\n')
+    return (GAL_STILE + f'<section id="altri-stand">\n  <div class="wrap">\n    <div class="sec-head"><h2 class="title" data-rv="up">{g["tit"]}</h2></div>\n'
+            f'    <div class="pg-testo" data-rv="up"><p>{e(g["intro"])}</p></div>\n{out}  </div>\n</section>\n')
+
+
+def gal_img_obj(lang):
+    r = []
+    for G in GALLERIA:
+        for f in G['foto']:
+            u = f'{SITE}{IMG}{f[0]}-1200.webp'; a = gal_alt(G, f, lang)
+            r.append({'@type': 'ImageObject', '@id': u + '#img', 'url': u, 'contentUrl': u, 'width': f[1], 'height': f[2],
+                      'caption': a, 'description': a, 'inLanguage': lang, 'creditText': T[lang]['foto'], 'copyrightNotice': '© Danova Stand',
+                      'creator': {'@id': SITE + '/#organization'}, 'thumbnailUrl': f'{SITE}{IMG}{f[0]}-800.webp',
+                      'license': SITE + '/termini/#proprieta-intellettuale', 'acquireLicensePage': SITE + '/contatti/'})
+    return r
+
+
 BOX_TIT = {'it': 'Lavoro recente', 'fr': 'Réalisation récente', 'en': 'Recent project'}
 
 
@@ -657,7 +706,7 @@ def genera_hub(lang):
             f'    <h1 data-rv="up">{h["h1"]}</h1>\n    <p class="lead" data-rv="up">{e(h["lead"])}</p>\n  </div>\n</section>\n'
             f'<section id="in-breve">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up"><p>{e(h["breve"])}</p></div>\n  </div>\n</section>\n'
             f'<section id="metodo">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up">' + ''.join(f'<p>{e(x)}</p>' for x in h['testo']) + '</div>\n  </div>\n</section>\n'
-            f'<section id="lavori">\n  <div class="wrap">\n    <div class="fr-gal">\n{card}    </div>\n  </div>\n</section>\n<!--CTA-->\n'
+            f'<section id="lavori">\n  <div class="wrap">\n    <div class="fr-gal">\n{card}    </div>\n  </div>\n</section>\n' + galleria_html(lang) + '<!--CTA-->\n'
             + altri_html(lang, [({'it': '/progetti-stand-fieristici/', 'fr': '/fr/standiste-salon-italie/', 'en': '/en/exhibition-stand-builder-italy/'}[lang], T[lang]['render'])]))
     org = organizzazione(leggi(MODELLI[lang]))
     graph = [org,
@@ -667,6 +716,9 @@ def genera_hub(lang):
               'mainEntity': {'@type': 'ItemList', 'itemListElement': [
                   {'@type': 'ListItem', 'position': i, 'url': SITE + L['url'][lang], 'name': L[lang]['crumb']} for i, L in enumerate(LAVORI, 1)]}},
              crumbs_ld(url, lang, [(T[lang]['hub'], None)])]
+    gi = gal_img_obj(lang)
+    graph[1]['image'] = [{'@id': i['@id']} for i in gi]
+    graph += gi
     return pagina(lang, HUB, h['title'], h['desc'], IMG + L0['og'], L0[lang]['hero_alt'], 'website', graph, main, agg)
 
 
@@ -738,7 +790,7 @@ def main():
     for lang in ('it', 'fr', 'en'):
         p = HUB[lang].strip('/') + '/index.html'
         out[p] = scrivi(p, genera_hub(lang))
-    pag_sitemap.append((HUB, [IMG + L['hero'] + '.webp' for L in LAVORI], max(L['pubblicato'] for L in LAVORI), None, None))
+    pag_sitemap.append((HUB, [IMG + L['hero'] + '.webp' for L in LAVORI] + [f'{IMG}{f[0]}-1200.webp' for G in GALLERIA for f in G['foto']], max(L['pubblicato'] for L in LAVORI), None, None))
     for L in LAVORI:
         for lang in ('it', 'fr', 'en'):
             p = L['url'][lang].strip('/') + '/index.html'

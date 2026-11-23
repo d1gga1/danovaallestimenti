@@ -9,3 +9,6 @@
 
 _google_business/
 *.tmp
+
+# foto originali (con EXIF): sul sito vanno solo le versioni webp in assets/img/lavori/
+nuove_foto_newstand/

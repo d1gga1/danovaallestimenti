@@ -127,6 +127,9 @@ Aggiunge le pagine alla sitemap, la sezione "Lavori realizzati" in `llms.txt` e 
 Foto in `assets/img/lavori/` (webp 800/1200/1600 + og 1200x630, senza dati EXIF/GPS).
 **Rilancialo dopo ogni `migra-da-danovatech.py`** (che rimette `/lavori/` come redirect), prima di `ottimizza-geo.py`.
 Nuovo lavoro: aggiungi un elemento a `LAVORI` nello script.
+Galleria "Altri stand realizzati" (23/11/2026): 19 stand divisi per cliente, 52 foto, sotto i lavori negli hub IT/FR/EN.
+Testi e foto in `strumenti/galleria_stand.py`; foto in `assets/img/lavori/stand-<cliente>-NN-800/-1200.webp`.
+Originali in `nuove_foto_newstand/` (fuori da git), gia' divisi per stand; le scartate in `_scartate (...)`.
 
 ## Gruppo Danova, feed e testo integrale per le AI (22/11/2026)
 Ordine completo degli script dopo ogni `migra-da-danovatech.py` (tutti idempotenti):
