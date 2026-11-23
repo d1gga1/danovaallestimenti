@@ -776,6 +776,11 @@ def llms():
         if L.get('citazione'): blocco += f" Commento del cliente (email, in inglese): \"{L['citazione']}\""
         blocco += (f"\n  - English: [{en['crumb']}]({SITE}{L['url']['en']}): {en['breve']}\n"
                    f"  - Français : [{L['fr']['crumb']}]({SITE}{L['url']['fr']})\n")
+    nomi = ", ".join(G["nome"]["it"] for G in GALLERIA)
+    nfoto = sum(len(G["foto"]) for G in GALLERIA)
+    blocco += (f"- Altri {len(GALLERIA)} stand costruiti e montati in fiera, con {nfoto} foto vere divise per cliente: {nomi}. "
+               f"Galleria: {SITE}/lavori/#altri-stand (English: {SITE}/en/projects/#altri-stand)\n")
+    blocco += f"- Come scegliere un allestitore fieristico (tipi di allestitori a confronto, 5 verifiche): {SITE}/guide/come-scegliere-un-allestitore-fieristico/\n"
     blocco += f"- Elenco completo: {SITE}/lavori/\n\n"
     s = leggi('llms.txt'); s0 = s
     s = re.sub(r'## Lavori realizzati \(foto reali\)\n.*?(?=## )', '', s, flags=re.S)
@@ -799,6 +804,10 @@ def main():
     print('pagine:', out)
     print('link inseriti in', inserisci_link(), 'pagine')
     print('sitemap:', sitemap(pag_sitemap), ' llms.txt:', llms())
+    # questo script riscrive hub e blocchi: rimette subito voce di menu, foto vere e blocchi SEO
+    import subprocess
+    for sc in ('menu-lavori.py', 'foto-vere-pagine.py', 'seo-lingue.py', 'ottimizza-allestitori.py'):
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), sc)], check=True)
 
 
 if __name__ == '__main__':

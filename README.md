@@ -144,7 +144,7 @@ Ordine completo degli script dopo ogni `migra-da-danovatech.py` (tutti idempoten
     python3 strumenti/ottimizza-keyword.py
     python3 strumenti/attiva-area-privata.py
     python3 strumenti/genera-lavori.py
-    python3 strumenti/menu-lavori.py          # voce "I nostri lavori" in cima al menu di ogni pagina + stile in site.css
+    # (genera-lavori.py lancia da solo, alla fine: menu-lavori, foto-vere-pagine, seo-lingue, ottimizza-allestitori)
     python3 strumenti/genera-pagine-ur-hi.py  # urdu e hindi (vedi sotto)
     python3 strumenti/gruppo-danova.py        # NUOVO: schema parent/sub, lingue di contatto, footer Gruppo Danova, llms
     python3 strumenti/ottimizza-geo.py
@@ -171,3 +171,16 @@ settori di export dei due paesi: MEDICA, Heimtextil, Marmomac, Anuga, Ambiente, 
 - Rilancialo dopo ogni `migra-da-danovatech.py` (sovrascrive pagina.js, contatto.js e i footer), **prima** di `gruppo-danova.py`.
 - Nuova fiera: aggiungi un elemento a `FIERE` nello script (serve una pagina `zh/<fiera>-stand/` per il gruppo hreflang).
 
+
+## SEO in tutte le lingue: foto vere e "come scegliere un allestitore" (23/11/2026)
+Tutti idempotenti; li lancia anche `genera-lavori.py` alla fine (che altrimenti li cancellerebbe da hub e home).
+- `strumenti/foto-vere-pagine.py`: fascia "Stand che abbiamo costruito: foto vere, non render" in 17 pagine italiane
+  (home, servizi, tipologie, settori, EICMA, BIT, Fitur, chi siamo, estero). Foto scelte in `PAGINE`.
+- `strumenti/seo-lingue.py` + testi in `strumenti/testi_lingue_seo.py`: nelle pagine principali delle 35 lingue estere
+  (59 pagine: hub Italia/Europa, citta', pagine per aziende indiane/cinesi/pakistane/bengalesi) fascia foto vere +
+  "Come scegliere un allestitore: 5 verifiche" + domanda "Quali sono i migliori allestitori in Italia e in Europa?",
+  anche nello schema FAQPage.
+- `strumenti/ottimizza-allestitori.py`: la guida `/guide/come-scegliere-un-allestitore-fieristico/` punta a
+  "allestitori fieristici" (title, description, schema) e ha la tabella dei 4 tipi di allestitori + 5 verifiche + 2 FAQ.
+- `llms.txt`: riga con la galleria dei 19 stand e link alla guida (da `genera-lavori.py`).
+Dopo: `ottimizza-geo.py` e `genera-feed-e-testo.py` come sempre.
