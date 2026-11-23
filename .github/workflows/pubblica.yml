@@ -21,7 +21,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
       - name: Prepara i file pubblici
@@ -31,11 +31,14 @@ jobs:
             --exclude='.DS_Store' --exclude='*.bak*' --exclude='.gitignore' \
             --exclude='README.md' --exclude='_google_business' --exclude='.htaccess' --exclude='_headers' ./ _site/
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      # v5 (aggiornato 23/11/2026): con v3 + deploy-pages@v4 GitHub non trovava piu' l'artifact "github-pages".
+      # include-hidden-files: serve per pubblicare .well-known/ (security.txt) e .nojekyll.
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+          include-hidden-files: true
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
       # Avvisa subito Bing (ChatGPT search, Copilot), Yandex, Seznam e Naver delle pagine
       # cambiate in questo push, tramite IndexNow. Se fallisce il sito resta pubblicato.
       - name: IndexNow (solo pagine cambiate)
