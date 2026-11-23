@@ -15,6 +15,7 @@ import os, re, sys, json, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from galleria_stand import GALLERIA
 from testi_lingue_seo import T
+from testi_lingue_svc import SVC  # solo montaggio/smontaggio, 7 giorni su 7 (23/11/2026)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = '/assets/img/lavori/'
@@ -94,11 +95,21 @@ def blocco(lg, t, scelte):
             f'<div class="sec-head"><h2 class="title" data-rv="up">{e(t["h"])} <span class="grad">{e(t["g"])}</span></h2></div>'
             f'<div class="pg-testo dsal-q" data-rv="up"><ol class="dsal-l">{voci}</ol>'
             f'<h3>{e(t["q"])}</h3><p>{e(t["a"])}</p>'
-            f'<p>{e(t["chi"])} <a href="{hub}" style="text-decoration:underline">{e(t["lav"])}</a>.</p></div>'
+            f'<p>{e(t["chi"])} <a href="{hub}" style="text-decoration:underline">{e(t["lav"])}</a>.</p>'
+            f'<h3>{e(t["q2"])}</h3><p>{e(t["svc"])}</p>'
+            f'<p class="dsfv-cta" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">'
+            f'<a href="tel:+393884706887" class="btn btn-p"><span class="lbl">{e(t["call"])} +39 388 470 6887</span></a>'
+            f'<a href="https://wa.me/393884706887" class="btn btn-g" rel="noopener"><span class="lbl">WhatsApp</span></a>'
+            f'<a href="mailto:info@danova-tech.com" class="btn btn-g"><span class="lbl">info@danova-tech.com</span></a></p></div>'
             f'</div></section><!--/ds-seo-lingue-->\n')
 
 
 def aggiungi_faq(s, t):
+    s = _faq1(s, dict(t, q=t['q2'], a=t['svc']))
+    return _faq1(s, t)
+
+
+def _faq1(s, t):
     """Aggiunge la domanda allo schema FAQPage (se non c'e' gia')."""
     if json.dumps(t['q'], ensure_ascii=False) in s or t['q'] in s.split('<section id="faq"')[0].split('</head>')[0]:
         return s
@@ -118,6 +129,8 @@ def main():
         s = open(p, encoding='utf-8').read()
         lg = lingua(s)
         t = T.get(lg) or T.get(lg[:2])
+        sv = SVC.get(lg) or SVC.get(lg[:2])
+        if t and sv: t = dict(t, q2=sv[0], svc=sv[1], call=sv[2])
         if not t or '<section id="faq"' not in s:
             print('  saltata', rel, lg); continue
         x = RE_BLOCCO.sub('', s)

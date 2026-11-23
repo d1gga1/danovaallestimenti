@@ -806,7 +806,7 @@ def main():
     print('sitemap:', sitemap(pag_sitemap), ' llms.txt:', llms())
     # questo script riscrive hub e blocchi: rimette subito voce di menu, foto vere e blocchi SEO
     import subprocess
-    for sc in ('menu-lavori.py', 'foto-vere-pagine.py', 'seo-lingue.py', 'ottimizza-allestitori.py'):
+    for sc in ('menu-lavori.py', 'foto-vere-pagine.py', 'seo-lingue.py', 'ottimizza-allestitori.py', 'fatti-danova.py'):
         subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), sc)], check=True)
 
 

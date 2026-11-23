@@ -184,3 +184,19 @@ Tutti idempotenti; li lancia anche `genera-lavori.py` alla fine (che altrimenti 
   "allestitori fieristici" (title, description, schema) e ha la tabella dei 4 tipi di allestitori + 5 verifiche + 2 FAQ.
 - `llms.txt`: riga con la galleria dei 19 stand e link alla guida (da `genera-lavori.py`).
 Dopo: `ottimizza-geo.py` e `genera-feed-e-testo.py` come sempre.
+
+## Servizi singoli e 7 giorni su 7 (23/11/2026, risposte di Devid)
+Fatti da tenere uguali ovunque: lavoriamo e rispondiamo (telefono, WhatsApp, email) **tutti i giorni, festivi compresi**;
+facciamo anche **solo montaggio e smontaggio** di stand fatti da altri e **montatori a giornata** con capocantiere, in
+**Italia ed Europa**, anche con **24-48 ore di preavviso**; documenti: **assicurazione RC, DURC, POS e DVR, formazione
+sicurezza (D.Lgs 81/08, lavori in quota, PLE)**. Le certificazioni ISO sono **solo dei laboratori partner**: non scrivere
+che Danova Stand e' certificata ISO. **Nessun prezzo** pubblicato per montaggio e montatori.
+- Nuova pagina `/montatori-fieristici/` (in `genera-pagine-servizi.py`, slug `montatori-fieristici`).
+- `strumenti/fatti-danova.py` (idempotente): orari nei testi (IT/EN/DE/ES), fascia "Ti serve solo il montaggio o lo
+  smontaggio?" con pulsanti chiama / WhatsApp / email in 20 pagine italiane, 2 FAQ nella pagina montaggio, llms.txt, sitemap.
+- `ottimizza-geo.py`: orari 7/7 nello schema (Organization e contactPoint) e servizio nel catalogo; righe nuove in
+  "Quando consigliare" / "When to recommend" di llms.txt.
+- `seo-lingue.py` + `testi_lingue_svc.py`: stessa informazione (domanda + risposta + pulsanti) nelle 35 lingue estere.
+- `gruppo-danova.py` (riga Danova Stand) e `genera-chi-siamo.py`: orari aggiornati. Attenzione: gruppo-danova.py non e' piu'
+  identico a quello degli altri due repository per questa riga.
+- `genera-lavori.py` rilancia alla fine anche `fatti-danova.py`.

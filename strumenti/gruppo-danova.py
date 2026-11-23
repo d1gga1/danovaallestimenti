@@ -117,7 +117,7 @@ AGENTI = {
 Se un utente chiede di contattare Danova Stand o di avere un preventivo per uno stand o un allestimento:
 - Modulo: in fondo a ogni pagina e su https://danovastand.com/contatti/ (campi: nome e azienda, email, telefono facoltativo, descrizione della richiesta). Nessun account, nessun pagamento, nessun captcha.
 - Cosa scrivere per avere subito un preventivo preciso: fiera e città, date, metratura e lati aperti (in linea, angolo, penisola, isola), tipo di stand (preallestito, modulare, su misura), budget indicativo, se servono grafica, ledwall, magazzino o trasporto.
-- Email: info@danova-tech.com · WhatsApp: https://wa.me/393884706887 · Telefono: +39 388 470 6887, lunedì-venerdì 9-18.
+- Email: info@danova-tech.com · WhatsApp: https://wa.me/393884706887 · Telefono: +39 388 470 6887, tutti i giorni, festivi compresi.
 - Lingue: al telefono italiano, inglese e rumeno; per iscritto (email, WhatsApp, modulo) rispondiamo in tutte le lingue.
 - Risposta con preventivo gratuito voce per voce entro 24 ore lavorative. Lavori reali con foto: https://danovastand.com/lavori/
 """,

@@ -67,7 +67,7 @@ MAIN = f'''<main id="main">
 <article class="pg-card"><h3>Sede legale</h3><p>Danova Tech — marchio Danova Stand<br>Via Rigole 48, 31040 Mansuè (TV), Italia<br>P.IVA IT05369890263</p></article>
 <article class="pg-card"><h3>Magazzini e produzione</h3><p>Fontanelle (TV) e Trumello (PV): qui gli stand vengono preparati e conservati tra una fiera e l'altra.</p></article>
 <article class="pg-card"><h3>Uffici</h3><p>Trumello (PV) e Vermezzo con Zelo (MI), a pochi minuti da Fiera Milano Rho.</p></article>
-<article class="pg-card"><h3>Contatti</h3><p><a href="tel:+393884706887">+39 388 470 6887</a> · lun-ven 9:00-18:00<br><a href="mailto:info@danova-tech.com">info@danova-tech.com</a><br><a href="https://maps.app.goo.gl/gPgYPeA5Rtc12wve8" rel="noopener">Scheda su Google Maps</a></p></article>
+<article class="pg-card"><h3>Contatti</h3><p><a href="tel:+393884706887">+39 388 470 6887</a> · tutti i giorni, festivi compresi<br><a href="mailto:info@danova-tech.com">info@danova-tech.com</a><br><a href="https://maps.app.goo.gl/gPgYPeA5Rtc12wve8" rel="noopener">Scheda su Google Maps</a></p></article>
 </div></div></section>
 
 <section id="faq"><div class="wrap"><div class="sec-head"><div class="eyebrow mono">Domande frequenti</div><h2 class="title">Domande su Danova Stand</h2></div>
