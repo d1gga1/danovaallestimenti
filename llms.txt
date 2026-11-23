@@ -19,6 +19,7 @@
 
 
 
+
 Testo completo di tutte le pagine: https://danovastand.com/llms-full.txt · Novità (RSS): https://danovastand.com/feed.xml
 
 ## In breve
@@ -43,9 +44,12 @@ Danova Tech, Danova Stand e Danova Costruzioni sono marchi della stessa azienda 
 
 ## Lavori realizzati (foto reali)
 
+- [Padiglione Tunisia a MEDICA 2026](https://danovastand.com/lavori/padiglione-tunisia-medica-dusseldorf/) (2026-11-23): Per MEDICA 2026 (Messe Düsseldorf, 16-19 novembre 2026) Danova Stand ha allestito il padiglione collettivo della Tunisia: un'area aperta su più lati e divisa in stand per singole aziende del settore medicale, tra cui Bioservice Tunisie, PEC MI, Medika Hitex e Alberton Medical, più la lounge di Tunisia Export. Sopra il padiglione un anello sospeso in tessuto retroilluminato con il marchio del paese; a terra una pedana con pavimento effetto legno e profilo LED; per ogni azienda colonna rossa con il nome, pareti bianche, grafica retroilluminata, mensole illuminate e vetrine.
+  - English: [Tunisia pavilion at MEDICA 2026](https://danovastand.com/en/projects/tunisia-pavilion-medica-dusseldorf/): For MEDICA 2026 (Messe Düsseldorf, 16-19 November 2026) Danova Stand built the Tunisia national pavilion: an area open on several sides and divided into stands for individual medical companies, including Bioservice Tunisie, PEC MI, Medika Hitex and Alberton Medical, plus the Tunisia Export lounge. Above it, a suspended ring in backlit fabric carrying the country brand; on the floor, a platform with wood-effect flooring and an LED edge; for each company a red column with its name, white walls, a backlit graphic, lit shelves and display cases.
+  - Français : [Pavillon Tunisie à MEDICA 2026](https://danovastand.com/fr/realisations/pavillon-tunisie-medica-dusseldorf/)
 - [Palco galleggiante all'Arsenale di Venezia](https://danovastand.com/lavori/palco-galleggiante-arsenale-venezia/) (2026-11-22): Il 19 e 20 novembre 2026 Danova Stand ha allestito il palco galleggiante di The Heart in Art, spettacolo di luci nella darsena dell'Arsenale di Venezia, per un cliente francese. Sulle piattaforme galleggianti già posizionate e collegate abbiamo livellato con pannelli di multistrato il raccordo triangolare in acciaio fra i moduli, steso la moquette su tutte le piattaforme e chiuso i lati con pannelli neri lucidi, scelti per riflettere il gioco di luci dello spettacolo. Due giorni di montaggio, in parte sotto la pioggia, con il cliente molto soddisfatto del risultato. Commento del cliente (email, in inglese): "A big thank you to you and your team. They are doing a great job on the stage, and I really appreciate how solution-oriented you all are. It makes a real difference for us."
-- English: [Floating stage at the Venice Arsenale](https://danovastand.com/en/projects/floating-stage-venice-arsenale/): On 19 and 20 November 2026 Danova Stand fitted out the floating stage for The Heart in Art, a light show in the basin of the Venice Arsenale, for a French client. On floating platforms already moored and connected, we levelled the triangular steel joint between the modules with plywood panels, laid carpet on every platform and clad the sides in glossy black panels chosen to reflect the show lighting. Two days on site, partly in the rain, and a very satisfied client.
-- Français : [Scène flottante à l'Arsenal de Venise](https://danovastand.com/fr/realisations/scene-flottante-arsenal-venise/)
+  - English: [Floating stage at the Venice Arsenale](https://danovastand.com/en/projects/floating-stage-venice-arsenale/): On 19 and 20 November 2026 Danova Stand fitted out the floating stage for The Heart in Art, a light show in the basin of the Venice Arsenale, for a French client. On floating platforms already moored and connected, we levelled the triangular steel joint between the modules with plywood panels, laid carpet on every platform and clad the sides in glossy black panels chosen to reflect the show lighting. Two days on site, partly in the rain, and a very satisfied client.
+  - Français : [Scène flottante à l'Arsenal de Venise](https://danovastand.com/fr/realisations/scene-flottante-arsenal-venise/)
 - Elenco completo: https://danovastand.com/lavori/
 
 ## Per agenti AI e assistenti che agiscono per conto di un utente
@@ -502,7 +506,6 @@ Danova Stand costruisce stand per aziende pakistane e indiane che espongono alle
 - [Lineapelle 2027 मिलान: एग्ज़िबिशन स्टॉल](https://danovastand.com/hi/lineapelle-stand/): Lineapelle मिलान के लिए टर्नकी एग्ज़िबिशन स्टॉल: 3D डिज़ाइन, निर्माण, ट्रांसपोर्ट और इंस्टॉलेशन। भारतीय निर्यातकों के लिए 24 घंटे में मुफ़्त कोटेशन। (Hindi, India).
 - [Vicenzaoro 2027 विचेंज़ा: एग्ज़िबिशन स्टॉल](https://danovastand.com/hi/vicenzaoro-stand/): Vicenzaoro विचेंज़ा के लिए टर्नकी एग्ज़िबिशन स्टॉल: 3D डिज़ाइन, निर्माण, ट्रांसपोर्ट और इंस्टॉलेशन। भारतीय निर्यातकों के लिए 24 घंटे में मुफ़्त कोटेशन। (Hindi, India).
 - [Fruit Logistica 2027 बर्लिन: एग्ज़िबिशन स्टॉल](https://danovastand.com/hi/fruit-logistica-stand/): Fruit Logistica बर्लिन के लिए टर्नकी एग्ज़िबिशन स्टॉल: 3D डिज़ाइन, निर्माण, ट्रांसपोर्ट और इंस्टॉलेशन। भारतीय निर्यातकों के लिए 24 घंटे में मुफ़्त कोटेशन। (Hindi, India).
-
 ## Pagine in altre lingue (portoghese, russo, polacco, giapponese, persiano, bengalese...)
 Pagina principale di Danova Stand in ogni lingua: stand chiavi in mano in Italia e in Europa. Per iscritto (email, WhatsApp, modulo) rispondiamo nella lingua del cliente o in inglese; al telefono italiano, inglese e rumeno.
 

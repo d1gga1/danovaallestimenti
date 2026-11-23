@@ -51,14 +51,14 @@ HUB_TXT = {
                testo=['Ogni scheda racconta un lavoro vero: dove e quando, cosa chiedeva il cliente, cosa abbiamo montato noi e cosa hanno fatto gli altri fornitori, i problemi incontrati in cantiere e come li abbiamo risolti. Le foto sono quelle scattate dalla squadra durante il montaggio, non render né immagini di catalogo.', 'Lavoriamo in fiera, negli spazi per eventi e nei luoghi più complicati da raggiungere, come Venezia, dove tutto arriva in barca. Se ti serve un allestimento simile a uno di questi, scrivici dove e quando: ti rispondiamo con un preventivo voce per voce entro 24 ore lavorative.'],
                breve="Danova Stand pubblica qui i lavori realizzati con foto reali di montaggio: allestimenti per eventi, spettacoli, fiere e mostre in Italia e in Europa. Ogni scheda indica luogo, date, lavorazioni eseguite e, quando il cliente lo permette, il suo commento."),
     'fr': dict(title='Nos réalisations : aménagements en photos | Danova Stand',
-               desc="Réalisations Danova Stand en photos de chantier : événements, spectacles et salons en Italie. Dernière : scène flottante à l'Arsenal de Venise.",
+               desc="Réalisations Danova Stand en photos de chantier : salons et événements en Italie et à l'étranger, de MEDICA à Düsseldorf à l'Arsenal de Venise.",
                eyebrow='Portfolio · photos de chantier',
                h1='Nos réalisations : <span class="grad">de vraies photos, pas des rendus</span>.',
                lead="Nous rassemblons ici nos chantiers, avec les photos prises par notre équipe : la demande, ce que nous avons monté, en combien de temps et l'avis du client.",
                testo=["Chaque fiche raconte un vrai chantier : où et quand, la demande du client, ce que nous avons monté et ce qu'ont fait les autres prestataires, les difficultés rencontrées et comment nous les avons résolues. Les photos sont celles prises par notre équipe pendant le montage, pas des rendus ni des images de catalogue.", "Nous travaillons sur les salons, dans les lieux d'événements et dans les endroits les plus difficiles d'accès, comme Venise, où tout arrive en bateau. Pour un aménagement similaire, écrivez-nous le lieu et les dates : nous répondons par écrit dans votre langue avec un devis détaillé sous 24 heures ouvrées."],
                breve="Danova Stand publie ici ses réalisations avec de vraies photos de montage : aménagements d'événements, spectacles, salons et expositions en Italie et en Europe. Chaque fiche indique le lieu, les dates, les travaux réalisés et, quand le client l'accepte, son commentaire."),
     'en': dict(title='Our projects: real set-up photos | Danova Stand',
-               desc='Projects by Danova Stand with real site photos: event, show and trade fair set-ups in Italy. Latest: a floating stage at the Venice Arsenale.',
+               desc='Projects by Danova Stand with real site photos: trade fair and event set-ups in Italy and abroad, from MEDICA Düsseldorf to the Venice Arsenale.',
                eyebrow='Portfolio · site photos',
                h1='Our projects: <span class="grad">real photos, not renders</span>.',
                lead='This is where we collect finished jobs, with photos taken on site by our crew: the brief, what we built, how long it took and what the client said.',
@@ -88,6 +88,26 @@ LAVORI = [{
         ('piattaforme-galleggianti-darsena-arsenale-venezia', 1600, 900),
     ],
     'citazione': CITAZIONE,
+    'citazione_trad': {'it': "Un grande grazie a te e alla tua squadra. Stanno facendo un ottimo lavoro sul palco e apprezzo davvero quanto siate tutti orientati alle soluzioni. Per noi fa davvero la differenza.",
+                       'fr': "Un grand merci à toi et à ton équipe. Ils font un excellent travail sur la scène et j'apprécie vraiment à quel point vous êtes tous orientés solutions. Cela fait vraiment la différence pour nous.",
+                       'en': ''},
+    'citazione_chi': {'it': "Organizzazione di The Heart in Art, cliente francese — email al nostro team, novembre 2026",
+                      'fr': "Organisation de The Heart in Art, client français — e-mail à notre équipe, novembre 2026",
+                      'en': "The Heart in Art organisers, French client — email to our team, November 2026"},
+    'evento': 'The Heart in Art',
+    'luogo': {'nome': {'it': 'Arsenale di Venezia', 'fr': 'Arsenal de Venise', 'en': 'Venice Arsenale'},
+              'address': {'@type': 'PostalAddress', 'addressLocality': 'Venezia', 'addressRegion': 'VE', 'postalCode': '30122', 'addressCountry': 'IT'}},
+    'about': {'it': 'Palco galleggiante', 'fr': 'Scène flottante', 'en': 'Floating stage'},
+    'keywords': {'it': "palco galleggiante Venezia, allestimento eventi Venezia, Arsenale di Venezia, piattaforme galleggianti, moquette, pannelli neri lucidi, allestitore Venezia",
+                 'fr': "scène flottante Venise, aménagement événementiel Venise, Arsenal de Venise, plateformes flottantes, moquette, standiste Italie",
+                 'en': "floating stage Venice, event set-up Venice, Venice Arsenale, floating platforms, carpet, event contractor Italy"},
+    # pagine che mostrano il riquadro "Lavoro recente" verso questo lavoro (vince il lavoro più recente)
+    'link_in': [('allestimenti-fieristici-venezia/index.html', 'it'), ('allestimenti-eventi/index.html', 'it'),
+                ('allestimenti-eventi-showroom-negozi/index.html', 'it'), ('progetti-stand-fieristici/index.html', 'it'),
+                ('index.html', 'it'), ('fr/standiste-salon-italie/index.html', 'fr'), ('en/exhibition-stand-builder-italy/index.html', 'en')],
+    'box': {'it': 'Guarda il palco galleggiante che abbiamo allestito all\'Arsenale di Venezia (novembre 2026), con le foto del montaggio.',
+            'fr': 'Découvrez la scène flottante que nous avons aménagée à l\'Arsenal de Venise (novembre 2026), avec les photos du montage.',
+            'en': 'See the floating stage we fitted out at the Venice Arsenale (November 2026), with photos of the set-up.'},
     'video': dict(file='spettacolo-luci-palco-galleggiante-arsenale-venezia', w=540, h=968, durata=32,
                   caricato='2026-11-22T12:00:00+01:00'),
     'it': dict(
@@ -124,8 +144,8 @@ LAVORI = [{
         testo_title="Perché <span class=\"grad\">nero lucido</span>",
         testo=["Lo spettacolo era tutto giocato sulla luce. Un fianco grezzo o chiaro avrebbe spezzato la scena; il nero lucido invece sparisce al buio e restituisce i riflessi delle teste mobili e delle barre LED, che si sommano a quelli sull'acqua.",
                "Prima della finitura bisognava però risolvere il piano: le piattaforme galleggianti erano unite ad angolo da un telaio triangolare in acciaio. Lo abbiamo chiuso con multistrato tagliato su misura, alla stessa quota dei moduli, così chi sale sul palco cammina su una superficie unica, senza gradini né fessure, e la moquette corre continua da un capo all'altro."],
-        pioggia_title="Due giorni di montaggio, <span class=\"grad\">anche sotto la pioggia</span>",
-        pioggia=["A Venezia si lavora con quello che c'è: materiali che arrivano in barca, spazi stretti, tempi fissati dallo spettacolo. Durante il montaggio è arrivata anche la pioggia, e abbiamo comunque consegnato il palco finito nei tempi previsti.",
+        testo2_title="Due giorni di montaggio, <span class=\"grad\">anche sotto la pioggia</span>",
+        testo2=["A Venezia si lavora con quello che c'è: materiali che arrivano in barca, spazi stretti, tempi fissati dallo spettacolo. Durante il montaggio è arrivata anche la pioggia, e abbiamo comunque consegnato il palco finito nei tempi previsti.",
                  "Per un allestimento sull'acqua la sequenza conta: prima il piano, poi la moquette, poi i pannelli laterali, infine il passaggio al service luci. Ogni fase deve essere chiusa prima della successiva, perché dalla barca non si torna indietro facilmente."],
         faq=[("Realizzate allestimenti su palchi e piattaforme galleggianti a Venezia?",
               "Sì. All'Arsenale di Venezia, a novembre 2026, abbiamo allestito il palco galleggiante dello spettacolo The Heart in Art: livellamento dei raccordi in multistrato, moquette e pannellatura laterale nera lucida. Organizziamo il lavoro in funzione dei trasporti via acqua."),
@@ -176,8 +196,8 @@ LAVORI = [{
         testo_title="Pourquoi <span class=\"grad\">le noir brillant</span>",
         testo=["Tout le spectacle reposait sur la lumière. Un côté brut ou clair aurait cassé la scène ; le noir brillant disparaît dans l'obscurité et renvoie les reflets des lyres et des barres LED, qui s'ajoutent à ceux de l'eau.",
                "Avant la finition, il fallait régler le plancher : les plateformes flottantes étaient reliées en angle par un cadre triangulaire en acier. Nous l'avons fermé avec du contreplaqué découpé sur mesure, à la même hauteur que les modules : on marche sur une surface unique, sans marche ni fente, et la moquette court d'un bout à l'autre."],
-        pioggia_title="Deux jours de montage, <span class=\"grad\">même sous la pluie</span>",
-        pioggia=["À Venise, on travaille avec les contraintes du lieu : matériel livré en bateau, espaces réduits, calendrier fixé par le spectacle. La pluie est arrivée pendant le montage et nous avons tout de même livré la scène dans les délais.",
+        testo2_title="Deux jours de montage, <span class=\"grad\">même sous la pluie</span>",
+        testo2=["À Venise, on travaille avec les contraintes du lieu : matériel livré en bateau, espaces réduits, calendrier fixé par le spectacle. La pluie est arrivée pendant le montage et nous avons tout de même livré la scène dans les délais.",
                  "Sur l'eau, l'ordre des opérations compte : d'abord le plancher, puis la moquette, puis les panneaux latéraux, enfin le passage à l'équipe lumière. Chaque étape doit être terminée avant la suivante."],
         faq=[("Réalisez-vous des aménagements de scènes et plateformes flottantes à Venise ?",
               "Oui. À l'Arsenal de Venise, en novembre 2026, nous avons aménagé la scène flottante du spectacle The Heart in Art : mise à niveau des jonctions en contreplaqué, moquette et habillage latéral noir brillant. Nous organisons le chantier en fonction du transport par voie d'eau."),
@@ -225,8 +245,8 @@ LAVORI = [{
         testo_title='Why <span class="grad">glossy black</span>',
         testo=['The whole show was about light. A raw or pale side would have broken the scene; glossy black disappears in the dark and gives back the reflections of the moving heads and LED bars, adding to those on the water.',
                'Before the finish, the deck had to be solved: the floating platforms were joined at an angle by a triangular steel frame. We closed it with made-to-measure plywood at the same height as the modules, so performers walk on one surface with no steps or gaps, and the carpet runs from end to end.'],
-        pioggia_title='Two days on site, <span class="grad">rain included</span>',
-        pioggia=['In Venice you work with what the city gives you: materials delivered by boat, tight spaces and a schedule set by the show. It rained during the set-up and we still handed over the finished stage on time.',
+        testo2_title='Two days on site, <span class="grad">rain included</span>',
+        testo2=['In Venice you work with what the city gives you: materials delivered by boat, tight spaces and a schedule set by the show. It rained during the set-up and we still handed over the finished stage on time.',
                  'On the water the sequence matters: deck first, then carpet, then side panels, then hand-over to the lighting crew. Each step has to be finished before the next one starts.'],
         faq=[('Do you fit out floating stages and platforms in Venice?',
               'Yes. In November 2026 at the Venice Arsenale we fitted out the floating stage for The Heart in Art: plywood levelling of the joints, carpet and glossy black side cladding. We plan the work around transport by water.'),
@@ -242,21 +262,180 @@ LAVORI = [{
     ),
 }]
 
-# link verso i lavori da inserire in altre pagine: (file, lingua, dove inserire: prima di questo testo)
-LINK_IN = [
-    ('allestimenti-fieristici-venezia/index.html', 'it'),
-    ('allestimenti-eventi/index.html', 'it'),
-    ('allestimenti-eventi-showroom-negozi/index.html', 'it'),
-    ('progetti-stand-fieristici/index.html', 'it'),
-    ('index.html', 'it'),
-    ('fr/standiste-salon-italie/index.html', 'fr'),
-    ('en/exhibition-stand-builder-italy/index.html', 'en'),
-]
-BOX_TXT = {
-    'it': ('Lavoro recente', 'Guarda il palco galleggiante che abbiamo allestito all\'Arsenale di Venezia (novembre 2026), con le foto del montaggio.'),
-    'fr': ('Réalisation récente', 'Découvrez la scène flottante que nous avons aménagée à l\'Arsenal de Venise (novembre 2026), avec les photos du montage.'),
-    'en': ('Recent project', 'See the floating stage we fitted out at the Venice Arsenale (November 2026), with photos of the set-up.'),
-}
+# MEDICA 2026: collettiva nazionale della Tunisia (inserito in cima: i lavori vanno dal più recente)
+LAVORI.insert(0, {
+    'id': 'medica-tunisia-2026',
+    'pubblicato': '2026-11-23',
+    'url': {'it': '/lavori/padiglione-tunisia-medica-dusseldorf/',
+            'fr': '/fr/realisations/pavillon-tunisie-medica-dusseldorf/',
+            'en': '/en/projects/tunisia-pavilion-medica-dusseldorf/'},
+    'og': 'og-padiglione-tunisia-medica-2026.jpg',
+    'hero': 'padiglione-tunisia-medica-2026-dusseldorf',   # composizione 1600x900 di due foto verticali
+    'foto': [
+        ('stand-bioservice-tunisie-collettiva-tunisia-medica-2026', 1200, 1600),
+        ('stand-medika-hitex-padiglione-tunisia-medica', 1200, 1600),
+        ('stand-alberton-medical-padiglione-tunisia-medica', 1200, 1600),
+        ('stand-pec-mi-padiglione-tunisia-medica', 1200, 1600),
+        ('lounge-tunisia-export-cepex-medica-dusseldorf', 1200, 1600),
+    ],
+    'evento': 'MEDICA 2026',
+    'luogo': {'nome': {'it': 'Messe Düsseldorf', 'fr': 'Parc des expositions de Düsseldorf', 'en': 'Messe Düsseldorf'},
+              'address': {'@type': 'PostalAddress', 'streetAddress': 'Stockumer Kirchstraße 61', 'addressLocality': 'Düsseldorf',
+                          'postalCode': '40474', 'addressCountry': 'DE'}},
+    'about': {'it': 'Padiglione nazionale della Tunisia', 'fr': 'Pavillon national de la Tunisie', 'en': 'Tunisia national pavilion'},
+    'keywords': {'it': "stand MEDICA Düsseldorf, padiglione Tunisia MEDICA 2026, collettiva nazionale fiera, stand settore medicale, allestimenti fieristici Germania, allestitore fiere estero",
+                 'fr': "stand MEDICA Düsseldorf, pavillon Tunisie MEDICA 2026, pavillon national salon, stand dispositifs médicaux, standiste Allemagne, standiste salons à l'étranger",
+                 'en': "MEDICA Düsseldorf stand, Tunisia pavilion MEDICA 2026, national pavilion trade fair, medical device exhibition stand, stand builder Germany"},
+    'link_in': [('stand-medica/index.html', 'it'), ('allestimenti-fieristici-germania/index.html', 'it'),
+                ('allestimenti-fieristici-estero/index.html', 'it'), ('progetti-stand-fieristici/index.html', 'it'),
+                ('index.html', 'it'), ('fr/standiste-salon-italie/index.html', 'fr'),
+                ('en/exhibition-stand-builder-italy/index.html', 'en'), ('en/medica-stand-builder/index.html', 'en'),
+                ('en/exhibition-stand-builder-europe/index.html', 'en')],
+    'box': {'it': 'Guarda il padiglione della Tunisia che abbiamo allestito a MEDICA 2026 a Düsseldorf: più aziende, un\'unica immagine.',
+            'fr': 'Découvrez le pavillon de la Tunisie que nous avons aménagé à MEDICA 2026 à Düsseldorf : plusieurs entreprises, une seule image.',
+            'en': 'See the Tunisia pavilion we built at MEDICA 2026 in Düsseldorf: several companies, one identity.'},
+    'it': dict(
+        title='Padiglione Tunisia a MEDICA 2026 Düsseldorf | Danova Stand',
+        desc="MEDICA 2026, Düsseldorf: abbiamo allestito la collettiva della Tunisia, con anello luminoso sospeso, uno stand per ogni azienda e la lounge di Tunisia Export.",
+        crumb='Padiglione Tunisia a MEDICA 2026',
+        card='Collettiva nazionale della Tunisia a MEDICA 2026, Düsseldorf: più aziende del medicale sotto un unico anello luminoso.',
+        eyebrow='Lavoro realizzato · Düsseldorf · novembre 2026',
+        h1='Il padiglione della Tunisia a <span class="grad">MEDICA 2026</span>, Düsseldorf.',
+        lead="Una collettiva nazionale alla più grande fiera del medicale: più aziende tunisine, ognuna con il proprio stand, riunite sotto un'unica immagine. Il segno che si vede da lontano è l'anello luminoso sospeso con il marchio «Tunisia — Your health… Yes We Care».",
+        breve="Per MEDICA 2026 (Messe Düsseldorf, 16-19 novembre 2026) Danova Stand ha allestito il padiglione collettivo della Tunisia: un'area aperta su più lati e divisa in stand per singole aziende del settore medicale, tra cui Bioservice Tunisie, PEC MI, Medika Hitex e Alberton Medical, più la lounge di Tunisia Export. Sopra il padiglione un anello sospeso in tessuto retroilluminato con il marchio del paese; a terra una pedana con pavimento effetto legno e profilo LED; per ogni azienda colonna rossa con il nome, pareti bianche, grafica retroilluminata, mensole illuminate e vetrine.",
+        hero_alt="Padiglione della Tunisia a MEDICA 2026 Düsseldorf: anello luminoso sospeso con il marchio Tunisia sopra gli stand di Bioservice Tunisie e Medika Hitex",
+        hero_cap="Due lati del padiglione: a sinistra lo stand Bioservice Tunisie, a destra Medika Hitex con i primi visitatori; sopra, l'anello luminoso sospeso.",
+        scheda=[('Dove', 'Messe Düsseldorf, Germania'),
+                ('Quando', 'MEDICA 2026, dal 16 al 19 novembre 2026'),
+                ('Progetto', 'Collettiva nazionale della Tunisia, settore dispositivi medici'),
+                ('Espositori', 'Bioservice Tunisie, PEC MI, Medika Hitex, Alberton Medical, Tunisia Export'),
+                ('Cosa abbiamo fatto', 'Stand per ogni azienda, anello luminoso sospeso, pedana con LED, vetrine, arredi e luci')],
+        passi='Il padiglione, stand per stand',
+        foto=[("Stand Bioservice Tunisie nel padiglione Tunisia a MEDICA 2026: grafiche retroilluminate, mensole illuminate, sacche mediche esposte a parete e banco vetrina",
+               'Bioservice Tunisie', "Angolo aperto su due lati: banco vetrina illuminato, colonna in vetro, grafiche retroilluminate e prodotti appesi a parete su barre cromate."),
+              ("Stand Medika Hitex al padiglione Tunisia di MEDICA 2026 con visitatori al tavolo, grafiche retroilluminate e vetrina a colonna",
+               'Medika Hitex', "Due grafiche retroilluminate, tavolo e sgabelli per gli incontri, vetrina a colonna illuminata per i prodotti."),
+              ("Stand Alberton Medical al padiglione Tunisia di MEDICA 2026 con banco vetrina illuminato e portadepliant, durante l'allestimento",
+               'Alberton Medical', "Banco vetrina con LED e portadepliant, grafica retroilluminata e colonna rossa con il nome: lo stesso schema degli altri stand, adattato all'azienda."),
+              ("Stand PEC MI nel padiglione Tunisia a MEDICA 2026 durante l'allestimento, con vetrina a colonna e mensole illuminate",
+               'PEC MI, a fine montaggio', "Le ultime ore prima dell'apertura: mensole con LED già accese, vetrine pronte e l'espositore che sistema i prodotti."),
+              ("Area lounge di Tunisia Export (CEPEX) nel padiglione Tunisia a MEDICA 2026, con poltroncine, schermo e pannelli retroilluminati",
+               'La lounge di Tunisia Export', "Lo spazio istituzionale per gli incontri: due pannelli retroilluminati, schermo a parete, poltroncine e tavolini, ancora con la plastica poco prima dell'apertura.")],
+        testo_title='Un padiglione, <span class="grad">più aziende</span>',
+        testo=["In una collettiva nazionale ogni azienda vuole il suo spazio, ma il visitatore deve capire a colpo d'occhio di trovarsi nel padiglione di un paese. Per questo abbiamo ripetuto lo stesso schema in ogni stand: colonna rossa con la grafica a icone mediche e la targa con il nome dell'azienda, pareti bianche, una grafica retroilluminata con i contenuti dell'espositore.",
+               "Dentro ogni stand cambia solo ciò che serve all'azienda: barre cromate per appendere i prodotti, mensole illuminate nelle nicchie, vetrine a colonna o banchi vetrina con portadepliant, tavolo e sedute per gli incontri e, dove serve, un ripostiglio con porta per scorte e borse."],
+        testo2_title="L'anello luminoso <span class=\"grad\">sopra il padiglione</span>",
+        testo2=["A MEDICA gli espositori sono migliaia: serviva un segno visibile da lontano. L'anello sospeso, in tessuto retroilluminato, porta il marchio «Tunisia — Your health… Yes We Care» e la bandiera su più lati, così il padiglione si riconosce dalle corsie intorno.",
+                "A terra la pedana con pavimento effetto legno e profilo in alluminio con LED delimita lo spazio e lega fra loro gli stand. In una fiera all'estero tutto va preparato prima della partenza: grafiche, arredi e illuminazione arrivano pronti per il montaggio."],
+        faq=[("Allestite stand e padiglioni a MEDICA Düsseldorf?",
+              "Sì. A MEDICA 2026 (16-19 novembre) abbiamo allestito il padiglione collettivo della Tunisia, con uno stand per ogni azienda del medicale e la lounge di Tunisia Export. Seguiamo progetto, produzione, trasporto e montaggio anche in Germania."),
+             ("Realizzate padiglioni nazionali e collettive con più espositori?",
+              "Sì: definiamo uno schema comune (identità del paese, insegna sospesa, pedana, colori) e lo adattiamo a ogni azienda con grafiche, vetrine ed esposizione dei prodotti. Ogni espositore ha il suo stand, il visitatore vede un unico padiglione."),
+             ("Lavorate con enti e aziende straniere?",
+              "Sì: questo padiglione era per aziende tunisine. Rispondiamo per iscritto in tutte le lingue, anche in francese e arabo; al telefono parliamo italiano, inglese e rumeno."),
+             ("Cosa comprende un allestimento chiavi in mano per una fiera all'estero?",
+              "Progetto, strutture e pareti, grafiche, illuminazione, arredi e vetrine, trasporto, montaggio e smontaggio, con un unico referente. Il preventivo è voce per voce, così si vede cosa è compreso.")],
+        altri=[('/stand-medica/', 'Stand per MEDICA Düsseldorf'),
+               ('/allestimenti-fieristici-germania/', 'Allestimenti fieristici in Germania'),
+               ('/allestimenti-fieristici-estero/', 'Allestimenti per fiere all\'estero'),
+               ('/stand-a-isola/', 'Stand a isola'),
+               ('/ledwall-e-illuminazione-stand/', 'Illuminazione e ledwall'),
+               ('/lavori/', 'Tutti i lavori realizzati')],
+    ),
+    'fr': dict(
+        title='Pavillon Tunisie à MEDICA 2026 Düsseldorf | Danova Stand',
+        desc="MEDICA 2026, Düsseldorf : nous avons aménagé le pavillon de la Tunisie, avec anneau lumineux suspendu, un stand par entreprise et le salon de Tunisia Export.",
+        crumb='Pavillon Tunisie à MEDICA 2026',
+        card='Pavillon national de la Tunisie à MEDICA 2026, Düsseldorf : plusieurs entreprises du médical sous un même anneau lumineux.',
+        eyebrow='Réalisation · Düsseldorf · novembre 2026',
+        h1='Le pavillon de la Tunisie à <span class="grad">MEDICA 2026</span>, Düsseldorf.',
+        lead="Un pavillon national au plus grand salon du médical : plusieurs entreprises tunisiennes, chacune avec son stand, réunies sous une seule image. Le signal visible de loin, c'est l'anneau lumineux suspendu à la marque « Tunisia — Your health… Yes We Care ».",
+        breve="Pour MEDICA 2026 (Messe Düsseldorf, du 16 au 19 novembre 2026), Danova Stand a aménagé le pavillon collectif de la Tunisie : un espace ouvert sur plusieurs côtés, divisé en stands pour des entreprises du secteur médical, dont Bioservice Tunisie, PEC MI, Medika Hitex et Alberton Medical, ainsi que le salon de Tunisia Export. Au-dessus, un anneau suspendu en tissu rétroéclairé à la marque du pays ; au sol, une estrade au plancher effet bois avec profil LED ; pour chaque entreprise, une colonne rouge avec son nom, des cloisons blanches, un visuel rétroéclairé, des étagères éclairées et des vitrines.",
+        hero_alt="Pavillon de la Tunisie à MEDICA 2026 Düsseldorf : anneau lumineux suspendu à la marque Tunisia au-dessus des stands Bioservice Tunisie et Medika Hitex",
+        hero_cap="Deux côtés du pavillon : à gauche le stand Bioservice Tunisie, à droite Medika Hitex avec les premiers visiteurs ; au-dessus, l'anneau lumineux suspendu.",
+        scheda=[('Lieu', 'Messe Düsseldorf, Allemagne'),
+                ('Dates', 'MEDICA 2026, du 16 au 19 novembre 2026'),
+                ('Projet', 'Pavillon national de la Tunisie, dispositifs médicaux'),
+                ('Exposants', 'Bioservice Tunisie, PEC MI, Medika Hitex, Alberton Medical, Tunisia Export'),
+                ('Nos travaux', 'Un stand par entreprise, anneau lumineux suspendu, estrade avec LED, vitrines, mobilier et éclairage')],
+        passi='Le pavillon, stand par stand',
+        foto=[("Stand Bioservice Tunisie dans le pavillon Tunisie à MEDICA 2026 : visuels rétroéclairés, étagères éclairées, poches médicales exposées au mur et comptoir vitrine",
+               'Bioservice Tunisie', "Angle ouvert sur deux côtés : comptoir vitrine éclairé, colonne vitrée, visuels rétroéclairés et produits suspendus au mur sur barres chromées."),
+              ("Stand Medika Hitex au pavillon Tunisie de MEDICA 2026 avec visiteurs à table, visuels rétroéclairés et vitrine colonne",
+               'Medika Hitex', "Deux visuels rétroéclairés, table et tabourets pour les rendez-vous, vitrine colonne éclairée pour les produits."),
+              ("Stand Alberton Medical au pavillon Tunisie de MEDICA 2026 avec comptoir vitrine éclairé et porte-brochures, pendant le montage",
+               'Alberton Medical', "Comptoir vitrine avec LED et porte-brochures, visuel rétroéclairé et colonne rouge au nom de l'entreprise : le même schéma que les autres stands, adapté à l'exposant."),
+              ("Stand PEC MI dans le pavillon Tunisie à MEDICA 2026 pendant le montage, avec vitrine colonne et étagères éclairées",
+               'PEC MI, fin de montage', "Les dernières heures avant l'ouverture : étagères LED déjà allumées, vitrines prêtes et l'exposant qui installe ses produits."),
+              ("Salon de Tunisia Export (CEPEX) dans le pavillon Tunisie à MEDICA 2026, avec fauteuils, écran et panneaux rétroéclairés",
+               'Le salon de Tunisia Export', "L'espace institutionnel pour les rendez-vous : deux panneaux rétroéclairés, écran mural, fauteuils et tables basses, encore sous plastique juste avant l'ouverture.")],
+        testo_title='Un pavillon, <span class="grad">plusieurs entreprises</span>',
+        testo=["Dans un pavillon national, chaque entreprise veut son espace, mais le visiteur doit comprendre d'un coup d'œil qu'il est dans le pavillon d'un pays. Nous avons donc répété le même schéma dans chaque stand : colonne rouge au motif d'icônes médicales avec le nom de l'entreprise, cloisons blanches et un visuel rétroéclairé avec les contenus de l'exposant.",
+               "À l'intérieur, seul change ce dont l'entreprise a besoin : barres chromées pour suspendre les produits, étagères éclairées dans les niches, vitrines colonnes ou comptoirs vitrines avec porte-brochures, table et assises pour les rendez-vous et, si besoin, une réserve fermée pour le stock et les bagages."],
+        testo2_title="L'anneau lumineux <span class=\"grad\">au-dessus du pavillon</span>",
+        testo2=["À MEDICA, les exposants se comptent par milliers : il fallait un signal visible de loin. L'anneau suspendu, en tissu rétroéclairé, porte la marque « Tunisia — Your health… Yes We Care » et le drapeau sur plusieurs côtés, pour que le pavillon se repère depuis les allées voisines.",
+                "Au sol, l'estrade au plancher effet bois et au profil aluminium avec LED délimite l'espace et relie les stands entre eux. Pour un salon à l'étranger, tout se prépare avant le départ : visuels, mobilier et éclairage arrivent prêts à monter."],
+        faq=[("Aménagez-vous des stands et pavillons à MEDICA Düsseldorf ?",
+              "Oui. À MEDICA 2026 (16-19 novembre), nous avons aménagé le pavillon collectif de la Tunisie, avec un stand par entreprise du médical et le salon de Tunisia Export. Nous gérons conception, fabrication, transport et montage, y compris en Allemagne."),
+             ("Réalisez-vous des pavillons nationaux avec plusieurs exposants ?",
+              "Oui : nous définissons un schéma commun (identité du pays, enseigne suspendue, estrade, couleurs) puis nous l'adaptons à chaque entreprise avec visuels, vitrines et présentation des produits. Chaque exposant a son stand, le visiteur voit un seul pavillon."),
+             ("Travaillez-vous avec des organismes et entreprises étrangers ?",
+              "Oui : ce pavillon réunissait des entreprises tunisiennes. Nous répondons par écrit dans toutes les langues, y compris en français et en arabe ; au téléphone, nous parlons italien, anglais et roumain."),
+             ("Que comprend un stand clés en main pour un salon à l'étranger ?",
+              "Conception, structures et cloisons, visuels, éclairage, mobilier et vitrines, transport, montage et démontage, avec un seul interlocuteur. Le devis est détaillé poste par poste.")],
+        altri=[('/fr/standiste-salon-italie/', 'Standiste et aménagements en Italie'),
+               ('/fr/realisations/', 'Toutes nos réalisations'),
+               ('/fr/contact/', 'Contact')],
+    ),
+    'en': dict(
+        title='Tunisia pavilion at MEDICA 2026 Düsseldorf | Danova Stand',
+        desc='MEDICA 2026, Düsseldorf: we built the Tunisia national pavilion, with a suspended light ring, a stand for each company and the Tunisia Export lounge.',
+        crumb='Tunisia pavilion at MEDICA 2026',
+        card='Tunisia national pavilion at MEDICA 2026, Düsseldorf: several medical companies under one light ring.',
+        eyebrow='Case study · Düsseldorf · November 2026',
+        h1='The Tunisia pavilion at <span class="grad">MEDICA 2026</span>, Düsseldorf.',
+        lead='A national pavilion at the largest medical trade fair: several Tunisian companies, each with its own stand, brought together under one identity. The sign you see from afar is the suspended light ring branded “Tunisia — Your health… Yes We Care”.',
+        breve='For MEDICA 2026 (Messe Düsseldorf, 16-19 November 2026) Danova Stand built the Tunisia national pavilion: an area open on several sides and divided into stands for individual medical companies, including Bioservice Tunisie, PEC MI, Medika Hitex and Alberton Medical, plus the Tunisia Export lounge. Above it, a suspended ring in backlit fabric carrying the country brand; on the floor, a platform with wood-effect flooring and an LED edge; for each company a red column with its name, white walls, a backlit graphic, lit shelves and display cases.',
+        hero_alt='Tunisia pavilion at MEDICA 2026 Düsseldorf: suspended light ring with the Tunisia brand above the Bioservice Tunisie and Medika Hitex stands',
+        hero_cap='Two sides of the pavilion: Bioservice Tunisie on the left, Medika Hitex with the first visitors on the right; above, the suspended light ring.',
+        scheda=[('Venue', 'Messe Düsseldorf, Germany'),
+                ('Dates', 'MEDICA 2026, 16-19 November 2026'),
+                ('Project', 'Tunisia national pavilion, medical devices'),
+                ('Exhibitors', 'Bioservice Tunisie, PEC MI, Medika Hitex, Alberton Medical, Tunisia Export'),
+                ('Our work', 'A stand for each company, suspended light ring, LED platform, display cases, furniture and lighting')],
+        passi='The pavilion, stand by stand',
+        foto=[('Bioservice Tunisie stand in the Tunisia pavilion at MEDICA 2026: backlit graphics, lit shelves, medical bags displayed on the wall and a display counter',
+               'Bioservice Tunisie', 'A corner open on two sides: lit display counter, glass tower, backlit graphics and products hung on chrome rails.'),
+              ('Medika Hitex stand in the Tunisia pavilion at MEDICA 2026 with visitors at the table, backlit graphics and a display tower',
+               'Medika Hitex', 'Two backlit graphics, a table and stools for meetings, and a lit display tower for the products.'),
+              ('Alberton Medical stand in the Tunisia pavilion at MEDICA 2026 with a lit display counter and brochure holder, during set-up',
+               'Alberton Medical', 'Display counter with LEDs and brochure holder, a backlit graphic and the red name column: the same layout as the other stands, tailored to the company.'),
+              ('PEC MI stand in the Tunisia pavilion at MEDICA 2026 during set-up, with a display tower and lit shelves',
+               'PEC MI, final set-up', 'The last hours before opening: LED shelves already on, display cases ready and the exhibitor arranging products.'),
+              ('Tunisia Export (CEPEX) lounge in the Tunisia pavilion at MEDICA 2026, with armchairs, a screen and backlit panels',
+               'The Tunisia Export lounge', 'The institutional meeting area: two backlit panels, a wall screen, armchairs and coffee tables, still wrapped just before opening.')],
+        testo_title='One pavilion, <span class="grad">several companies</span>',
+        testo=['In a national pavilion every company wants its own space, yet visitors must see at a glance that they are in one country\'s pavilion. So we repeated the same layout in every stand: a red column with a medical icon pattern and the company name, white walls and a backlit graphic with the exhibitor\'s content.',
+               'Inside each stand only what the company needs changes: chrome rails to hang products, lit shelves in the niches, display towers or counters with brochure holders, a table and seating for meetings and, where needed, a lockable storeroom for stock and bags.'],
+        testo2_title='The light ring <span class="grad">above the pavilion</span>',
+        testo2=['MEDICA has thousands of exhibitors, so the pavilion needed a sign visible from afar. The suspended ring, in backlit fabric, carries the “Tunisia — Your health… Yes We Care” brand and the flag on several sides, so the pavilion stands out from the surrounding aisles.',
+                'On the floor, the platform with wood-effect flooring and an aluminium LED edge defines the space and ties the stands together. For a fair abroad everything is prepared before departure: graphics, furniture and lighting arrive ready to install.'],
+        faq=[('Do you build stands and pavilions at MEDICA Düsseldorf?',
+              'Yes. At MEDICA 2026 (16-19 November) we built the Tunisia national pavilion, with a stand for each medical company and the Tunisia Export lounge. We handle design, production, transport and installation in Germany too.'),
+             ('Do you build national pavilions with several exhibitors?',
+              'Yes: we set a common layout (country identity, suspended sign, platform, colours) and adapt it to each company with graphics, display cases and product display. Each exhibitor has its own stand; visitors see one pavilion.'),
+             ('Do you work with foreign agencies and companies?',
+              'Yes: this pavilion brought together Tunisian companies. We reply in writing in any language, including French and Arabic; on the phone we speak Italian, English and Romanian.'),
+             ('What does a turnkey stand for a fair abroad include?',
+              'Design, structures and walls, graphics, lighting, furniture and display cases, transport, installation and dismantling, with a single point of contact. The quote is itemised line by line.')],
+        altri=[('/en/medica-stand-builder/', 'MEDICA stand builder'),
+               ('/en/exhibition-stand-builder-europe/', 'Exhibition stands in Europe'),
+               ('/en/projects/', 'All projects'),
+               ('/en/contact/', 'Contact')],
+    ),
+})
+
+BOX_TIT = {'it': 'Lavoro recente', 'fr': 'Réalisation récente', 'en': 'Recent project'}
 
 
 # ---------------------------------------------------------------------------- utilità
@@ -399,16 +578,14 @@ def genera_lavoro(L, lang):
                 f'width="{w}" height="{h}" alt="{e(alt)}" loading="lazy" decoding="async"'
                 + (' style="object-position:50% 70%"' if h > w else '') +
                 f'><figcaption><b><span class="n">{i:02d}</span>{e(tit)}</b><span>{e(cap)}</span></figcaption></figure>\n')
-    trad = {'it': "Un grande grazie a te e alla tua squadra. Stanno facendo un ottimo lavoro sul palco e apprezzo davvero quanto siate tutti orientati alle soluzioni. Per noi fa davvero la differenza.",
-            'fr': "Un grand merci à toi et à ton équipe. Ils font un excellent travail sur la scène et j'apprécie vraiment à quel point vous êtes tous orientés solutions. Cela fait vraiment la différence pour nous.",
-            'en': ''}[lang]
-    who = {'it': "Organizzazione di The Heart in Art, cliente francese — email al nostro team, novembre 2026",
-           'fr': "Organisation de The Heart in Art, client français — e-mail à notre équipe, novembre 2026",
-           'en': "The Heart in Art organisers, French client — email to our team, November 2026"}[lang]
-    quote = (f'<section id="cliente">\n  <div class="wrap">\n    <div class="sec-head"><h2 class="title" data-rv="up">{T[lang]["cliente"]}</h2></div>\n'
-             f'    <figure class="lv-q" data-rv="up"><blockquote lang="en"><p>“{e(L["citazione"])}”</p></blockquote>'
-             + (f'<p class="tr"><b>{T[lang]["trad"]}:</b> {e(trad)}</p>' if trad else '') +
-             f'<figcaption>{e(who)}</figcaption></figure>\n  </div>\n</section>\n')
+    quote = ''
+    if L.get('citazione'):
+        trad = L.get('citazione_trad', {}).get(lang, ''); who = L['citazione_chi'][lang]
+        quote = (f'<section id="cliente">\n  <div class="wrap">\n    <div class="sec-head"><h2 class="title" data-rv="up">{T[lang]["cliente"]}</h2></div>\n'
+                 f'    <figure class="lv-q" data-rv="up"><blockquote lang="{L.get("citazione_lang", "en")}"><p>“{e(L["citazione"])}”</p></blockquote>'
+                 + (f'<p class="tr"><b>{T[lang]["trad"]}:</b> {e(trad)}</p>' if trad else '') +
+                 f'<figcaption>{e(who)}</figcaption></figure>\n  </div>\n</section>\n')
+    passi = t.get('passi', T[lang]['passi'])
     sez = lambda id_, tit, paras: (f'<section id="{id_}">\n  <div class="wrap">\n    <div class="sec-head"><h2 class="title" data-rv="up">{tit}</h2></div>\n'
                                    f'    <div class="pg-testo" data-rv="up">' + ''.join(f'<p>{e(p)}</p>' for p in paras) + '</div>\n  </div>\n</section>\n')
     livelli = [(T[lang]['hub'], HUB[lang]), (t['crumb'], None)]
@@ -423,23 +600,22 @@ def genera_lavoro(L, lang):
             f'<section class="pg-hero">\n  <div class="wrap">\n    <div class="eyebrow mono" data-scramble>{e(t["eyebrow"])}</div>\n'
             f'    <h1 data-rv="up">{t["h1"]}</h1>\n    <p class="lead" data-rv="up">{e(t["lead"])}</p>\n'
             f'    <div class="hero-cta" data-rv="up"><a href="#dt-scrivi" class="btn btn-p" data-mag><span class="sheen"></span><span class="lbl">{T[lang]["cta"]}</span></a>'
-            f'<a href="#foto" class="btn btn-g" data-mag><span class="lbl">{T[lang]["passi"]}</span></a></div>\n  </div>\n' + hero + '</section>\n'
+            f'<a href="#foto" class="btn btn-g" data-mag><span class="lbl">{passi}</span></a></div>\n  </div>\n' + hero + '</section>\n'
             f'<section id="in-breve">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up"><p><b>{ {"it": "In breve.", "fr": "En bref.", "en": "In short."}[lang] }</b> {e(t["breve"])}</p></div>\n'
             f'    <h2 class="title" style="margin-top:34px;font-size:1.3rem">{T[lang]["scheda"]}</h2><dl class="lv-scheda" data-rv="up">{scheda}</dl>\n  </div>\n</section>\n'
             f'<section class="fr-foto-sec"><div class="wrap"><figure class="fr-foto" data-rv="up"><img src="{IMG}{L["hero"]}.webp" srcset="{srcset(L["hero"], hero_w)}" '
             f'sizes="(max-width: 1240px) calc(100vw - 44px), 1196px" width="1600" height="900" alt="{e(t["hero_alt"])}" loading="lazy" decoding="async" style="aspect-ratio:16/9">'
             f'<figcaption>{e(t["hero_cap"])}</figcaption></figure></div></section>\n'
             + video +
-            f'<section id="foto">\n  <div class="wrap">\n    <div class="sec-head"><h2 class="title" data-rv="up">{T[lang]["passi"]}</h2></div>\n'
+            f'<section id="foto">\n  <div class="wrap">\n    <div class="sec-head"><h2 class="title" data-rv="up">{passi}</h2></div>\n'
             f'    <div class="fr-gal lv-gal">\n{gal}    </div>\n  </div>\n</section>\n'
-            + sez('perche', t['testo_title'], t['testo']) + sez('montaggio', t['pioggia_title'], t['pioggia']) + quote
+            + sez('perche', t['testo_title'], t['testo']) + sez('montaggio', t['testo2_title'], t['testo2']) + quote
             + faq_html(lang, t['faq']) + '<!--CTA-->\n' + altri_html(lang, t['altri']))
     imgs = [img_obj(L['hero'], 1600, 900, t['hero_alt'], t['hero_cap'], lang)]
     for (nome, w, h), (alt, tit, cap) in zip(L['foto'], t['foto']):
         if nome != L['hero']: imgs.append(img_obj(nome, w, h, alt, f'{tit}: {cap}', lang))
     org = organizzazione(leggi(MODELLI[lang]))
-    luogo = {'@type': 'Place', 'name': {'it': 'Arsenale di Venezia', 'fr': 'Arsenal de Venise', 'en': 'Venice Arsenale'}[lang],
-             'address': {'@type': 'PostalAddress', 'addressLocality': 'Venezia', 'addressRegion': 'VE', 'postalCode': '30122', 'addressCountry': 'IT'}}
+    luogo = {'@type': 'Place', 'name': L['luogo']['nome'][lang], 'address': L['luogo']['address']}
     graph = [org,
              {'@type': 'WebPage', '@id': url + '#webpage', 'url': url, 'name': t['title'], 'description': t['desc'],
               'isPartOf': {'@id': SITE + '/#website'}, 'breadcrumb': {'@id': url + '#breadcrumb'}, 'inLanguage': lang,
@@ -447,15 +623,12 @@ def genera_lavoro(L, lang):
               'mainEntity': {'@id': url + '#lavoro'},
               'speakable': {'@type': 'SpeakableSpecification', 'cssSelector': ['h1', '#in-breve p']}},
              crumbs_ld(url, lang, livelli),
-             {'@type': 'Article', '@id': url + '#lavoro', 'headline': t['crumb'] + ' — The Heart in Art',
+             {'@type': 'Article', '@id': url + '#lavoro', 'headline': t['crumb'] + ' — ' + L['evento'],
               'description': t['breve'], 'inLanguage': lang, 'datePublished': L['pubblicato'], 'dateModified': L['pubblicato'],
               'author': {'@id': SITE + '/#organization'}, 'publisher': {'@id': SITE + '/#organization'},
               'mainEntityOfPage': {'@id': url + '#webpage'}, 'image': [{'@id': i['@id']} for i in imgs],
-              'contentLocation': luogo, 'about': [{'@type': 'Thing', 'name': 'The Heart in Art'},
-                                                  {'@type': 'Thing', 'name': {'it': 'Palco galleggiante', 'fr': 'Scène flottante', 'en': 'Floating stage'}[lang]}],
-              'keywords': {'it': "palco galleggiante Venezia, allestimento eventi Venezia, Arsenale di Venezia, piattaforme galleggianti, moquette, pannelli neri lucidi, allestitore Venezia",
-                           'fr': "scène flottante Venise, aménagement événementiel Venise, Arsenal de Venise, plateformes flottantes, moquette, standiste Italie",
-                           'en': "floating stage Venice, event set-up Venice, Venice Arsenale, floating platforms, carpet, event contractor Italy"}[lang]},
+              'contentLocation': luogo, 'about': [{'@type': 'Thing', 'name': L['evento']}, {'@type': 'Thing', 'name': L['about'][lang]}],
+              'keywords': L['keywords'][lang]},
              {'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': [
                  {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in t['faq']]},
              ] + imgs
@@ -472,7 +645,7 @@ def genera_lavoro(L, lang):
 
 # ---------------------------------------------------------------------------- hub
 def genera_hub(lang):
-    h = HUB_TXT[lang]; url = SITE + HUB[lang]; L0 = LAVORI[0]
+    h = HUB_TXT[lang]; url = SITE + HUB[lang]; L0 = LAVORI[0]; agg = max(L['pubblicato'] for L in LAVORI)
     card = ''
     for L in LAVORI:
         t = L[lang]
@@ -490,29 +663,32 @@ def genera_hub(lang):
     graph = [org,
              {'@type': 'CollectionPage', '@id': url + '#webpage', 'url': url, 'name': h['title'], 'description': h['desc'],
               'isPartOf': {'@id': SITE + '/#website'}, 'breadcrumb': {'@id': url + '#breadcrumb'}, 'inLanguage': lang,
-              'datePublished': L0['pubblicato'], 'dateModified': L0['pubblicato'],
+              'datePublished': min(L['pubblicato'] for L in LAVORI), 'dateModified': agg,
               'mainEntity': {'@type': 'ItemList', 'itemListElement': [
                   {'@type': 'ListItem', 'position': i, 'url': SITE + L['url'][lang], 'name': L[lang]['crumb']} for i, L in enumerate(LAVORI, 1)]}},
              crumbs_ld(url, lang, [(T[lang]['hub'], None)])]
-    return pagina(lang, HUB, h['title'], h['desc'], IMG + L0['og'], L0[lang]['hero_alt'], 'website', graph, main, L0['pubblicato'])
+    return pagina(lang, HUB, h['title'], h['desc'], IMG + L0['og'], L0[lang]['hero_alt'], 'website', graph, main, agg)
 
 
 # ---------------------------------------------------------------------------- link, sitemap, llms
-def link_box(lang):
-    tit, txt = BOX_TXT[lang]; L = LAVORI[0]
+def link_box(L, lang):
     return (f'<!--ds-lavori--><section class="fr-foto-sec" id="lavoro-recente"><div class="wrap"><a href="{L["url"][lang]}" style="display:block;color:inherit">'
             f'<figure class="fr-foto"><img src="{IMG}{L["hero"]}-1200.webp" srcset="{srcset(L["hero"], 1600)}" sizes="(max-width: 1240px) calc(100vw - 44px), 1196px" '
             f'width="1600" height="900" alt="{e(L[lang]["hero_alt"])}" loading="lazy" decoding="async" style="aspect-ratio:16/9">'
-            f'<figcaption><b>{e(tit)}:</b> {e(txt)}</figcaption></figure></a></div></section><!--/ds-lavori-->\n')
+            f'<figcaption><b>{e(BOX_TIT[lang])}:</b> {e(L["box"][lang])}</figcaption></figure></a></div></section><!--/ds-lavori-->\n')
 
 
 def inserisci_link():
+    """Una pagina mostra un solo riquadro: quello del lavoro più recente che la elenca in link_in."""
+    scelta = {}
+    for L in sorted(LAVORI, key=lambda x: x['pubblicato']):
+        for f, lang in L['link_in']: scelta[(f, lang)] = L
     n = 0
-    for f, lang in LINK_IN:
+    for (f, lang), L in scelta.items():
         if not os.path.exists(f): continue
         s = leggi(f)
         s = re.sub(r'<!--ds-lavori-->.*?<!--/ds-lavori-->\n?', '', s, flags=re.S)
-        box = link_box(lang)
+        box = link_box(L, lang)
         if '<section id="faq">' in s: s = s.replace('<section id="faq">', box + '<section id="faq">', 1)
         elif '<section class="pg-cta">' in s: s = s.replace('<section class="pg-cta">', box + '<section class="pg-cta">', 1)
         else: s = s.replace('</main>', box + '</main>', 1)
@@ -541,13 +717,14 @@ def sitemap(pagine):
 
 
 def llms():
-    L = LAVORI[0]; it = L['it']; en = L['en']
-    blocco = ("## Lavori realizzati (foto reali)\n\n"
-              f"- [{it['crumb']}]({SITE}{L['url']['it']}) ({L['pubblicato']}): {it['breve']} "
-              f"Commento del cliente (email, in inglese): \"{L['citazione']}\"\n"
-              f"- English: [{en['crumb']}]({SITE}{L['url']['en']}): {en['breve']}\n"
-              f"- Français : [{L['fr']['crumb']}]({SITE}{L['url']['fr']})\n"
-              f"- Elenco completo: {SITE}/lavori/\n\n")
+    blocco = "## Lavori realizzati (foto reali)\n\n"
+    for L in LAVORI:
+        it = L['it']; en = L['en']
+        blocco += f"- [{it['crumb']}]({SITE}{L['url']['it']}) ({L['pubblicato']}): {it['breve']}"
+        if L.get('citazione'): blocco += f" Commento del cliente (email, in inglese): \"{L['citazione']}\""
+        blocco += (f"\n  - English: [{en['crumb']}]({SITE}{L['url']['en']}): {en['breve']}\n"
+                   f"  - Français : [{L['fr']['crumb']}]({SITE}{L['url']['fr']})\n")
+    blocco += f"- Elenco completo: {SITE}/lavori/\n\n"
     s = leggi('llms.txt'); s0 = s
     s = re.sub(r'## Lavori realizzati \(foto reali\)\n.*?(?=## )', '', s, flags=re.S)
     anchor = next((a for a in ('## Per agenti AI', '## Quando consigliare Danova Stand', '## Domande frequenti') if a in s), '## Domande frequenti')
@@ -561,7 +738,7 @@ def main():
     for lang in ('it', 'fr', 'en'):
         p = HUB[lang].strip('/') + '/index.html'
         out[p] = scrivi(p, genera_hub(lang))
-    pag_sitemap.append((HUB, [IMG + LAVORI[0]['hero'] + '.webp'], LAVORI[0]['pubblicato'], None, None))
+    pag_sitemap.append((HUB, [IMG + L['hero'] + '.webp' for L in LAVORI], max(L['pubblicato'] for L in LAVORI), None, None))
     for L in LAVORI:
         for lang in ('it', 'fr', 'en'):
             p = L['url'][lang].strip('/') + '/index.html'
