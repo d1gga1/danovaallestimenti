@@ -90,7 +90,7 @@
       + '<div class="m-grid"><div><h3>Contatto</h3><p><b>' + esc(r.nome || '—') + '</b>' + (r.azienda ? '<br>' + esc(r.azienda) : '') + '</p><div class="acts">'
       + (r.email ? '<a class="ghost" href="mailto:' + esc(r.email) + '?subject=' + encodeURIComponent(marchio(r) + ' — la sua richiesta') + '&body=' + encodeURIComponent(testo(r)) + '">' + esc(r.email) + '</a>' : '')
       + (r.telefono ? '<a class="ghost" href="tel:' + esc(tel(r.telefono)) + '">' + esc(r.telefono) + '</a><a class="ghost" target="_blank" rel="noopener" href="' + wa(r.telefono) + '?text=' + encodeURIComponent(testo(r)) + '">WhatsApp</a>' : '') + '</div>'
-      + (r.pid && window.PDPersona ? '<p><button class="ghost" id="r-pp">👤 Cosa ha guardato sul sito</button></p>' : '') + '</div>'
+      + '<p class="acts">' + (r.pid && window.PDPersona ? '<button class="ghost" id="r-pp">👤 Cosa ha guardato sul sito</button>' : '') + (window.DSClienti ? '<button class="ghost" id="r-cl">➕ Salva tra i clienti</button>' : '') + '</p></div>'
       + '<div><h3>Provenienza</h3><div class="det">' + [['Luogo', [r.citta, r.regione, r.paese].filter(Boolean).join(', ')], ['Arrivato da', [r.sorgente, r.canale].filter(Boolean).join(' · ')], ['Lingua', String(r.lingua || '').toUpperCase()], ['Visite sul sito', r.visite ? r.visite + ' (' + r.pagine_viste + ' pagine)' : '']]
         .filter(function (x) { return x[1]; }).map(function (x) { return '<span>' + x[0] + '</span><b>' + esc(x[1]) + '</b>'; }).join('') + '</div></div></div>'
       + '<h3>Richiesta</h3><div class="det">' + [['Fiera', r.fiera], ['Quando vuole partire', r.urgenza]].concat(r.campi || []).filter(function (x) { return x[1]; }).map(function (x) { return '<span>' + esc(x[0]) + '</span><b>' + esc(x[1]) + '</b>'; }).join('') + '</div>'
@@ -99,6 +99,7 @@
       + '<label>Valore del lavoro in € (facoltativo, per i totali)<input name="valore" type="number" min="0" step="1" value="' + (r.valore != null ? +r.valore : '') + '" style="background:var(--page);border:1px solid var(--line-2);border-radius:9px;padding:8px 10px;color:var(--ink)"></label>'
       + '<label>Note interne<textarea name="note_admin" rows="3">' + esc(r.note_admin || '') + '</textarea></label><div class="acts"><button class="btn" type="submit">Salva</button><span id="r-msg" class="muted small"></span></div></form>');
     var pp = $('#r-pp', b); if (pp) pp.onclick = function () { window.PDPersona.apri(r.pid); };
+    var rc = $('#r-cl', b); if (rc) rc.onclick = function () { window.DSClienti.daRichiesta(r); };
     var f = $('#r-form', b);
     f.onsubmit = function (e) {
       e.preventDefault(); var bt = $('button', f); bt.disabled = true;

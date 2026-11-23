@@ -115,3 +115,14 @@ Stesso database, stessa funzione `ds`: ogni sito manda il proprio nome con le vi
 - Il popup −3% newsletter e la fascia preventivo restano solo su Danova Stand.
 - "Non contare le mie visite": il link `?dslive=no` va aperto una volta **per ogni sito**.
 - Le visite e richieste raccolte prima di questo aggiornamento risultano di Danova Stand.
+
+---
+
+## Scheda "Clienti & lavori" (aggiunta il 23/11/2026)
+
+Rubrica dei clienti (anche potenziali) e dei lavori con le date di **produzione, montaggio, fiera e smontaggio**:
+calendario del mese (avvisa con ⚠ quando più montaggi/smontaggi cadono lo stesso giorno), agenda dei prossimi 60 giorni,
+elenco lavori, CSV e calendario da aggiungere al telefono. Dalla scheda Richieste: «➕ Salva tra i clienti».
+
+Per attivarla basta **ripubblicare la funzione**: Edge Functions → `ds` → **Code** → incolla tutto `2-edge-function-ds.ts` → **Deploy**.
+Le tabelle `clienti` e `lavori` si creano da sole al primo accesso. "Verify JWT" deve restare disattivato.

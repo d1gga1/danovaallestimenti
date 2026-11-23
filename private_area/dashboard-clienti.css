@@ -1,0 +1,88 @@
+/* DANOVA — scheda Clienti & lavori: calendario montaggi/smontaggi/produzione e schede clienti */
+:root{--f-prod:#b07cff;--f-mont:#4f8cff;--f-fiera:#ffc53d;--f-smont:#ff7a45}
+.cl-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cl-bar .btn{display:inline-flex;align-items:center;gap:6px}
+.cl-bar .sel{margin-left:auto}
+.fase{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;border-radius:7px;padding:2px 8px;white-space:nowrap}
+.fase i{width:8px;height:8px;border-radius:50%;display:inline-block;background:currentColor}
+.fase.prod{background:rgba(176,124,255,.16);color:#cdb0ff}
+.fase.mont{background:rgba(79,140,255,.16);color:#9cc0ff}
+.fase.fiera{background:rgba(255,197,61,.15);color:#ffd877}
+.fase.smont{background:rgba(255,122,69,.16);color:#ffab88}
+.fasi-leg{display:flex;gap:8px;flex-wrap:wrap}
+
+/* calendario del mese */
+.cal-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.cal-head h3{margin:0;font-size:16px;color:var(--ink);text-transform:capitalize;min-width:150px}
+.cal-head .fasi-leg{margin-left:auto}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.cal .dn{font-size:11px;color:var(--muted);text-align:center;padding:2px 0 4px;text-transform:uppercase;letter-spacing:.06em}
+.cal .g{min-height:104px;background:rgba(5,8,15,.4);border:1px solid var(--line);border-radius:10px;padding:5px;display:flex;flex-direction:column;gap:3px;min-width:0}
+.cal .g.fuori{opacity:.38}
+.cal .g.oggi{border-color:var(--s5);box-shadow:inset 0 0 0 1px rgba(255,197,61,.35)}
+.cal .g.we{background:rgba(5,8,15,.6)}
+.cal .g .n{font-size:12px;color:var(--ink-2);display:flex;justify-content:space-between;align-items:center}
+.cal .g .n .warn{font-size:10.5px;color:#ffab88;font-weight:700}
+.cal .ev{font-size:11px;line-height:1.25;border-radius:5px;padding:2px 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;border-left:3px solid currentColor}
+.cal .ev.prod{background:rgba(176,124,255,.16);color:#d8c2ff}
+.cal .ev.mont{background:rgba(79,140,255,.18);color:#b7d0ff}
+.cal .ev.fiera{background:rgba(255,197,61,.13);color:#ffe199}
+.cal .ev.smont{background:rgba(255,122,69,.17);color:#ffc0a6}
+.cal .ev:hover{filter:brightness(1.25)}
+.cal .piu{font-size:11px;color:var(--muted);cursor:pointer}
+
+/* agenda */
+.cl-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:14px;margin-top:14px}
+.agenda{display:flex;flex-direction:column;gap:2px;max-height:620px;overflow:auto}
+.ag-g{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:12px 0 4px;display:flex;justify-content:space-between}
+.ag-g:first-child{margin-top:0}
+.ag-g.oggi{color:var(--s5)}
+.ag-r{display:grid;grid-template-columns:auto 1fr auto;gap:2px 10px;align-items:center;padding:8px 10px;border-radius:10px;cursor:pointer;background:var(--card-2);border:1px solid transparent}
+.ag-r:hover{border-color:var(--line-2)}
+.ag-r b{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ag-r small{grid-column:2/4;color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ag-r .q{font-size:12px;color:var(--ink-2);white-space:nowrap}
+
+/* clienti */
+.cl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;max-height:620px;overflow:auto;padding:2px}
+.cl-c{background:var(--card-2);border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;display:flex;flex-direction:column;gap:6px;min-width:0}
+.cl-c:hover{border-color:var(--line-2)}
+.cl-c .t{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.cl-c .t b{font-size:14.5px;overflow:hidden;text-overflow:ellipsis}
+.cl-c small{color:var(--muted);font-size:12px}
+.cl-c .nx{font-size:12px;color:var(--ink-2);display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.st-potenziale{background:rgba(255,197,61,.15);color:#ffd877}
+.st-trattativa{background:rgba(176,124,255,.18);color:#cdb0ff}
+.st-attivo{background:rgba(34,196,147,.18);color:#6fe0bb}
+.st-ex,.st-annullato{background:rgba(127,138,160,.18);color:#aab3c5}
+.st-perso{background:rgba(230,103,103,.18);color:#f19b9b}
+.st-preventivo{background:rgba(255,197,61,.15);color:#ffd877}
+.st-confermato{background:rgba(79,140,255,.18);color:#9cc0ff}
+.st-produzione{background:rgba(176,124,255,.18);color:#cdb0ff}
+.st-montato{background:rgba(255,122,69,.18);color:#ffab88}
+.st-concluso{background:rgba(34,196,147,.18);color:#6fe0bb}
+
+/* tabella lavori */
+.fasi-td{display:flex;flex-direction:column;gap:3px}
+.tbl td .fase{font-size:11px}
+.tbl tr.passato td{opacity:.55}
+
+/* moduli */
+.m-form input:not([type=checkbox]){background:var(--page);border:1px solid var(--line-2);border-radius:9px;padding:8px 10px;color:var(--ink);font:inherit;color-scheme:dark;min-width:0;width:100%}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.fase-box{border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;display:grid;gap:8px}
+.fase-box>.chk{margin:0!important;font-weight:600;color:var(--ink)!important}
+.fase-box.off .f2{display:none}
+.fase-box.prod{border-left:3px solid var(--f-prod)} .fase-box.mont{border-left:3px solid var(--f-mont)}
+.fase-box.fiera{border-left:3px solid var(--f-fiera)} .fase-box.smont{border-left:3px solid var(--f-smont)}
+.fasi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn.danger{background:none;border:1px solid rgba(230,103,103,.5);color:#f19b9b}
+.lav-mini{display:grid;gap:8px}
+.lav-mini>div{background:var(--card-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}
+.lav-mini>div:hover{border-color:var(--line-2)}
+.lav-mini .fasi-leg{margin-top:6px}
+.ics-box{display:grid;gap:8px}
+.ics-box input{width:100%;background:var(--page);border:1px solid var(--line-2);border-radius:9px;padding:8px 10px;color:var(--ink);font:12px ui-monospace,monospace}
+@media (max-width:1100px){.cl-cols{grid-template-columns:1fr}}
+@media (max-width:700px){.cal .g{min-height:64px}.cal .ev{font-size:0;padding:0;height:6px;border-left:0}.f2,.f3,.fasi-grid{grid-template-columns:1fr}}
