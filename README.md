@@ -129,6 +129,10 @@ Foto in `assets/img/lavori/` (webp 800/1200/1600 + og 1200x630, senza dati EXIF/
 Nuovo lavoro: aggiungi un elemento a `LAVORI` nello script.
 Galleria "Altri stand realizzati" (23/11/2026): 19 stand divisi per cliente, 52 foto, sotto i lavori negli hub IT/FR/EN.
 Testi e foto in `strumenti/galleria_stand.py`; foto in `assets/img/lavori/stand-<cliente>-NN-800/-1200.webp`.
+Voce di menu "I nostri lavori" (23/11/2026): `python3 strumenti/menu-lavori.py` (idempotente) la mette per prima nel menu
+desktop e mobile di tutte le pagine, in 36 lingue (IT -> `/lavori/`, FR -> `/fr/realisations/`, le altre -> `/en/projects/`).
+Aggiunge lo stile in fondo a `assets/css/site.css`: va rilanciato dopo `migra-da-danovatech.py`.
+Tra 901 e 1240px, sulle pagine col menu lungo (IT) il pulsante "Parliamone" e' nascosto per far spazio (resta "Contatti").
 Originali in `nuove_foto_newstand/` (fuori da git), gia' divisi per stand; le scartate in `_scartate (...)`.
 
 ## Gruppo Danova, feed e testo integrale per le AI (22/11/2026)
@@ -140,6 +144,7 @@ Ordine completo degli script dopo ogni `migra-da-danovatech.py` (tutti idempoten
     python3 strumenti/ottimizza-keyword.py
     python3 strumenti/attiva-area-privata.py
     python3 strumenti/genera-lavori.py
+    python3 strumenti/menu-lavori.py          # voce "I nostri lavori" in cima al menu di ogni pagina + stile in site.css
     python3 strumenti/genera-pagine-ur-hi.py  # urdu e hindi (vedi sotto)
     python3 strumenti/gruppo-danova.py        # NUOVO: schema parent/sub, lingue di contatto, footer Gruppo Danova, llms
     python3 strumenti/ottimizza-geo.py

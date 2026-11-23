@@ -993,3 +993,12 @@ header .lang-links.ll .ll-menu a{padding:8px 11px}
 @media (max-width:820px){header .lang-links.ll .ll-menu{grid-template-columns:repeat(2,minmax(140px,1fr));max-height:72vh;overflow-y:auto;background:rgba(12,10,4,.97);border:1px solid var(--line);border-radius:16px;padding:6px;margin-top:10px}header .lang-links.ll .ll-menu::before{display:none}}
 #mob .mob-lang-links a{min-width:44px;text-align:center}
 /* /ds-lingue-extra */
+
+/* === MENU LAVORI (strumenti/menu-lavori.py) === */
+nav.links a.nav-lavori{color:#fff;background:rgba(255,201,60,.10);border:1px solid var(--line-strong);margin-right:4px}
+nav.links a.nav-lavori:hover,nav.links a.nav-lavori[aria-current="page"]{background:rgba(255,201,60,.20);color:#fff}
+nav.links a.nav-lavori::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--blue);margin-right:7px;vertical-align:middle;position:relative;top:-1px}
+#mob a.nav-lavori{color:var(--blue-2)}
+/* menu lungo (IT, 9 voci): tra 901 e 1240px non ci sta col pulsante "Parliamone", che porta allo stesso modulo di "Contatti" */
+@media (min-width:901px) and (max-width:1240px){header:has(nav.links a:nth-child(8)) .nav-r .btn-p{display:none}nav.links a.nav-lavori::before{display:none}}
+/* === FINE MENU LAVORI === */
