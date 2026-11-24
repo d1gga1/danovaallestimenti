@@ -238,3 +238,14 @@ mobile, sitemap con gli alternate, `llms.txt` (blocco `<!--ds-fiere-lingue-->`).
 - Fatte: tutte le 91 fiere in inglese e tedesco (testi in `fiere_en*.py` e `fiere_de*.py`, divisi in 4 file per lingua).
   Somiglianza media fra pagine della stessa lingua: 0,13 (EN) e 0,17 (DE). Nuova lingua: voce in `ui.py` + `fiere_<lingua>*.py`.
 - `assets/js/fiere-richiesta.js`: aggiunto il tedesco; le lingue senza testi usano l'inglese (prima l'italiano).
+
+## Coerenza dei fatti e popup su telefono (24/11/2026, sera)
+`python3 strumenti/fatti-coerenti-seo.py` (idempotente): lanciarlo dopo `migra-da-danovatech.py` e `genera-chi-siamo.py`,
+**prima** di `ottimizza-geo.py`.
+- Lingue: ovunque "sito in 36 lingue" (chi siamo diceva "Cinque lingue", FAQ e llms.txt dicevano 8 lingue).
+- Alt dell'immagine nella pagina montatori.
+- Popup −3% su telefono: si apre sempre da solo dopo 5-7 s, ma come riquadro piccolo in basso (circa 1/7 dello schermo,
+  senza velo scuro: la pagina resta visibile e cliccabile), con "−3%", titolo, pulsante e X. Il pulsante apre il modulo
+  completo. Su computer invariato. Classe `.mini` in `assets/js/ds-conversioni.js`; per tornare al popup a tutto schermo
+  anche su telefono, in `prova()` sostituire `apri(da, window.innerWidth <= 760)` con `apri(da)`.
+  Attenzione: lo stesso file e' usato anche da danova-tech.com e danovacostruzioni.it (riportare la modifica la').

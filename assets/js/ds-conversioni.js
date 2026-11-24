@@ -196,6 +196,12 @@
     + '.ds-bolla.on{opacity:1;transform:none}.ds-bolla button{position:absolute;top:4px;right:6px;border:0;background:none;font:400 18px/1 sans-serif;color:#555;cursor:pointer}'
     + '@media(max-width:760px){.dsnl-box{grid-template-columns:1fr;top:auto;bottom:0;left:0;width:100%;max-height:92%;border-radius:22px 22px 0 0;transform:translateY(30px)}.dsnl.show .dsnl-box{transform:none}'
     + '.dsnl-vis{padding:22px 20px;gap:8px}.dsnl-vis ul{display:none}.dsnl-vis b.big{font-size:64px}.dsnl-f{padding:20px 18px 18px}.dsnl-g{grid-template-columns:1fr}'
+    + '.dsnl-esp{display:none}.dsnl.mini{pointer-events:none}.dsnl.mini .dsnl-scrim{display:none}'
+    + '.dsnl.mini .dsnl-box{pointer-events:auto;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));width:auto;max-height:none;overflow:visible;border-radius:18px;grid-template-columns:auto 1fr;align-items:center;box-shadow:0 14px 40px rgba(0,0,0,.55)}'
+    + '.dsnl.mini .dsnl-vis{padding:14px 12px 14px 16px;justify-content:center;background:none}.dsnl.mini .dsnl-vis small,.dsnl.mini .dsnl-vis .sub{display:none}.dsnl.mini .dsnl-vis b.big{font-size:40px;margin:0}'
+    + '.dsnl.mini .dsnl-f{padding:14px 14px 14px 0;gap:8px}.dsnl.mini .dsnl-f h2{font-size:15.5px;line-height:1.25;padding-right:34px}'
+    + '.dsnl.mini .dsnl-sub,.dsnl.mini .dsnl-g,.dsnl.mini .dsnl-ok,.dsnl.mini .dsnl-e,.dsnl.mini .dsnl-no,.dsnl.mini button[type=submit]{display:none}'
+    + '.dsnl.mini .dsnl-esp{display:block;padding:11px 16px;font-size:14px}.dsnl.mini .dsnl-x{top:8px;right:8px;width:30px;height:30px;font-size:20px}'
     + '.dsnl-pill{bottom:calc(84px + env(safe-area-inset-bottom));left:10px}.ds-fascia .ds-f-in{padding:20px}.ds-bolla{display:none}}';
   /* colori del sito: oro su Stand, verde su Costruzioni, blu su Tech */
   var COL = {
@@ -238,19 +244,20 @@
       + '<label>' + esc(T.fiera) + '<input name="fiera" placeholder="' + esc(T.fieraPh) + '"></label></div>'
       + '<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">'
       + '<label class="dsnl-ok"><input type="checkbox" name="consenso"><span>' + T.ok + '</span></label>'
-      + '<p class="dsnl-e" aria-live="polite"></p><button class="dsnl-b" type="submit">' + esc(T.btn) + '</button><button type="button" class="dsnl-no">' + esc(T.no) + '</button></form></div></div>';
+      + '<p class="dsnl-e" aria-live="polite"></p><button class="dsnl-b dsnl-esp" type="button">' + esc(T.btn) + '</button><button class="dsnl-b" type="submit">' + esc(T.btn) + '</button><button type="button" class="dsnl-no">' + esc(T.no) + '</button></form></div></div>';
     document.body.appendChild(BOX);
     BOX.querySelector('.dsnl-x').onclick = function () { chiudi(true); };
     BOX.querySelector('.dsnl-no').onclick = function () { chiudi(true); };
+    BOX.querySelector('.dsnl-esp').onclick = function () { BOX.classList.remove('mini'); BOX.setAttribute('aria-modal', 'true'); ev('preventivo', 'popup mini espanso'); };
     BOX.querySelector('.dsnl-scrim').onclick = function () { chiudi(true); };
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && BOX.classList.contains('open')) chiudi(true); });
     BOX.querySelector('form').addEventListener('submit', invia);
     BOX.addEventListener('input', function (e) { if (e.target.classList) e.target.classList.remove('err'); BOX.querySelector('.dsnl-e').textContent = ''; });
     return BOX;
   }
-  function apri(da) {
+  function apri(da, mini) {
     if (iscritto()) return;
-    costruisci(); BOX.classList.add('open'); requestAnimationFrame(function () { BOX.classList.add('show'); });
+    costruisci(); BOX.classList.toggle('mini', !!mini); BOX.setAttribute('aria-modal', mini ? 'false' : 'true'); BOX.classList.add('open'); requestAnimationFrame(function () { BOX.classList.add('show'); });
     ss('ds_nl_vista', '1'); if (PILL) PILL.hidden = true;
     ev('preventivo', 'popup −' + SCONTO.perc + '% aperto' + (da ? ' (' + da + ')' : ''));
     setTimeout(function () { var i = BOX.querySelector('input[name=nome]'); if (i && window.innerWidth > 760) i.focus(); }, 350);
@@ -325,11 +332,11 @@
     if (!puoMostrare()) return;
     var fm = document.activeElement;   // sta scrivendo in un modulo: riproviamo tra poco
     if (fm && /^(INPUT|TEXTAREA|SELECT)$/.test(fm.tagName) && !(BOX && BOX.contains(fm))) { setTimeout(function () { prova(da); }, 4000); return; }
-    apri(da);
+    apri(da, window.innerWidth <= 760);
   }
   var attesa = 5000 + Math.floor(Math.random() * 2000);
   if (ATTIVO.popup && !iscritto()) {
-    setTimeout(function () { prova('dopo ' + Math.round(attesa / 1000) + ' s'); }, attesa);
+    setTimeout(function () { prova('dopo ' + Math.round(attesa / 1000) + ' s'); }, attesa);   /* su telefono si apre in versione mini */
     setInterval(pillolaSeServe, 2000);
   }
   function pillolaSeServe() {
