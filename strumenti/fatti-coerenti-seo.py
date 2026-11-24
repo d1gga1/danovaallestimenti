@@ -71,5 +71,16 @@ if 'dsnl-esp' not in open(JS, encoding='utf-8').read():
              "    " + CSS_V)
     sost(JS, CSS_V, CSS_N)
 
+# 4. LinkedIn (pagina aziendale creata il 24/11/2026): link nel footer accanto agli altri social e in llms.txt.
+#    Nello schema (sameAs) lo aggiunge ottimizza-seo.py (lista SOCIAL).
+LI = 'https://www.linkedin.com/company/danova-stand/'
+FB_LI = '<li><a href="https://www.facebook.com/profile.php?id=61594907955699" target="_blank" rel="noopener me">Facebook Danova Tech</a></li>'
+for f in glob.glob('**/index.html', recursive=True):
+    if f.startswith(('Claude outputs/', 'strumenti/', 'render/', 'private_area/')): continue
+    if LI in open(f, encoding='utf-8').read(): continue
+    sost(f, FB_LI, FB_LI + '\n        <li><a href="' + LI + '" target="_blank" rel="noopener me">LinkedIn Danova Stand</a></li>')
+if LI not in open('llms.txt', encoding='utf-8').read():
+    sost('llms.txt', 'Facebook https://www.facebook.com/profile.php?id=61594907955699', 'Facebook https://www.facebook.com/profile.php?id=61594907955699 · LinkedIn ' + LI)
+
 print('file cambiati:', len(set(cambi)))
 for c in sorted(set(cambi)): print('  ', c)

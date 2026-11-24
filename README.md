@@ -249,3 +249,9 @@ mobile, sitemap con gli alternate, `llms.txt` (blocco `<!--ds-fiere-lingue-->`).
   completo. Su computer invariato. Classe `.mini` in `assets/js/ds-conversioni.js`; per tornare al popup a tutto schermo
   anche su telefono, in `prova()` sostituire `apri(da, window.innerWidth <= 760)` con `apri(da)`.
   Attenzione: lo stesso file e' usato anche da danova-tech.com e danovacostruzioni.it (riportare la modifica la').
+
+## LinkedIn (24/11/2026)
+Pagina aziendale: https://www.linkedin.com/company/danova-stand/ (descrizione in più lingue, banner e logo in
+`Claude outputs/linkedin/`, fuori da git). Sul sito: `sameAs` dello schema (lista `SOCIAL` in `ottimizza-seo.py`),
+link "LinkedIn Danova Stand" nel footer accanto agli altri social e riga "Profili ufficiali" di llms.txt
+(sezione 4 di `fatti-coerenti-seo.py`). Le 42 pagine zh-hant delle fiere non hanno social nel footer: restano senza.

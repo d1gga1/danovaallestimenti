@@ -24,6 +24,7 @@ SOCIAL = [
     "https://www.instagram.com/danova_techh/",
     "https://www.tiktok.com/@danova.tech",
     "https://www.facebook.com/profile.php?id=61594907955699",
+    "https://www.linkedin.com/company/danova-stand/",
     # danova-tech.com non va in sameAs: e' la capogruppo (parentOrganization, vedi gruppo-danova.py)
 ]
 KNOWS = [
