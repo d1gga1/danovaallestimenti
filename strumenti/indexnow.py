@@ -8,10 +8,11 @@ Uso, DOPO aver pubblicato il sito (push su main e GitHub Pages aggiornato):
 
 La chiave e' il file 431f85a1f959c91d9e984e63689aa560.txt nella radice del sito: non cancellarlo.
 """
-import json, re, sys, urllib.request
+import json, os, re, sys, urllib.request
 HOST = "danovastand.com"
 KEY = "431f85a1f959c91d9e984e63689aa560"
-here = __file__.rsplit("/", 2)[0] if "/" in __file__ else "."
+# radice del sito = cartella sopra strumenti/, da qualunque cartella si lanci lo script
+here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if len(sys.argv) > 1:
     urls = ["https://" + HOST + (u if u.startswith("/") else "/" + u) for u in sys.argv[1:]]
 else:
