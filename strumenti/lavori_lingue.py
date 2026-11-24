@@ -61,7 +61,7 @@ X['venezia-arsenale-2026'] = dict(
         'In diesem Fall zwei Tage für Nivellierung, Teppich und Seitenpaneele, auf bereits verankerten Plattformen. Die Zeit hängt von Fläche, Zugang über das Wasser, Wetter und gewünschter Ausführung ab.'),
        ('Kann man auch bei Regen aufbauen?',
         'Ja, mit den nötigen Vorkehrungen: In Venedig haben wir teils im Regen gearbeitet und die Bühne pünktlich übergeben. Oberflächen werden auf trockenem Untergrund verlegt, deshalb planen wir einen Puffer im Zeitplan ein.')],
-  altri=[('/de/messebau-italien/', 'Messebau in Italien'), ('/de/leistungen/', 'Unsere Leistungen'),
+  altri=[('/de/messebau-italien/', 'Messebau in Italien'), ('/de/messebau-italien/#cosa', 'Unsere Leistungen'),
          ('/de/referenzen/', 'Alle Referenzen'), ('/de/kontakt/', 'Kontakt')]),
  es=dict(
   video_tit='El escenario encendido, la noche del 20 de noviembre',
@@ -108,7 +108,7 @@ X['venezia-arsenale-2026'] = dict(
         'En este caso, dos días de montaje para nivelación, moqueta y paneles laterales, sobre plataformas ya colocadas. Los plazos dependen de la superficie, los accesos por agua, el tiempo y los acabados que se pidan.'),
        ('¿Se puede montar también con lluvia?',
         'Sí, con las precauciones necesarias: en Venecia trabajamos en parte bajo la lluvia y entregamos el escenario a tiempo. Los acabados se colocan sobre superficie seca, por eso dejamos margen en el calendario.')],
-  altri=[('/es/montaje-stands-feriales-italia/', 'Montaje de stands en Italia'), ('/es/servicios/', 'Nuestros servicios'),
+  altri=[('/es/montaje-stands-feriales-italia/', 'Montaje de stands en Italia'), ('/es/montaje-stands-feriales-italia/#cosa', 'Nuestros servicios'),
          ('/es/trabajos-realizados/', 'Todos los trabajos realizados'), ('/es/contacto/', 'Contacto')]),
 )
 
@@ -162,7 +162,7 @@ X['medica-tunisia-2026'] = dict(
         'Ja: Dieser Pavillon war für tunesische Unternehmen. Wir antworten schriftlich in allen Sprachen, auch auf Französisch und Arabisch; am Telefon sprechen wir Italienisch, Englisch und Rumänisch.'),
        ('Was umfasst ein schlüsselfertiger Stand für eine Messe im Ausland?',
         'Planung, Konstruktionen und Wände, Grafik, Beleuchtung, Möbel und Vitrinen, Transport, Auf- und Abbau, mit einem einzigen Ansprechpartner. Das Angebot ist nach Positionen aufgeschlüsselt, so sieht man, was enthalten ist.')],
-  altri=[('/de/messebau-italien/', 'Messebau in Italien'), ('/de/leistungen/', 'Unsere Leistungen'),
+  altri=[('/de/messebau-italien/', 'Messebau in Italien'), ('/de/messebau-italien/#cosa', 'Unsere Leistungen'),
          ('/de/referenzen/', 'Alle Referenzen'), ('/de/kontakt/', 'Kontakt')]),
  es=dict(
   title='Pabellón de Túnez en MEDICA 2026 Düsseldorf | Danova Stand',
@@ -205,7 +205,7 @@ X['medica-tunisia-2026'] = dict(
         'Sí: este pabellón era para empresas tunecinas. Respondemos por escrito en todos los idiomas, también en francés y árabe; por teléfono hablamos italiano, inglés y rumano.'),
        ('¿Qué incluye un stand llave en mano para una feria en el extranjero?',
         'Proyecto, estructuras y paredes, gráficas, iluminación, mobiliario y vitrinas, transporte, montaje y desmontaje, con un único interlocutor. El presupuesto va partida por partida, así se ve qué está incluido.')],
-  altri=[('/es/montaje-stands-feriales-italia/', 'Montaje de stands en Italia'), ('/es/servicios/', 'Nuestros servicios'),
+  altri=[('/es/montaje-stands-feriales-italia/', 'Montaje de stands en Italia'), ('/es/montaje-stands-feriales-italia/#cosa', 'Nuestros servicios'),
          ('/es/trabajos-realizados/', 'Todos los trabajos realizados'), ('/es/contacto/', 'Contacto')]),
 )
 

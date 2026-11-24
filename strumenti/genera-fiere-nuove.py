@@ -64,6 +64,8 @@ def descrizione(f, s):
          f"grafica, impianti e montatori in fiera. Prossima edizione: {f['date']}.")
     if len(d) > 158:
         d = f"Stand per {f['nome']} a {s['q']}: progetto, produzione e montaggio. Prossima edizione: {f['date']}."
+    if len(d) > 160:  # 24/11/2026: nomi lunghi (es. "Hospitality – Il Salone dell'Accoglienza"): solo la prima parte
+        d = d.replace(f['nome'], f['nome'].split(" – ")[0])
     return d
 
 

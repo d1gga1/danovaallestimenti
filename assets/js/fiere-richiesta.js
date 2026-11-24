@@ -4,7 +4,7 @@
 (function(){
   var WA='393884706887', MAIL='info@danova-tech.com';
   var L=(document.documentElement.lang||'it').toLowerCase();
-  L = L.indexOf('zh-hant')===0 ? 'zht' : L.indexOf('zh')===0 ? 'zh' : L.indexOf('de')===0 ? 'de' : L.indexOf('fr')===0 ? 'fr' : L.indexOf('es')===0 ? 'es' : L.indexOf('it')===0 ? 'it' : 'en'; /* 24/11/2026: tedesco; le altre lingue in inglese */
+  L = L.indexOf('zh-hant')===0 ? 'zht' : L.indexOf('zh')===0 ? 'zh' : L.indexOf('de')===0 ? 'de' : L.indexOf('fr')===0 ? 'fr' : L.indexOf('es')===0 ? 'es' : L.indexOf('it')===0 ? 'it' : L.indexOf('pt')===0 ? 'pt' : L.indexOf('nl')===0 ? 'nl' : L.indexOf('pl')===0 ? 'pl' : 'en'; /* 24/11/2026: tedesco, portoghese, olandese, polacco; le altre lingue in inglese */
   var T={
     it:{head:'Richiesta stand dal sito danova-tech.com',fiera:'Fiera',mq:'Metri quadri',spazio:'Tipo di spazio',nome:'Nome',azienda:'Azienda',tel:'Telefono',note:'Note',pagina:'Pagina',subj:'Richiesta stand: ',
         e_fiera:'Indica la fiera a cui partecipi.',e_nome:'Inserisci nome e cognome.',e_azienda:"Inserisci il nome dell'azienda.",e_tel:'Inserisci un numero di telefono.',
@@ -26,6 +26,18 @@
         e_fiera:'Indica la feria en la que participas.',e_nome:'Indica tu nombre.',e_azienda:'Indica el nombre de la empresa.',e_tel:'Indica un número de teléfono.',
         e_tel2:'El número de teléfono parece incompleto.',e_mail:'El email no parece válido: corrígelo o deja el campo vacío.',
         ok:'¡Solicitud enviada! Te contactamos enseguida con las primeras ideas y un presupuesto.'},
+    pt:{head:'Pedido de stand pelo danovastand.com (página em português)',fiera:'Feira',mq:'Metros quadrados',spazio:'Tipo de espaço',nome:'Nome',azienda:'Empresa',tel:'Telefone',note:'Notas',pagina:'Página',subj:'Pedido de stand: ',
+        e_fiera:'Informe a feira da qual você vai participar.',e_nome:'Informe seu nome.',e_azienda:'Informe o nome da empresa.',e_tel:'Informe um número de telefone.',
+        e_tel2:'O número de telefone parece incompleto.',e_mail:'O e-mail não parece válido: corrija ou deixe o campo vazio.',
+        ok:'Pedido enviado! Entraremos em contato em breve com as primeiras ideias e um orçamento.'},
+    nl:{head:'Standaanvraag via danovastand.com (Nederlandse pagina)',fiera:'Beurs',mq:'Vierkante meters',spazio:'Type standplaats',nome:'Naam',azienda:'Bedrijf',tel:'Telefoon',note:'Opmerkingen',pagina:'Pagina',subj:'Standaanvraag: ',
+        e_fiera:'Vul de beurs in waaraan u deelneemt.',e_nome:'Vul uw naam in.',e_azienda:'Vul de naam van uw bedrijf in.',e_tel:'Vul een telefoonnummer in.',
+        e_tel2:'Het telefoonnummer lijkt onvolledig.',e_mail:'Het e-mailadres lijkt ongeldig: corrigeer het of laat het veld leeg.',
+        ok:'Aanvraag verzonden! Wij nemen snel contact met u op met de eerste ideeën en een offerte.'},
+    pl:{head:'Zapytanie o stoisko ze strony danovastand.com (wersja polska)',fiera:'Targi',mq:'Metry kwadratowe',spazio:'Rodzaj stoiska',nome:'Imię i nazwisko',azienda:'Firma',tel:'Telefon',note:'Uwagi',pagina:'Strona',subj:'Zapytanie o stoisko: ',
+        e_fiera:'Wpisz targi, w których bierzesz udział.',e_nome:'Wpisz imię i nazwisko.',e_azienda:'Wpisz nazwę firmy.',e_tel:'Wpisz numer telefonu.',
+        e_tel2:'Numer telefonu wygląda na niepełny.',e_mail:'Adres e-mail wygląda na niepoprawny: popraw go lub zostaw pole puste.',
+        ok:'Zapytanie wysłane! Wkrótce odezwiemy się z pierwszymi pomysłami i wyceną.'},
     zh:{head:'Stand request from danova-tech.com (中文页面)',fiera:'Fair / 展会',mq:'m² / 面积',spazio:'Space / 展位类型',nome:'Name / 姓名',azienda:'Company / 公司',tel:'Phone / 电话',note:'Notes / 备注',pagina:'Page',subj:'展台询价 Stand request: ',
         e_fiera:'请填写您参加的展会。',e_nome:'请填写您的姓名。',e_azienda:'请填写公司名称。',e_tel:'请填写电话号码。',
         e_tel2:'电话号码似乎不完整。',e_mail:'邮箱格式不正确：请修改或留空。',

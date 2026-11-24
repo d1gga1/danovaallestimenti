@@ -127,7 +127,7 @@ m+=testo("quando","Quando conviene il noleggio",None,
  [("Tutto incluso, se vuoi.","Trasporto, montaggio, smontaggio e ritiro."),
   ("Anche all'ultimo momento.","Accettiamo richieste urgenti, compatibilmente con la disponibilità del materiale."),
   ("Misto noleggio e proprietà.","Struttura a noleggio, grafiche e alcuni elementi tuoi.")])
-page(P,"Noleggio stand fieristici: affitto stand e arredi | Danova Tech",
+page(P,"Noleggio stand fieristici: stand completi | Danova Tech",
  "Noleggio stand fieristici preallestiti e modulari, arredi, luci, schermi LED, con trasporto e montaggio in fiera. In Italia e all'estero, anche last minute.",
  "Noleggio stand fieristici — Danova Tech","Stand preallestiti e modulari, arredi e tecnologia a noleggio, montati in fiera.",
  "Noleggio stand fieristici",m,[

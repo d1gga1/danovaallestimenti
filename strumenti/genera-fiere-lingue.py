@@ -105,6 +105,8 @@ def pagina(lang, f, t):
     desc = U["desc"].format(**fmt)
     if len(desc) > 158:
         desc = U["desc_corta"].format(**fmt)
+    if len(desc) > 160:  # 24/11/2026: nomi lunghi, solo la prima parte del nome
+        desc = U["desc_corta"].format(**dict(fmt, nome=nome.split(" – ")[0]))
     img, alt = f["img"], U["alt"].format(**fmt)
     p = leggi(U["modello"])
     # ---- head
