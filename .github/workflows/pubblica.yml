@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url || steps.deployment3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -37,7 +37,23 @@ jobs:
         with:
           path: _site
           include-hidden-files: true
+      # GitHub Pages a volte risponde "Deployment failed, try again later" (errore temporaneo dei suoi server):
+      # invece di fallire subito riproviamo altre due volte, a 1 e a 3 minuti di distanza.
       - id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Attesa prima del secondo tentativo
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+      - id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Attesa prima del terzo tentativo
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        run: sleep 120
+      - id: deployment3
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
         uses: actions/deploy-pages@v5
       # Avvisa subito Bing (ChatGPT search, Copilot), Yandex, Seznam e Naver delle pagine
       # cambiate in questo push, tramite IndexNow. Se fallisce il sito resta pubblicato.
