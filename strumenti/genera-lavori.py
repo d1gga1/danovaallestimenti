@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Genera la sezione LAVORI REALIZZATI (foto vere di cantiere) in italiano, francese e inglese.
+"""Genera la sezione LAVORI REALIZZATI (foto vere di cantiere) in italiano, francese, inglese, tedesco e spagnolo.
 
     python3 strumenti/genera-lavori.py
 
 Idempotente. Rilancialo dopo ogni migra-da-danovatech.py (prima di ottimizza-geo.py):
- - riscrive gli hub /lavori/, /fr/realisations/, /en/projects/ e le pagine dei singoli lavori;
+ - riscrive gli hub /lavori/, /fr/realisations/, /en/projects/, /de/referenzen/, /es/trabajos-realizados/ e le pagine dei singoli lavori;
  - aggiunge le pagine alla sitemap (se mancano);
  - rimette i link verso i lavori nelle pagine collegate (blocchi <!--ds-lavori-->);
  - aggiorna la sezione "Lavori realizzati" di llms.txt.
@@ -486,6 +486,39 @@ def gal_img_obj(lang):
 
 BOX_TIT = {'it': 'Lavoro recente', 'fr': 'Réalisation récente', 'en': 'Recent project'}
 
+# ---------------------------------------------------------------------------- tedesco e spagnolo
+# Testi e URL in strumenti/lavori_lingue.py (24/11/2026). Nuova lingua: aggiungila lì e in LINGUE.
+import lavori_lingue as _LL
+LINGUE = ('it', 'fr', 'en', 'de', 'es')
+MODELLI.update(_LL.MODELLI); LOCALE.update(_LL.LOCALE); HOME.update(_LL.HOME); HUB.update(_LL.HUB)
+T.update(_LL.T); HUB_TXT.update(_LL.HUB_TXT); GAL_TXT.update(_LL.GAL_TXT); BOX_TIT.update(_LL.BOX_TIT)
+IN_BREVE = {'it': 'In breve.', 'fr': 'En bref.', 'en': 'In short.', **_LL.IN_BREVE}
+for _L in LAVORI:
+    _x = _LL.X[_L['id']]
+    for _k in ('url', 'citazione_trad', 'citazione_chi', 'about', 'keywords', 'box'):
+        if _k in _x: _L.setdefault(_k, {}).update(_x[_k])
+    _L['luogo']['nome'].update(_x['luogo'])
+    _L['link_in'] = _L['link_in'] + _x['link_in']
+    for _lg in ('de', 'es'): _L[_lg] = _x[_lg]
+
+# Altre lingue: un file per lingua, strumenti/lavori_lingua_<lingua>.py (stessi campi, vedi lavori_lingua_zh.py).
+import glob as _glob, importlib as _imp
+_EXTRA = [_imp.import_module(os.path.basename(_f)[:-3]) for _f in sorted(_glob.glob(os.path.join(ROOT, 'strumenti', 'lavori_lingua_*.py')))]
+LINGUE = LINGUE + tuple(_m.LANG for _m in _EXTRA)
+HREFLANG = {_m.LANG: _m.HREFLANG for _m in _EXTRA}
+for _L in LAVORI: _L['_slug'] = _L['id']  # la lingua 'id' (indonesiano) sovrascrive la chiave 'id'
+for _m in _EXTRA:
+    _lg = _m.LANG
+    MODELLI[_lg] = _m.MODELLO; LOCALE[_lg] = _m.LOCALE; HOME[_lg] = _m.HOME; HUB[_lg] = _m.HUB
+    T[_lg] = _m.T; HUB_TXT[_lg] = _m.HUB_TXT; GAL_TXT[_lg] = _m.GAL_TXT; BOX_TIT[_lg] = _m.BOX_TIT; IN_BREVE[_lg] = _m.IN_BREVE
+    for _L in LAVORI:
+        _x = _m.X[_L['_slug']]
+        for _k in ('url', 'citazione_trad', 'citazione_chi', 'about', 'keywords', 'box'):
+            if _k in _x: _L.setdefault(_k, {})[_lg] = _x[_k]
+        _L['luogo']['nome'][_lg] = _x['luogo']
+        _L['link_in'] = _L['link_in'] + _x['link_in']
+        _L[_lg] = _x['testi']
+
 
 # ---------------------------------------------------------------------------- utilità
 def leggi(p): return open(p, encoding='utf-8').read()
@@ -545,11 +578,11 @@ def pagina(lang, urls, title, desc, og_img, og_alt, og_type, graph, main, publis
     head = re.sub(r'<title>.*?</title>', f'<title>{e(title)}</title>', head, flags=re.S)
     head = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{e(desc)}">', head)
     head = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', head)
-    alt = ''.join(f'<link rel="alternate" hreflang="{l}" href="{SITE}{urls[l]}">\n' for l in ('it', 'fr', 'en'))
+    alt = ''.join(f'<link rel="alternate" hreflang="{HREFLANG.get(l, l)}" href="{SITE}{urls[l]}">\n' for l in LINGUE)
     alt += f'<link rel="alternate" hreflang="x-default" href="{SITE}{urls["it"]}">\n'
     head = re.sub(r'(<link rel="alternate" hreflang="[^"]+" href="[^"]+">\n)+', alt, head, count=1)
     head = re.sub(r'<meta property="og:locale:alternate"[^>]*>\n', '', head)
-    altri_loc = ''.join(f'<meta property="og:locale:alternate" content="{LOCALE[l]}">\n' for l in ('it', 'fr', 'en') if l != lang)
+    altri_loc = ''.join(f'<meta property="og:locale:alternate" content="{LOCALE[l]}">\n' for l in LINGUE if l != lang)
     head = re.sub(r'(<meta property="og:locale" content=")[^"]*(">\n)', r'\g<1>' + LOCALE[lang] + r'\g<2>' + altri_loc.replace('\\', '\\\\'), head)
     rep = {'og:type': og_type, 'og:url': url, 'og:title': title.split(' | ')[0] + ' — Danova Stand', 'og:description': desc,
            'og:image': SITE + og_img, 'og:image:width': '1200', 'og:image:height': '630', 'og:image:alt': og_alt}
@@ -656,7 +689,7 @@ def genera_lavoro(L, lang):
             f'    <h1 data-rv="up">{t["h1"]}</h1>\n    <p class="lead" data-rv="up">{e(t["lead"])}</p>\n'
             f'    <div class="hero-cta" data-rv="up"><a href="#dt-scrivi" class="btn btn-p" data-mag><span class="sheen"></span><span class="lbl">{T[lang]["cta"]}</span></a>'
             f'<a href="#foto" class="btn btn-g" data-mag><span class="lbl">{passi}</span></a></div>\n  </div>\n' + hero + '</section>\n'
-            f'<section id="in-breve">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up"><p><b>{ {"it": "In breve.", "fr": "En bref.", "en": "In short."}[lang] }</b> {e(t["breve"])}</p></div>\n'
+            f'<section id="in-breve">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up"><p><b>{IN_BREVE[lang]}</b> {e(t["breve"])}</p></div>\n'
             f'    <h2 class="title" style="margin-top:34px;font-size:1.3rem">{T[lang]["scheda"]}</h2><dl class="lv-scheda" data-rv="up">{scheda}</dl>\n  </div>\n</section>\n'
             f'<section class="fr-foto-sec"><div class="wrap"><figure class="fr-foto" data-rv="up"><img src="{IMG}{L["hero"]}.webp" srcset="{srcset(L["hero"], hero_w)}" '
             f'sizes="(max-width: 1240px) calc(100vw - 44px), 1196px" width="1600" height="900" alt="{e(t["hero_alt"])}" loading="lazy" decoding="async" style="aspect-ratio:16/9">'
@@ -713,7 +746,7 @@ def genera_hub(lang):
             f'<section id="in-breve">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up"><p>{e(h["breve"])}</p></div>\n  </div>\n</section>\n'
             f'<section id="metodo">\n  <div class="wrap">\n    <div class="pg-testo" data-rv="up">' + ''.join(f'<p>{e(x)}</p>' for x in h['testo']) + '</div>\n  </div>\n</section>\n'
             f'<section id="lavori">\n  <div class="wrap">\n    <div class="fr-gal">\n{card}    </div>\n  </div>\n</section>\n' + galleria_html(lang) + '<!--CTA-->\n'
-            + altri_html(lang, [({'it': '/progetti-stand-fieristici/', 'fr': '/fr/standiste-salon-italie/', 'en': '/en/exhibition-stand-builder-italy/'}[lang], T[lang]['render'])]))
+            + altri_html(lang, [({'it': '/progetti-stand-fieristici/', 'fr': '/fr/standiste-salon-italie/', 'en': '/en/exhibition-stand-builder-italy/', 'de': '/de/messebau-italien/', 'es': '/es/montaje-stands-feriales-italia/'}.get(lang, HOME[lang]), T[lang]['render'])]))
     org = organizzazione(leggi(MODELLI[lang]))
     graph = [org,
              {'@type': 'CollectionPage', '@id': url + '#webpage', 'url': url, 'name': h['title'], 'description': h['desc'],
@@ -759,7 +792,7 @@ def sitemap(pagine):
     if 'xmlns:video=' not in s:
         s = s.replace('<urlset ', '<urlset xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" ', 1)
     for urls, imgs, data, V, L in pagine:
-        for lang in ('it', 'fr', 'en'):
+        for lang in LINGUE:
             loc = SITE + urls[lang]
             s = re.sub(r'  <url>\n    <loc>' + re.escape(loc) + r'</loc>.*?\n  </url>\n', '', s, flags=re.S)
             b = f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{data}</lastmod>\n'
@@ -768,7 +801,7 @@ def sitemap(pagine):
                 b += (f'    <video:video><video:thumbnail_loc>{SITE}{IMG}{V["file"]}.jpg</video:thumbnail_loc>'
                       f'<video:title>{e(L[lang]["video_nome"])}</video:title><video:description>{e(L[lang]["video_txt"])}</video:description>'
                       f'<video:content_loc>{SITE}{IMG}{V["file"]}.mp4</video:content_loc><video:duration>{V["durata"]}</video:duration></video:video>\n')
-            b += ''.join(f'    <xhtml:link rel="alternate" hreflang="{l}" href="{SITE}{urls[l]}"/>\n' for l in ('it', 'fr', 'en'))
+            b += ''.join(f'    <xhtml:link rel="alternate" hreflang="{HREFLANG.get(l, l)}" href="{SITE}{urls[l]}"/>\n' for l in LINGUE)
             b += f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{urls["it"]}"/>\n  </url>\n'
             s = s.replace('</urlset>', b + '</urlset>')
     return scrivi('sitemap.xml', s) if s != s0 else False
@@ -781,7 +814,9 @@ def llms():
         blocco += f"- [{it['crumb']}]({SITE}{L['url']['it']}) ({L['pubblicato']}): {it['breve']}"
         if L.get('citazione'): blocco += f" Commento del cliente (email, in inglese): \"{L['citazione']}\""
         blocco += (f"\n  - English: [{en['crumb']}]({SITE}{L['url']['en']}): {en['breve']}\n"
-                   f"  - Français : [{L['fr']['crumb']}]({SITE}{L['url']['fr']})\n")
+                   f"  - Français : [{L['fr']['crumb']}]({SITE}{L['url']['fr']})\n"
+                   f"  - Deutsch: [{L['de']['crumb']}]({SITE}{L['url']['de']})\n"
+                   f"  - Español: [{L['es']['crumb']}]({SITE}{L['url']['es']})\n")
     nomi = ", ".join(G["nome"]["it"] for G in GALLERIA)
     nfoto = sum(len(G["foto"]) for G in GALLERIA)
     blocco += (f"- Altri {len(GALLERIA)} stand costruiti e montati in fiera, con {nfoto} foto vere divise per cliente: {nomi}. "
@@ -798,12 +833,12 @@ def llms():
 def main():
     out = {}
     pag_sitemap = []
-    for lang in ('it', 'fr', 'en'):
+    for lang in LINGUE:
         p = HUB[lang].strip('/') + '/index.html'
         out[p] = scrivi(p, genera_hub(lang))
     pag_sitemap.append((HUB, [IMG + L['hero'] + '.webp' for L in LAVORI] + [f'{IMG}{f[0]}-1200.webp' for G in GALLERIA for f in G['foto']], max(L['pubblicato'] for L in LAVORI), None, None))
     for L in LAVORI:
-        for lang in ('it', 'fr', 'en'):
+        for lang in LINGUE:
             p = L['url'][lang].strip('/') + '/index.html'
             out[p] = scrivi(p, genera_lavoro(L, lang))
         pag_sitemap.append((L['url'], [src_max(n, w) for n, w, h in L['foto']], L['pubblicato'], L.get('video'), L))

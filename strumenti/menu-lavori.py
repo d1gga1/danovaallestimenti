@@ -13,7 +13,7 @@ import os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SALTA = {'.git', 'private_area', 'strumenti', 'Claude outputs', '_google_business', 'nuove_foto_newstand', 'assets', 'node_modules'}
 
-HUB = {'it': '/lavori/', 'fr': '/fr/realisations/'}
+HUB = {'it': '/lavori/', 'fr': '/fr/realisations/', 'de': '/de/referenzen/', 'es': '/es/trabajos-realizados/', 'zh': '/zh/projects/', 'zh-Hans': '/zh/projects/', 'ur': '/ur/projects/', 'hi': '/hi/projects/', 'ar': '/ar/projects/', 'tr': '/tr/referanslar/', 'pl': '/pl/realizacje/', 'pt': '/pt/projetos/', 'nl': '/nl/projecten/', 'zh-Hant': '/zh-hant/projects/', 'zh-hant': '/zh-hant/projects/', 'sv': '/sv/projects/', 'cs': '/cs/projects/', 'hu': '/hu/projects/', 'ro': '/ro/projects/', 'bg': '/bg/projects/', 'hr': '/hr/projects/', 'el': '/el/projects/', 'sq': '/sq/projects/', 'ru': '/ru/projects/', 'uk': '/uk/projects/', 'he': '/he/projects/', 'fa': '/fa/projects/', 'bn': '/bn/projects/', 'pa': '/pa/projects/', 'gu': '/gu/projects/', 'ta': '/ta/projects/', 'ja': '/ja/projects/', 'ko': '/ko/projects/', 'id': '/id/projects/', 'ms': '/ms/projects/', 'vi': '/vi/projects/', 'th': '/th/projects/'}
 HUB_DEF = '/en/projects/'
 ETICHETTA = {
     'it': 'I nostri lavori', 'en': 'Our work', 'fr': 'Nos réalisations', 'de': 'Referenzen',

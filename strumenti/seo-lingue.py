@@ -51,7 +51,7 @@ PAGINE = {
 for l in 'pt sv pl cs hu ro bg hr el sq ru uk he fa bn pa gu ta ja ko id ms vi th'.split():
     PAGINE[f'{l}/europe-exhibition-stand'] = EUROPA
 
-HUB = {'fr': '/fr/realisations/'}
+HUB = {'fr': '/fr/realisations/', 'de': '/de/referenzen/', 'es': '/es/trabajos-realizados/', 'zh': '/zh/projects/', 'zh-Hans': '/zh/projects/', 'ur': '/ur/projects/', 'hi': '/hi/projects/', 'ar': '/ar/projects/', 'tr': '/tr/referanslar/', 'pl': '/pl/realizacje/', 'pt': '/pt/projetos/', 'nl': '/nl/projecten/', 'zh-Hant': '/zh-hant/projects/', 'zh-hant': '/zh-hant/projects/', 'sv': '/sv/projects/', 'cs': '/cs/projects/', 'hu': '/hu/projects/', 'ro': '/ro/projects/', 'bg': '/bg/projects/', 'hr': '/hr/projects/', 'el': '/el/projects/', 'sq': '/sq/projects/', 'ru': '/ru/projects/', 'uk': '/uk/projects/', 'he': '/he/projects/', 'fa': '/fa/projects/', 'bn': '/bn/projects/', 'pa': '/pa/projects/', 'gu': '/gu/projects/', 'ta': '/ta/projects/', 'ja': '/ja/projects/', 'ko': '/ko/projects/', 'id': '/id/projects/', 'ms': '/ms/projects/', 'vi': '/vi/projects/', 'th': '/th/projects/'}
 HUB_DEF = '/en/projects/'
 
 STILE = ('<style>.dsfv-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}'

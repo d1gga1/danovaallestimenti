@@ -227,3 +227,14 @@ query/pagine con `python3 strumenti/search-console/match_gsc.py . strumenti/sear
 - Date: `conf=False` = solo mese previsto. Quando escono le date ufficiali, aggiornare `date`, `start`, `end`, `conf` e rilanciare.
 - **Rilanciarlo dopo ogni `migra-da-danovatech.py`** (riscrive calendario e hub), prima di `ottimizza-geo.py`.
 - Traduzioni nelle altre lingue: non ancora fatte.
+
+## Pagine fiera tradotte (24/11/2026)
+`python3 strumenti/genera-fiere-lingue.py` (idempotente; lo lancia anche `genera-fiere-nuove.py` alla fine) crea le versioni
+tradotte delle 91 fiere nuove e collega tutte le versioni della stessa fiera: hreflang nell'head, selettore lingua desktop e
+mobile, sitemap con gli alternate, `llms.txt` (blocco `<!--ds-fiere-lingue-->`).
+- Testi di interfaccia per lingua in `strumenti/traduzioni/ui.py` (slug, titoli, etichette, modulo, blocco legno, nomi di
+  citta' e paesi). Testi delle fiere in `strumenti/traduzioni/fiere_<lingua>.py`, una voce per fiera (chiave = `k`).
+- Indirizzi: inglese `/en/<fiera>-stand-builder/`, tedesco `/de/messestand-<fiera>/`.
+- Fatte: tutte le 91 fiere in inglese e tedesco (testi in `fiere_en*.py` e `fiere_de*.py`, divisi in 4 file per lingua).
+  Somiglianza media fra pagine della stessa lingua: 0,13 (EN) e 0,17 (DE). Nuova lingua: voce in `ui.py` + `fiere_<lingua>*.py`.
+- `assets/js/fiere-richiesta.js`: aggiunto il tedesco; le lingue senza testi usano l'inglese (prima l'italiano).

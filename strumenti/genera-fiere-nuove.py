@@ -316,6 +316,8 @@ def genera(f, modello, graph_tpl, json_block):
     resto = re.sub(r"SPS[ -]?Italia|sps-italia|spsitalia", "", pulita, flags=re.I)
     if resto != pulita:
         raise SystemExit(f"{f['k']}: nel modello resta un riferimento a SPS Italia, controllare")
+    # hreflang e selettore verso le versioni tradotte (strumenti/genera-fiere-lingue.py)
+    p = LINGUE.aggiorna_head_e_selettore(p, LINGUE.versioni(f["k"]), "it")
     out = os.path.join(RADICE, f"stand-{f['k']}", "index.html")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     vecchio = open(out, encoding="utf-8").read() if os.path.exists(out) else None
@@ -328,6 +330,11 @@ def genera(f, modello, graph_tpl, json_block):
         return True
     return False
 
+
+import importlib.util  # noqa: E402
+_spec = importlib.util.spec_from_file_location("genera_fiere_lingue", os.path.join(RADICE, "strumenti", "genera-fiere-lingue.py"))
+LINGUE = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(LINGUE)
 
 modello = open(MODELLO, encoding="utf-8").read()
 mj = re.search(r'<script type="application/ld\+json">(.*?)</script>', modello, re.S)
@@ -455,3 +462,6 @@ def collega():
 
 if not solo:
     collega()
+    # pagine tradotte: le rigenera e rimette hreflang e selettore sulle pagine italiane appena riscritte
+    import subprocess
+    subprocess.run([sys.executable, os.path.join(RADICE, "strumenti", "genera-fiere-lingue.py")], check=True)
