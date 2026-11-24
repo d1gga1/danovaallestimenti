@@ -200,3 +200,16 @@ che Danova Stand e' certificata ISO. **Nessun prezzo** pubblicato per montaggio 
 - `gruppo-danova.py` (riga Danova Stand) e `genera-chi-siamo.py`: orari aggiornati. Attenzione: gruppo-danova.py non e' piu'
   identico a quello degli altri due repository per questa riga.
 - `genera-lavori.py` rilancia alla fine anche `fatti-danova.py`.
+
+## Search Console: pagine e rinforzi (24/11/2026)
+Analisi, dati e risposte di Devid in `strumenti/search-console/` (`analisi-search-console-2026-11-24.md`; rifare il confronto
+query/pagine con `python3 strumenti/search-console/match_gsc.py . strumenti/search-console/gsc_query_2026-11.txt`).
+- Testi delle 11 pagine nuove in `strumenti/pagine_search_console.py`, letti da `genera-pagine-servizi.py` (7 IT: noleggio arredi,
+  rendering, chiavi in mano, showroom, Varese-Como-Novara, Svizzera, Sicilia) e `genera-pagine-estere.py` (de/messebau-hannover,
+  nl/standbouw-medica-dusseldorf, en/...-venice, en/...-genoa). Entrambi ora accettano i nomi delle pagine da rigenerare come argomenti.
+- `strumenti/ottimizza-search-console.py` (idempotente, dopo `ottimizza-keyword.py`): title/description EIMA, EICMA, Fieracavalli,
+  calendari meccanica e turismo, idee, modulari, pagine EN delle citta'; blocchi `<!--ds-gsc-->` prima delle FAQ; link interni;
+  selettore lingua delle pagine estere nuove; testi olandesi (rispondiamo per iscritto in olandese); sitemap e llms.txt.
+- `attiva-area-privata.py` ora scrive `ds-live.js?v=3` (prima riportava tutte le pagine a v=1).
+- ATTENZIONE: rilanciare `genera-pagine-ur-hi.py` toglie da ur/ e hi/ il menu "I nostri lavori" e il selettore a 36 lingue:
+  il 24/11 quelle pagine sono state lasciate com'erano.

@@ -117,11 +117,11 @@ PAGINE = [
           ("Ambiente en Heimtextil – Frankfurt", "Consumentengoederen en woontextiel, jaarlijks in januari en februari.", "/en/ambiente-frankfurt-stand-builder/")],
   warum_title='Waarom een <span class="grad">Italiaanse standbouwer</span>',
   warum=["Wij bouwen al meer dan twintig jaar beursstands en hebben er meer dan 300 opgebouwd, in Italië en in elf Europese landen. Productie en houtbewerking gebeuren in onze partnerwerkplaatsen in Noord-Italië, met Italiaanse afwerking tegen een concurrerende prijs.",
-         "U krijgt één aanspreekpunt, een gespecificeerde offerte en een vaste planning. Wij communiceren per e-mail in het Engels; uw aanvraag in het Nederlands is welkom."],
+         "U krijgt één aanspreekpunt, een gespecificeerde offerte en een vaste planning. Wij schrijven u in het Nederlands; telefonisch spreken wij Engels en Italiaans."],
   faq=[("Wat kost een beursstand in Düsseldorf of Keulen?", "Dat hangt af van oppervlakte, bouwwijze en uitrusting. De meeste klanten investeren tussen 10.000 en 30.000 euro voor een complete stand. U ontvangt binnen 24 werkuren een gratis, gedetailleerde offerte."),
        ("Bouwen jullie ook in Duitsland, Frankrijk en Spanje?", "Ja. Wij hebben stands gebouwd in Italië en in elf Europese landen, met transport vanuit Italië en onze eigen bouwploegen."),
        ("Hoe vroeg moeten we aanvragen?", "Voor een stand op maat het liefst drie tot vier maanden voor de beurs. Voor modulaire stands volstaan vaak enkele weken."),
-       ("In welke taal communiceren jullie?", "Per e-mail in het Engels, binnen 24 werkuren. U mag ons gerust in het Nederlands schrijven."),
+       ("In welke taal communiceren jullie?", "Schriftelijk (e-mail, WhatsApp) in het Nederlands, binnen 24 uur. Telefonisch spreken wij Engels en Italiaans."),
        ("Kunnen jullie ons eigen ontwerp bouwen?", "Ja. Wij controleren uw ontwerp op het technische reglement van de beurs, stellen zo nodig aanpassingen voor en bouwen het.")],
   cta_title="Een beursstand nodig?", cta_text="Vertel ons beurs, data en oppervlakte. U ontvangt binnen 24 werkuren een gratis, gedetailleerde offerte.",
   altri_title="Meer pagina's", faq_title="Veelgestelde vragen",
@@ -129,7 +129,7 @@ PAGINE = [
          ("/en/medica-stand-builder/", "English: MEDICA stand builder"), ("/en/euroshop-stand-builder/", "English: EuroShop stand builder")],
   service="Standbouw voor beurzen in Duitsland en Europa", area="Europa",
   form=dict(nome="Naam en bedrijf", email="E-mail", tel="Telefoon (optioneel)", msg="Beurs, data, oppervlakte, wensen", btn="Aanvraag versturen",
-            note='Wij antwoorden binnen 24 werkuren. Liever bellen? <a href="tel:+393884706887">+39 388 470 6887</a> (Engels of Italiaans).'),
+            note='Wij antwoorden binnen 24 uur, ook schriftelijk in het Nederlands. Liever bellen? <a href="tel:+393884706887">+39 388 470 6887</a> (Engels of Italiaans).'),
  ),
  dict(
   path="nl/standbouw-italie", lang="nl", locale="nl_NL", modello="en/exhibition-stand-builder-milan",
@@ -157,11 +157,11 @@ PAGINE = [
           ("MIDO en MICAM – Milaan", "Brillen en schoenen, jaarlijks in februari.", "/en/mido-stand-builder/")],
   warum_title='Waarom een <span class="grad">standbouwer ter plaatse</span>',
   warum=["Met een Italiaanse standbouwer vermijdt u lange transporten en dure reizen voor uw eigen ploeg. Wij kennen de beurscomplexen, de opbouwtijden en de technische reglementen, en wij dienen het project voor u in.",
-         "U krijgt één aanspreekpunt, een gespecificeerde offerte en een vaste planning. Wij communiceren per e-mail in het Engels; uw aanvraag in het Nederlands is welkom."],
+         "U krijgt één aanspreekpunt, een gespecificeerde offerte en een vaste planning. Wij schrijven u in het Nederlands; telefonisch spreken wij Engels en Italiaans."],
   faq=[("Wat kost een beursstand in Italië?", "Dat hangt af van oppervlakte, bouwwijze en uitrusting. De meeste klanten investeren tussen 10.000 en 30.000 euro voor een complete stand. U ontvangt binnen 24 werkuren een gratis, gedetailleerde offerte."),
        ("Moeten we zelf naar Italië komen voor de opbouw?", "Nee. Wij bouwen de stand op en u komt bij de opening. Tijdens de opbouw sturen we foto's van de voortgang."),
        ("Hoe vroeg moeten we aanvragen?", "Voor de Salone del Mobile en Vinitaly het liefst drie tot vier maanden vooraf: bouwploegen en materialen zijn dan schaars."),
-       ("In welke taal communiceren jullie?", "Per e-mail in het Engels, binnen 24 werkuren. U mag ons gerust in het Nederlands schrijven."),
+       ("In welke taal communiceren jullie?", "Schriftelijk (e-mail, WhatsApp) in het Nederlands, binnen 24 uur. Telefonisch spreken wij Engels en Italiaans."),
        ("Kunnen jullie ons eigen ontwerp bouwen?", "Ja. Wij controleren uw ontwerp op het technische reglement van de beurs, stellen zo nodig aanpassingen voor en bouwen het.")],
   cta_title="Exposeren in Italië?", cta_text="Vertel ons beurs, data en oppervlakte. U ontvangt binnen 24 werkuren een gratis, gedetailleerde offerte.",
   altri_title="Meer pagina's", faq_title="Veelgestelde vragen",
@@ -169,9 +169,15 @@ PAGINE = [
          ("/en/exhibition-stand-builder-milan/", "English: stand builder in Milan"), ("/en/exhibiting-at-trade-fairs-in-italy/", "English: exhibiting at trade fairs in Italy")],
   service="Standbouw voor beurzen in Italië", area="Italia",
   form=dict(nome="Naam en bedrijf", email="E-mail", tel="Telefoon (optioneel)", msg="Beurs, data, oppervlakte, wensen", btn="Aanvraag versturen",
-            note='Wij antwoorden binnen 24 werkuren. Liever bellen? <a href="tel:+393884706887">+39 388 470 6887</a> (Engels of Italiaans).'),
+            note='Wij antwoorden binnen 24 uur, ook schriftelijk in het Nederlands. Liever bellen? <a href="tel:+393884706887">+39 388 470 6887</a> (Engels of Italiaans).'),
  ),
 ]
+
+# Pagine dall'analisi Search Console del 24/11/2026
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pagine_search_console import PAGINE_ESTERE
+PAGINE += PAGINE_ESTERE
 
 FORM_DE = dict(nome="Name und Firma", email="E-Mail", tel="Telefon (optional)", msg="Was brauchen Sie?", btn="Anfrage senden",
                note='Wir antworten innerhalb von 24 Arbeitsstunden. Lieber telefonieren? Rufen Sie <a href="tel:+393884706887">+39 388 470 6887</a> an (Italienisch oder Englisch).')
@@ -285,7 +291,7 @@ def ld_json(p, org):
     g = [org,
          {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"], "inLanguage": p["lang"],
           "isPartOf": {"@id": SITO + "/#website"}, "about": {"@id": SITO + "/#organization"}, "breadcrumb": {"@id": url + "#breadcrumb"},
-          "datePublished": OGGI, "dateModified": OGGI,
+          "datePublished": p.get("oggi", OGGI), "dateModified": p.get("oggi", OGGI),
           "primaryImageOfPage": {"@type": "ImageObject", "url": f"{SITO}/assets/img/stand/{p['img']}.webp"}},
          {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": crumbs},
          {"@type": "Service", "@id": url + "#service", "name": p["service"], "serviceType": "Exhibition stand design and construction",
@@ -321,7 +327,10 @@ def build(p):
 
 
 def main():
+    solo = set(sys.argv[1:])  # opzionale: rigenera solo i percorsi indicati (es. de/messebau-hannover)
     for p in PAGINE:
+        if solo and p["path"] not in solo:
+            continue
         d = os.path.join(ROOT, p["path"]); os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(build(p))
         print("scritta", p["path"])

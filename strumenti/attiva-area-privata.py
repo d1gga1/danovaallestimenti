@@ -34,7 +34,7 @@ if SITO != 'stand':
     print('Copiato assets/js/ds-live.js in', REPO)
 MAIL = {'stand': 'info@danova-tech.com', 'costruzioni': 'info@danovacostruzioni.it', 'tech': 'info@danova-tech.com'}[SITO]
 SALTA = {'.git', '.github', 'strumenti', 'private_area', '_google_business', 'Claude outputs', 'node_modules', 'seo-tools', 'social', 'assets'}
-TAG = '<script src="/assets/js/ds-live.js?v=1" defer></script>'
+TAG = '<script src="/assets/js/ds-live.js?v=3" defer></script>'  # v=3: versione pubblicata (non tornare a v=1)
 PROG_FILE = os.path.join(QUI, 'strumenti', 'supabase', 'progetto.txt')
 
 

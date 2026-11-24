@@ -1,15 +1,15 @@
 {
  "allestimenti-eventi-showroom-negozi/index.html": {
-  "data": "2026-11-23",
-  "hash": "dcd19ce44059c9319d6d3a5206b2b18588613712"
+  "data": "2026-11-24",
+  "hash": "9cedf3f7024ed727154186855860047679e11566"
  },
  "allestimenti-eventi/index.html": {
-  "data": "2026-11-23",
-  "hash": "bf43f08abaf1b7a52edbd8f303c0d8afce3e8c6f"
+  "data": "2026-11-24",
+  "hash": "afd5aaf5e1c4c6a5e087f2d8d0c511766a174cbb"
  },
  "allestimenti-fieristici-bari/index.html": {
-  "data": "2026-11-23",
-  "hash": "819cbe6b73b80517633ee6b6d963ecf80ed2cf68"
+  "data": "2026-11-24",
+  "hash": "be77abdaec652262f8c13136a473f52d55cb8464"
  },
  "allestimenti-fieristici-bergamo/index.html": {
   "data": "2026-11-23",
@@ -36,36 +36,36 @@
   "hash": "ee661df3c34995094882028285dec73ac524d912"
  },
  "allestimenti-fieristici-estero/index.html": {
-  "data": "2026-11-23",
-  "hash": "9b7c8cd779de1145f4a6fcb0b288b0f69d9d73fc"
+  "data": "2026-11-24",
+  "hash": "84d7ac4e7787108f07d5e8a7fce548e20a173646"
  },
  "allestimenti-fieristici-firenze/index.html": {
-  "data": "2026-11-23",
-  "hash": "fdcf0c8dda9ef02382ddf280eb7b30858c63cee2"
+  "data": "2026-11-24",
+  "hash": "8d2f63e688d456b47075cc3aea85e58e6185f862"
  },
  "allestimenti-fieristici-genova/index.html": {
-  "data": "2026-11-23",
-  "hash": "8197a879e0473ddd304373b1417c3c7b79caca4b"
+  "data": "2026-11-24",
+  "hash": "61f4e7a17e8a669efeb4911bc7d64ba84ee798b3"
  },
  "allestimenti-fieristici-germania/index.html": {
-  "data": "2026-11-23",
-  "hash": "f34528e63e7fbf2dc8f84f03f455a137dc95e80f"
+  "data": "2026-11-24",
+  "hash": "fa60cdc32a0dabe2fb52eb9db117bab2d574ed51"
  },
  "allestimenti-fieristici-lombardia/index.html": {
-  "data": "2026-11-23",
-  "hash": "9585dd48e97d501e89c899e5be920ca014311fc3"
+  "data": "2026-11-24",
+  "hash": "8fb085259a2d527b1de3017a1c162603da7ba174"
  },
  "allestimenti-fieristici-longarone/index.html": {
   "data": "2026-11-23",
   "hash": "9ddccbe97e5f8a0a07283258696dce20e1c745fb"
  },
  "allestimenti-fieristici-milano/index.html": {
-  "data": "2026-11-23",
-  "hash": "674631525117f2a1dbca300092918f0d44b26ede"
+  "data": "2026-11-24",
+  "hash": "59ba7931910e946065cdd6750e942d07e2c271ff"
  },
  "allestimenti-fieristici-napoli/index.html": {
-  "data": "2026-11-23",
-  "hash": "36f6e790e969b93e98b17e98d8080c3bb9e2e95f"
+  "data": "2026-11-24",
+  "hash": "3056a5e2a03ff673e4067bfc7c34e0654ed53f83"
  },
  "allestimenti-fieristici-padova/index.html": {
   "data": "2026-11-23",
@@ -91,6 +91,14 @@
   "data": "2026-11-23",
   "hash": "0cb42881d5f7992aba30a24b16f14655e329697b"
  },
+ "allestimenti-fieristici-sicilia/index.html": {
+  "data": "2026-11-24",
+  "hash": "ea09c07b1c2f163f78498cf22d043144167a3f5f"
+ },
+ "allestimenti-fieristici-svizzera/index.html": {
+  "data": "2026-11-24",
+  "hash": "da172b8a01352b6bdc664c34fa82c7b8d955f702"
+ },
  "allestimenti-fieristici-torino/index.html": {
   "data": "2026-11-23",
   "hash": "77415d43fb466385cc420b413b72f1c49574bc67"
@@ -103,13 +111,17 @@
   "data": "2026-11-23",
   "hash": "b311a9338918833f011d793b428c97b37ba8f97f"
  },
+ "allestimenti-fieristici-varese/index.html": {
+  "data": "2026-11-24",
+  "hash": "499efb2ec1d38403c286d64c484a574602a47112"
+ },
  "allestimenti-fieristici-veneto/index.html": {
   "data": "2026-11-23",
   "hash": "484bc2592be1119930fa47467dd426044cd086e9"
  },
  "allestimenti-fieristici-venezia/index.html": {
-  "data": "2026-11-23",
-  "hash": "931a1536e34409eb97852cc1e6ce7a8b8d22febe"
+  "data": "2026-11-24",
+  "hash": "27b7130f08f380410cef6bdd3ea2fcc3d1b2ad70"
  },
  "allestimenti-fieristici-verona/index.html": {
   "data": "2026-11-23",
@@ -124,8 +136,12 @@
   "hash": "452b5c9ec0e769ee2f544294cdade625dea777b0"
  },
  "allestimento-negozi/index.html": {
-  "data": "2026-11-23",
-  "hash": "057227b7a43e1329225d7eddef01a5ec1bef3bd6"
+  "data": "2026-11-24",
+  "hash": "a587dd6d0240ffed9f6906c2ecbb41ddfd7702e3"
+ },
+ "allestimento-showroom/index.html": {
+  "data": "2026-11-24",
+  "hash": "b1dea97e327efe37c0ac308bbf971c4720466206"
  },
  "allestimento-vetrine/index.html": {
   "data": "2026-11-23",
@@ -172,8 +188,8 @@
   "hash": "0fed17f9b24d385fa2c0a4c9cd14cc466d9663df"
  },
  "calendario-fiere-meccanica-e-industria/index.html": {
-  "data": "2026-11-23",
-  "hash": "a468e8fc54c2499119b1e9514d1ddccfd96bedfd"
+  "data": "2026-11-24",
+  "hash": "12ff8cbc7420b4a9ecc84e4cf9017f16d0d0cbdd"
  },
  "calendario-fiere-milano/index.html": {
   "data": "2026-11-23",
@@ -192,8 +208,8 @@
   "hash": "7d42e721bcd02a18bd18c62717ec7098e15bcf89"
  },
  "calendario-fiere-turismo/index.html": {
-  "data": "2026-11-23",
-  "hash": "594a8ae0baa545992d8dd2fc463603206a1b938b"
+  "data": "2026-11-24",
+  "hash": "84cbe1441bab665ae3a87ace47aa9d9269d4ebfa"
  },
  "calendario-fiere-verona/index.html": {
   "data": "2026-11-23",
@@ -243,13 +259,17 @@
   "data": "2026-11-23",
   "hash": "1702a400e7aeedb7c8c1176a740c834dfe1a761e"
  },
+ "de/messebau-hannover/index.html": {
+  "data": "2026-11-24",
+  "hash": "027e6d06009956eaa0a47c13900ee1894b47cb0d"
+ },
  "de/messebau-italien/index.html": {
-  "data": "2026-11-23",
-  "hash": "48bb8d5d4042b0a24fd26020e35ca2d91fdc920c"
+  "data": "2026-11-24",
+  "hash": "81981b72b5e2ee3f12e7893a28ea6205ce66c5e0"
  },
  "de/messebau-mailand/index.html": {
-  "data": "2026-11-23",
-  "hash": "f91b8c95b920876c237143d9fe844c384a1c0937"
+  "data": "2026-11-24",
+  "hash": "d164756133a8edec7cb471846636cfa950715d3d"
  },
  "de/messebau-verona/index.html": {
   "data": "2026-11-23",
@@ -320,16 +340,16 @@
   "hash": "06217208bb601f956d683379b1b1b26a8e6cc00a"
  },
  "en/exhibition-stand-builder-bologna/index.html": {
-  "data": "2026-11-23",
-  "hash": "473b3dc6b233549e636ba600a2039572616f46a9"
+  "data": "2026-11-24",
+  "hash": "e968a6e51a81eed773331930cf7376da21f4af49"
  },
  "en/exhibition-stand-builder-europe/index.html": {
-  "data": "2026-11-23",
-  "hash": "02b9f0ef85480aa83601e069edd6821f2b502d88"
+  "data": "2026-11-24",
+  "hash": "0986b422c5d25666c2f2f9488bc98c47ab074938"
  },
  "en/exhibition-stand-builder-florence/index.html": {
-  "data": "2026-11-23",
-  "hash": "0b3d6b654ce78d48ae07a37118216b16e3d5bbcd"
+  "data": "2026-11-24",
+  "hash": "4961730abcb8b1ff81a9cec93e701513792fc6b9"
  },
  "en/exhibition-stand-builder-for-bangladeshi-companies/index.html": {
   "data": "2026-11-23",
@@ -347,25 +367,33 @@
   "data": "2026-11-23",
   "hash": "9fd6e3dc52bfb42d96dff68c3361e9c72bc8e139"
  },
+ "en/exhibition-stand-builder-genoa/index.html": {
+  "data": "2026-11-24",
+  "hash": "cc02b385af22affb405eb72be7e139ea2e53d170"
+ },
  "en/exhibition-stand-builder-italy/index.html": {
-  "data": "2026-11-23",
-  "hash": "04d9dc396b2ad78153e6ac230c30da970580f4ac"
+  "data": "2026-11-24",
+  "hash": "b81ff332708f179ce5a766b1d25d3c17234d559b"
  },
  "en/exhibition-stand-builder-milan/index.html": {
-  "data": "2026-11-23",
-  "hash": "2e3703269942ff5dda74537074c5b3c2432dbd72"
+  "data": "2026-11-24",
+  "hash": "84d1a7510a879f2c9d7b54491945f56408e2239b"
  },
  "en/exhibition-stand-builder-parma/index.html": {
-  "data": "2026-11-23",
-  "hash": "f6e8c849867bae1646d3566eabeb2b877a3f209c"
+  "data": "2026-11-24",
+  "hash": "f9d7bdd2741fe3cea62ec7e4b14ca7770553baf0"
  },
  "en/exhibition-stand-builder-rimini/index.html": {
-  "data": "2026-11-23",
-  "hash": "9e13f1defc75be99f7389359068a0b47ce3fe0f2"
+  "data": "2026-11-24",
+  "hash": "85a9b2900e18ad43d4a5a685af0580c35536988f"
  },
  "en/exhibition-stand-builder-riva-del-garda/index.html": {
   "data": "2026-11-23",
   "hash": "64300af2cb990958076082921f8767afabc92cb0"
+ },
+ "en/exhibition-stand-builder-venice/index.html": {
+  "data": "2026-11-24",
+  "hash": "77e065a3051549148564623fe3779bb83b42b944"
  },
  "en/exhibition-stand-builder-verona/index.html": {
   "data": "2026-11-23",
@@ -388,8 +416,8 @@
   "hash": "7e869728b7c01f17a985eade93eb6c4f427730da"
  },
  "en/hannover-messe-stand-builder/index.html": {
-  "data": "2026-11-23",
-  "hash": "2ce630b72b5932f7bdb314d4eb510502197eeddc"
+  "data": "2026-11-24",
+  "hash": "a616c7b63cb28eaf85c973332ef8d4a62f936860"
  },
  "en/heimtextil-stand-builder/index.html": {
   "data": "2026-11-23",
@@ -440,8 +468,8 @@
   "hash": "cb80192d2a864b618f66106295e0b69c13ab9df3"
  },
  "en/medica-stand-builder/index.html": {
-  "data": "2026-11-23",
-  "hash": "02bc3a38e01c35992346a54ebb9ae6d909042e9b"
+  "data": "2026-11-24",
+  "hash": "e8829c30a541017283586f162ab304c959464e16"
  },
  "en/metstrade-stand-builder/index.html": {
   "data": "2026-11-23",
@@ -548,8 +576,8 @@
   "hash": "d20aaf6a0484ae8db8184b3325995d077d7e5602"
  },
  "espositori-desk-totem-per-fiere/index.html": {
-  "data": "2026-11-23",
-  "hash": "4a037408bdae4e530c6e14682703c524e5b73ffa"
+  "data": "2026-11-24",
+  "hash": "5d0054f67e7b734821ae72481c09dc08562b301e"
  },
  "espositori-pubblicitari/index.html": {
   "data": "2026-11-23",
@@ -692,8 +720,8 @@
   "hash": "58d4eb538b1f1ba2fa1b9fd389ee8e76d83fe9a3"
  },
  "idee-stand-fieristici/index.html": {
-  "data": "2026-11-23",
-  "hash": "54869ba5e67910e270cacef9dfb19a36bba8c493"
+  "data": "2026-11-24",
+  "hash": "6f3d767c6ddbb899ff319fde46c76c88db5acfcb"
  },
  "index.html": {
   "data": "2026-11-23",
@@ -720,8 +748,8 @@
   "hash": "9fce8a8b2106ee2a883158cbe1467775d3809c58"
  },
  "ledwall-e-illuminazione-stand/index.html": {
-  "data": "2026-11-23",
-  "hash": "6c0b61f1fe9891bd98c4b639fb768e6eeff79677"
+  "data": "2026-11-24",
+  "hash": "5be2a750cb050051e0a65de48d175079f665ae2d"
  },
  "montaggio-stand-fieristici/index.html": {
   "data": "2026-11-23",
@@ -740,16 +768,24 @@
   "hash": "679e7e6ded7623d33a5069c45c23a77fe1167320"
  },
  "nl/standbouw-beurzen-duitsland-europa/index.html": {
-  "data": "2026-11-23",
-  "hash": "770bbb049da5e23af0df855be4bcba95baa19675"
+  "data": "2026-11-24",
+  "hash": "18296c4103e234e73aab5fc36a2d694935caa17b"
  },
  "nl/standbouw-italie/index.html": {
-  "data": "2026-11-23",
-  "hash": "f1d28de0c809d155d81aa941f7941cbbd1e7b18a"
+  "data": "2026-11-24",
+  "hash": "f1f87c3dcded093f38546bc55fc9adf41aa58205"
+ },
+ "nl/standbouw-medica-dusseldorf/index.html": {
+  "data": "2026-11-24",
+  "hash": "c1e7cee3eb12835d9cf73575ff7b29fde14128c6"
+ },
+ "noleggio-arredi-stand-fieristici/index.html": {
+  "data": "2026-11-24",
+  "hash": "057efd82fc2e56b7dcf41ab236cca8911384d051"
  },
  "noleggio-stand-fieristici/index.html": {
-  "data": "2026-11-23",
-  "hash": "f1c357fe636e16d679f71b7d9e289d23fa566ad0"
+  "data": "2026-11-24",
+  "hash": "d8f56dc66a2a14f19976e7fc30ea1f5e2ea78f67"
  },
  "pa/europe-exhibition-stand/index.html": {
   "data": "2026-11-23",
@@ -764,12 +800,12 @@
   "hash": "33bb92057a45b6271b061c5035a230a88ae4c8e8"
  },
  "progettazione-stand-fieristici/index.html": {
-  "data": "2026-11-23",
-  "hash": "1ef8fb965d6fcab34e4d236c75f1f8966b5dcaec"
+  "data": "2026-11-24",
+  "hash": "6404b17c4062858d989034af9b51d1fb163cbb60"
  },
  "progetti-stand-fieristici/index.html": {
-  "data": "2026-11-23",
-  "hash": "9034e7eee5d57546419ec2d79326abd17f55df14"
+  "data": "2026-11-24",
+  "hash": "99f676dd1d759bc0f75199bfbf4a29dc552ce299"
  },
  "pt/europe-exhibition-stand/index.html": {
   "data": "2026-11-23",
@@ -778,6 +814,10 @@
  "quanto-costa-uno-stand-fieristico/index.html": {
   "data": "2026-11-23",
   "hash": "e6741e973b7b5a7d71c478bbab7351a5372b5ec1"
+ },
+ "rendering-stand-fieristici/index.html": {
+  "data": "2026-11-24",
+  "hash": "265987ecf022e22d3d0368754a002847ccc24d1e"
  },
  "ro/europe-exhibition-stand/index.html": {
   "data": "2026-11-23",
@@ -788,8 +828,8 @@
   "hash": "fddd9063666cca46737ab05f904ef94ba207c41b"
  },
  "servizi/allestimenti-fieristici/index.html": {
-  "data": "2026-11-23",
-  "hash": "3c36c18dc525148f62cfbedca69d63f3ac169ddf"
+  "data": "2026-11-24",
+  "hash": "783f255294eec9dc5862d26cf0621098b1c277d0"
  },
  "sicurezza-stand-fieristici/index.html": {
   "data": "2026-11-23",
@@ -800,8 +840,8 @@
   "hash": "f59ab15819afeea1a5a0734e90952288b3e2e3c3"
  },
  "stand-a-due-piani/index.html": {
-  "data": "2026-11-23",
-  "hash": "5e5705059d3fa83cc0e1e09da798bb33bb314d77"
+  "data": "2026-11-24",
+  "hash": "88ad0d357f4c5db3bd48392ef2ba23491ffd3c86"
  },
  "stand-a-isola/index.html": {
   "data": "2026-11-23",
@@ -831,6 +871,10 @@
   "data": "2026-11-23",
   "hash": "d53d36b4d53327c4cb7ab8528dfaf6263c3c215d"
  },
+ "stand-chiavi-in-mano/index.html": {
+  "data": "2026-11-24",
+  "hash": "7e2d99632c4def0d4c68ab000c3de746c3b7f1d2"
+ },
  "stand-cibus/index.html": {
   "data": "2026-11-23",
   "hash": "7d27d6a421a3851d558e276c0a27e9656f8a98a7"
@@ -848,12 +892,12 @@
   "hash": "2fc2a1353a818ab8d43adec27de77b457e0f02e7"
  },
  "stand-eicma/index.html": {
-  "data": "2026-11-23",
-  "hash": "bbdf7a7ffec768891dcf6d09400fe23e6c8dfc01"
+  "data": "2026-11-24",
+  "hash": "9a645e2d6391a26398f3739bd8f1641faff5b899"
  },
  "stand-eima/index.html": {
-  "data": "2026-11-23",
-  "hash": "291572cb962e9c1064fc56250342175337ed85db"
+  "data": "2026-11-24",
+  "hash": "1aef31f052fcbc768333425126a42301a08e336c"
  },
  "stand-electronica/index.html": {
   "data": "2026-11-23",
@@ -872,8 +916,8 @@
   "hash": "820703efa78c2e1d342db0e3e5770a01321baedd"
  },
  "stand-fieracavalli/index.html": {
-  "data": "2026-11-23",
-  "hash": "5ef5f3198677172bd671d7485f9a8063ccf7b184"
+  "data": "2026-11-24",
+  "hash": "020466e3ef22c37d90a6a7c7d65a7e0b4f6038ce"
  },
  "stand-fieragricola/index.html": {
   "data": "2026-11-23",
@@ -892,12 +936,12 @@
   "hash": "711833638098e016d6dff174ccb4c5e7f725c1c9"
  },
  "stand-fieristici-ecosostenibili/index.html": {
-  "data": "2026-11-23",
-  "hash": "28f2e445a58ef91d5813428a00c4b001ad91327f"
+  "data": "2026-11-24",
+  "hash": "dcc56c2919ec6433935cb773e8d4996545866107"
  },
  "stand-fieristici-food-e-vino/index.html": {
-  "data": "2026-11-23",
-  "hash": "000f08ace07ad46d841feece98913dbd78854ce2"
+  "data": "2026-11-24",
+  "hash": "63b3df919f5d451a3be9d4986c91efd50d0a7a12"
  },
  "stand-fieristici-meccanica-e-industria/index.html": {
   "data": "2026-11-23",
@@ -916,8 +960,8 @@
   "hash": "0f02f8d076643035ca710e39842e22ac5506a5c4"
  },
  "stand-fieristici-su-misura/index.html": {
-  "data": "2026-11-23",
-  "hash": "06c8465362424092a4b5843182c358a5cdfde7b3"
+  "data": "2026-11-24",
+  "hash": "c475db920f617118fc5356a19fe9b9c4fd9d25dd"
  },
  "stand-fitur/index.html": {
   "data": "2026-11-23",
@@ -928,8 +972,8 @@
   "hash": "bc4d2d19388d90ab410674aad4e71507cce7e2dd"
  },
  "stand-hannover-messe/index.html": {
-  "data": "2026-11-23",
-  "hash": "209f5b9de6b7644b388acb0bd2fc6eef0c3b2068"
+  "data": "2026-11-24",
+  "hash": "fca98fa1de0805496714895fb4e7335b2ac70fb7"
  },
  "stand-heimtextil/index.html": {
   "data": "2026-11-23",
@@ -984,8 +1028,8 @@
   "hash": "f2f298f4e746401807c75fe412d3b6842044d1fc"
  },
  "stand-medica/index.html": {
-  "data": "2026-11-23",
-  "hash": "1f2f8afe20aa13ef3f3d29ee30f7cb1f2d06001a"
+  "data": "2026-11-24",
+  "hash": "a06e1161358035602e82d43c8df51eb2be7cac2e"
  },
  "stand-metstrade/index.html": {
   "data": "2026-11-23",
@@ -1000,8 +1044,8 @@
   "hash": "b41b4ef9860898e612f32a64e3fded5c81b6bcf8"
  },
  "stand-modulari/index.html": {
-  "data": "2026-11-23",
-  "hash": "1b56dde59c358ba7d5a7a8efa85076f5c5b7d55c"
+  "data": "2026-11-24",
+  "hash": "692409340f76907f27579efa5f322c0835765330"
  },
  "stand-mwc-barcellona/index.html": {
   "data": "2026-11-23",
@@ -1012,8 +1056,8 @@
   "hash": "0332ec57f9bc4a0c72141b200657728d2c37222e"
  },
  "stand-preallestiti/index.html": {
-  "data": "2026-11-23",
-  "hash": "d5074542d62690c8581d8b34bb4407cf2102ba43"
+  "data": "2026-11-24",
+  "hash": "d77b5b30434c895ed0faac7e0961739db48de700"
  },
  "stand-prowein/index.html": {
   "data": "2026-11-23",
@@ -1024,12 +1068,12 @@
   "hash": "4878ea4ab84ba59221fd125ef9e487a935d8b54b"
  },
  "stand-salone-del-mobile/index.html": {
-  "data": "2026-11-23",
-  "hash": "a138280395b84b8a6acd45720ada353dec718929"
+  "data": "2026-11-24",
+  "hash": "b856f36bef967ebaeacbc6ab881e0f63376bac25"
  },
  "stand-salone-nautico-genova/index.html": {
-  "data": "2026-11-23",
-  "hash": "4fa3e95c88dcb8cf1c273a9a7450e4ee8946115a"
+  "data": "2026-11-24",
+  "hash": "703655c61bd2fb649f625c0839a0be2b5b840a05"
  },
  "stand-samuexpo/index.html": {
   "data": "2026-11-23",
@@ -1064,8 +1108,8 @@
   "hash": "c2c1c3dd902d45591215aafbb96310d0a6bbf24c"
  },
  "stand-vicenzaoro/index.html": {
-  "data": "2026-11-23",
-  "hash": "6027563aae8a4d0d77bea5c2696307deee93a046"
+  "data": "2026-11-24",
+  "hash": "5b0d249b954ce5a00ab3a1b9f5f956d9be3056e0"
  },
  "stand-vinitaly/index.html": {
   "data": "2026-11-23",

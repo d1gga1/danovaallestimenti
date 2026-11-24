@@ -463,6 +463,14 @@ PAGINE = [
 ]
 
 
+# Pagine dall'analisi Search Console del 24/11/2026 (testi in strumenti/pagine_search_console.py)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pagine_search_console import PAGINE_IT
+PAGINE += PAGINE_IT
+
+HUB = ("/allestimenti-eventi-showroom-negozi/", "Allestimenti per eventi, showroom, negozi e mostre", "Eventi, showroom, negozi e mostre")
+
+
 def cards_html(cards):
     out = []
     for i, (t, p) in enumerate(cards, 1):
@@ -477,6 +485,8 @@ def lista_html(items):
 def build(p, tpl, legno, cta_form, footer_after_main, head_before_ld, head_after_ld, body_before_main):
     slug, url = p["slug"], f"{SITO}/{p['slug']}/"
     img = p["img"]
+    oggi = p.get("oggi", OGGI)
+    par_url, par_nome, par_breve = p.get("parent", HUB)
     w, h = webp_size(os.path.join(ROOT, "assets/img/stand", img + ".webp"))
     imgurl = f"{SITO}/assets/img/stand/{img}.webp"
 
@@ -509,12 +519,12 @@ def build(p, tpl, legno, cta_form, footer_after_main, head_before_ld, head_after
     nodes = [org,
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": p["title"], "description": p["desc"],
          "isPartOf": {"@id": SITO + "/#website"}, "breadcrumb": {"@id": url + "#breadcrumb"}, "inLanguage": "it",
-         "datePublished": OGGI, "dateModified": OGGI, "primaryImageOfPage": {"@id": imgurl + "#img"},
+         "datePublished": oggi, "dateModified": oggi, "primaryImageOfPage": {"@id": imgurl + "#img"},
          "about": {"@id": url + "#service"}, "image": {"@id": imgurl + "#img"},
          "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", "#in-breve p"]}},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": SITO + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Allestimenti per eventi, showroom, negozi e mostre", "item": SITO + "/allestimenti-eventi-showroom-negozi/"},
+            {"@type": "ListItem", "position": 2, "name": par_nome, "item": SITO + par_url},
             {"@type": "ListItem", "position": 3, "name": p["crumb"]}]},
         {"@type": "Service", "@id": url + "#service", "name": p["service"], "serviceType": p["service_type"],
          "description": p["breve"], "provider": {"@id": SITO + "/#organization"}, "url": url,
@@ -541,7 +551,7 @@ def build(p, tpl, legno, cta_form, footer_after_main, head_before_ld, head_after
     main = f'''<main id="main">
 
 <div class="wrap pg-crumbs">
-  <a href="/">Home</a><em>/</em><a href="/allestimenti-eventi-showroom-negozi/">Eventi, showroom, negozi e mostre</a><em>/</em>{e(p["crumb"])}
+  <a href="/">Home</a><em>/</em><a href="{par_url}">{e(par_breve)}</a><em>/</em>{e(p["crumb"])}
 </div>
 
 <section class="pg-hero">

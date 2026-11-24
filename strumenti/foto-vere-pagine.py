@@ -38,6 +38,14 @@ PAGINE = {
     'stand-fitur/index.html': ('it', [('telangana-tourism', 1), ('uttar-pradesh-tourism', 2), ('rajasthan-tourism', 1), ('telangana-tourism', 3)]),
     'chi-siamo/index.html': ('it', [('asfour-crystal', 1), ('fabtech', 1), ('polska-poland-tastes-good', 2), ('telangana-tourism', 1)]),
     'allestimenti-fieristici-estero/index.html': ('it', [('telangana-tourism', 1), ('polska-poland-tastes-good', 2), ('fabtech', 1), ('arama-benet', 1)]),
+    # pagine nate da Search Console (24/11/2026)
+    'stand-chiavi-in-mano/index.html': ('it', [('asfour-crystal', 1), ('fabtech', 1), ('arama-benet', 1), ('telangana-tourism', 1)]),
+    'rendering-stand-fieristici/index.html': ('it', [('fabtech', 2), ('asfour-crystal', 3), ('telangana-tourism', 2), ('triveni-turbines-refurb', 1)]),
+    'noleggio-arredi-stand-fieristici/index.html': ('it', [('asfour-crystal', 5), ('applied-nutrition', 1), ('polska-poland-tastes-good', 2), ('arama-benet', 2)]),
+    'allestimento-showroom/index.html': ('it', [('asfour-crystal', 2), ('arama-benet', 1), ('wrp-wind-trading', 3), ('gsb-helmets', 1)]),
+    'allestimenti-fieristici-varese/index.html': ('it', [('fabtech', 1), ('plastona', 1), ('talos-performance', 1), ('topsun', 1)]),
+    'allestimenti-fieristici-svizzera/index.html': ('it', [('telangana-tourism', 1), ('fabtech', 1), ('asfour-crystal', 1), ('polska-poland-tastes-good', 2)]),
+    'allestimenti-fieristici-sicilia/index.html': ('it', [('polska-poland-tastes-good', 2), ('applied-nutrition', 1), ('telangana-tourism', 1), ('arama-benet', 1)]),
 }
 
 TXT = {
