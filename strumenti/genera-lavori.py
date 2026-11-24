@@ -523,12 +523,18 @@ def organizzazione(modello):
     return {'@id': SITE + '/#organization'}
 
 
+# Tutte le lingue del selettore, nello stesso ordine delle altre pagine del sito.
+# Le lingue senza una versione di questa pagina aprono la versione inglese (come la voce di menu "I nostri lavori").
+LINGUE_SELETTORE = [('it', 'IT'), ('en', 'EN'), ('de', 'DE'), ('fr', 'FR'), ('es', 'ES'), ('pt', 'PT'), ('nl', 'NL'), ('sv', 'SV'), ('pl', 'PL'), ('cs', 'CS'), ('hu', 'HU'), ('ro', 'RO'), ('bg', 'BG'), ('hr', 'HR'), ('el', 'EL'), ('sq', 'SQ'), ('ru', 'RU'), ('uk', 'UK'), ('tr', 'TR'), ('ar', 'ع'), ('he', 'HE'), ('fa', 'FA'), ('ur', 'UR'), ('hi', 'HI'), ('bn', 'BN'), ('pa', 'PA'), ('gu', 'GU'), ('ta', 'TA'), ('zh-Hans', '简体'), ('zh-Hant', '繁體'), ('ja', 'JA'), ('ko', 'KO'), ('id', 'ID'), ('ms', 'MS'), ('vi', 'VI'), ('th', 'TH')]
+
+
 def lang_links(urls, lang, cls):
-    nomi = {'it': 'IT', 'en': 'EN', 'fr': 'FR'}
     righe = []
-    for l in ('it', 'en', 'fr'):
+    for code, etichetta in LINGUE_SELETTORE:
+        l = {'zh-Hans': 'zh', 'zh-Hant': 'zh-hant'}.get(code, code)
+        href = urls.get(l) or urls['en']
         cur = ' aria-current="page"' if l == lang else ''
-        righe.append(f'<a href="{urls[l]}" hreflang="{l}"{cur}>{nomi[l]}</a>')
+        righe.append(f'<a href="{href}" hreflang="{code}"{cur}>{etichetta}</a>')
     return f'<{cls}>\n        ' + '\n        '.join(righe) + '\n      '
 
 
