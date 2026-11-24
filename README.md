@@ -213,3 +213,17 @@ query/pagine con `python3 strumenti/search-console/match_gsc.py . strumenti/sear
 - `attiva-area-privata.py` ora scrive `ds-live.js?v=3` (prima riportava tutte le pagine a v=1).
 - ATTENZIONE: rilanciare `genera-pagine-ur-hi.py` toglie da ur/ e hi/ il menu "I nostri lavori" e il selettore a 36 lingue:
   il 24/11 quelle pagine sono state lasciate com'erano.
+
+## 91 pagine nuove "stand-<fiera>" (24/11/2026)
+`python3 strumenti/genera-fiere-nuove.py` (idempotente) crea le pagine `/stand-<fiera>/` di 91 fiere in Italia e in Europa
+(BAU, ISM, interzum, ITB, Autopromotec, TTG, MCE, Klimahouse, ACHEMA, drupa, ISE, JEC, Art Basel...).
+- Testi in `strumenti/dati_fiere_nuove.py`, `_2` (Italia), `_3` (Germania), `_4` (Francia, Spagna, NL, UK, CH, CZ): una voce per
+  fiera con presentazione, chi la visita, esigenze dello stand, tempi, 3 FAQ proprie, servizi, link interni. `exp` non c'e':
+  nessuna pagina dice "abbiamo gia' allestito"; aggiungere la frase a mano dove e' vero.
+- Modello: `stand-sps-italia/index.html` (head, menu, footer). Le sezioni uguali in tutte le pagine sono state ridotte apposta
+  (niente schede generiche ne' "come lavoriamo") per tenere basse le somiglianze fra pagine: media 0,17 (5-gram Jaccard).
+- Collega le pagine: sitemap, `llms.txt` (blocco `<!--ds-fiere-nuove-->`), nome cliccabile + "Scheda stand" nel calendario,
+  sezione "Stand per le fiere di ..." negli hub citta'/paese/estero (blocco `<!--ds-fiere-nuove-->`).
+- Date: `conf=False` = solo mese previsto. Quando escono le date ufficiali, aggiornare `date`, `start`, `end`, `conf` e rilanciare.
+- **Rilanciarlo dopo ogni `migra-da-danovatech.py`** (riscrive calendario e hub), prima di `ottimizza-geo.py`.
+- Traduzioni nelle altre lingue: non ancora fatte.
