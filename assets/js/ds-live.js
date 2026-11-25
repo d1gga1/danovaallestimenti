@@ -1,5 +1,5 @@
 /* Danova — statistiche visite per l'area privata danovastand.com/private_area/ (solo uso interno).
-   STESSO FILE su danovastand.com, danovacostruzioni.it e danova-tech.com: il sito si riconosce dal dominio.
+   STESSO FILE su danovastand.com, danovacostruzioni.it, danova-tech.com e newstandsallestimenti.com: il sito si riconosce dal dominio.
    Stesso sistema di pandooragroup.it (pd-live.js), con database Supabase e funzione "ds".
    Per tutti: conteggi anonimi (pagine viste, provenienza, dispositivo, zona approssimativa; nessun indirizzo IP salvato).
    Solo per chi accetta il banner: clic, sezioni lette, moduli iniziati / inviati / lasciati a metà (mai quello che si scrive).
@@ -21,8 +21,8 @@
   if (/[?&]dslive=no\b/.test(q)) set('ds_live_off', '1');
   if (/[?&]dslive=si\b/.test(q)) del('ds_live_off');
   if (get('ds_live_off') || navigator.webdriver) return;
-  var SITI = { 'danovastand.com': 'stand', 'danovacostruzioni.it': 'costruzioni', 'danova-tech.com': 'tech' };
-  var NOMI = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech' };
+  var SITI = { 'danovastand.com': 'stand', 'danovacostruzioni.it': 'costruzioni', 'danova-tech.com': 'tech', 'newstandsallestimenti.com': 'newstand' };
+  var NOMI = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech', newstand: 'Newstands' };
   var DOMINIO = location.hostname.replace(/^www\./, '');
   var SITO = window.DS_SITO || SITI[DOMINIO] || '';
   if (!SITO || (!window.DS_LIVE_BASE && !SITI[DOMINIO])) return;   // niente statistiche in locale o in anteprima
@@ -448,7 +448,7 @@
   }
 
   /* ───────── più richieste: popup −3% newsletter, fascia preventivo, fumetto WhatsApp (ds-conversioni.js) ───────── */
-  if (SITO) try { var cv = document.createElement('script'); cv.src = '/assets/js/ds-conversioni.js?v=3'; cv.defer = true; (document.head || document.documentElement).appendChild(cv); } catch (e) {}
+  if (SITO && SITO !== 'newstand') try { var cv = document.createElement('script'); cv.src = '/assets/js/ds-conversioni.js?v=3'; cv.defer = true; (document.head || document.documentElement).appendChild(cv); } catch (e) {}
 
   /* ───────── banner cookie (statistiche dettagliate) ─────────
      Senza consenso restano solo i conteggi anonimi. La scelta vale 6 mesi. */
@@ -483,7 +483,7 @@
       'border:1px solid rgba(255,217,122,.28);border-radius:14px;padding:16px 18px;font:14px/1.5 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.45)';
     if (window.innerWidth < 760) box.style.cssText += ';left:10px;right:10px;bottom:calc(84px + env(safe-area-inset-bottom));max-width:none';   // sopra la barra contatti mobile
     var bt = 'cursor:pointer;border-radius:999px;padding:9px 18px;font:600 14px Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;';
-    box.innerHTML = '<p style="margin:0 0 12px">' + ck[0] + ' <a href="' + ck[4] + '" style="color:#ffe49f;text-decoration:underline">' + ck[3] + '</a></p>' +
+    box.innerHTML = '<p style="margin:0 0 12px">' + ck[0] + (SITO === 'newstand' ? '' : ' <a href="' + ck[4] + '" style="color:#ffe49f;text-decoration:underline">' + ck[3] + '</a>') + '</p>' +
       '<div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap">' +
       '<button type="button" data-c="0" style="' + bt + 'background:transparent;color:#e9edf7;border:1px solid rgba(255,255,255,.3)">' + ck[2] + '</button>' +
       '<button type="button" data-c="1" style="' + bt + 'background:#FFC93C;color:#0b0b0b;border:1px solid #FFC93C">' + ck[1] + '</button></div>';

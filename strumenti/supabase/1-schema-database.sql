@@ -68,7 +68,7 @@ create index if not exists i_r_creato on public.richieste (creato);
 create index if not exists i_r_stato on public.richieste (stato);
 create index if not exists i_r_vis on public.richieste (visitatore);
 
--- più siti nello stesso database: stand / costruzioni / tech
+-- più siti nello stesso database: stand / costruzioni / tech / newstand
 alter table public.sessioni add column if not exists sito text;
 alter table public.eventi add column if not exists sito text;
 alter table public.richieste add column if not exists sito text;

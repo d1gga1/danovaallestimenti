@@ -15,7 +15,7 @@
   var CL = { nuova: 'ricevuto', contattato: 'produzione', preventivo: 'spedito', acquisita: 'consegnato', persa: 'annullato' };
   var badge = function (s) { return '<span class="st st-' + (CL[s] || 'ricevuto') + '">' + esc(STATI[s] || s) + '</span>'; };
   var NOME = (window.DSSITO || {}).nome && window.DSSITO.id ? window.DSSITO.nome : 'Danova';
-  var NOMI_S = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech' };
+  var NOMI_S = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech', newstand: 'Newstands' };
   var MSG = {
     it: function (n, f, b) { return 'Buongiorno' + (n ? ' ' + n : '') + ', sono di ' + b + ': abbiamo ricevuto la sua richiesta' + (f ? ' per ' + f : '') + ' dal nostro sito. Quando possiamo sentirci per parlarne e prepararle il preventivo?'; },
     en: function (n, f, b) { return 'Hello' + (n ? ' ' + n : '') + ', this is ' + b + ': we received your request' + (f ? ' for ' + f : '') + ' from our website. When can we talk about it and prepare your quote?'; },

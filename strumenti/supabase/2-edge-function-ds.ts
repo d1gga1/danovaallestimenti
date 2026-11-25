@@ -16,7 +16,7 @@ import postgres from "npm:postgres@3.4.4";
 
 /* ======================= impostazioni ======================= */
 /* i siti collegati: nome breve → dominio */
-const SITI: Record<string, string> = { stand: "danovastand.com", costruzioni: "danovacostruzioni.it", tech: "danova-tech.com" };
+const SITI: Record<string, string> = { stand: "danovastand.com", costruzioni: "danovacostruzioni.it", tech: "danova-tech.com", newstand: "newstandsallestimenti.com" };
 function sitoDi(x: unknown, req?: Request) {
   const s = String(x ?? "");
   if (SITI[s]) return s;
@@ -27,7 +27,7 @@ function sitoDi(x: unknown, req?: Request) {
   return "stand";
 }
 const CFG = {
-  origini: (Deno.env.get("DS_ORIGINI") || "https://danovastand.com,https://www.danovastand.com,https://danovacostruzioni.it,https://www.danovacostruzioni.it,https://danova-tech.com,https://www.danova-tech.com").split(",").map((s) => s.trim()),
+  origini: (Deno.env.get("DS_ORIGINI") || "https://danovastand.com,https://www.danovastand.com,https://danovacostruzioni.it,https://www.danovacostruzioni.it,https://danova-tech.com,https://www.danova-tech.com,https://newstandsallestimenti.com,https://www.newstandsallestimenti.com").split(",").map((s) => s.trim()),
   contatto: "info@danova-tech.com",
   segreto: Deno.env.get("DS_SEGRETO") || "",
   admin_password: Deno.env.get("ADMIN_PASSWORD") || "",

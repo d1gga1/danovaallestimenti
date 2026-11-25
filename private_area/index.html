@@ -33,7 +33,7 @@
 <header class="top">
   <div class="brand"><span class="brand-mark">D</span><div><b id="ds-nome">DANOVA STAND</b><small>Visitatori del sito</small></div></div>
   <label class="ds-siti" title="Scegli il sito"><select id="ds-sito" aria-label="Sito">
-    <option value="stand">Danova Stand</option><option value="costruzioni">Danova Costruzioni</option><option value="tech">Danova Tech</option><option value="">Tutti i siti</option>
+    <option value="stand">Danova Stand</option><option value="costruzioni">Danova Costruzioni</option><option value="tech">Danova Tech</option><option value="newstand">Newstands</option><option value="">Tutti i siti</option>
   </select></label>
   <nav class="tabs" role="tablist">
     <button role="tab" data-tab="live" class="on"><span class="dot"></span>Live</button>
@@ -186,9 +186,9 @@
 (function () {
   var BASE = 'https://hqodsztwzcofdsunnpxa.supabase.co/functions/v1/ds/admin';   // impostato da strumenti/attiva-area-privata.py
   var K = 'dsAdmT';
-  /* sito scelto (Danova Stand / Costruzioni / Tech / tutti): va in ogni richiesta alla funzione */
-  var NOMI = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech', '': 'Tutti i siti' };
-  var DOMINI = { stand: 'danovastand.com', costruzioni: 'danovacostruzioni.it', tech: 'danova-tech.com' };
+  /* sito scelto (Danova Stand / Costruzioni / Tech / Newstands / tutti): va in ogni richiesta alla funzione */
+  var NOMI = { stand: 'Danova Stand', costruzioni: 'Danova Costruzioni', tech: 'Danova Tech', newstand: 'Newstands', '': 'Tutti i siti' };
+  var DOMINI = { stand: 'danovastand.com', costruzioni: 'danovacostruzioni.it', tech: 'danova-tech.com', newstand: 'newstandsallestimenti.com' };
   var sito = 'stand'; try { var sv = localStorage.getItem('dsSito'); if (sv !== null && sv in NOMI) sito = sv; } catch (e) {}
   window.DSSITO = { id: sito, nome: NOMI[sito], dominio: DOMINI[sito] || '', domini: DOMINI };
   var tok = function () { try { return localStorage.getItem(K) || ''; } catch (e) { return ''; } };

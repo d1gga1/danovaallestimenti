@@ -6,6 +6,7 @@ Una sola dashboard per tre siti: Danova Stand (questo), Danova Costruzioni, Dano
     python3 strumenti/attiva-area-privata.py abcdefghijklmn  # in più collega il progetto Supabase (codice del progetto)
     python3 strumenti/attiva-area-privata.py --sito costruzioni ~/danova_costruzioni   # collega un altro sito
     python3 strumenti/attiva-area-privata.py --sito tech ~/Desktop/dantech/danovatech
+    python3 strumenti/attiva-area-privata.py --sito newstand ~/newstand
   Per gli altri siti copia anche assets/js/ds-live.js (lo stesso file per tutti: il sito si riconosce dal dominio).
 
 Cosa fa:
@@ -23,7 +24,7 @@ args = sys.argv[1:]
 SITO = 'stand'
 if '--sito' in args:
     i = args.index('--sito'); SITO = args[i + 1]; del args[i:i + 2]
-    if SITO not in ('stand', 'costruzioni', 'tech'): sys.exit('--sito deve essere stand, costruzioni o tech')
+    if SITO not in ('stand', 'costruzioni', 'tech', 'newstand'): sys.exit('--sito deve essere stand, costruzioni, tech o newstand')
 REPO = QUI
 if SITO != 'stand':
     if not args: sys.exit('Indica la cartella del sito, es. --sito costruzioni ~/danova_costruzioni')
@@ -32,7 +33,7 @@ if SITO != 'stand':
     src = open(os.path.join(QUI, 'assets', 'js', 'ds-live.js'), encoding='utf-8').read()
     open(os.path.join(REPO, 'assets', 'js', 'ds-live.js'), 'w', encoding='utf-8').write(src)
     print('Copiato assets/js/ds-live.js in', REPO)
-MAIL = {'stand': 'info@danova-tech.com', 'costruzioni': 'info@danovacostruzioni.it', 'tech': 'info@danova-tech.com'}[SITO]
+MAIL = {'stand': 'info@danova-tech.com', 'costruzioni': 'info@danovacostruzioni.it', 'tech': 'info@danova-tech.com', 'newstand': 'info@newstandsallestimenti.com'}[SITO]
 SALTA = {'.git', '.github', 'strumenti', 'private_area', '_google_business', 'Claude outputs', 'node_modules', 'seo-tools', 'social', 'assets'}
 TAG = '<script src="/assets/js/ds-live.js?v=3" defer></script>'  # v=3: versione pubblicata (non tornare a v=1)
 PROG_FILE = os.path.join(QUI, 'strumenti', 'supabase', 'progetto.txt')

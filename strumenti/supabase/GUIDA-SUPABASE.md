@@ -126,3 +126,17 @@ elenco lavori, CSV e calendario da aggiungere al telefono. Dalla scheda Richiest
 
 Per attivarla basta **ripubblicare la funzione**: Edge Functions → `ds` → **Code** → incolla tutto `2-edge-function-ds.ts` → **Deploy**.
 Le tabelle `clienti` e `lavori` si creano da sole al primo accesso. "Verify JWT" deve restare disattivato.
+
+---
+
+## Newstands nell'area privata (25/11/2026)
+
+Nel menu giallo c'è anche **Newstands** (newstandsallestimenti.com). Stesso database e stessa funzione `ds`, nome breve `newstand`.
+
+- Su Newstands `assets/js/ds-live.js` è già copiato e lo script è nei modelli del generatore (`_build/build.py` e
+  `_build/home.tpl.html`): resta anche quando rigeneri il sito con `python3 _build/build.py`.
+- Su Newstands non si caricano popup −3%, fascia preventivo e fumetto (`ds-conversioni.js`): sono di Danova.
+- Il banner cookie su Newstands non ha il link alla cookie policy, perché il sito non ha ancora quella pagina.
+- **Da fare in Supabase:** Edge Functions → `ds` → **Code** → incolla tutto `2-edge-function-ds.ts` → **Deploy**.
+  Se nei Secrets esiste `DS_ORIGINI`, aggiungi in fondo `,https://newstandsallestimenti.com,https://www.newstandsallestimenti.com`.
+- "Non contare le mie visite": apri una volta `newstandsallestimenti.com/?dslive=no`.
