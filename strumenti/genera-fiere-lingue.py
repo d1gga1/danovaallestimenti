@@ -136,8 +136,8 @@ def pagina(lang, f, t):
           "location": {"@type": "Place", "name": q, "address": {"@type": "PostalAddress", "streetAddress": s["via"], "addressLocality": citta, "addressCountry": s["cc"]},
                        "geo": {"@type": "GeoCoordinates", "latitude": s["lat"], "longitude": s["lon"]}},
           "organizer": {"@type": "Organization", "name": nome, "url": f["sito"]}}
-    if f["end"]:
-        ev["endDate"] = f["end"]
+    # endDate sempre presente (Search Console): senza data di fine si usa il mese di inizio
+    ev["endDate"] = f["end"] or (f["start"] if f["conf"] else f["start"][:7])
     crumbs = [(SITO + h, n) for h, n in U["crumbs"]]
     nuovo = {"@context": "https://schema.org", "@graph": [org,
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": tit, "description": desc, "isPartOf": {"@id": f"{SITO}/#website"},

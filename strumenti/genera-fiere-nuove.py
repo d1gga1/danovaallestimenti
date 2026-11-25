@@ -247,10 +247,9 @@ def jsonld(graph_tpl, f, s, faq, tit, desc):
                        "url": f["sito"], "description": f"{f['nome']}: fiera di settore {f['sett'].lower()} a {s['c']}.",
                        "organizer": {"@type": "Organization", "name": f["nome"], "url": f["sito"]},
                        "performer": {"@type": "Organization", "name": f["nome"], "url": f["sito"]}})
-            if f["end"]:
-                ev["endDate"] = f["end"]
-            else:
-                ev.pop("endDate", None)
+            # endDate sempre presente (Search Console): se la fiera non ha la data di fine,
+            # si usa il mese di inizio, cioe' "si svolge in quel mese"
+            ev["endDate"] = f["end"] or (f["start"] if f["conf"] else f["start"][:7])
             ev["location"] = {"@type": "Place", "name": s["q"],
                               "address": {"@type": "PostalAddress", "streetAddress": s["via"], "addressLocality": s["c"], "addressCountry": s["cc"]},
                               "geo": {"@type": "GeoCoordinates", "latitude": s["lat"], "longitude": s["lon"]}}
