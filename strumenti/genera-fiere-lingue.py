@@ -93,6 +93,18 @@ def aggiorna_head_e_selettore(p, v, corrente):
     return p
 
 
+# Descrizione dell'evento nei dati strutturati (Search Console, campo 'description')
+EVENT_DESC = {
+    "en": "{nome}: trade fair at {q}, {citta}.",
+    "de": "{nome}: Fachmesse in {q}, {citta}.",
+    "fr": "{nome} : salon professionnel à {q}, {citta}.",
+    "es": "{nome}: feria profesional en {q}, {citta}.",
+    "pt": "{nome}: feira profissional em {q}, {citta}.",
+    "nl": "{nome}: vakbeurs in {q}, {citta}.",
+    "pl": "{nome}: targi branżowe – {q}, {citta}.",
+}
+
+
 def pagina(lang, f, t):
     U, s = UI[lang], SEDI[f["sede"]]
     k, nome, anno = f["k"], t.get("nome", f["nome"]), f["start"][:4]
@@ -136,6 +148,10 @@ def pagina(lang, f, t):
           "location": {"@type": "Place", "name": q, "address": {"@type": "PostalAddress", "streetAddress": s["via"], "addressLocality": citta, "addressCountry": s["cc"]},
                        "geo": {"@type": "GeoCoordinates", "latitude": s["lat"], "longitude": s["lon"]}},
           "organizer": {"@type": "Organization", "name": nome, "url": f["sito"]}}
+    # Search Console 26/11/2026 (Dati strutturati Eventi): campi 'image', 'description', 'performer'
+    ev["description"] = EVENT_DESC.get(lang, EVENT_DESC["en"]).format(**fmt)
+    ev["image"] = [og["og:image"]]
+    ev["performer"] = dict(ev["organizer"])
     # endDate sempre presente (Search Console): senza data di fine si usa il mese di inizio
     ev["endDate"] = f["end"] or (f["start"] if f["conf"] else f["start"][:7])
     crumbs = [(SITO + h, n) for h, n in U["crumbs"]]
