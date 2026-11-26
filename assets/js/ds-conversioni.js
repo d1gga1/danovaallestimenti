@@ -202,7 +202,17 @@
     + '.dsnl.mini .dsnl-f{padding:14px 14px 14px 0;gap:8px}.dsnl.mini .dsnl-f h2{font-size:15.5px;line-height:1.25;padding-right:34px}'
     + '.dsnl.mini .dsnl-sub,.dsnl.mini .dsnl-g,.dsnl.mini .dsnl-ok,.dsnl.mini .dsnl-e,.dsnl.mini .dsnl-no,.dsnl.mini button[type=submit]{display:none}'
     + '.dsnl.mini .dsnl-esp{display:block;padding:11px 16px;font-size:14px}.dsnl.mini .dsnl-x{top:8px;right:8px;width:30px;height:30px;font-size:20px}'
-    + '.dsnl-pill{bottom:calc(84px + env(safe-area-inset-bottom));left:10px}.ds-fascia .ds-f-in{padding:20px}.ds-bolla{display:none}}';
+    + '.dsnl-pill{bottom:calc(84px + env(safe-area-inset-bottom));left:10px}.ds-fascia .ds-f-in{padding:20px}.ds-bolla{display:none}'
+    /* 26/11/2026: su telefono il popup aperto deve stare tutto in uno schermo (anche 360x640), senza zoom di iOS sui campi e senza blocchi */
+    + '.dsnl-scrim{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(5,6,10,.82)}'
+    + '.dsnl-box{max-height:calc(100% - 10px);max-height:calc(100dvh - 10px);overscroll-behavior:contain;-webkit-overflow-scrolling:touch}'
+    + '.dsnl:not(.mini) .dsnl-vis{display:none}.dsnl:not(.mini) .dsnl-f{padding:18px 16px calc(12px + env(safe-area-inset-bottom))}'
+    + '.dsnl:not(.mini) .dsnl-f form{display:flex;flex-direction:column;gap:9px}.dsnl:not(.mini) .dsnl-f h2{font-size:20px;padding-right:44px}'
+    + '.dsnl:not(.mini) .dsnl-sub{font-size:13px;line-height:1.4}.dsnl:not(.mini) .dsnl-g{grid-template-columns:1fr 1fr;gap:7px 8px}'
+    + '.dsnl-g label{font-size:11.5px;gap:3px}.dsnl-g label:nth-child(2),.dsnl-g label:nth-child(5){grid-column:1/-1}'
+    + '.dsnl-g input{font-size:16px;padding:9px 11px;border-radius:10px}.dsnl-ok{font-size:11.5px;line-height:1.4}'
+    + '.dsnl:not(.mini) .dsnl-b{padding:13px 18px}.dsnl-no{padding:2px}.dsnl:not(.mini) .dsnl-x{top:10px;right:10px;width:34px;height:34px;font-size:22px}.dsnl-code b{font-size:19px;white-space:nowrap}}'
+    + 'html.dsnl-lock,html.dsnl-lock body{overflow:hidden}';
   /* colori del sito: oro su Stand, verde su Costruzioni, blu su Tech */
   var COL = {
     costruzioni: { a: '#83b06d', rgb: '131,176,109', l: '157,193,139', lt: '#c9e0bd', bg: '#0b0f09', g1: '#131c0f', g2: '#080b06', btn: '#83b06d', btnTx: '#0b0b0b' },
@@ -231,6 +241,7 @@
 
   /* ================= 1) popup newsletter −3% ================= */
   var BOX = null, PILL = null;
+  var blocca = function (on) { try { document.documentElement.classList.toggle('dsnl-lock', !!on); } catch (e) {} };   // pagina ferma sotto il popup aperto
   function costruisci() {
     if (BOX) return BOX;
     BOX = document.createElement('div'); BOX.className = 'dsnl'; BOX.setAttribute('role', 'dialog'); BOX.setAttribute('aria-modal', 'true'); BOX.setAttribute('aria-label', T.h);
@@ -248,7 +259,7 @@
     document.body.appendChild(BOX);
     BOX.querySelector('.dsnl-x').onclick = function () { chiudi(true); };
     BOX.querySelector('.dsnl-no').onclick = function () { chiudi(true); };
-    BOX.querySelector('.dsnl-esp').onclick = function () { BOX.classList.remove('mini'); BOX.setAttribute('aria-modal', 'true'); ev('preventivo', 'popup mini espanso'); };
+    BOX.querySelector('.dsnl-esp').onclick = function () { BOX.classList.remove('mini'); blocca(true); BOX.querySelector('.dsnl-box').scrollTop = 0; BOX.setAttribute('aria-modal', 'true'); ev('preventivo', 'popup mini espanso'); };
     BOX.querySelector('.dsnl-scrim').onclick = function () { chiudi(true); };
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && BOX.classList.contains('open')) chiudi(true); });
     BOX.querySelector('form').addEventListener('submit', invia);
@@ -257,14 +268,14 @@
   }
   function apri(da, mini) {
     if (iscritto()) return;
-    costruisci(); BOX.classList.toggle('mini', !!mini); BOX.setAttribute('aria-modal', mini ? 'false' : 'true'); BOX.classList.add('open'); requestAnimationFrame(function () { BOX.classList.add('show'); });
+    costruisci(); BOX.classList.toggle('mini', !!mini); BOX.setAttribute('aria-modal', mini ? 'false' : 'true'); BOX.classList.add('open'); blocca(!mini); requestAnimationFrame(function () { BOX.classList.add('show'); });
     ss('ds_nl_vista', '1'); if (PILL) PILL.hidden = true;
     ev('preventivo', 'popup −' + SCONTO.perc + '% aperto' + (da ? ' (' + da + ')' : ''));
     setTimeout(function () { var i = BOX.querySelector('input[name=nome]'); if (i && window.innerWidth > 760) i.focus(); }, 350);
   }
   function chiudi(rifiutato) {
     if (!BOX) return;
-    BOX.classList.remove('show'); setTimeout(function () { BOX.classList.remove('open'); }, 300);
+    BOX.classList.remove('show'); blocca(false); setTimeout(function () { BOX.classList.remove('open'); }, 300);
     if (rifiutato && !iscritto()) { ls('ds_nl_no', String(Date.now())); pillola(); }
   }
   function pillola() {
